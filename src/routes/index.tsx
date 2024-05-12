@@ -6,7 +6,7 @@ export default component$(() => {
     <div class="container">
       <h1 class="sr-only">ZitDevs</h1>
 
-      <section class="w-full justify-center flex mt-24">
+      <section class="w-full justify-center flex mt-32">
         <h2 class="font-bold text-5xl max-w-2xl text-center">
           We are passionate about building software
         </h2>
