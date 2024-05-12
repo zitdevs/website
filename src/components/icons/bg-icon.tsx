@@ -7,7 +7,6 @@ const BGICon = (props: SVGProps<SVGSVGElement>) => (
         height={187}
         fill="none"
         viewBox="0 0 210 187"
-        // scale with the parent container
         style={{ width: "100%", height: "100%" }}
         {...props}
     >
