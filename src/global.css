@@ -6,4 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+    background-color: #F5F8FF;
+}
