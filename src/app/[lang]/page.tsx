@@ -10,8 +10,8 @@ export default async function Home({ params: { lang } }: Props) {
   const tHome = dictionary.home;
 
   return (
-    <main className="">
+    <>
       <h1 className="text-4xl font-bold text-center mt-10">{tHome.title}</h1>
-    </main>
+    </>
   );
 }
