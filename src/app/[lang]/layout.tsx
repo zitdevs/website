@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import { Locale, i18n } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 import Header from "@/components/header/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"] });
 
 type Props = {
   children: React.ReactNode;
@@ -34,7 +34,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
-      <body className={inter.className + " bg-[#F5F8FF]"}>
+      <body className={raleway.className + " bg-[#F5F8FF]"}>
         <Header tHeader={dictionary.default.header} />
         <main className="">{children}</main>
       </body>
