@@ -1,7 +1,19 @@
 {
   "default": {
     "metadata": {
-      "title": "Un site web"
+      "title": "ZitDevs: Nos encanta crear Software"
+    },
+    "header": {
+      "title": "ZitDevs",
+      "menu": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "how_it_works": "Cómo funciona",
+        "services": "Servicios"
+      },
+      "cta": {
+        "contact": "Contáctenos"
+      }
     }
   },
   "home": {

@@ -1,7 +1,19 @@
 {
   "default": {
     "metadata": {
-      "title": "A web page"
+      "title": "ZitDevs: Passionate about building great software"
+    },
+    "header": {
+      "title": "ZitDevs",
+      "menu": {
+        "home": "Home",
+        "about": "About",
+        "how_it_works": "How it works",
+        "services": "Services"
+      },
+      "cta": {
+        "contact": "Contact"
+      }
     }
   },
   "home": {

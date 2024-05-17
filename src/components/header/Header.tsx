@@ -1,16 +1,21 @@
 import { LogoIcon } from "../icons/logo";
 import Link from "next/link";
 import Nav from "./Nav";
+import { Dictionary } from "@/get-dictionary";
 
-const Header = () => {
+export type HeaderProps = {
+  tHeader: Dictionary["default"]["header"];
+};
+
+const Header: React.FC<HeaderProps> = ({ tHeader }) => {
   return (
     <header className="container justify-between flex items-center pt-2">
-      <Link className="w-32" href="/" title="ZitDevs">
+      <Link className="w-32" href="/" title={tHeader.title}>
         <LogoIcon />
       </Link>
       <Nav />
       <div>
-        <button>Contact Us</button>
+        <button>{tHeader.cta.contact}</button>
       </div>
     </header>
   );

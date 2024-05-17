@@ -26,11 +26,16 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export default function RootLayout({ children, params: { lang } }: Props) {
+export default async function RootLayout({
+  children,
+  params: { lang },
+}: Props) {
+  const dictionary = await getDictionary(lang);
+
   return (
     <html lang={lang}>
       <body className={inter.className + " bg-[#F5F8FF]"}>
-        <Header />
+        <Header tHeader={dictionary.default.header} />
         <main className="">{children}</main>
       </body>
     </html>
