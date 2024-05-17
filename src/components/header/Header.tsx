@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ tHeader }) => {
       <Link className="w-32" href="/" title={tHeader.title}>
         <LogoIcon />
       </Link>
-      <Nav />
+      <Nav tNav={tHeader.menu} />
       <div>
         <button>{tHeader.cta.contact}</button>
       </div>

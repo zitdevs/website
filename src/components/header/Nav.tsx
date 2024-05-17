@@ -1,24 +1,30 @@
-const Nav = () => {
+import { Dictionary } from "@/get-dictionary";
+
+export type NavProps = {
+  tNav: Dictionary["default"]["header"]["menu"];
+};
+
+const Nav: React.FC<NavProps> = ({ tNav }) => {
   return (
     <nav className="flex gap-10 list-none px-14 py-5 rounded-2xl border border-white bg-white/60">
       <li>
         <a href="#" className="font-semibold">
-          Home
+          {tNav.home}
         </a>
       </li>
       <li>
         <a href="#" className="font-semibold">
-          About
+          {tNav.about}
         </a>
       </li>
       <li>
         <a href="#" className="font-semibold">
-          How it works
+          {tNav.how_it_works}
         </a>
       </li>
       <li>
         <a href="#" className="font-semibold">
-          Services
+          {tNav.services}
         </a>
       </li>
     </nav>
