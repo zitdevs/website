@@ -9,7 +9,7 @@ export type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ tHeader }) => {
   return (
-    <header className="container justify-between flex items-center pt-2">
+    <header className="container justify-between flex items-center pt-2 relative z-50">
       <Link className="w-32" href="/" title={tHeader.title}>
         <LogoIcon />
       </Link>

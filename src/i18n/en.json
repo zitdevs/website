@@ -17,6 +17,9 @@
     }
   },
   "home": {
-    "title": "The template is ready to use"
+    "sr_only": "ZitDevs: Passionate about building great software",
+    "hero": {
+      "title": "We are passionate about building software"
+    }
   }
 }

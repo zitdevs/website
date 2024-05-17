@@ -17,6 +17,9 @@
     }
   },
   "home": {
-    "title": "El template esta listo para usarse"
+    "sr_only": "ZitDevs: Apasionados por crear software excelente",
+    "hero": {
+      "title": "Nos apasiona crear software"
+    }
   }
 }
