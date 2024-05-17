@@ -1,0 +1,25 @@
+{
+  "default": {
+    "metadata": {
+      "title": "ZitDevs: Passionate about building great software"
+    },
+    "header": {
+      "title": "ZitDevs",
+      "menu": {
+        "home": "Home",
+        "about": "About",
+        "how_it_works": "How it works",
+        "services": "Services"
+      },
+      "cta": {
+        "contact": "Contact"
+      }
+    }
+  },
+  "home": {
+    "sr_only": "ZitDevs: Passionate about building great software",
+    "hero": {
+      "title": "We are passionate about building software"
+    }
+  }
+}

@@ -1,75 +1,57 @@
-# Qwik City App ⚡️
+# Next.js 14 Project
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+This is a starter template for [Learn Next.js](https://nextjs.org/learn), a framework for building web applications in JavaScript.
 
----
+## Features
 
-## Project Structure
+- [x] Next.js 14
+- [x] React 18
+- [x] Tailwind CSS 3
+- [x] ESLint
+- [x] Prettier
+- [x] Husky
+- [x] Commitlint
+- [x] Cypress
+- [x] i18n
 
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+## Getting Started
 
-Inside your project, you'll see the following directory structure:
+Start using create-next-app:
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+```bash
+# with npx
+npx create-next-app --example "https://github.com/isaacismaelx14/nextjs-template"
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.dev/qwikcity/routing/overview/) for more info.
+# with yarn
+yarn create next-app --example "https://github.com/isaacismaelx14/nextjs-template"
 
-- `src/components`: Recommended directory for components.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
-
-## Add Integrations and deployment
-
-Use the `pnpm qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
-
-```shell
-pnpm qwik add # or `pnpm qwik add`
+# with pnpx
+pnpx create-next-app --example "https://github.com/isaacismaelx14/nextjs-template"
 ```
 
-## Development
+First, run the development server:
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
-
-```shell
-npm start # or `pnpm start`
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Preview
+## Learn More
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+To learn more about Next.js, take a look at the following resources:
 
-```shell
-pnpm preview # or `pnpm preview`
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Production
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+## Deploy on Vercel
 
-```shell
-pnpm build # or `pnpm build`
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Express Server
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-This app has a minimal [Express server](https://expressjs.com/) implementation. After running a full build, you can preview the build using the command:
-
-```
-npm run serve
-```
-
-Then visit [http://localhost:8080/](http://localhost:8080/)
+With ❤️ from @isaacismaelx14
