@@ -11,8 +11,8 @@
     "format:fix": "prettier --write --list-different .",
     "postinstall": "npx husky install",
     "cy:open": "cypress open",
-    "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
-    "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
+    "e2e": "PORT=3123 start-server-and-test dev http://localhost:3123 \"cypress open --e2e\"",
+    "e2e:headless": "PORT=3123 start-server-and-test dev http://localhost:3123 \"cypress run --e2e\"",
     "component": "cypress open --component",
     "component:headless": "cypress run --component"
   },
