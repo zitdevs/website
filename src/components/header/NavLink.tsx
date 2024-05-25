@@ -18,7 +18,6 @@ const NavLink: React.FC<NavLinkProps> = ({ href: _href, ...props }) => {
   );
 
   useEffect(() => {
-    console.log(pathname, href);
     setIsActive(pathname === href);
   }, [pathname, href]);
 
