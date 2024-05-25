@@ -18,6 +18,6 @@ describe("<Hero />", () => {
 
   it("displays the correct CTA", () => {
     cy.mount(<Hero tHero={mockTHero} />);
-    cy.contains("button", mockTHero.cta).should("be.visible");
+    cy.contains("a", mockTHero.cta).should("be.visible");
   });
 });
