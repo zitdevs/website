@@ -2,6 +2,7 @@ import { LogoIcon } from "../icons/logo";
 import Link from "next/link";
 import Nav from "./Nav";
 import { Dictionary } from "@/get-dictionary";
+import { Button } from "../button/Button";
 
 export type HeaderProps = {
   tHeader: Dictionary["default"]["header"];
@@ -15,7 +16,9 @@ const Header: React.FC<HeaderProps> = ({ tHeader }) => {
       </Link>
       <Nav tNav={tHeader.menu} />
       <div>
-        <button>{tHeader.cta.contact}</button>
+        <Button variant="secondary" className="px-8">
+          {tHeader.cta.contact}
+        </Button>
       </div>
     </header>
   );
