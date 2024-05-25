@@ -18,7 +18,7 @@ export default async function Home({ params: { lang } }: Props) {
         <Hero tHero={tHome.hero} />
       </div>
       <div className="absolute inset-0 overflow-hidden w-full h-[90vh]">
-        <div className="h-[600px] mt-12 blur-lg -rotate-12 overflow-hidden">
+        <div className="h-[600px] mt-20 blur-lg -rotate-12 overflow-hidden">
           <BgLogo className="blur-md" />
         </div>
       </div>
