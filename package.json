@@ -18,11 +18,17 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "husky": "^9.0.11",
+    "lucide-react": "^0.379.0",
     "negotiator": "^0.6.3",
     "next": "14.2.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
