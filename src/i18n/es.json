@@ -1,7 +1,7 @@
 {
   "default": {
     "metadata": {
-      "title": "ZitDevs: Nos encanta crear Software"
+      "title": "ZitDevs: Apasionados por construir software de calidad"
     },
     "header": {
       "title": "ZitDevs",
@@ -12,15 +12,15 @@
         "services": "Servicios"
       },
       "cta": {
-        "contact": "Contáctenos"
+        "contact": "Contacto"
       }
     }
   },
   "home": {
-    "sr_only": "ZitDevs: Apasionados por crear software excelente",
+    "sr_only": "ZitDevs: Apasionados por construir software de calidad",
     "hero": {
-      "title": "Nos apasiona crear software",
-      "cta": "Contáctenos"
+      "title": "Trabajamos por sueños, y los sueños traen ingresos",
+      "cta": "Cómo funciona"
     }
   }
 }
