@@ -19,7 +19,8 @@
   "home": {
     "sr_only": "ZitDevs: Apasionados por crear software excelente",
     "hero": {
-      "title": "Nos apasiona crear software"
+      "title": "Nos apasiona crear software",
+      "cta": "Contáctenos"
     }
   }
 }

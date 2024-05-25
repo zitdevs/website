@@ -11,7 +11,7 @@ const Hero: React.FC<HeroProps> = ({ tHero }) => {
       <h2 className="font-semibold text-6xl max-w-2xl text-center">
         {tHero.title}
       </h2>
-      <Button className="px-12 py-6 font-bold">Get in Touch</Button>
+      <Button className="px-12 py-6 font-bold">{tHero.cta}</Button>
     </section>
   );
 };
