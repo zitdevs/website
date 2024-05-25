@@ -34,7 +34,7 @@ export default async function RootLayout({
   const dictionary = await getDictionary(lang);
 
   return (
-    <html lang={lang}>
+    <html lang={lang} className="scroll-smooth">
       <body className={raleway.className + " bg-[#F5F8FF]"}>
         <Header tHeader={dictionary.default.header} />
         <main className="">{children}</main>
