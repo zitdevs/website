@@ -17,7 +17,7 @@ export default async function Home({ params: { lang } }: Props) {
         <h1 className="sr-only">{tHome.sr_only}</h1>
         <Hero tHero={tHome.hero} />
       </div>
-      <div className="absolute inset-0 overflow-hidden w-full h-[90vh]">
+      <div className="absolute inset-0 overflow-hidden w-full h-[100vh]">
         <div className="h-[600px] mt-20 blur-lg -rotate-12 overflow-hidden">
           <BgLogo className="blur-md" />
         </div>

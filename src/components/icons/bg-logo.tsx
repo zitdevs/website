@@ -1,14 +1,20 @@
+"use client";
 import { SVGProps } from "react";
+import { motion } from "framer-motion";
 
 export const BgLogo = (props: SVGProps<SVGSVGElement>) => (
-  <svg
+  <motion.svg
     xmlns="http://www.w3.org/2000/svg"
     width={210}
     height={187}
     fill="none"
     viewBox="0 0 210 187"
     style={{ width: "100%", height: "100%" }}
-    {...props}
+    initial={{ rotate: 360, scale: 0 }}
+    animate={{ rotate: 0, scale: 1 }}
+    className={props.className}
+    aria-hidden="true"
+    transition={{ ease: "backOut", duration: 1, delay: 1 }}
   >
     <path
       fill="url(#a)"
@@ -76,5 +82,5 @@ export const BgLogo = (props: SVGProps<SVGSVGElement>) => (
         <stop offset={1} stopColor="#FF15E8" />
       </radialGradient>
     </defs>
-  </svg>
+  </motion.svg>
 );
