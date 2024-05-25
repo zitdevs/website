@@ -8,7 +8,7 @@ export type TopHeroProps = {
 
 const TopHero: React.FC<TopHeroProps> = ({ tHome }) => {
   return (
-    <section id="hero" className="min-h-[68dvh]">
+    <section id="hero" className="min-h-[70dvh]">
       <div className="container relative z-10">
         <h1 className="sr-only">{tHome.sr_only}</h1>
         <Hero tHero={tHome.hero} />
