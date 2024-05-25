@@ -6,7 +6,7 @@ const WhatWeDo = () => {
     <section id="what-we-do" className="container z-10 pb-48">
       <h2 className="text-5xl font-bold">What We Do</h2>
 
-      <ul className="grid grid-cols-4 gap-4 mt-9">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-9">
         <li>
           <ItemCard
             icon={{ name: "clock" }}
@@ -40,7 +40,7 @@ const WhatWeDo = () => {
             rewards."
           />
         </li>
-        <li className="row-span-2">
+        <li className="sm:row-span-2">
           <ItemCard
             icon={{ name: "briefcase" }}
             title="Empowering DevelopersProfits"
@@ -51,7 +51,7 @@ const WhatWeDo = () => {
             image={{ src: Empowering, alt: "Empowering Developers" }}
           />
         </li>
-        <li className="col-span-2">
+        <li className="md:col-span-2">
           <ItemCard
             icon={{ name: "heart" }}
             title="Collaboration and Innovation"
@@ -61,7 +61,7 @@ const WhatWeDo = () => {
             the boundaries of what’s possible and deliver exceptional results."
           />
         </li>
-        <li>
+        <li className="sm:col-span-2 xl:col-span-1">
           <ItemCard
             icon={{ name: "shield" }}
             title="Transparency and Fairness"

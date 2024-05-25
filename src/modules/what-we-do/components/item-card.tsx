@@ -41,7 +41,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
             height={200}
             src={image.src}
             alt={image.alt}
-            className="mt-10 rounded-md shadow-sm"
+            className="mt-10 rounded-md shadow-sm m-auto sm:mx-0"
           />
         )}
       </CardContent>
