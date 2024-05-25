@@ -2,11 +2,12 @@
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
-    ["className: \"([^\"]*)\"",],
-    ["className: '([^']*)'",],
+    ["className: \"([^\"]*)\""],
+    ["className: '([^']*)'"]
   ],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
+  "cSpell.words": ["Zitdevs"]
 }

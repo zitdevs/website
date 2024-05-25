@@ -1,7 +1,7 @@
-import Hero from "@/components/hero/Hero";
-import { BgLogo } from "@/components/icons/bg-logo";
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
+import TopHero from "@/modules/top-hero";
+import WhatWeDo from "@/modules/what-we-do";
 
 type Props = {
   params: { lang: Locale };
@@ -13,15 +13,8 @@ export default async function Home({ params: { lang } }: Props) {
 
   return (
     <>
-      <div className="container relative z-10">
-        <h1 className="sr-only">{tHome.sr_only}</h1>
-        <Hero tHero={tHome.hero} />
-      </div>
-      <div className="absolute inset-0 overflow-hidden w-full h-[100vh]">
-        <div className="h-[600px] mt-20 blur-lg -rotate-12 overflow-hidden">
-          <BgLogo className="blur-md" />
-        </div>
-      </div>
+      <TopHero tHome={tHome} />
+      <WhatWeDo tWhatWeDo={tHome.what_we_do} />
     </>
   );
 }

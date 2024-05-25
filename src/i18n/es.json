@@ -1,13 +1,13 @@
 {
   "default": {
     "metadata": {
-      "title": "ZitDevs: Apasionados por construir software de calidad"
+      "title": "ZitDevs: Apasionados por crear software de calidad"
     },
     "header": {
       "title": "ZitDevs",
       "menu": {
         "home": "Inicio",
-        "about": "Acerca de",
+        "about": "Nosotros",
         "how_it_works": "Cómo funciona",
         "services": "Servicios"
       },
@@ -17,10 +17,42 @@
     }
   },
   "home": {
-    "sr_only": "ZitDevs: Apasionados por construir software de calidad",
+    "sr_only": "ZitDevs: Apasionados por crear software de calidad",
     "hero": {
       "title": "Trabajamos por sueños, y los sueños traen ingresos",
       "cta": "Cómo funciona"
+    },
+    "what_we_do": {
+      "title": "Lo que hacemos",
+      "item": {
+        "flexible": {
+          "title": "Horarios de trabajo flexibles para desarrolladores",
+          "description": "En Zitdevs, creemos en proporcionar a los desarrolladores la flexibilidad de elegir sus propias horas de trabajo. Nuestra plataforma permite a los desarrolladores trabajar tantas horas como deseen cada semana, ofreciéndoles la oportunidad de ganar ingresos adicionales mientras mantienen un equilibrio saludable entre trabajo y vida personal."
+        },
+        "community": {
+          "title": "Desarrollo de productos enfocados en la comunidad",
+          "description": "Nuestro equipo está dedicado a crear productos que beneficien a la comunidad. Nuestro objetivo es desarrollar soluciones que aborden problemas reales y mejoren la calidad de vida de las personas en todo el mundo. Ya sea una nueva aplicación, un sitio web o una herramienta, nuestros proyectos están diseñados pensando en las necesidades de la comunidad."
+        },
+        "driven_by": {
+          "title": "Impulsados por grandes ideas, no solo por ganancias",
+          "description": "Somos un colectivo de desarrolladores motivados por la búsqueda de ideas impactantes en lugar de ganancias financieras. Nuestro objetivo principal es trabajar en proyectos que tengan el potencial de hacer una diferencia significativa, enfocándonos en la innovación y la creatividad por encima de las recompensas monetarias."
+        },
+        "empowering": {
+          "title": "Empoderando a los desarrolladores",
+          "description": "Zitdevs proporciona una plataforma donde los desarrolladores pueden mejorar sus habilidades y trabajar en proyectos significativos. Ofrecemos recursos, mentoría y un entorno colaborativo que fomenta el crecimiento y desarrollo profesional.",
+          "image": {
+            "alt": "Empoderando a los desarrolladores"
+          }
+        },
+        "innovation": {
+          "title": "Colaboración e innovación",
+          "description": "Nuestro enfoque se centra en la colaboración y la innovación. Reunimos a talentosos desarrolladores de diversos orígenes para trabajar en proyectos de vanguardia. Al compartir conocimientos e ideas, empujamos los límites de lo que es posible y entregamos resultados excepcionales."
+        },
+        "transparency": {
+          "title": "Transparencia y equidad",
+          "description": "En Zitdevs, valoramos la transparencia y la equidad en todas nuestras interacciones. Aseguramos que los desarrolladores sean compensados justamente por su trabajo y que nuestros clientes reciban servicios honestos y confiables."
+        }
+      }
     }
   }
 }
