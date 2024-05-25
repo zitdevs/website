@@ -4,6 +4,7 @@ import "./globals.css";
 import { Locale, i18n } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 import Header from "@/components/header/Header";
+import SetAppStore from "@/components/utils/SetAppStore";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default async function RootLayout({
       <body className={raleway.className + " bg-[#F5F8FF]"}>
         <Header tHeader={dictionary.default.header} />
         <main className="">{children}</main>
+        <SetAppStore locale={lang} />
       </body>
     </html>
   );
