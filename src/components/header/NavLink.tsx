@@ -1,21 +1,18 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useAppStore } from "@/stores/app.store";
-import Link, { LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
+import { LinkI18nProps } from "../i18nLink";
+import Link from "next/link";
+import { useHrefI18n } from "@/hooks/useHrefI18n";
 
-export type NavLinkProps = LinkProps & React.HTMLProps<HTMLAnchorElement>;
+export type NavLinkProps = LinkI18nProps;
 
 const NavLink: React.FC<NavLinkProps> = ({ href: _href, ...props }) => {
   const [isActive, setIsActive] = useState(false);
-  const locale = useAppStore((state) => state.locale);
   const pathname = usePathname();
-  const href = useMemo(
-    () => (_href === "/" ? `/${locale}` : `/${locale}${_href}`),
-    [_href, locale]
-  );
+  const href = useHrefI18n(_href);
 
   useEffect(() => {
     setIsActive(pathname === href);

@@ -8,7 +8,7 @@ export type WhatWeDoProps = {
 
 const WhatWeDo: React.FC<WhatWeDoProps> = ({ tWhatWeDo }) => {
   return (
-    <section id="what-we-do" className="container z-10">
+    <section id="what-we-do" className="container z-10 pt-8">
       <h2 className="text-4xl sm:text-5xl font-bold">{tWhatWeDo.title}</h2>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-9">
