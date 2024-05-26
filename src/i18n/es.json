@@ -110,25 +110,25 @@
       }
     },
     "services": {
-      "title": "Innovative Solutions",
-      "subtitle": "for a Digital World",
-      "learnMore": "Learn more",
+      "title": "Soluciones Innovadoras",
+      "subtitle": "para un Mundo Digital",
+      "learnMore": "Aprender más",
       "cards": {
         "softwareDevelopment": {
-          "title": "Software Development",
-          "description": "We create custom software to meet your business needs, handling the entire development lifecycle from consultation to deployment. Our agile approach ensures flexibility, rapid iterations, and continuous improvement."
+          "title": "Desarrollo de Software",
+          "description": "Creamos software personalizado para satisfacer las necesidades de tu negocio, manejando todo el ciclo de desarrollo desde la consulta hasta la implementación. Nuestro enfoque ágil asegura flexibilidad, iteraciones rápidas y mejora continua."
         },
         "webDevelopment": {
-          "title": "Web Development",
-          "description": "We create responsive websites, develop robust e-commerce platforms, and implement powerful CMS solutions for easy, non-technical content management."
+          "title": "Desarrollo Web",
+          "description": "Creamos sitios web responsivos, desarrollamos plataformas de comercio electrónico robustas e implementamos potentes soluciones CMS para una gestión de contenido fácil y no técnica."
         },
         "mobileAppDevelopment": {
-          "title": "Mobile App Development",
-          "description": "We develop high-performance iOS and Android apps with user-centric designs and seamless system integration. We also provide ongoing maintenance and support to ensure smooth operation."
+          "title": "Desarrollo de Apps Móviles",
+          "description": "Desarrollamos aplicaciones de alto rendimiento para iOS y Android con diseños centrados en el usuario e integración fluida con sistemas. También ofrecemos mantenimiento y soporte continuo para asegurar una operación sin problemas."
         },
         "consultingStrategy": {
-          "title": "Consulting and Strategy",
-          "description": "We provide strategic technology consulting, project management services, and innovation workshops to help you make informed decisions, complete projects efficiently, and drive growth and innovation."
+          "title": "Consultoría y Estrategia",
+          "description": "Ofrecemos consultoría estratégica en tecnología, servicios de gestión de proyectos y talleres de innovación para ayudarte a tomar decisiones informadas, completar proyectos eficientemente y fomentar el crecimiento y la innovación."
         }
       }
     }
