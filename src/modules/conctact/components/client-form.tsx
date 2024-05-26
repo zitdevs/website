@@ -1,4 +1,3 @@
-"use client";
 import { DynamicIcon } from "@/components/icons/dynamic";
 
 const ClientForm = () => {
@@ -9,7 +8,7 @@ const ClientForm = () => {
           htmlFor="company"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Company
+          Company <span className="text-red-500">*</span>
         </label>
         <div className="mt-2.5">
           <input
@@ -26,7 +25,7 @@ const ClientForm = () => {
           htmlFor="email"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Email
+          Email <span className="text-red-500">*</span>
         </label>
         <div className="mt-2.5">
           <input
@@ -79,7 +78,7 @@ const ClientForm = () => {
           htmlFor="message"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Message
+          Message <span className="text-red-500">*</span>
         </label>
         <div className="mt-2.5">
           <textarea

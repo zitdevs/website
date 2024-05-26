@@ -1,10 +1,6 @@
-"use client";
 import { DynamicIcon } from "@/components/icons/dynamic";
-import { useState } from "react";
 
 const ZitLancerForm = () => {
-  const [agreed, setAgreed] = useState(false);
-
   return (
     <>
       <div className="sm:col-span-2">
@@ -12,7 +8,7 @@ const ZitLancerForm = () => {
           htmlFor="email"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Email
+          Email <span className="text-red-500">*</span>
         </label>
         <div className="mt-2.5">
           <input
@@ -29,7 +25,7 @@ const ZitLancerForm = () => {
           htmlFor="phone-number"
           className="block text-sm font-semibold leading-6 text-gray-900"
         >
-          Phone number
+          Phone number <span className="text-red-500">*</span>
         </label>
         <div className="relative mt-2.5">
           <div className="absolute inset-y-0 left-0 flex items-center">
