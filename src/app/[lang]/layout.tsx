@@ -38,7 +38,7 @@ export default async function RootLayout({
       <body className={raleway.className + " bg-[#F5F8FF]"}>
         <Header tHeader={dictionary.default.header} />
         <main className="">{children}</main>
-        <SetAppStore locale={lang} />
+        <SetAppStore locale={lang} countries={dictionary.default.countries} />
       </body>
     </html>
   );
