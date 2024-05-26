@@ -1,6 +1,7 @@
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 import HowItWorks from "@/modules/how-it-works";
+import { Services } from "@/modules/services";
 import TopHero from "@/modules/top-hero";
 import WhatWeDo from "@/modules/what-we-do";
 
@@ -17,6 +18,7 @@ export default async function Home({ params: { lang } }: Props) {
       <TopHero tHome={tHome} />
       <WhatWeDo tWhatWeDo={tHome.what_we_do} />
       <HowItWorks tHowItWorks={tHome.how_it_works} />
+      <Services />
     </>
   );
 }
