@@ -5,6 +5,7 @@ import { Locale, i18n } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 import Header from "@/components/header/Header";
 import SetAppStore from "@/components/utils/SetAppStore";
+import { Toaster } from "@/components/toaster/Toaster";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default async function RootLayout({
         <Header tHeader={dictionary.default.header} />
         <main className="">{children}</main>
         <SetAppStore locale={lang} countries={dictionary.default.countries} />
+        <Toaster />
       </body>
     </html>
   );
