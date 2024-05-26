@@ -1,5 +1,4 @@
 import { Dictionary } from "@/get-dictionary";
-import NavLink from "./NavLink";
 import NavItems from "./NavItems";
 
 export type NavProps = {

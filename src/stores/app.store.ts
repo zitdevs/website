@@ -1,4 +1,4 @@
-import { Dictionary, getDictionary } from "@/get-dictionary";
+import { Dictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
 import { create } from "zustand";
 
