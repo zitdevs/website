@@ -25,12 +25,7 @@ const PhoneInput = () => {
             className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm"
           >
             {countries.map((country) => (
-              <option
-                key={country}
-                value={country}
-                // defaultChecked={country === "US"}
-                selected={country === "US"}
-              >
+              <option key={country} value={country} selected={country === "US"}>
                 {country}
               </option>
             ))}
