@@ -108,6 +108,29 @@
         },
         "cta": "Join To Waitlist"
       }
+    },
+    "services": {
+      "title": "Innovative Solutions",
+      "subtitle": "for a Digital World",
+      "learnMore": "Learn more",
+      "cards": {
+        "softwareDevelopment": {
+          "title": "Software Development",
+          "description": "We create custom software to meet your business needs, handling the entire development lifecycle from consultation to deployment. Our agile approach ensures flexibility, rapid iterations, and continuous improvement."
+        },
+        "webDevelopment": {
+          "title": "Web Development",
+          "description": "We create responsive websites, develop robust e-commerce platforms, and implement powerful CMS solutions for easy, non-technical content management."
+        },
+        "mobileAppDevelopment": {
+          "title": "Mobile App Development",
+          "description": "We develop high-performance iOS and Android apps with user-centric designs and seamless system integration. We also provide ongoing maintenance and support to ensure smooth operation."
+        },
+        "consultingStrategy": {
+          "title": "Consulting and Strategy",
+          "description": "We provide strategic technology consulting, project management services, and innovation workshops to help you make informed decisions, complete projects efficiently, and drive growth and innovation."
+        }
+      }
     }
   }
 }
