@@ -108,6 +108,29 @@
         },
         "cta": "Únete a la Lista de Espera"
       }
+    },
+    "services": {
+      "title": "Soluciones Innovadoras",
+      "subtitle": "para un Mundo Digital",
+      "learnMore": "Aprender más",
+      "cards": {
+        "softwareDevelopment": {
+          "title": "Desarrollo de Software",
+          "description": "Creamos software personalizado para satisfacer las necesidades de tu negocio, manejando todo el ciclo de desarrollo desde la consulta hasta la implementación. Nuestro enfoque ágil asegura flexibilidad, iteraciones rápidas y mejora continua."
+        },
+        "webDevelopment": {
+          "title": "Desarrollo Web",
+          "description": "Creamos sitios web responsivos, desarrollamos plataformas de comercio electrónico robustas e implementamos potentes soluciones CMS para una gestión de contenido fácil y no técnica."
+        },
+        "mobileAppDevelopment": {
+          "title": "Desarrollo de Apps Móviles",
+          "description": "Desarrollamos aplicaciones de alto rendimiento para iOS y Android con diseños centrados en el usuario e integración fluida con sistemas. También ofrecemos mantenimiento y soporte continuo para asegurar una operación sin problemas."
+        },
+        "consultingStrategy": {
+          "title": "Consultoría y Estrategia",
+          "description": "Ofrecemos consultoría estratégica en tecnología, servicios de gestión de proyectos y talleres de innovación para ayudarte a tomar decisiones informadas, completar proyectos eficientemente y fomentar el crecimiento y la innovación."
+        }
+      }
     }
   }
 }
