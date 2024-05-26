@@ -12,7 +12,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ tHowItWorks }) => {
   return (
     <section id="how-it-works" className="z-10 py-32">
       <div className="container">
-        <h2 className="text-4xl sm:text-5xl font-bold">How It Works</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold">{tHowItWorks.title}</h2>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 px-1 mt-9">
