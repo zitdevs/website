@@ -53,6 +53,61 @@
           "description": "En Zitdevs, valoramos la transparencia y la equidad en todas nuestras interacciones. Aseguramos que los desarrolladores sean compensados justamente por su trabajo y que nuestros clientes reciban servicios honestos y confiables."
         }
       }
+    },
+    "how_it_works": {
+      "title": "Cómo Funciona",
+      "clients": {
+        "title": "Para Clientes",
+        "item": {
+          "contact_us": {
+            "title": "Contáctanos",
+            "description": "Empieza por comunicarte con nosotros a través de nuestro formulario de contacto o correo electrónico. Nos interesa conocer tu proyecto y entender tu visión."
+          },
+          "schedule_call": {
+            "title": "Agenda una Llamada",
+            "description": "Una vez que nos contactes, agendaremos una llamada para discutir tu proyecto en detalle. Esta llamada nos ayuda a comprender el potencial de tu idea y alinearla con nuestra misión en Zitdevs."
+          },
+          "project_evaluation": {
+            "title": "Evaluación del Proyecto",
+            "description": "En Zitdevs, nos centramos en proyectos con alto potencial de negocio para que nuestros desarrolladores trabajen en iniciativas atractivas y motivadoras, complementando sus empleos formales."
+          },
+          "project_approval": {
+            "title": "Aprobación del Proyecto",
+            "description": "Después de evaluar tu proyecto, lo aprobaremos si cumple con nuestros criterios. Luego, formamos un equipo dedicado de desarrolladores apasionados por tu idea y listos para llevarla a cabo."
+          },
+          "cost_effective": {
+            "title": "Desarrollo Rentable",
+            "description": "Nuestro modelo nos permite mantener un proceso de desarrollo rentable asegurando un alto nivel de enfoque y compromiso con tu idea. Este enfoque nos ayuda a entregar resultados de calidad sin costos excesivos."
+          }
+        },
+        "cta": "Hablemos"
+      },
+      "zitlancers": {
+        "title": "Para Zitlancers",
+        "item": {
+          "register": {
+            "title": "Regístrate",
+            "description": "Para comenzar a colaborar con nosotros, regístrate en nuestra plataforma (actualmente en desarrollo). Esta plataforma será tu puerta de entrada a una variedad de proyectos emocionantes."
+          },
+          "browse_join": {
+            "title": "Explora Proyectos",
+            "description": "Una vez registrado, puedes explorar los proyectos disponibles y unirte a los que te interesen. Selecciona el número de horas que deseas dedicar cada semana, entre 5 y 15 horas."
+          },
+          "flexible_hours": {
+            "title": "Horas de Trabajo Flexibles",
+            "description": "Tienes la flexibilidad de elegir cuándo y cuánto trabajar cada semana. Tu principal compromiso es cumplir con los plazos del proyecto."
+          },
+          "early_bonus": {
+            "title": "Bonos por Entregas",
+            "description": "Algunos proyectos ofrecen bonos por entregas anticipadas, proporcionando incentivos adicionales por un trabajo puntual y eficiente."
+          },
+          "submit_get_paid": {
+            "title": "Entrega y Recibe tu Pago",
+            "description": "Completa tus tareas dentro del plazo estipulado y entrega tu trabajo. Los pagos se procesan puntualmente en función de las horas trabajadas."
+          }
+        },
+        "cta": "Únete a la Lista de Espera"
+      }
     }
   }
 }

@@ -16,7 +16,7 @@ export default async function Home({ params: { lang } }: Props) {
     <>
       <TopHero tHome={tHome} />
       <WhatWeDo tWhatWeDo={tHome.what_we_do} />
-      <HowItWorks />
+      <HowItWorks tHowItWorks={tHome.how_it_works} />
     </>
   );
 }
