@@ -53,6 +53,61 @@
           "description": "At Zitdevs, we value transparency and fairness in all our dealings. We ensure that developers are fairly compensated for their work and that our clients receive honest and reliable services."
         }
       }
+    },
+    "how_it_works": {
+      "title": "How It Works",
+      "clients": {
+        "title": "For Clients",
+        "item": {
+          "contact_us": {
+            "title": "Contact Us",
+            "description": "Start by reaching out to us through our contact form or email. We’re eager to hear about your project and understand your vision."
+          },
+          "schedule_call": {
+            "title": "Schedule a Call",
+            "description": "Once you contact us, we will schedule a call to discuss your project in detail. This call helps us grasp the potential of your idea and align it with our mission at Zitdevs."
+          },
+          "project_evaluation": {
+            "title": "Project Evaluation",
+            "description": "At Zitdevs, we focus on projects that show great potential as a business. Our goal is to ensure that our developers are engaged in projects that are attractive and motivating, as they often work on these after their formal jobs."
+          },
+          "project_approval": {
+            "title": "Project Approval",
+            "description": "After evaluating your project, we will approve it if it aligns with our criteria. We then assemble a dedicated team of developers who are passionate about your idea and ready to bring it to life."
+          },
+          "cost_effective": {
+            "title": "Cost-Effective Development",
+            "description": "Our model allows us to maintain a cost-effective development process while ensuring a high level of focus and commitment to your idea. This approach helps us deliver quality results without excessive costs."
+          }
+        },
+        "cta": "Let's Talk"
+      },
+      "zitlancers": {
+        "title": "For Zitlancers",
+        "item": {
+          "register": {
+            "title": "Register on Our Platform",
+            "description": "To start collaborating with us, register on our platform (currently in development). This platform will be your gateway to a variety of exciting projects."
+          },
+          "browse_join": {
+            "title": "Browse and Join Projects",
+            "description": "Once registered, you can browse through available projects and join those that interest you. Select the number of hours you wish to dedicate each week, ranging from 5 to 15 hours."
+          },
+          "flexible_hours": {
+            "title": "Flexible Work Hours",
+            "description": "You have the flexibility to choose when and how much you work each week. Your main commitment is to meet the project deadlines."
+          },
+          "early_bonus": {
+            "title": "Early Delivery Bonuses",
+            "description": "Some projects offer bonuses for early delivery, providing additional incentives for timely and efficient work."
+          },
+          "submit_get_paid": {
+            "title": "Submit Work and Get Paid",
+            "description": "Complete your tasks within the stipulated timeline and submit your work. Payments are processed promptly based on the hours worked."
+          }
+        },
+        "cta": "Join To Waitlist"
+      }
     }
   }
 }
