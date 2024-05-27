@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/button/Button";
 import { cn } from "@/lib/utils";
 import ClientForm from "./client-form";
@@ -7,6 +8,7 @@ import { TrashIcon } from "lucide-react";
 import { useContactStore } from "../store/contact.store";
 import { useEffect } from "react";
 import TempForm from "./temp-form";
+import { toast } from "sonner";
 
 const MainForm = () => {
   const {
@@ -19,17 +21,25 @@ const MainForm = () => {
     email,
     firstName,
     lastName,
+    privacyPolicy,
+    setValid,
   } = useContactStore();
 
   useEffect(() => {
     if (!isSubmitting) return;
-    setSubmitting(false);
-  }, [isSubmitting, setSubmitting]);
+    if (!privacyPolicy) {
+      toast.error("You need to accept the privacy policy");
+      setValid(false, "privacy");
+    } else {
+      setValid(true, "privacy");
+    }
+  }, [isSubmitting, privacyPolicy, setSubmitting, setValid]);
 
   useEffect(() => {
-    if (!isValid.main) return;
-    if (userType === "client" && !isValid.client) return;
-    if (userType === "zitlancer" && !isValid.zitlancer) return;
+    if (!isValid.main || !isValid.privacy) return setSubmitting(false);
+    if (userType === "client" && !isValid.client) return setSubmitting(false);
+    if (userType === "zitlancer" && !isValid.zitlancer)
+      return setSubmitting(false);
 
     console.log("Simulating submit", {
       ...data,
@@ -37,7 +47,9 @@ const MainForm = () => {
       firstName,
       lastName,
     });
-  }, [data, email, firstName, isValid, lastName, userType]);
+
+    setSubmitting(false);
+  }, [data, email, firstName, isValid, lastName, setSubmitting, userType]);
 
   return (
     <>

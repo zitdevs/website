@@ -24,6 +24,7 @@ type DefaultContactStoreState = DefaultData & {
     client: boolean;
     zitlancer: boolean;
     main: boolean;
+    privacy: boolean;
   };
 };
 
@@ -49,7 +50,10 @@ type ContactStoreActions = {
   setPrivacyPolicy: (privacyPolicy: boolean) => void;
   setSubmitting: (isSubmitting: boolean) => void;
   clearData: () => void;
-  setValid: (isValid: boolean, type: "client" | "zitlancer" | "main") => void;
+  setValid: (
+    isValid: boolean,
+    type: "client" | "zitlancer" | "main" | "privacy"
+  ) => void;
 };
 
 type ContactStore = ContactStoreState & ContactStoreActions;
@@ -66,6 +70,7 @@ const useContactStore = create<ContactStore>()((set) => ({
     client: false,
     zitlancer: false,
     main: false,
+    privacy: false,
   },
   setValid: (isValid, type) => {
     set((state) => {
@@ -86,7 +91,7 @@ const useContactStore = create<ContactStore>()((set) => ({
   setPrivacyPolicy: (privacyPolicy) => set({ privacyPolicy }),
   setSubmitting: (isSubmitting) => set({ isSubmitting }),
   clearData: () =>
-    set({
+    set((state) => ({
       isSubmitting: false,
       user_type: null,
       firstName: "",
@@ -98,8 +103,9 @@ const useContactStore = create<ContactStore>()((set) => ({
         client: false,
         zitlancer: false,
         main: false,
+        privacy: state.privacyPolicy || false,
       },
-    }),
+    })),
 }));
 
 export { useContactStore };
