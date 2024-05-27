@@ -1,6 +1,6 @@
 "use client";
-import { useEffect } from "react";
-import { useContactStore } from "../store/contact.store";
+import { useEffect, useState } from "react";
+import { ClientStoreState, useContactStore } from "../store/contact.store";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,20 +15,24 @@ import {
 
 const ClientForm = () => {
   const schema = z.object({
-    company: z.string().nonempty("Company is required"),
-    message: z.string().nonempty("Message is required"),
+    company: z.string().min(1, "Company is required"),
+    message: z.string().min(1, "Message is required"),
   });
 
   type ValidationSchemaType = z.infer<typeof schema>;
-
   const form = useForm<ValidationSchemaType>({ resolver: zodResolver(schema) });
+
+  const setClientData = useContactStore((state) => state.setClientData);
   const isSubmitting = useContactStore((state) => state.isSubmitting);
+  const setValid = useContactStore((state) => state.setValid);
 
   useEffect(() => {
-    if (isSubmitting) {
-      form.handleSubmit(console.log)();
-    }
-  }, [form, isSubmitting]);
+    if (isSubmitting) form.handleSubmit(setClientData)();
+  }, [form, isSubmitting, setClientData, setValid]);
+
+  useEffect(() => {
+    setValid(form.formState.isValid, "client");
+  }, [form.formState.isValid, setValid]);
 
   return (
     <Form {...form}>

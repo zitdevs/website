@@ -30,12 +30,15 @@ const ZitLancerForm = () => {
   type ValidationSchemaType = z.infer<typeof schema>;
 
   const form = useForm<ValidationSchemaType>({ resolver: zodResolver(schema) });
+
+  const setZitLancerData = useContactStore((state) => state.setZitLancerData);
   const isSubmitting = useContactStore((state) => state.isSubmitting);
+  const setValid = useContactStore((state) => state.setValid);
 
   useEffect(() => {
     if (isSubmitting) {
-      form.handleSubmit((e) => {
-        if (e.mainSkill === "other" && !e.otherSkill) {
+      form.handleSubmit((data) => {
+        if (data.mainSkill === "other" && !data.otherSkill) {
           form.setError("otherSkill", {
             type: "manual",
             message: "Other skill is required",
@@ -43,10 +46,18 @@ const ZitLancerForm = () => {
           return;
         }
 
-        console.log(e);
+        setZitLancerData({
+          mainSkill: data.mainSkill,
+          otherSkill: data.otherSkill || "",
+          country: "",
+        });
       })();
     }
-  }, [form, isSubmitting]);
+  }, [form, isSubmitting, setValid, setZitLancerData]);
+
+  useEffect(() => {
+    setValid(form.formState.isValid, "zitlancer");
+  }, [form.formState.isValid, setValid]);
 
   return (
     <Form {...form}>
