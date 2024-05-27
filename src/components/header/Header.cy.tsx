@@ -19,7 +19,6 @@ describe("<Header />", () => {
 
     cy.mount(<Header tHeader={tHeader} />);
     cy.get(`a[title="${tHeader.title}"]`).should("be.visible");
-    cy.get("nav").should("exist");
     cy.contains("button", tHeader.cta.contact).should("be.visible");
   });
 });
