@@ -61,8 +61,8 @@ const ClientForm: React.FC<ClientFormProps> = ({ tClientForm }) => {
   return (
     <>
       <Form {...form}>
-        <form className="col-span-2">
-          <div className="sm:col-span-2">
+        <form className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+          <div className="col-span-2">
             <FormField
               control={form.control}
               name="company"
@@ -85,7 +85,7 @@ const ClientForm: React.FC<ClientFormProps> = ({ tClientForm }) => {
               )}
             />
           </div>
-          <div className="sm:col-span-2">
+          <div className="col-span-2">
             <FormField
               control={form.control}
               name="message"

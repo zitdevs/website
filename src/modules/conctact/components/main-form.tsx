@@ -112,7 +112,7 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
       <TempForm tTempForm={tContact.temp_form} />
       <div className="mx-auto max-w-xl mt-6">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 ">
-          <div className="sm:col-span-2">
+          <div className="col-span-2">
             <label
               htmlFor="last-name"
               className="block text-sm font-semibold leading-6 text-gray-900"
