@@ -1,5 +1,7 @@
+"use client";
 import { Dictionary } from "@/get-dictionary";
 import { Side } from "./components/side";
+import { useContactStore } from "../conctact/store/contact.store";
 
 export type HowItWorksProps = {
   tHowItWorks: Dictionary["home"]["how_it_works"];
@@ -8,6 +10,8 @@ export type HowItWorksProps = {
 const HowItWorks: React.FC<HowItWorksProps> = ({ tHowItWorks }) => {
   const clientItem = tHowItWorks.clients.item;
   const zitlancersItem = tHowItWorks.zitlancers.item;
+
+  const setUserType = useContactStore((state) => state.setUserType);
 
   return (
     <section id="how-it-works" className="z-10 py-32">
@@ -22,7 +26,12 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ tHowItWorks }) => {
           title={tHowItWorks.clients.title}
           cta={{
             text: tHowItWorks.clients.cta,
-            href: "#contact",
+            onClick: () => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              });
+              setUserType("client");
+            },
           }}
           items={[
             {
@@ -58,7 +67,12 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ tHowItWorks }) => {
           title={tHowItWorks.zitlancers.title}
           cta={{
             text: tHowItWorks.zitlancers.cta,
-            href: "#contact",
+            onClick: () => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              });
+              setUserType("zitlancer");
+            },
           }}
           items={[
             {

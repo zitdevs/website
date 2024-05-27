@@ -1,11 +1,10 @@
 import { Button } from "@/components/button/Button";
-import LinkI18n from "@/components/i18nLink";
 import { DynamicIcon, DynamicIconProps } from "@/components/icons/dynamic";
 import { cn } from "@/lib/utils";
 
 export type CTA = {
   text: string;
-  href: string;
+  onClick?: () => void;
 };
 
 export type Item = {
@@ -82,9 +81,9 @@ export const Side: React.FC<SideProps> = ({
               className="mt-4 px-10"
               size="sm"
               variant={variant === "left" ? "default" : "secondary"}
-              asChild
+              onClick={cta.onClick}
             >
-              <LinkI18n href={cta.href}>{cta.text}</LinkI18n>
+              {cta.text}
             </Button>
           )}
         </div>
