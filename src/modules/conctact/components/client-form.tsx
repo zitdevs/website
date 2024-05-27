@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import { ClientStoreState, useContactStore } from "../store/contact.store";
+import { useEffect } from "react";
+import { useContactStore } from "../store/contact.store";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,11 +12,24 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/form/Form";
+import { Dictionary } from "@/get-dictionary";
 
-const ClientForm = () => {
+export type ClientFormProps = {
+  tClientForm: Dictionary["home"]["contact"]["client_form"];
+};
+
+const ClientForm: React.FC<ClientFormProps> = ({ tClientForm }) => {
   const schema = z.object({
-    company: z.string().min(1, "Company is required"),
-    message: z.string().min(1, "Message is required"),
+    company: z
+      .string({
+        required_error: tClientForm.placeholders.company,
+      })
+      .min(1, tClientForm.placeholders.company),
+    message: z
+      .string({
+        required_error: tClientForm.placeholders.message,
+      })
+      .min(1, tClientForm.placeholders.message),
   });
 
   type ValidationSchemaType = z.infer<typeof schema>;
@@ -44,7 +57,8 @@ const ClientForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Company <span className="text-red-500">*</span>
+                  {tClientForm.labels.company}{" "}
+                  <span className="text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
                   <input
@@ -66,7 +80,8 @@ const ClientForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Message <span className="text-red-500">*</span>
+                  {tClientForm.labels.message}{" "}
+                  <span className="text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
                   <textarea

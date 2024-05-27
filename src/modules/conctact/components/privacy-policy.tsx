@@ -1,13 +1,17 @@
 "use client";
 import { Field, Label, Switch } from "@headlessui/react";
-import { useState } from "react";
 import { useContactStore } from "../store/contact.store";
+import { Dictionary } from "@/get-dictionary";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const PrivacyPolicy = () => {
+export type PrivacyPolicyProps = {
+  tPricyPolicy: Dictionary["home"]["contact"]["privacy_policy"];
+};
+
+const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ tPricyPolicy }) => {
   const setPrivacyPolicy = useContactStore((state) => state.setPrivacyPolicy);
   const privacyPolicy = useContactStore((state) => state.privacyPolicy);
 
@@ -22,7 +26,7 @@ const PrivacyPolicy = () => {
             "flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           )}
         >
-          <span className="sr-only">Agree to policies</span>
+          <span className="sr-only">{tPricyPolicy.sr_only}</span>
           <span
             aria-hidden="true"
             className={classNames(
@@ -33,9 +37,9 @@ const PrivacyPolicy = () => {
         </Switch>
       </div>
       <Label className="text-sm leading-6 text-gray-600">
-        By selecting this, you agree to our{" "}
+        {tPricyPolicy.label}{" "}
         <a href="#" className="font-semibold text-indigo-600">
-          privacy&nbsp;policy
+          {tPricyPolicy.link_text}
         </a>
         .
       </Label>

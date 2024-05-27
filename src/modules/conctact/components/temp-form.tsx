@@ -12,12 +12,29 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useContactStore } from "../store/contact.store";
+import { Dictionary } from "@/get-dictionary";
 
-const TempForm = () => {
+export type TempFormProps = {
+  tTempForm: Dictionary["home"]["contact"]["temp_form"];
+};
+
+const TempForm: React.FC<TempFormProps> = ({ tTempForm }) => {
   const schema = z.object({
-    email: z.string().email("Invalid email address"),
-    first_name: z.string().nonempty("First name is required"),
-    last_name: z.string().nonempty("Last name is required"),
+    email: z
+      .string({
+        required_error: tTempForm.validation_messages.email_required,
+      })
+      .email({ message: tTempForm.validation_messages.email_invalid }),
+    first_name: z
+      .string({
+        required_error: tTempForm.validation_messages.first_name_required,
+      })
+      .min(1, tTempForm.validation_messages.first_name_required),
+    last_name: z
+      .string({
+        required_error: tTempForm.validation_messages.last_name_required,
+      })
+      .min(1, tTempForm.validation_messages.last_name_required),
   });
 
   type ValidationSchemaType = z.infer<typeof schema>;
@@ -61,7 +78,8 @@ const TempForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  First name <span className="text-red-500">*</span>
+                  {tTempForm.labels.first_name}{" "}
+                  <span className="text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
                   <input
@@ -81,7 +99,8 @@ const TempForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Last Name <span className="text-red-500">*</span>
+                  {tTempForm.labels.last_name}{" "}
+                  <span className="text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
                   <input
@@ -102,7 +121,8 @@ const TempForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Email <span className="text-red-500">*</span>
+                    {tTempForm.labels.email}{" "}
+                    <span className="text-red-500">*</span>
                   </FormLabel>
                   <FormControl>
                     <input

@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/select/Select";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useContactStore } from "../store/contact.store";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -20,10 +20,19 @@ import {
   FormMessage,
   FormDescription,
 } from "@/components/form/Form";
+import { Dictionary } from "@/get-dictionary";
 
-const ZitLancerForm = () => {
+export type ZitLancerFormProps = {
+  tZitLancerForm: Dictionary["home"]["contact"]["zitlancer_form"];
+};
+
+const ZitLancerForm: React.FC<ZitLancerFormProps> = ({ tZitLancerForm }) => {
   const schema = z.object({
-    mainSkill: z.string().min(0, "Main skill is required"),
+    mainSkill: z
+      .string({
+        required_error: tZitLancerForm.validation_messages.main_skill_required,
+      })
+      .min(0, tZitLancerForm.validation_messages.main_skill_required),
     otherSkill: z.string().optional(),
   });
 
@@ -41,7 +50,7 @@ const ZitLancerForm = () => {
         if (data.mainSkill === "other" && !data.otherSkill) {
           form.setError("otherSkill", {
             type: "manual",
-            message: "Other skill is required",
+            message: tZitLancerForm.validation_messages.other_skill_required,
           });
           return;
         }
@@ -53,7 +62,13 @@ const ZitLancerForm = () => {
         });
       })();
     }
-  }, [form, isSubmitting, setValid, setZitLancerData]);
+  }, [
+    form,
+    isSubmitting,
+    setValid,
+    setZitLancerData,
+    tZitLancerForm.validation_messages.other_skill_required,
+  ]);
 
   useEffect(() => {
     setValid(form.formState.isValid, "zitlancer");
@@ -70,7 +85,8 @@ const ZitLancerForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>
-                  Main Skill <span className="text-red-500">*</span>
+                  {tZitLancerForm.labels.main_skill}{" "}
+                  <span className="text-red-500">*</span>
                 </FormLabel>
                 <Select
                   onValueChange={field.onChange}
@@ -78,21 +94,19 @@ const ZitLancerForm = () => {
                 >
                   <FormControl>
                     <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select your main skill" />
+                      <SelectValue
+                        placeholder={tZitLancerForm.placeholders.main_skill}
+                      />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="software-dev">
-                      Software Development
-                    </SelectItem>
-                    <SelectItem value="web-dev">Web Development</SelectItem>
-                    <SelectItem value="mobile-dev">
-                      Mobile Development
-                    </SelectItem>
-                    <SelectItem value="design">Design</SelectItem>
-                    <SelectItem value="marketing">Marketing</SelectItem>
-                    <SelectItem value="data-science">Data Science</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    {Object.entries(tZitLancerForm.skills).map(
+                      ([key, value]) => (
+                        <SelectItem key={key} value={key}>
+                          {value}
+                        </SelectItem>
+                      )
+                    )}
                   </SelectContent>
                 </Select>
                 <FormMessage />
@@ -109,7 +123,8 @@ const ZitLancerForm = () => {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>
-                    Other Skill <span className="text-red-500">*</span>
+                    {tZitLancerForm.labels.main_skill}{" "}
+                    <span className="text-red-500">*</span>
                   </FormLabel>
                   <FormControl>
                     <input
@@ -120,7 +135,7 @@ const ZitLancerForm = () => {
                     />
                   </FormControl>
                   <FormDescription>
-                    Please specify your main skill
+                    {tZitLancerForm.placeholders.other_skill}
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

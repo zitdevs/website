@@ -9,8 +9,15 @@ import { useContactStore } from "../store/contact.store";
 import { useEffect } from "react";
 import TempForm from "./temp-form";
 import { toast } from "sonner";
+import { Dictionary } from "@/get-dictionary";
 
-const MainForm = () => {
+export type MainFormProps = {
+  tContact: Dictionary["home"]["contact"];
+};
+
+const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
+  const { main_form: tMainForm } = tContact;
+
   const {
     data,
     isSubmitting,
@@ -34,7 +41,7 @@ const MainForm = () => {
     if (validValues.length < 2) return setSubmitting(false);
 
     if (!privacyPolicy) {
-      toast.error("You need to accept the privacy policy");
+      toast.error(tMainForm.privacy_policy_error);
       setValid(false, "privacy");
     } else {
       setValid(true, "privacy");
@@ -42,10 +49,10 @@ const MainForm = () => {
   }, [
     isSubmitting,
     isValid,
-    isValid.main,
     privacyPolicy,
     setSubmitting,
     setValid,
+    tMainForm.privacy_policy_error,
   ]);
 
   useEffect(() => {
@@ -64,7 +71,7 @@ const MainForm = () => {
 
   return (
     <>
-      <TempForm />
+      <TempForm tTempForm={tContact.temp_form} />
       <div className="mx-auto max-w-xl mt-6">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 ">
           <div className="sm:col-span-2">
@@ -73,10 +80,10 @@ const MainForm = () => {
               className="block text-sm font-semibold leading-6 text-gray-900"
             >
               {userType === null ? (
-                "Who are you?"
+                tMainForm.label.default
               ) : (
                 <div className="flex items-center gap-2 font-semibold">
-                  <span>I&apos;m want to be</span>
+                  <span>{tMainForm.label.selected.prefix}</span>
                   <div
                     className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-all"
                     onClick={(e) => {
@@ -85,10 +92,10 @@ const MainForm = () => {
                     }}
                   >
                     <span>(</span>
-                    <span>Remove Selection</span>
+                    <span>{tMainForm.label.selected.remove}</span>
                     <TrashIcon
-                      aria-label="Remove selection"
                       className="text-red-500 size-4"
+                      aria-hidden="true"
                     />
                     <span>)</span>
                   </div>
@@ -113,7 +120,7 @@ const MainForm = () => {
                   setUserType("client");
                 }}
               >
-                Client
+                {tMainForm.buttons.client}
               </Button>
               <Button
                 className={cn("w-full block", {
@@ -127,13 +134,19 @@ const MainForm = () => {
                   setUserType("zitlancer");
                 }}
               >
-                Zitlancer
+                {tMainForm.buttons.zitlancer}
               </Button>
             </div>
           </div>
-          {userType === "client" && <ClientForm />}
-          {userType === "zitlancer" && <ZitLancerForm />}
-          {userType !== null && <PrivacyPolicy />}
+          {userType === "client" && (
+            <ClientForm tClientForm={tContact.client_form} />
+          )}
+          {userType === "zitlancer" && (
+            <ZitLancerForm tZitLancerForm={tContact.zitlancer_form} />
+          )}
+          {userType !== null && (
+            <PrivacyPolicy tPricyPolicy={tContact.privacy_policy} />
+          )}
           <div className="mt-10 col-span-2">
             {userType !== null && (
               <Button
@@ -145,7 +158,9 @@ const MainForm = () => {
                   setSubmitting(true);
                 }}
               >
-                {userType === "client" ? "Let's talk" : "Join To Waitlist"}
+                {userType === "client"
+                  ? tMainForm.submit_messages.client
+                  : tMainForm.submit_messages.zitlancer}
               </Button>
             )}
           </div>

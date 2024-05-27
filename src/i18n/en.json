@@ -377,6 +377,79 @@
           "description": "We provide strategic technology consulting, project management services, and innovation workshops to help you make informed decisions, complete projects efficiently, and drive growth and innovation."
         }
       }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Ready to start a project? Drop us a line.",
+      "main_form": {
+        "label": {
+          "default": "Who are you?",
+          "selected": {
+            "prefix": "I'm want to be",
+            "remove": "Remove Selection"
+          }
+        },
+        "buttons": {
+          "client": "Client",
+          "zitlancer": "Zitlancer"
+        },
+        "privacy_policy_error": "You need to accept the privacy policy",
+        "submit_messages": {
+          "client": "Let's talk",
+          "zitlancer": "Join To Waitlist"
+        }
+      },
+      "client_form": {
+        "labels": {
+          "company": "Company",
+          "message": "Message"
+        },
+        "placeholders": {
+          "company": "Company is required",
+          "message": "Message is required"
+        }
+      },
+      "privacy_policy": {
+        "label": "By selecting this, you agree to our",
+        "link_text": "privacy policy",
+        "sr_only": "Agree to policies"
+      },
+      "zitlancer_form": {
+        "labels": {
+          "main_skill": "Main Skill",
+          "other_skill": "Other Skill"
+        },
+        "placeholders": {
+          "main_skill": "Select your main skill",
+          "other_skill": "Please specify your main skill"
+        },
+        "validation_messages": {
+          "main_skill_required": "Main skill is required",
+          "other_skill_required": "Other skill is required"
+        },
+        "skills": {
+          "software_dev": "Software Development",
+          "web_dev": "Web Development",
+          "mobile_dev": "Mobile Development",
+          "design": "Design",
+          "marketing": "Marketing",
+          "data_science": "Data Science",
+          "other": "Other"
+        }
+      },
+      "temp_form": {
+        "labels": {
+          "first_name": "First name",
+          "last_name": "Last name",
+          "email": "Email"
+        },
+        "validation_messages": {
+          "email_invalid": "Invalid email address",
+          "email_required": "Email is required",
+          "first_name_required": "First name is required",
+          "last_name_required": "Last name is required"
+        }
+      }
     }
   }
 }

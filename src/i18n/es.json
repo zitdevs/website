@@ -377,6 +377,79 @@
           "description": "Ofrecemos consultoría estratégica en tecnología, servicios de gestión de proyectos y talleres de innovación para ayudarte a tomar decisiones informadas, completar proyectos eficientemente y fomentar el crecimiento y la innovación."
         }
       }
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "subtitle": "¿Listo para empezar un proyecto? Escríbenos.",
+      "main_form": {
+        "label": {
+          "default": "¿Quién eres?",
+          "selected": {
+            "prefix": "Quiero ser",
+            "remove": "Eliminar selección"
+          }
+        },
+        "buttons": {
+          "client": "Cliente",
+          "zitlancer": "Zitlancer"
+        },
+        "privacy_policy_error": "Debes aceptar la política de privacidad",
+        "submit_messages": {
+          "client": "Hablemos",
+          "zitlancer": "Únete a la Lista de Espera"
+        }
+      },
+      "client_form": {
+        "labels": {
+          "company": "Empresa",
+          "message": "Mensaje"
+        },
+        "placeholders": {
+          "company": "Empresa es obligatorio",
+          "message": "Mensaje es obligatorio"
+        }
+      },
+      "privacy_policy": {
+        "label": "Al seleccionar esto, aceptas nuestra",
+        "link_text": "política de privacidad",
+        "sr_only": "Aceptar políticas"
+      },
+      "zitlancer_form": {
+        "labels": {
+          "main_skill": "Habilidad Principal",
+          "other_skill": "Otra Habilidad"
+        },
+        "placeholders": {
+          "main_skill": "Selecciona tu habilidad principal",
+          "other_skill": "Por favor especifica tu habilidad principal"
+        },
+        "validation_messages": {
+          "main_skill_required": "Habilidad principal es obligatoria",
+          "other_skill_required": "Otra habilidad es obligatoria"
+        },
+        "skills": {
+          "software_dev": "Desarrollo de Software",
+          "web_dev": "Desarrollo Web",
+          "mobile_dev": "Desarrollo Móvil",
+          "design": "Diseño",
+          "marketing": "Marketing",
+          "data_science": "Ciencia de Datos",
+          "other": "Otra"
+        }
+      },
+      "temp_form": {
+        "labels": {
+          "first_name": "Nombre",
+          "last_name": "Apellido",
+          "email": "Correo Electrónico"
+        },
+        "validation_messages": {
+          "email_invalid": "Dirección de correo electrónico no válida",
+          "email_required": "Correo electrónico es obligatorio",
+          "first_name_required": "Nombre es obligatorio",
+          "last_name_required": "Apellido es obligatorio"
+        }
+      }
     }
   }
 }

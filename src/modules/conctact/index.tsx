@@ -1,8 +1,13 @@
 "use client";
 
+import { Dictionary } from "@/get-dictionary";
 import MainForm from "./components/main-form";
 
-export default function Contact() {
+export type ContactProps = {
+  tContact: Dictionary["home"]["contact"];
+};
+
+export const Contact: React.FC<ContactProps> = ({ tContact }) => {
   return (
     <div className="isolate from-[#F5F8FF] to-[#dbe5ff] bg-gradient-to-br px-6 py-24 sm:py-32 lg:px-8 mt-14 min-h-screen">
       <div
@@ -19,13 +24,13 @@ export default function Contact() {
       </div>
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Contact us
+          {tContact.title}
         </h2>
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          Ready to start a project? Drop us a line.
+          {tContact.subtitle}
         </p>
       </div>
-      <MainForm />
+      <MainForm tContact={tContact} />
     </div>
   );
-}
+};
