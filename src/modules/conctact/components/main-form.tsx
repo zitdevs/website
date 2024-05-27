@@ -32,6 +32,7 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
     privacyPolicy,
     setValid,
     clearData,
+    captcha,
   } = useContactStore();
 
   useEffect(() => {
@@ -65,13 +66,16 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
 
     if (userType == "client") {
       (async () => {
-        const res = await clientContactAction({
-          email,
-          firstName,
-          lastName,
-          message: data.message,
-          company: data.company,
-        });
+        const res = await clientContactAction(
+          {
+            email,
+            firstName,
+            lastName,
+            message: data.message,
+            company: data.company,
+          },
+          captcha
+        );
 
         if (res.error) {
           toast.error(res.error);
@@ -91,6 +95,7 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
       lastName,
     });
   }, [
+    captcha,
     clearData,
     data,
     email,

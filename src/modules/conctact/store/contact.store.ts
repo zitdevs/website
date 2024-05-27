@@ -26,6 +26,7 @@ type DefaultContactStoreState = DefaultData & {
     main: boolean;
     privacy: boolean;
   };
+  captcha: string;
 };
 
 export type ContactStoreState =
@@ -54,6 +55,7 @@ type ContactStoreActions = {
     isValid: boolean,
     type: "client" | "zitlancer" | "main" | "privacy"
   ) => void;
+  setCaptcha: (captcha: string) => void;
 };
 
 type ContactStore = ContactStoreState & ContactStoreActions;
@@ -66,12 +68,14 @@ const useContactStore = create<ContactStore>()((set) => ({
   email: "",
   data: null,
   privacyPolicy: false,
+  captcha: "",
   isValid: {
     client: false,
     zitlancer: false,
     main: false,
     privacy: false,
   },
+  setCaptcha: (captcha) => set({ captcha }),
   setValid: (isValid, type) => {
     set((state) => {
       state.isValid[type] = isValid;
