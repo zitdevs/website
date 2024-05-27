@@ -33,7 +33,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
         <CardTitle className="font-semibold">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-[#8987A1] text-sm">{description}</p>
+        <p className="text-[#5a5967] text-sm">{description}</p>
 
         {!!image && (
           <Image
