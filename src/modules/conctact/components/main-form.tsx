@@ -123,7 +123,7 @@ const MainForm = () => {
           {userType === "client" && <ClientForm />}
           {userType === "zitlancer" && <ZitLancerForm />}
           {userType !== null && <PrivacyPolicy />}
-          <div className="mt-10">
+          <div className="mt-10 col-span-2">
             {userType !== null && (
               <Button
                 variant={userType === "client" ? "secondary" : "default"}
