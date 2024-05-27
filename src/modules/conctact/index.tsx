@@ -9,7 +9,10 @@ export type ContactProps = {
 
 export const Contact: React.FC<ContactProps> = ({ tContact }) => {
   return (
-    <div className="isolate from-[#F5F8FF] to-[#dbe5ff] bg-gradient-to-br px-6 py-24 sm:py-32 lg:px-8 mt-14 min-h-screen">
+    <section
+      className="isolate from-[#F5F8FF] to-[#dbe5ff] bg-gradient-to-br px-6 py-24 sm:py-32 lg:px-8 mt-14 min-h-screen"
+      id="contact"
+    >
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -31,6 +34,6 @@ export const Contact: React.FC<ContactProps> = ({ tContact }) => {
         </p>
       </div>
       <MainForm tContact={tContact} />
-    </div>
+    </section>
   );
 };
