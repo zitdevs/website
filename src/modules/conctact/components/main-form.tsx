@@ -27,13 +27,26 @@ const MainForm = () => {
 
   useEffect(() => {
     if (!isSubmitting) return;
+    const validValues = Object.keys(isValid).filter(
+      (key) => isValid[key as keyof typeof isValid]
+    );
+
+    if (validValues.length < 2) return setSubmitting(false);
+
     if (!privacyPolicy) {
       toast.error("You need to accept the privacy policy");
       setValid(false, "privacy");
     } else {
       setValid(true, "privacy");
     }
-  }, [isSubmitting, privacyPolicy, setSubmitting, setValid]);
+  }, [
+    isSubmitting,
+    isValid,
+    isValid.main,
+    privacyPolicy,
+    setSubmitting,
+    setValid,
+  ]);
 
   useEffect(() => {
     if (!isValid.main || !isValid.privacy) return setSubmitting(false);
@@ -47,8 +60,6 @@ const MainForm = () => {
       firstName,
       lastName,
     });
-
-    setSubmitting(false);
   }, [data, email, firstName, isValid, lastName, setSubmitting, userType]);
 
   return (
