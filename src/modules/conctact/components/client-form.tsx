@@ -1,61 +1,85 @@
 "use client";
-import { useEffect, useState } from "react";
-import { ClientStoreState, useContactStore } from "../store/contact.store";
+import { useEffect } from "react";
+import { useContactStore } from "../store/contact.store";
+import { z } from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/form/Form";
 
 const ClientForm = () => {
-  const setClientData = useContactStore((state) => state.setClientData);
-  const isSubmitting = useContactStore((state) => state.isSubmitting);
-
-  const [data, setData] = useState<ClientStoreState>({
-    company: "",
-    message: "",
+  const schema = z.object({
+    company: z.string().nonempty("Company is required"),
+    message: z.string().nonempty("Message is required"),
   });
 
+  type ValidationSchemaType = z.infer<typeof schema>;
+
+  const form = useForm<ValidationSchemaType>({ resolver: zodResolver(schema) });
+  const isSubmitting = useContactStore((state) => state.isSubmitting);
+
   useEffect(() => {
-    if (isSubmitting) setClientData(data);
-  }, [data, isSubmitting, setClientData]);
+    if (isSubmitting) {
+      form.handleSubmit(console.log)();
+    }
+  }, [form, isSubmitting]);
 
   return (
-    <>
-      <div className="sm:col-span-2">
-        <label
-          htmlFor="company"
-          className="block text-sm font-semibold leading-6 text-gray-900"
-        >
-          Company <span className="text-red-500">*</span>
-        </label>
-        <div className="mt-2.5">
-          <input
-            type="text"
+    <Form {...form}>
+      <form className="col-span-2">
+        <div className="sm:col-span-2">
+          <FormField
+            control={form.control}
             name="company"
-            id="company"
-            autoComplete="organization"
-            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
-            onChange={(e) => setData({ ...data, company: e.target.value })}
-            value={data.company}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>
+                  Company <span className="text-red-500">*</span>
+                </FormLabel>
+                <FormControl>
+                  <input
+                    type="text"
+                    autoComplete="organization"
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
         </div>
-      </div>
-      <div className="sm:col-span-2">
-        <label
-          htmlFor="message"
-          className="block text-sm font-semibold leading-6 text-gray-900"
-        >
-          Message <span className="text-red-500">*</span>
-        </label>
-        <div className="mt-2.5">
-          <textarea
+        <div className="sm:col-span-2">
+          <FormField
+            control={form.control}
             name="message"
-            id="message"
-            onChange={(e) => setData({ ...data, message: e.target.value })}
-            value={data.message}
-            autoComplete="off"
-            rows={4}
-            className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6 min-h-10 max-h-28"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>
+                  Message <span className="text-red-500">*</span>
+                </FormLabel>
+                <FormControl>
+                  <textarea
+                    id="message"
+                    autoComplete="off"
+                    rows={4}
+                    className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6 min-h-10 max-h-28"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
           />
         </div>
-      </div>
-    </>
+      </form>
+    </Form>
   );
 };
 
