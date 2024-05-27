@@ -396,7 +396,8 @@
         "privacy_policy_error": "Debes aceptar la política de privacidad",
         "submit_messages": {
           "client": "Hablemos",
-          "zitlancer": "Únete a la Lista de Espera"
+          "zitlancer": "Únete a la Lista de Espera",
+          "success": "¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto."
         }
       },
       "client_form": {

@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import TempForm from "./temp-form";
 import { toast } from "sonner";
 import { Dictionary } from "@/get-dictionary";
+import { clientContactAction } from "../actions/client.action";
 
 export type MainFormProps = {
   tContact: Dictionary["home"]["contact"];
@@ -30,6 +31,7 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
     lastName,
     privacyPolicy,
     setValid,
+    clearData,
   } = useContactStore();
 
   useEffect(() => {
@@ -61,13 +63,44 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
     if (userType === "zitlancer" && !isValid.zitlancer)
       return setSubmitting(false);
 
+    if (userType == "client") {
+      (async () => {
+        const res = await clientContactAction({
+          email,
+          firstName,
+          lastName,
+          message: data.message,
+          company: data.company,
+        });
+
+        if (res.error) {
+          toast.error(res.error);
+          return setSubmitting(false);
+        }
+
+        toast.success(tMainForm.submit_messages.success);
+        clearData();
+        return setSubmitting(false);
+      })();
+    }
+
     console.log("Simulating submit", {
       ...data,
       email,
       firstName,
       lastName,
     });
-  }, [data, email, firstName, isValid, lastName, setSubmitting, userType]);
+  }, [
+    clearData,
+    data,
+    email,
+    firstName,
+    isValid,
+    lastName,
+    setSubmitting,
+    tMainForm.submit_messages.success,
+    userType,
+  ]);
 
   return (
     <>
