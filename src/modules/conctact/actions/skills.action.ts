@@ -17,7 +17,11 @@ export const getSkillsByLocale = async ({ locale }: SkillParams) => {
     throw new Error("Language not found");
   }
 
-  const record = await pb.collection("skills").getList(1, 100, {
+  const record = await pb.collection("skills").getList<{
+    lang: string;
+    name: string;
+    id: string;
+  }>(1, 100, {
     filter: `lang = "${lang?.id}"`,
   });
 
