@@ -427,7 +427,9 @@
         "placeholders": {
           "main_skill": "Selecciona tu habilidad principal",
           "other_skill": "Por favor especifica tu habilidad principal",
-          "country": "Selecciona tu país"
+          "country": "Selecciona tu país",
+          "country_search": "Buscar país",
+          "country_select": "Seleccionar país"
         },
         "validation_messages": {
           "main_skill_required": "Habilidad principal es obligatoria",

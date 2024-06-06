@@ -427,7 +427,9 @@
         "placeholders": {
           "main_skill": "Select your main skill",
           "other_skill": "Please specify your main skill",
-          "country": "Select your country"
+          "country": "Select your country",
+          "country_search": "Search for a country",
+          "country_select": "Select a country"
         },
         "validation_messages": {
           "main_skill_required": "Main skill is required",

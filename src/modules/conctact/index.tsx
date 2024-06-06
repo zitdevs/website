@@ -1,13 +1,15 @@
 import { Dictionary } from "@/get-dictionary";
 import MainForm from "./components/main-form";
 import { getSkillsByLocale } from "./actions/skills.action";
+import { Locale } from "@/i18n-config";
 
 export type ContactProps = {
   tContact: Dictionary["home"]["contact"];
+  lang: Locale;
 };
 
-export const Contact: React.FC<ContactProps> = async ({ tContact }) => {
-  const skills = await getSkillsByLocale({ locale: "en" });
+export const Contact: React.FC<ContactProps> = async ({ tContact, lang }) => {
+  const skills = await getSkillsByLocale({ locale: lang });
 
   return (
     <section

@@ -122,8 +122,10 @@ const ZitLancerForm: React.FC<ZitLancerFormProps> = ({
                     value={field.value}
                     isSearchable
                     isClearable
-                    searchInputPlaceholder="Search country"
-                    placeholder="Select country"
+                    searchInputPlaceholder={
+                      tZitLancerForm.placeholders.country_search
+                    }
+                    placeholder={tZitLancerForm.placeholders.country_select}
                   />
                   <FormMessage />
                 </FormItem>

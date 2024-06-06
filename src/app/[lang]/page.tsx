@@ -20,7 +20,7 @@ export default async function Home({ params: { lang } }: Props) {
       <WhatWeDo tWhatWeDo={tHome.what_we_do} />
       <HowItWorks tHowItWorks={tHome.how_it_works} />
       <Services tServices={tHome.services} />
-      <Contact tContact={tHome.contact} />
+      <Contact tContact={tHome.contact} lang={lang} />
     </>
   );
 }
