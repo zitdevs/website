@@ -397,7 +397,10 @@
         "submit_messages": {
           "client": "Let's talk",
           "zitlancer": "Join To Waitlist",
-          "success": "Thank you for contacting us. We will get back to you shortly."
+          "success": "Thank you for contacting us. We will get back to you shortly.",
+          "zitlancer_success": "Thank you for joining our waitlist. We will notify you once our platform is ready.",
+          "error": "An error occurred. Please try again later.",
+          "existing_email": "This email is already registered"
         }
       },
       "client_form": {
@@ -418,23 +421,20 @@
       "zitlancer_form": {
         "labels": {
           "main_skill": "Main Skill",
-          "other_skill": "Other Skill"
+          "other_skill": "Other Skill",
+          "country": "Country"
         },
         "placeholders": {
           "main_skill": "Select your main skill",
-          "other_skill": "Please specify your main skill"
+          "other_skill": "Please specify your main skill",
+          "country": "Select your country"
         },
         "validation_messages": {
           "main_skill_required": "Main skill is required",
-          "other_skill_required": "Other skill is required"
+          "other_skill_required": "Other skill is required",
+          "country_required": "Country is required"
         },
         "skills": {
-          "software_dev": "Software Development",
-          "web_dev": "Web Development",
-          "mobile_dev": "Mobile Development",
-          "design": "Design",
-          "marketing": "Marketing",
-          "data_science": "Data Science",
           "other": "Other"
         }
       },

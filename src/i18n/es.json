@@ -396,8 +396,11 @@
         "privacy_policy_error": "Debes aceptar la política de privacidad",
         "submit_messages": {
           "client": "Hablemos",
-          "zitlancer": "Únete a la Lista de Espera",
-          "success": "¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto."
+          "zitlancer": "Únete a la lista de espera",
+          "success": "Gracias por contactarnos. Nos pondremos en contacto contigo en breve.",
+          "zitlancer_success": "Gracias por unirte a nuestra lista de espera. Te notificaremos cuando nuestra plataforma esté lista.",
+          "error": "Ocurrió un error. Por favor, inténtalo de nuevo más tarde.",
+          "existing_email": "Este correo electrónico ya está registrado"
         }
       },
       "client_form": {
@@ -418,23 +421,20 @@
       "zitlancer_form": {
         "labels": {
           "main_skill": "Habilidad Principal",
-          "other_skill": "Otra Habilidad"
+          "other_skill": "Otra Habilidad",
+          "country": "País"
         },
         "placeholders": {
           "main_skill": "Selecciona tu habilidad principal",
-          "other_skill": "Por favor especifica tu habilidad principal"
+          "other_skill": "Por favor especifica tu habilidad principal",
+          "country": "Selecciona tu país"
         },
         "validation_messages": {
           "main_skill_required": "Habilidad principal es obligatoria",
-          "other_skill_required": "Otra habilidad es obligatoria"
+          "other_skill_required": "Otra habilidad es obligatoria",
+          "country_required": "País es obligatorio"
         },
         "skills": {
-          "software_dev": "Desarrollo de Software",
-          "web_dev": "Desarrollo Web",
-          "mobile_dev": "Desarrollo Móvil",
-          "design": "Diseño",
-          "marketing": "Marketing",
-          "data_science": "Ciencia de Datos",
           "other": "Otra"
         }
       },

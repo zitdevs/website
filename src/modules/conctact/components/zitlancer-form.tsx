@@ -21,12 +21,24 @@ import {
   FormDescription,
 } from "@/components/form/Form";
 import { Dictionary } from "@/get-dictionary";
+import { ListResult } from "pocketbase";
+import { useAppStore } from "@/stores/app.store";
+import ReactSelect from "react-tailwindcss-select";
+import getUnicodeFlagIcon from "country-flag-icons/unicode";
 
 export type ZitLancerFormProps = {
   tZitLancerForm: Dictionary["home"]["contact"]["zitlancer_form"];
+  skills: ListResult<{
+    lang: string;
+    name: string;
+    id: string;
+  }>;
 };
 
-const ZitLancerForm: React.FC<ZitLancerFormProps> = ({ tZitLancerForm }) => {
+const ZitLancerForm: React.FC<ZitLancerFormProps> = ({
+  tZitLancerForm,
+  skills,
+}) => {
   const schema = z.object({
     mainSkill: z
       .string({
@@ -34,6 +46,15 @@ const ZitLancerForm: React.FC<ZitLancerFormProps> = ({ tZitLancerForm }) => {
       })
       .min(0, tZitLancerForm.validation_messages.main_skill_required),
     otherSkill: z.string().optional(),
+    country: z.object(
+      {
+        value: z.string().min(0),
+        label: z.string(),
+      },
+      {
+        required_error: tZitLancerForm.validation_messages.country_required,
+      }
+    ),
   });
 
   type ValidationSchemaType = z.infer<typeof schema>;
@@ -43,6 +64,8 @@ const ZitLancerForm: React.FC<ZitLancerFormProps> = ({ tZitLancerForm }) => {
   const setZitLancerData = useContactStore((state) => state.setZitLancerData);
   const isSubmitting = useContactStore((state) => state.isSubmitting);
   const setValid = useContactStore((state) => state.setValid);
+
+  const countries = useAppStore((state) => state.countries);
 
   useEffect(() => {
     if (isSubmitting) {
@@ -58,7 +81,7 @@ const ZitLancerForm: React.FC<ZitLancerFormProps> = ({ tZitLancerForm }) => {
         setZitLancerData({
           mainSkill: data.mainSkill,
           otherSkill: data.otherSkill || "",
-          country: "",
+          country: data.country.value,
         });
       })();
     }
@@ -78,7 +101,37 @@ const ZitLancerForm: React.FC<ZitLancerFormProps> = ({ tZitLancerForm }) => {
     <Form {...form}>
       <form className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         <div className="sm:col-span-2">
-          <div className="mt-2.5"></div>
+          {countries && (
+            <FormField
+              control={form.control}
+              name="country"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    {tZitLancerForm.labels.country}{" "}
+                    <span className="text-red-500">*</span>
+                  </FormLabel>
+                  <ReactSelect
+                    options={Object.keys(countries).map((key) => ({
+                      value: key,
+                      label: `${getUnicodeFlagIcon(key)} ${countries[key as keyof typeof countries]}`,
+                    }))}
+                    primaryColor="text-primary"
+                    classNames={{}}
+                    {...field}
+                    value={field.value}
+                    isSearchable
+                    isClearable
+                    searchInputPlaceholder="Search country"
+                    placeholder="Select country"
+                  />
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
+        </div>
+        <div className="sm:col-span-2">
           <FormField
             control={form.control}
             name="mainSkill"
@@ -100,13 +153,14 @@ const ZitLancerForm: React.FC<ZitLancerFormProps> = ({ tZitLancerForm }) => {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    {Object.entries(tZitLancerForm.skills).map(
-                      ([key, value]) => (
-                        <SelectItem key={key} value={key}>
-                          {value}
-                        </SelectItem>
-                      )
-                    )}
+                    {skills.items.map((item) => (
+                      <SelectItem key={item.id} value={item.id}>
+                        {item.name}
+                      </SelectItem>
+                    ))}
+                    <SelectItem value="other">
+                      {tZitLancerForm.skills.other}
+                    </SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />

@@ -11,12 +11,20 @@ import TempForm from "./temp-form";
 import { toast } from "sonner";
 import { Dictionary } from "@/get-dictionary";
 import { clientContactAction } from "../actions/client.action";
+import { ListResult } from "pocketbase";
+import { saveToWaitlist } from "../actions/zitlanser.action";
+import { useAppStore } from "@/stores/app.store";
 
 export type MainFormProps = {
   tContact: Dictionary["home"]["contact"];
+  skills: ListResult<{
+    lang: string;
+    name: string;
+    id: string;
+  }>;
 };
 
-const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
+const MainForm: React.FC<MainFormProps> = ({ tContact, skills }) => {
   const { main_form: tMainForm } = tContact;
 
   const {
@@ -34,6 +42,8 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
     clearData,
     captcha,
   } = useContactStore();
+
+  const locale = useAppStore((state) => state.locale);
 
   useEffect(() => {
     if (!isSubmitting) return;
@@ -88,12 +98,32 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
       })();
     }
 
-    console.log("Simulating submit", {
-      ...data,
-      email,
-      firstName,
-      lastName,
-    });
+    if (userType == "zitlancer") {
+      if (!data) return;
+      (async () => {
+        const res = await saveToWaitlist({
+          name: firstName,
+          last_name: lastName,
+          email,
+          country: data.country,
+          main_skill: data.mainSkill !== "other" ? data.mainSkill : undefined,
+          other_skill: data.otherSkill,
+          locale,
+        });
+
+        if (res.error) {
+          if (res.error === "email_already_exists")
+            toast.error(tMainForm.submit_messages.existing_email);
+          else toast.error(res.error);
+
+          return setSubmitting(false);
+        }
+
+        toast.success(tMainForm.submit_messages.zitlancer_success);
+        clearData();
+        return setSubmitting(false);
+      })();
+    }
   }, [
     captcha,
     clearData,
@@ -180,7 +210,10 @@ const MainForm: React.FC<MainFormProps> = ({ tContact }) => {
             <ClientForm tClientForm={tContact.client_form} />
           )}
           {userType === "zitlancer" && (
-            <ZitLancerForm tZitLancerForm={tContact.zitlancer_form} />
+            <ZitLancerForm
+              tZitLancerForm={tContact.zitlancer_form}
+              skills={skills}
+            />
           )}
           {userType !== null && (
             <PrivacyPolicy tPricyPolicy={tContact.privacy_policy} />

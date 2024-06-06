@@ -1,13 +1,14 @@
-"use client";
-
 import { Dictionary } from "@/get-dictionary";
 import MainForm from "./components/main-form";
+import { getSkillsByLocale } from "./actions/skills.action";
 
 export type ContactProps = {
   tContact: Dictionary["home"]["contact"];
 };
 
-export const Contact: React.FC<ContactProps> = ({ tContact }) => {
+export const Contact: React.FC<ContactProps> = async ({ tContact }) => {
+  const skills = await getSkillsByLocale({ locale: "en" });
+
   return (
     <section
       className="isolate from-[#F5F8FF] to-[#dbe5ff] bg-gradient-to-br px-6 py-24 sm:py-32 lg:px-8 mt-14 min-h-screen"
@@ -33,7 +34,7 @@ export const Contact: React.FC<ContactProps> = ({ tContact }) => {
           {tContact.subtitle}
         </p>
       </div>
-      <MainForm tContact={tContact} />
+      <MainForm tContact={tContact} skills={skills} />
     </section>
   );
 };
