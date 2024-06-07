@@ -9,6 +9,8 @@ export type ServicesProps = {
 };
 
 export const Services: React.FC<ServicesProps> = ({ tServices }) => {
+  const learnMore = false;
+
   return (
     <section
       id="services"
@@ -19,7 +21,7 @@ export const Services: React.FC<ServicesProps> = ({ tServices }) => {
           {tServices.title}
           <span className="text-slate-400"> {tServices.subtitle}</span>
         </h2>
-        <Button>{tServices.learnMore}</Button>
+        {learnMore && <Button>{tServices.learnMore}</Button>}
       </div>
       <div className="mb-4 grid grid-cols-12 gap-4">
         <ItemCard
