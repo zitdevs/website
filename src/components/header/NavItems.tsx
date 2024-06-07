@@ -11,13 +11,13 @@ const NavItems: React.FC<NavItemsProps> = ({ tNav }) => {
       <NavLink href="/" className="font-semibold">
         {tNav.home}
       </NavLink>
-      <NavLink href="#" className="font-semibold">
+      <NavLink href="#what-we-do" className="font-semibold">
         {tNav.about}
       </NavLink>
-      <NavLink href="#" className="font-semibold">
+      <NavLink href="#how-it-works" className="font-semibold">
         {tNav.how_it_works}
       </NavLink>
-      <NavLink href="#" className="font-semibold">
+      <NavLink href="#services" className="font-semibold">
         {tNav.services}
       </NavLink>
     </>

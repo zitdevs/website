@@ -1,3 +1,5 @@
+"use client";
+
 import { LogoIcon } from "../icons/logo";
 import Link from "next/link";
 import Nav from "./Nav";
@@ -17,7 +19,11 @@ const Header: React.FC<HeaderProps> = ({ tHeader }) => {
       </Link>
       <Nav tNav={tHeader.menu} />
       <div className="flex gap-4 items-center ">
-        <Button variant="secondary" className="px-8 hidden min-[390px]:block">
+        <Button
+          variant="secondary"
+          className="px-8 hidden min-[390px]:block"
+          href="#contact"
+        >
           {tHeader.cta.contact}
         </Button>
         <Menu tNav={tHeader.menu} tCta={tHeader.cta} />

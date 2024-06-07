@@ -3,6 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 import ClientMotion from "./ClientMotion";
+import Link from "next/link";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
@@ -38,6 +39,7 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   ref?: React.ForwardedRef<HTMLButtonElement>;
+  href?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -46,13 +48,16 @@ const Button: React.FC<ButtonProps> = ({
   size,
   asChild = false,
   ref,
+  href,
   ...props
 }) => {
-  const Comp = asChild ? Slot : ClientMotion;
+  const Comp = asChild ? Slot : ((href ? Link : ClientMotion) as any);
+
   return (
     <Comp
       className={cn(buttonVariants({ variant, size, className }))}
       ref={ref}
+      href={href}
       {...props}
     />
   );

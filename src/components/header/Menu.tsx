@@ -27,6 +27,7 @@ const Menu: React.FC<MenuProps> = ({ tNav, tCta }) => {
               <Button
                 variant="secondary"
                 className="px-8 min-[390px]:hidden w-full"
+                href="#contact"
               >
                 {tCta.contact}
               </Button>
