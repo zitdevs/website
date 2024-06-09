@@ -1,6 +1,7 @@
 "use client";
 import { Dictionary } from "@/get-dictionary";
 import { Field, Label, Switch } from "@headlessui/react";
+import Link from "next/link";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -39,13 +40,18 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({
             />
           </Switch>
         </div>
-        <Label className="text-sm leading-6 text-gray-600">
-          {tPricyPolicy.label}{" "}
-          <a href="#" className="font-semibold text-indigo-600">
+        <div>
+          <Label className="text-sm leading-6 text-gray-600">
+            {tPricyPolicy.label}
+          </Label>{" "}
+          <Link
+            target="_blank"
+            href="/legal/privacy-policy"
+            className="font-semibold text-indigo-600"
+          >
             {tPricyPolicy.link_text}
-          </a>
-          .
-        </Label>
+          </Link>
+        </div>
       </Field>
     </>
   );

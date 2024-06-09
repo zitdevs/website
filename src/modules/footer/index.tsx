@@ -53,13 +53,8 @@ export const Footer: React.FC<FooterProps> = ({ tNav, tFooter }) => {
           <div className="mt-4 sm:mt-0">
             <ul className="items-center justify-center mt-1 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
               <li>
-                <Link href={"/privacy-policy"} className="underline">
+                <Link href={"/legal/privacy-policy"} className="underline">
                   {tFooter.links.privacy}
-                </Link>
-              </li>
-              <li>
-                <Link href={"/terms-and-conditions"} className="underline">
-                  {tFooter.links.terms}
                 </Link>
               </li>
             </ul>

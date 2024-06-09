@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
-import "./globals.css";
 import { Locale, i18n } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
 import Header from "@/components/header/Header";
