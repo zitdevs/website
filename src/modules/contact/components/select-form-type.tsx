@@ -68,6 +68,7 @@ const SelectFormType: React.FC<MainFormProps> = ({
                   setUserType("client");
                   form.setValue("type", "client");
                 }}
+                id="client-button"
               >
                 {tMainForm.buttons.client}
               </Button>
@@ -83,6 +84,7 @@ const SelectFormType: React.FC<MainFormProps> = ({
                   setUserType("zitlancer");
                   form.setValue("type", "zitlancer");
                 }}
+                id="zitlancer-button"
               >
                 {tMainForm.buttons.zitlancer}
               </Button>
