@@ -11,6 +11,7 @@ describe("<Header />", () => {
         services: "Services",
         home: "Home",
         how_it_works: "How it works",
+        contact: "Contact",
       },
       cta: {
         contact: "Contact",
