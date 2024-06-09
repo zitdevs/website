@@ -171,7 +171,6 @@ const MainForm: React.FC<MainFormProps> = ({ tContact, skills }) => {
         </form>
         {isFormVisible && (
           <>
-            {console.log("isCaptchaVisible")}
             <Captcha
               ref={captchaRef}
               size="invisible"
