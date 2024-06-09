@@ -1,7 +1,44 @@
 {
   "default": {
     "metadata": {
-      "title": "ZitDevs: Passionate about building great software"
+      "title": "ZitDevs: Passionate about building great software",
+      "description": "ZitDevs is a forward-thinking development company dedicated to transforming big ideas into impactful technological solutions. We focus on creating products and services that make a significant difference, reaching and benefiting millions rather than just generating revenue. At ZitDevs, innovation and social impact are at the heart of everything we do.",
+      "keywords": [
+        "ZitDevs",
+        "Software Development",
+        "Web Development",
+        "Mobile App Development",
+        "Consulting and Strategy",
+        "Innovative Solutions",
+        "Digital World",
+        "Custom Software",
+        "E-commerce Platforms",
+        "IT Services",
+        "Digital Transformation",
+        "Technology Consulting",
+        "Project Management",
+        "Innovation Workshops",
+        "Agile Approach",
+        "Community-Focused Development",
+        "Flexible Work Hours"
+      ],
+      "openGraph": {
+        "og:title": "Zitdevs - Leading the Way in Software Development",
+        "og:description": "Discover innovative software development solutions with Zitdevs. Our services include custom software development, web and mobile application development, and IT consulting.",
+        "og:image": "https://zitdevs.com/images/og-image.jpeg",
+        "og:url": "https://zitdevs.com",
+        "og:type": "website",
+        "og:site_name": "Zitdevs",
+        "og:locale": "en_US"
+      },
+      "twitterCard": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Zitdevs - Leading the Way in Software Development",
+        "twitter:description": "Discover innovative software development solutions with Zitdevs. Our services include custom software development, web and mobile application development, and IT consulting.",
+        "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+        "twitter:site": "@zitdevs",
+        "twitter:creator": "@zitdevs"
+      }
     },
     "header": {
       "title": "ZitDevs",

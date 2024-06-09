@@ -23,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ tHeader }) => {
           variant="secondary"
           className="px-8 hidden min-[390px]:block"
           href="#contact"
+          size="sm"
         >
           {tHeader.cta.contact}
         </Button>

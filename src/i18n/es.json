@@ -1,7 +1,44 @@
 {
   "default": {
     "metadata": {
-      "title": "ZitDevs: Apasionados por crear software de calidad"
+      "title": "ZitDevs: Apasionados por crear software de calidad",
+      "description": "ZitDevs es una empresa de desarrollo visionaria dedicada a transformar grandes ideas en soluciones tecnológicas impactantes. Nos enfocamos en crear productos y servicios que marquen una diferencia significativa, alcanzando y beneficiando a millones en lugar de solo generar ingresos. En ZitDevs, la innovación y el impacto social están en el corazón de todo lo que hacemos.",
+      "keywords": [
+        "ZitDevs",
+        "Desarrollo de Software",
+        "Desarrollo Web",
+        "Desarrollo de Aplicaciones Móviles",
+        "Consultoría y Estrategia",
+        "Soluciones Innovadoras",
+        "Mundo Digital",
+        "Software Personalizado",
+        "Plataformas de Comercio Electrónico",
+        "Servicios de TI",
+        "Transformación Digital",
+        "Consultoría Tecnológica",
+        "Gestión de Proyectos",
+        "Talleres de Innovación",
+        "Enfoque Ágil",
+        "Desarrollo Comunitario",
+        "Horarios de Trabajo Flexibles"
+      ],
+      "openGraph": {
+        "og:title": "Zitdevs - Líderes en Desarrollo de Software",
+        "og:description": "Descubre soluciones innovadoras de desarrollo de software con Zitdevs. Nuestros servicios incluyen desarrollo de software personalizado, desarrollo de aplicaciones web y móviles, y consultoría en TI.",
+        "og:image": "https://zitdevs.com/images/og-image.jpeg",
+        "og:url": "https://zitdevs.com",
+        "og:type": "website",
+        "og:site_name": "Zitdevs",
+        "og:locale": "es_ES"
+      },
+      "twitterCard": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Zitdevs - Líderes en Desarrollo de Software",
+        "twitter:description": "Descubre soluciones innovadoras de desarrollo de software con Zitdevs. Nuestros servicios incluyen desarrollo de software personalizado, desarrollo de aplicaciones web y móviles, y consultoría en TI.",
+        "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+        "twitter:site": "@zitdevs",
+        "twitter:creator": "@zitdevs"
+      }
     },
     "header": {
       "title": "ZitDevs",

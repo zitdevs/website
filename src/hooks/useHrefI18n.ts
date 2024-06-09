@@ -8,5 +8,5 @@ export const useHrefI18n = (_href: string) => {
     [_href, locale]
   );
 
-  return href;
+  return [href, locale];
 };

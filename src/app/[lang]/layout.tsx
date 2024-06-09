@@ -21,6 +21,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: metadata.title,
+    description: metadata.description,
+    keywords: metadata.keywords,
+    robots: "index, follow",
+    authors: [
+      {
+        name: "ZitDevs",
+      },
+    ],
+    openGraph: {
+      type: "website",
+      title: metadata.openGraph["og:title"],
+      description: metadata.openGraph["og:description"],
+      locale: lang,
+      siteName: metadata.openGraph["og:site_name"],
+      url: metadata.openGraph["og:url"],
+      images: [metadata.openGraph["og:image"]],
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: metadata.twitterCard["twitter:site"],
+      title: metadata.twitterCard["twitter:title"],
+      description: metadata.twitterCard["twitter:description"],
+      images: [metadata.twitterCard["twitter:image"]],
+    },
   };
 }
 
