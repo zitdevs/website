@@ -440,7 +440,7 @@
           "other": "Other"
         }
       },
-      "temp_form": {
+      "base_form": {
         "labels": {
           "first_name": "First name",
           "last_name": "Last name",

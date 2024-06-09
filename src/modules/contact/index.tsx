@@ -13,8 +13,8 @@ export const Contact: React.FC<ContactProps> = async ({ tContact, lang }) => {
 
   return (
     <section
-      className="isolate from-[#F5F8FF] to-[#dbe5ff] bg-gradient-to-br px-6 py-24 sm:py-32 lg:px-8 mt-14 min-h-screen"
       id="contact"
+      className="isolate from-[#F5F8FF] to-[#dbe5ff] bg-gradient-to-br px-6 py-24 sm:py-32 lg:px-8 mt-14 min-h-screen"
     >
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
