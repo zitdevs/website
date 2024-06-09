@@ -1,19 +1,24 @@
 "use client";
-import { Button } from "@/components/button/Button";
-import { cn } from "@/lib/utils";
-import ClientForm from "./client-form";
-import ZitLancerForm from "./zitlancer-form";
-import PrivacyPolicy from "./privacy-policy";
-import { TrashIcon } from "lucide-react";
-import { useContactStore } from "../store/contact.store";
-import { useEffect } from "react";
-import TempForm from "./temp-form";
-import { toast } from "sonner";
+import { Form } from "@/components/form/Form";
 import { Dictionary } from "@/get-dictionary";
-import { clientContactAction } from "../actions/client.action";
-import { ListResult } from "pocketbase";
-import { saveToWaitlist } from "../actions/zitlanser.action";
 import { useAppStore } from "@/stores/app.store";
+import useIntersectionObserver from "@/utils/useIntersectionObserver";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ListResult } from "pocketbase";
+import { useRef, useState } from "react";
+import Captcha from "react-google-recaptcha";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
+import { clientContactAction } from "../actions/client.action";
+import { saveToWaitlist } from "../actions/zitlanser.action";
+import { mainFormSchema } from "../schema/main-form";
+import BaseForm from "./base-form";
+import ClientForm from "./client-form";
+import PrivacyPolicy from "./privacy-policy";
+import SelectFormType from "./select-form-type";
+import SubmitButton from "./submit-button";
+import ZitLancerForm from "./zitlancer-form";
 
 export type MainFormProps = {
   tContact: Dictionary["home"]["contact"];
@@ -26,61 +31,38 @@ export type MainFormProps = {
 
 const MainForm: React.FC<MainFormProps> = ({ tContact, skills }) => {
   const { main_form: tMainForm } = tContact;
-
-  const {
-    data,
-    isSubmitting,
-    setSubmitting,
-    user_type: userType,
-    setUserType,
-    isValid,
-    email,
-    firstName,
-    lastName,
-    privacyPolicy,
-    setValid,
-    clearData,
-    captcha,
-  } = useContactStore();
+  const schema = mainFormSchema({ tContact });
+  type ValidationSchemaTypeDefualt = z.infer<typeof schema>;
+  const form = useForm<ValidationSchemaTypeDefualt>({
+    resolver: zodResolver(schema),
+  });
 
   const locale = useAppStore((state) => state.locale);
+  const [userType, setUserType] = useState<string | null>(null);
+  const [privacyPolicy, setPrivacyPolicy] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [formRef, isFormVisible] = useIntersectionObserver({
+    threshold: 0.1,
+  });
 
-  useEffect(() => {
-    if (!isSubmitting) return;
-    const validValues = Object.keys(isValid).filter(
-      (key) => isValid[key as keyof typeof isValid]
-    );
+  const captchaRef = useRef<Captcha>(null);
 
-    if (validValues.length < 2) return setSubmitting(false);
+  const onSubmit = (data: ValidationSchemaTypeDefualt) => {
+    setSubmitting(true);
 
     if (!privacyPolicy) {
       toast.error(tMainForm.privacy_policy_error);
-      setValid(false, "privacy");
-    } else {
-      setValid(true, "privacy");
+      setSubmitting(false);
     }
-  }, [
-    isSubmitting,
-    isValid,
-    privacyPolicy,
-    setSubmitting,
-    setValid,
-    tMainForm.privacy_policy_error,
-  ]);
 
-  useEffect(() => {
-    if (!isValid.main || !isValid.privacy) return setSubmitting(false);
-    if (userType === "client" && !isValid.client) return setSubmitting(false);
-    if (userType === "zitlancer" && !isValid.zitlancer)
-      return setSubmitting(false);
-
-    if (userType == "client") {
-      (async () => {
+    (async () => {
+      if (data.type == "client") {
+        const captcha = (await captchaRef.current?.executeAsync()) || "";
         const res = await clientContactAction(
           {
-            email,
-            firstName,
-            lastName,
+            email: data.email,
+            firstName: data.first_name,
+            lastName: data.last_name,
             message: data.message,
             company: data.company,
           },
@@ -93,19 +75,23 @@ const MainForm: React.FC<MainFormProps> = ({ tContact, skills }) => {
         }
 
         toast.success(tMainForm.submit_messages.success);
-        clearData();
+        form.reset({
+          email: "",
+          first_name: "",
+          last_name: "",
+          message: "",
+          company: "",
+        });
+        setUserType(null);
         return setSubmitting(false);
-      })();
-    }
+      }
 
-    if (userType == "zitlancer") {
-      if (!data) return;
-      (async () => {
+      if (data.type == "zitlancer") {
         const res = await saveToWaitlist({
-          name: firstName,
-          last_name: lastName,
-          email,
-          country: data.country,
+          name: data.first_name,
+          last_name: data.last_name,
+          email: data.email,
+          country: data.country.value,
           main_skill: data.mainSkill !== "other" ? data.mainSkill : undefined,
           other_skill: data.otherSkill,
           locale,
@@ -120,123 +106,80 @@ const MainForm: React.FC<MainFormProps> = ({ tContact, skills }) => {
         }
 
         toast.success(tMainForm.submit_messages.zitlancer_success);
-        clearData();
+        form.reset({
+          email: "",
+          first_name: "",
+          last_name: "",
+          message: "",
+          company: "",
+        });
+        setUserType(null);
         return setSubmitting(false);
-      })();
-    }
-  }, [
-    captcha,
-    clearData,
-    data,
-    email,
-    firstName,
-    isValid,
-    lastName,
-    setSubmitting,
-    tMainForm.submit_messages.success,
-    userType,
-  ]);
+      }
+    })();
+  };
 
   return (
     <>
-      <TempForm tTempForm={tContact.temp_form} />
-      <div className="mx-auto max-w-xl mt-6">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 ">
-          <div className="col-span-2">
-            <label
-              htmlFor="last-name"
-              className="block text-sm font-semibold leading-6 text-gray-900"
-            >
-              {userType === null ? (
-                tMainForm.label.default
-              ) : (
-                <div className="flex items-center gap-2 font-semibold">
-                  <span>{tMainForm.label.selected.prefix}</span>
-                  <div
-                    className="flex items-center gap-1 cursor-pointer hover:text-secondary transition-all"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setUserType(null);
-                    }}
-                  >
-                    <span>(</span>
-                    <span>{tMainForm.label.selected.remove}</span>
-                    <TrashIcon
-                      className="text-red-500 size-4"
-                      aria-hidden="true"
-                    />
-                    <span>)</span>
-                  </div>
-                </div>
-              )}
-            </label>
-            <div
-              className={cn("mt-2.5", {
-                "grid grid-cols-2": userType === null,
-              })}
-            >
-              <Button
-                className={cn("w-full block", {
-                  selected: userType === "client",
-                  hidden: userType !== "client" && userType !== null,
-                  "rounded-r-none": userType === null,
-                })}
-                variant="secondary"
-                disabled={userType === "client"}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setUserType("client");
-                }}
-              >
-                {tMainForm.buttons.client}
-              </Button>
-              <Button
-                className={cn("w-full block", {
-                  selected: userType === "zitlancer",
-                  hidden: userType !== "zitlancer" && userType !== null,
-                  "rounded-l-none": userType === null,
-                })}
-                disabled={userType === "zitlancer"}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setUserType("zitlancer");
-                }}
-              >
-                {tMainForm.buttons.zitlancer}
-              </Button>
-            </div>
-          </div>
-          {userType === "client" && (
-            <ClientForm tClientForm={tContact.client_form} />
-          )}
-          {userType === "zitlancer" && (
-            <ZitLancerForm
-              tZitLancerForm={tContact.zitlancer_form}
-              skills={skills}
-            />
-          )}
+      <Form {...form}>
+        <form
+          className="mx-auto mt-16 max-w-xl sm:mt-20"
+          onSubmit={form.handleSubmit(onSubmit)}
+          ref={formRef}
+        >
+          <BaseForm tBaseForm={tContact.base_form} form={form as any} />
+          <SelectFormType
+            tMainForm={tMainForm}
+            userType={userType}
+            setUserType={setUserType}
+            form={form as any}
+          />
           {userType !== null && (
-            <PrivacyPolicy tPricyPolicy={tContact.privacy_policy} />
+            <div className="mx-auto max-w-xl mt-6">
+              <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                {userType === "client" && (
+                  <ClientForm
+                    tClientForm={tContact.client_form}
+                    form={form as any}
+                  />
+                )}
+                {userType === "zitlancer" && (
+                  <ZitLancerForm
+                    tZitLancerForm={tContact.zitlancer_form}
+                    form={form as any}
+                    skills={skills}
+                  />
+                )}
+                {userType !== null && (
+                  <PrivacyPolicy
+                    tPricyPolicy={tContact.privacy_policy}
+                    privacyPolicy={privacyPolicy}
+                    setPrivacyPolicy={setPrivacyPolicy}
+                  />
+                )}
+                {userType !== null && (
+                  <SubmitButton
+                    userType={userType}
+                    submitting={submitting}
+                    setSubmitting={setSubmitting}
+                    tSubmit={tMainForm.submit_messages}
+                  />
+                )}
+              </div>
+            </div>
           )}
-          <div className="mt-10 col-span-2">
-            {userType !== null && (
-              <Button
-                variant={userType === "client" ? "secondary" : "default"}
-                className="w-full"
-                disabled={isSubmitting}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setSubmitting(true);
-                }}
-              >
-                {userType === "client"
-                  ? tMainForm.submit_messages.client
-                  : tMainForm.submit_messages.zitlancer}
-              </Button>
-            )}
-          </div>
-        </div>
-      </div>
+        </form>
+        {isFormVisible && (
+          <>
+            {console.log("isCaptchaVisible")}
+            <Captcha
+              ref={captchaRef}
+              size="invisible"
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA!}
+            />
+          </>
+        )}
+      </Form>
     </>
   );
 };
