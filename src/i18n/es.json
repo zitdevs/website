@@ -46,10 +46,18 @@
         "home": "Inicio",
         "about": "Nosotros",
         "how_it_works": "Cómo funciona",
-        "services": "Servicios"
+        "services": "Servicios",
+        "contact": "Contacto"
       },
       "cta": {
         "contact": "Contacto"
+      }
+    },
+    "footer": {
+      "description": "En ZitDevs, priorizamos los grandes sueños sobre las grandes ganancias, esforzándonos por crear ideas que impacten a millones en lugar de perseguir millones en ingresos.",
+      "links": {
+        "privacy": "Política de Privacidad",
+        "terms": "Términos del Servicio"
       }
     },
     "countries": {

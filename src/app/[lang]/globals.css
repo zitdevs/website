@@ -74,3 +74,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.grecaptcha-badge {
+  opacity: 0.18;
+}
+
+.grecaptcha-badge:hover {
+  opacity: 1;
+}

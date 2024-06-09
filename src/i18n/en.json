@@ -46,10 +46,18 @@
         "home": "Home",
         "about": "About",
         "how_it_works": "How it works",
-        "services": "Services"
+        "services": "Services",
+        "contact": "Contact"
       },
       "cta": {
         "contact": "Contact"
+      }
+    },
+    "footer": {
+      "description": "At ZitDevs, we prioritize big dreams over big profits, striving to create ideas that impact millions rather than chasing millions in revenue.",
+      "links": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
       }
     },
     "countries": {

@@ -6,6 +6,7 @@ import { getDictionary } from "@/get-dictionary";
 import Header from "@/components/header/Header";
 import SetAppStore from "@/components/utils/SetAppStore";
 import { Toaster } from "@/components/toaster/Toaster";
+import { Footer } from "@/modules/footer";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -63,6 +64,12 @@ export default async function RootLayout({
       <body className={raleway.className + " bg-[#F5F8FF]"}>
         <Header tHeader={dictionary.default.header} />
         <main className="">{children}</main>
+        <Footer
+          tFooter={dictionary.default.footer}
+          tNav={dictionary.default.header.menu}
+        />
+
+        {/* Extras */}
         <SetAppStore locale={lang} countries={dictionary.default.countries} />
         <Toaster />
       </body>
