@@ -1,7 +1,7 @@
 "use client";
 import { Dictionary } from "@/get-dictionary";
 import { Side } from "./components/side";
-import { useContactStore } from "../conctact/store/contact.store";
+import { useContactStore } from "../contact/store/contact.store";
 
 export type HowItWorksProps = {
   tHowItWorks: Dictionary["home"]["how_it_works"];

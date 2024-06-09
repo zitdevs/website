@@ -1,6 +1,6 @@
 import { getDictionary } from "@/get-dictionary";
 import { Locale } from "@/i18n-config";
-import { Contact } from "@/modules/conctact";
+import { Contact } from "@/modules/contact";
 import HowItWorks from "@/modules/how-it-works";
 import { Services } from "@/modules/services";
 import TopHero from "@/modules/top-hero";
