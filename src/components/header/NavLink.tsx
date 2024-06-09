@@ -12,7 +12,7 @@ export type NavLinkProps = LinkI18nProps;
 const NavLink: React.FC<NavLinkProps> = ({ href: _href, ...props }) => {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
-  const href = useHrefI18n(_href);
+  const [href] = useHrefI18n(_href);
 
   useEffect(() => {
     setIsActive(pathname === href);
