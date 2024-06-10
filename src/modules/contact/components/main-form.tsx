@@ -52,7 +52,7 @@ const MainForm: React.FC<MainFormProps> = ({ tContact, skills }) => {
 
     if (!privacyPolicy) {
       toast.error(tMainForm.privacy_policy_error);
-      setSubmitting(false);
+      return setSubmitting(false);
     }
 
     (async () => {
