@@ -1,7 +1,7 @@
 import NavLink from "@/components/header/NavLink";
 import { LogoIcon } from "@/components/icons/logo";
 import { Dictionary } from "@/get-dictionary";
-import { Instagram, Linkedin, Github } from "lucide-react";
+import { Instagram, Linkedin, Github, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export type FooterProps = {
@@ -76,11 +76,11 @@ export const Footer: React.FC<FooterProps> = ({ tNav, tFooter }) => {
               </li>
               <li className="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-secondary hover:text-white">
                 <a
-                  href="https://github.com/zitdevs"
+                  href="https://x.com/zitdevs"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Github size={20} />
+                  <Twitter size={20} />
                 </a>
               </li>
               <li className="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-secondary hover:text-white">
@@ -90,6 +90,15 @@ export const Footer: React.FC<FooterProps> = ({ tNav, tFooter }) => {
                   rel="noreferrer"
                 >
                   <Instagram size={20} />
+                </a>
+              </li>
+              <li className="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-secondary hover:text-white">
+                <a
+                  href="https://github.com/zitdevs"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Github size={20} />
                 </a>
               </li>
             </ul>
