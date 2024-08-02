@@ -13,7 +13,7 @@ export const clientContactAction = async (
     message: string;
     company: string;
   },
-  captcha: string
+  captcha: string,
 ) => {
   const params = new URLSearchParams();
   params.append("secret", process.env.RECAPTCHA_SECRET || "");

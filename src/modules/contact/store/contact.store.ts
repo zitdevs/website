@@ -53,7 +53,7 @@ type ContactStoreActions = {
   clearData: () => void;
   setValid: (
     isValid: boolean,
-    type: "client" | "zitlancer" | "main" | "privacy"
+    type: "client" | "zitlancer" | "main" | "privacy",
   ) => void;
   setCaptcha: (captcha: string) => void;
 };

@@ -13,7 +13,7 @@ function getLocale(request: NextRequest): string | undefined {
   const locales: string[] = i18n.locales;
 
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages(
-    locales
+    locales,
   );
 
   const locale = matchLocale(languages, locales, i18n.defaultLocale);
@@ -25,7 +25,8 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+    (locale) =>
+      !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
 
   if (pathnameIsMissingLocale) {
@@ -34,8 +35,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(
       new URL(
         `/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`,
-        request.url
-      )
+        request.url,
+      ),
     );
   }
 }

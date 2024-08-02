@@ -27,7 +27,7 @@ const useIntersectionObserver = ({
           observer.disconnect();
         }
       },
-      { threshold, root, rootMargin }
+      { threshold, root, rootMargin },
     );
 
     if (ref.current) {

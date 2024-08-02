@@ -5,7 +5,7 @@ export const useHrefI18n = (_href: string) => {
   const locale = useAppStore((state) => state.locale);
   const href = useMemo(
     () => (_href === "/" ? `/${locale}` : `/${locale}${_href}`),
-    [_href, locale]
+    [_href, locale],
   );
 
   return [href, locale];
