@@ -23,7 +23,7 @@ type FormFieldContextValue<
 };
 
 const FormFieldContext = createContext<FormFieldContextValue>(
-  {} as FormFieldContextValue
+  {} as FormFieldContextValue,
 );
 
 const FormField = <
@@ -67,7 +67,7 @@ type FormItemContextValue = {
 };
 
 const FormItemContext = createContext<FormItemContextValue>(
-  {} as FormItemContextValue
+  {} as FormItemContextValue,
 );
 
 const FormItem: React.FC<React.ComponentPropsWithRef<"div">> = ({
@@ -140,7 +140,7 @@ const FormDescription: React.FC<React.ComponentPropsWithRef<"p">> = ({
 
 const FormMessage: React.FC<React.ComponentPropsWithRef<"p">> = (
   { className, children, ...props },
-  ref
+  ref,
 ) => {
   const { error, formMessageId } = useFormField();
   const body = error ? String(error?.message) : children;
