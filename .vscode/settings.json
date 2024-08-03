@@ -9,11 +9,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "cSpell.words": [
-    "pocketbase",
-    "preline",
-    "Zitdevs",
-    "zitlancer",
-    "zitlancers"
-  ]
+  "cSpell.words": ["pocketbase", "Zitdevs", "zitlancer", "zitlancers"]
 }
