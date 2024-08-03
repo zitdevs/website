@@ -11,7 +11,7 @@ const Card: React.FC<React.ComponentPropsWithRef<"div">> = ({
     ref={ref}
     className={cn(
       "rounded-xl border border-[#2B2B2B]/5 bg-card text-card-foreground shadow-sm",
-      className,
+      className
     )}
     {...props}
   />
@@ -19,7 +19,7 @@ const Card: React.FC<React.ComponentPropsWithRef<"div">> = ({
 
 const CardHeader: React.FC<React.ComponentPropsWithRef<"div">> = (
   { className, ...props },
-  ref,
+  ref
 ) => (
   <div
     ref={ref}
@@ -29,13 +29,13 @@ const CardHeader: React.FC<React.ComponentPropsWithRef<"div">> = (
 );
 const CardTitle: React.FC<React.ComponentPropsWithRef<"div">> = (
   { className, ...props },
-  ref,
+  ref
 ) => (
   <h3
     ref={ref}
     className={cn(
       "text-lg font-semibold leading-none tracking-tight",
-      className,
+      className
     )}
     {...props}
   />
@@ -43,7 +43,7 @@ const CardTitle: React.FC<React.ComponentPropsWithRef<"div">> = (
 
 const CardDescription: React.FC<React.ComponentPropsWithRef<"div">> = (
   { className, ...props },
-  ref,
+  ref
 ) => (
   <p
     ref={ref}
@@ -54,12 +54,12 @@ const CardDescription: React.FC<React.ComponentPropsWithRef<"div">> = (
 
 const CardContent: React.FC<React.ComponentPropsWithRef<"div">> = (
   { className, ...props },
-  ref,
+  ref
 ) => <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 
 const CardFooter: React.FC<React.ComponentPropsWithRef<"div">> = (
   { className, ...props },
-  ref,
+  ref
 ) => (
   <div
     ref={ref}

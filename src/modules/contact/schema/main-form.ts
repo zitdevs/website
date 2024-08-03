@@ -85,7 +85,7 @@ export const mainFormSchema = ({ tContact }: MainFormProps) => {
       {
         required_error:
           tContact.zitlancer_form.validation_messages.country_required,
-      },
+      }
     ),
   });
 
@@ -102,8 +102,7 @@ export const mainFormSchema = ({ tContact }: MainFormProps) => {
               })
               .min(
                 1,
-                tContact.zitlancer_form.validation_messages
-                  .other_skill_required,
+                tContact.zitlancer_form.validation_messages.other_skill_required
               ),
           })
           .safeParse(data).success;
@@ -113,6 +112,6 @@ export const mainFormSchema = ({ tContact }: MainFormProps) => {
     {
       message: tContact.zitlancer_form.validation_messages.other_skill_required,
       path: ["otherSkill"],
-    },
+    }
   );
 };

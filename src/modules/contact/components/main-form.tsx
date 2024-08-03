@@ -66,7 +66,7 @@ const MainForm: React.FC<MainFormProps> = ({ tContact, skills }) => {
             message: data.message,
             company: data.company,
           },
-          captcha,
+          captcha
         );
 
         if (res.error) {
