@@ -29,13 +29,6 @@ export default function Layout({ children }: PropsWithChildren) {
         async
       />
 
-      <Script
-        id="CookieDeclaration"
-        src="https://consent.cookiebot.com/418e3622-e287-4d76-80f9-e43f27e0329f/cd.js"
-        type="text/javascript"
-        async
-      />
-
       <body>{children}</body>
     </html>
   );
