@@ -19,6 +19,23 @@ export default function Layout({ children }: PropsWithChildren) {
           gtag('config', 'G-V28YYZTMPB');
         `}
       </Script>
+
+      <Script
+        id="Cookiebot"
+        src="https://consent.cookiebot.com/uc.js"
+        data-cbid="418e3622-e287-4d76-80f9-e43f27e0329f"
+        data-blockingmode="auto"
+        type="text/javascript"
+        async
+      />
+
+      <Script
+        id="CookieDeclaration"
+        src="https://consent.cookiebot.com/418e3622-e287-4d76-80f9-e43f27e0329f/cd.js"
+        type="text/javascript"
+        async
+      />
+
       <body>{children}</body>
     </html>
   );
