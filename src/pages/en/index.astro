@@ -2,6 +2,7 @@
 import { getI18n } from "../../i18n";
 import { getLangFromUrl } from "../../i18n/utils";
 import Layout from "../../layouts/Layout.astro";
+import HowItWorks from "../../modules/how-it-works/index.astro";
 import TopHero from "../../modules/TopHero.astro";
 import WhatWeDo from "../../modules/what-we-do/index.astro";
 
@@ -13,4 +14,5 @@ const tHome = i18n.home;
 <Layout title="Welcome to Astro.">
   <TopHero tHero={tHome.hero} tSrOnly={tHome.sr_only} />
   <WhatWeDo tWhatWeDo={tHome.what_we_do} />
+  <HowItWorks tHowItWorks={tHome.how_it_works} />
 </Layout>

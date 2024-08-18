@@ -1,0 +1,62 @@
+---
+import Side from "./components/Side.astro";
+import SideItem from "./components/SideItem.astro";
+
+const { tHowItWorks } = Astro.props;
+const { clients, zitlancers } = tHowItWorks;
+const clientItems = Object.keys(clients.item).map((key) => clients.item[key]);
+const zitlancerItems = Object.keys(zitlancers.item).map(
+  (key) => zitlancers.item[key]
+);
+---
+
+<section id="how-it-works" class="z-10 py-32">
+  <div class="container">
+    <h2 class="text-4xl sm:text-5xl font-bold">{tHowItWorks.title}</h2>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 px-1 mt-9">
+    <Side
+      id="clients"
+      variant="left"
+      title={tHowItWorks.clients.title}
+      cta={{
+        text: tHowItWorks.clients.cta,
+        onClick: () => {
+          document.getElementById("contact")?.scrollIntoView({
+            behavior: "smooth",
+          });
+          const clientButton = document.getElementById("client-button");
+          clientButton?.click();
+        },
+      }}
+    >
+      {
+        clientItems.map((item, index, items) => (
+          <SideItem index={index} item={item} items={items} variant="left" />
+        ))
+      }
+    </Side>
+    <Side
+      id="zitlancers"
+      variant="right"
+      title={tHowItWorks.zitlancers.title}
+      cta={{
+        text: tHowItWorks.zitlancers.cta,
+        onClick: () => {
+          document.getElementById("contact")?.scrollIntoView({
+            behavior: "smooth",
+          });
+          const zitlancerButton = document.getElementById("zitlancer-button");
+          zitlancerButton?.click();
+        },
+      }}
+    >
+      {
+        zitlancerItems.map((item, index, items) => (
+          <SideItem index={index} item={item} items={items} variant="right" />
+        ))
+      }
+    </Side>
+  </div>
+</section>

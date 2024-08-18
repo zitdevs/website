@@ -362,23 +362,28 @@
                 "item": {
                     "contact_us": {
                         "title": "Contact Us",
-                        "description": "Start by reaching out to us through our contact form or email. We’re eager to hear about your project and understand your vision."
+                        "description": "Start by reaching out to us through our contact form or email. We’re eager to hear about your project and understand your vision.",
+                        "icon": "message-square-more"
                     },
                     "schedule_call": {
                         "title": "Schedule a Call",
-                        "description": "Once you contact us, we will schedule a call to discuss your project in detail. This call helps us grasp the potential of your idea and align it with our mission at Zitdevs."
+                        "description": "Once you contact us, we will schedule a call to discuss your project in detail. This call helps us grasp the potential of your idea and align it with our mission at Zitdevs.",
+                        "icon": "calendar"
                     },
                     "project_evaluation": {
                         "title": "Project Evaluation",
-                        "description": "At Zitdevs, we focus on projects that show great potential as a business. Our goal is to ensure that our developers are engaged in projects that are attractive and motivating, as they often work on these after their formal jobs."
+                        "description": "At Zitdevs, we focus on projects that show great potential as a business. Our goal is to ensure that our developers are engaged in projects that are attractive and motivating, as they often work on these after their formal jobs.",
+                        "icon": "scan-eye"
                     },
                     "project_approval": {
                         "title": "Project Approval",
-                        "description": "After evaluating your project, we will approve it if it aligns with our criteria. We then assemble a dedicated team of developers who are passionate about your idea and ready to bring it to life."
+                        "description": "After evaluating your project, we will approve it if it aligns with our criteria. We then assemble a dedicated team of developers who are passionate about your idea and ready to bring it to life.",
+                        "icon": "check"
                     },
                     "cost_effective": {
                         "title": "Cost-Effective Development",
-                        "description": "Our model allows us to maintain a cost-effective development process while ensuring a high level of focus and commitment to your idea. This approach helps us deliver quality results without excessive costs."
+                        "description": "Our model allows us to maintain a cost-effective development process while ensuring a high level of focus and commitment to your idea. This approach helps us deliver quality results without excessive costs.",
+                        "icon": "hand-coins"
                     }
                 },
                 "cta": "Let's Talk"
@@ -388,23 +393,28 @@
                 "item": {
                     "register": {
                         "title": "Register on Our Platform",
-                        "description": "To start collaborating with us, register on our platform (currently in development). This platform will be your gateway to a variety of exciting projects."
+                        "description": "To start collaborating with us, register on our platform (currently in development). This platform will be your gateway to a variety of exciting projects.",
+                        "icon": "user-round-cog"
                     },
                     "browse_join": {
                         "title": "Browse and Join Projects",
-                        "description": "Once registered, you can browse through available projects and join those that interest you. Select the number of hours you wish to dedicate each week, ranging from 5 to 15 hours."
+                        "description": "Once registered, you can browse through available projects and join those that interest you. Select the number of hours you wish to dedicate each week, ranging from 5 to 15 hours.",
+                        "icon": "search-code"
                     },
                     "flexible_hours": {
                         "title": "Flexible Work Hours",
-                        "description": "You have the flexibility to choose when and how much you work each week. Your main commitment is to meet the project deadlines."
+                        "description": "You have the flexibility to choose when and how much you work each week. Your main commitment is to meet the project deadlines.",
+                        "icon": "calendar-clock"
                     },
                     "early_bonus": {
                         "title": "Early Delivery Bonuses",
-                        "description": "Some projects offer bonuses for early delivery, providing additional incentives for timely and efficient work."
+                        "description": "Some projects offer bonuses for early delivery, providing additional incentives for timely and efficient work.",
+                        "icon": "calendar-clock"
                     },
                     "submit_get_paid": {
                         "title": "Submit Work and Get Paid",
-                        "description": "Complete your tasks within the stipulated timeline and submit your work. Payments are processed promptly based on the hours worked."
+                        "description": "Complete your tasks within the stipulated timeline and submit your work. Payments are processed promptly based on the hours worked.",
+                        "icon": "circle-dollar-sign"
                     }
                 },
                 "cta": "Join To Waitlist"
