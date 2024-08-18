@@ -1,0 +1,513 @@
+{
+  "default": {
+    "metadata": {
+      "title": "ZitDevs: Apasionados por crear software de calidad",
+      "description": "ZitDevs es una empresa de desarrollo visionaria dedicada a transformar grandes ideas en soluciones tecnológicas impactantes. Nos enfocamos en crear productos y servicios que marquen una diferencia significativa, alcanzando y beneficiando a millones en lugar de solo generar ingresos. En ZitDevs, la innovación y el impacto social están en el corazón de todo lo que hacemos.",
+      "keywords": [
+        "ZitDevs",
+        "Desarrollo de Software",
+        "Desarrollo Web",
+        "Desarrollo de Aplicaciones Móviles",
+        "Consultoría y Estrategia",
+        "Soluciones Innovadoras",
+        "Mundo Digital",
+        "Software Personalizado",
+        "Plataformas de Comercio Electrónico",
+        "Servicios de TI",
+        "Transformación Digital",
+        "Consultoría Tecnológica",
+        "Gestión de Proyectos",
+        "Talleres de Innovación",
+        "Enfoque Ágil",
+        "Desarrollo Centrado en la Comunidad",
+        "Horarios de Trabajo Flexibles",
+        "República Dominicana",
+        "Zitlancers",
+        "Plataforma Zitdevs",
+        "Lista de Espera Zitdevs",
+        "Contacto Zitdevs",
+        "Servicios Zitdevs",
+        "Cómo Funciona Zitdevs",
+        "Acerca de Zitdevs",
+        "Inicio Zitdevs",
+        "Santo Domingo"
+      ],
+      "openGraph": {
+        "og:title": "Zitdevs - Líderes en Desarrollo de Software",
+        "og:description": "Descubre soluciones innovadoras de desarrollo de software con Zitdevs. Nuestros servicios incluyen desarrollo de software personalizado, desarrollo de aplicaciones web y móviles, y consultoría en TI.",
+        "og:image": "https://zitdevs.com/images/og-image.jpeg",
+        "og:url": "https://zitdevs.com",
+        "og:type": "website",
+        "og:site_name": "Zitdevs",
+        "og:locale": "es_ES"
+      },
+      "twitterCard": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Zitdevs - Líderes en Desarrollo de Software",
+        "twitter:description": "Descubre soluciones innovadoras de desarrollo de software con Zitdevs. Nuestros servicios incluyen desarrollo de software personalizado, desarrollo de aplicaciones web y móviles, y consultoría en TI.",
+        "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+        "twitter:site": "@zitdevs",
+        "twitter:creator": "@zitdevs"
+      }
+    },
+    "header": {
+      "title": "ZitDevs",
+      "menu": {
+        "home": "Inicio",
+        "about": "Nosotros",
+        "how_it_works": "Cómo funciona",
+        "services": "Servicios",
+        "contact": "Contacto"
+      },
+      "cta": {
+        "contact": "Contacto"
+      }
+    },
+    "footer": {
+      "description": "En ZitDevs, priorizamos los grandes sueños sobre las grandes ganancias, esforzándonos por crear ideas que impacten a millones en lugar de perseguir millones en ingresos.",
+      "links": {
+        "privacy": "Política de Privacidad",
+        "terms": "Términos del Servicio"
+      }
+    },
+    "countries": {
+      "AF": "Afganistán",
+      "AX": "Islas Åland",
+      "AL": "Albania",
+      "DZ": "Argelia",
+      "AS": "Samoa Americana",
+      "AD": "Andorra",
+      "AO": "Angola",
+      "AI": "Anguila",
+      "AQ": "Antártida",
+      "AG": "Antigua y Barbuda",
+      "AR": "Argentina",
+      "AM": "Armenia",
+      "AW": "Aruba",
+      "AU": "Australia",
+      "AT": "Austria",
+      "AZ": "Azerbaiyán",
+      "BS": "Bahamas",
+      "BH": "Baréin",
+      "BD": "Bangladés",
+      "BB": "Barbados",
+      "BY": "Bielorrusia",
+      "BE": "Bélgica",
+      "BZ": "Belice",
+      "BJ": "Benín",
+      "BM": "Bermudas",
+      "BT": "Bután",
+      "BO": "Bolivia",
+      "BA": "Bosnia y Herzegovina",
+      "BW": "Botsuana",
+      "BV": "Isla Bouvet",
+      "BR": "Brasil",
+      "IO": "Territorio Británico del Océano Índico",
+      "BN": "Brunéi",
+      "BG": "Bulgaria",
+      "BF": "Burkina Faso",
+      "BI": "Burundi",
+      "KH": "Camboya",
+      "CM": "Camerún",
+      "CA": "Canadá",
+      "CV": "Cabo Verde",
+      "KY": "Islas Caimán",
+      "CF": "República Centroafricana",
+      "TD": "Chad",
+      "CL": "Chile",
+      "CN": "China",
+      "CX": "Isla de Navidad",
+      "CC": "Islas Cocos (Keeling)",
+      "CO": "Colombia",
+      "KM": "Comoras",
+      "CG": "Congo",
+      "CD": "República Democrática del Congo",
+      "CK": "Islas Cook",
+      "CR": "Costa Rica",
+      "CI": "Costa de Marfil",
+      "HR": "Croacia",
+      "CU": "Cuba",
+      "CY": "Chipre",
+      "CZ": "República Checa",
+      "DK": "Dinamarca",
+      "DJ": "Yibuti",
+      "DM": "Dominica",
+      "DO": "República Dominicana",
+      "EC": "Ecuador",
+      "EG": "Egipto",
+      "SV": "El Salvador",
+      "GQ": "Guinea Ecuatorial",
+      "ER": "Eritrea",
+      "EE": "Estonia",
+      "ET": "Etiopía",
+      "FK": "Islas Malvinas",
+      "FO": "Islas Feroe",
+      "FJ": "Fiyi",
+      "FI": "Finlandia",
+      "FR": "Francia",
+      "GF": "Guayana Francesa",
+      "PF": "Polinesia Francesa",
+      "TF": "Territorios Australes Franceses",
+      "GA": "Gabón",
+      "GM": "Gambia",
+      "GE": "Georgia",
+      "DE": "Alemania",
+      "GH": "Ghana",
+      "GI": "Gibraltar",
+      "GR": "Grecia",
+      "GL": "Groenlandia",
+      "GD": "Granada",
+      "GP": "Guadalupe",
+      "GU": "Guam",
+      "GT": "Guatemala",
+      "GG": "Guernesey",
+      "GN": "Guinea",
+      "GW": "Guinea-Bisáu",
+      "GY": "Guyana",
+      "HT": "Haití",
+      "HM": "Islas Heard y McDonald",
+      "VA": "Santa Sede (Estado de la Ciudad del Vaticano)",
+      "HN": "Honduras",
+      "HK": "Hong Kong",
+      "HU": "Hungría",
+      "IS": "Islandia",
+      "IN": "India",
+      "ID": "Indonesia",
+      "IR": "República Islámica de Irán",
+      "IQ": "Irak",
+      "IE": "Irlanda",
+      "IM": "Isla de Man",
+      "IL": "Israel",
+      "IT": "Italia",
+      "JM": "Jamaica",
+      "JP": "Japón",
+      "JE": "Jersey",
+      "JO": "Jordania",
+      "KZ": "Kazajistán",
+      "KE": "Kenia",
+      "KI": "Kiribati",
+      "KP": "República Popular Democrática de Corea",
+      "KR": "República de Corea",
+      "KW": "Kuwait",
+      "KG": "Kirguistán",
+      "LA": "República Democrática Popular Lao",
+      "LV": "Letonia",
+      "LB": "Líbano",
+      "LS": "Lesoto",
+      "LR": "Liberia",
+      "LY": "Libia",
+      "LI": "Liechtenstein",
+      "LT": "Lituania",
+      "LU": "Luxemburgo",
+      "MO": "Macao",
+      "MK": "República de Macedonia",
+      "MG": "Madagascar",
+      "MW": "Malaui",
+      "MY": "Malasia",
+      "MV": "Maldivas",
+      "ML": "Malí",
+      "MT": "Malta",
+      "MH": "Islas Marshall",
+      "MQ": "Martinica",
+      "MR": "Mauritania",
+      "MU": "Mauricio",
+      "YT": "Mayotte",
+      "MX": "México",
+      "FM": "Micronesia, Estados Federados de",
+      "MD": "República de Moldavia",
+      "MC": "Mónaco",
+      "MN": "Mongolia",
+      "ME": "Montenegro",
+      "MS": "Montserrat",
+      "MA": "Marruecos",
+      "MZ": "Mozambique",
+      "MM": "Myanmar",
+      "NA": "Namibia",
+      "NR": "Nauru",
+      "NP": "Nepal",
+      "NL": "Países Bajos",
+      "AN": "Antillas Neerlandesas",
+      "NC": "Nueva Caledonia",
+      "NZ": "Nueva Zelanda",
+      "NI": "Nicaragua",
+      "NE": "Níger",
+      "NG": "Nigeria",
+      "NU": "Niue",
+      "NF": "Isla Norfolk",
+      "MP": "Islas Marianas del Norte",
+      "NO": "Noruega",
+      "OM": "Omán",
+      "PK": "Pakistán",
+      "PW": "Palau",
+      "PS": "Territorio Palestino, Ocupado",
+      "PA": "Panamá",
+      "PG": "Papúa Nueva Guinea",
+      "PY": "Paraguay",
+      "PE": "Perú",
+      "PH": "Filipinas",
+      "PN": "Islas Pitcairn",
+      "PL": "Polonia",
+      "PT": "Portugal",
+      "PR": "Puerto Rico",
+      "QA": "Catar",
+      "RE": "Reunión",
+      "RO": "Rumanía",
+      "RU": "Federación de Rusia",
+      "RW": "Ruanda",
+      "SH": "Santa Elena, Ascensión y Tristán de Acuña",
+      "KN": "San Cristóbal y Nieves",
+      "LC": "Santa Lucía",
+      "PM": "San Pedro y Miquelón",
+      "VC": "San Vicente y las Granadinas",
+      "WS": "Samoa",
+      "SM": "San Marino",
+      "ST": "Santo Tomé y Príncipe",
+      "SA": "Arabia Saudita",
+      "SN": "Senegal",
+      "RS": "Serbia",
+      "SC": "Seychelles",
+      "SL": "Sierra Leona",
+      "SG": "Singapur",
+      "SK": "Eslovaquia",
+      "SI": "Eslovenia",
+      "SB": "Islas Salomón",
+      "SO": "Somalia",
+      "ZA": "Sudáfrica",
+      "GS": "Georgia del Sur e Islas Sandwich del Sur",
+      "ES": "España",
+      "LK": "Sri Lanka",
+      "SD": "Sudán",
+      "SR": "Surinam",
+      "SJ": "Svalbard y Jan Mayen",
+      "SZ": "Suazilandia",
+      "SE": "Suecia",
+      "CH": "Suiza",
+      "SY": "República Árabe Siria",
+      "TW": "Taiwán, Provincia de China",
+      "TJ": "Tayikistán",
+      "TZ": "República Unida de Tanzania",
+      "TH": "Tailandia",
+      "TL": "Timor-Leste",
+      "TG": "Togo",
+      "TK": "Tokelau",
+      "TO": "Tonga",
+      "TT": "Trinidad y Tobago",
+      "TN": "Túnez",
+      "TR": "Turquía",
+      "TM": "Turkmenistán",
+      "TC": "Islas Turcas y Caicos",
+      "TV": "Tuvalu",
+      "UG": "Uganda",
+      "UA": "Ucrania",
+      "AE": "Emiratos Árabes Unidos",
+      "GB": "Reino Unido",
+      "US": "Estados Unidos",
+      "UM": "Islas Ultramarinas Menores de Estados Unidos",
+      "UY": "Uruguay",
+      "UZ": "Uzbekistán",
+      "VU": "Vanuatu",
+      "VE": "Venezuela",
+      "VN": "Vietnam",
+      "VG": "Islas Vírgenes Británicas",
+      "VI": "Islas Vírgenes de los Estados Unidos",
+      "WF": "Wallis y Futuna",
+      "EH": "Sahara Occidental",
+      "YE": "Yemen",
+      "ZM": "Zambia",
+      "ZW": "Zimbabue"
+    }
+  },
+  "home": {
+    "sr_only": "ZitDevs: Apasionados por crear software de calidad",
+    "hero": {
+      "title": "Trabajamos por sueños, y los sueños traen ingresos",
+      "cta": "Cuéntame Más"
+    },
+    "what_we_do": {
+      "title": "Lo que hacemos",
+      "item": {
+        "flexible": {
+          "title": "Horarios de trabajo flexibles para desarrolladores",
+          "description": "En Zitdevs, creemos en proporcionar a los desarrolladores la flexibilidad de elegir sus propias horas de trabajo. Nuestra plataforma permite a los desarrolladores trabajar tantas horas como deseen cada semana, ofreciéndoles la oportunidad de ganar ingresos adicionales mientras mantienen un equilibrio saludable entre trabajo y vida personal."
+        },
+        "community": {
+          "title": "Desarrollo de productos enfocados en la comunidad",
+          "description": "Nuestro equipo está dedicado a crear productos que beneficien a la comunidad. Nuestro objetivo es desarrollar soluciones que aborden problemas reales y mejoren la calidad de vida de las personas en todo el mundo. Ya sea una nueva aplicación, un sitio web o una herramienta, nuestros proyectos están diseñados pensando en las necesidades de la comunidad."
+        },
+        "driven_by": {
+          "title": "Impulsados por grandes ideas, no solo por ganancias",
+          "description": "Somos un colectivo de desarrolladores motivados por la búsqueda de ideas impactantes en lugar de ganancias financieras. Nuestro objetivo principal es trabajar en proyectos que tengan el potencial de hacer una diferencia significativa, enfocándonos en la innovación y la creatividad por encima de las recompensas monetarias."
+        },
+        "empowering": {
+          "title": "Empoderando a los desarrolladores",
+          "description": "Zitdevs proporciona una plataforma donde los desarrolladores pueden mejorar sus habilidades y trabajar en proyectos significativos. Ofrecemos recursos, mentoría y un entorno colaborativo que fomenta el crecimiento y desarrollo profesional.",
+          "image": {
+            "alt": "Empoderando a los desarrolladores"
+          }
+        },
+        "innovation": {
+          "title": "Colaboración e innovación",
+          "description": "Nuestro enfoque se centra en la colaboración y la innovación. Reunimos a talentosos desarrolladores de diversos orígenes para trabajar en proyectos de vanguardia. Al compartir conocimientos e ideas, empujamos los límites de lo que es posible y entregamos resultados excepcionales."
+        },
+        "transparency": {
+          "title": "Transparencia y equidad",
+          "description": "En Zitdevs, valoramos la transparencia y la equidad en todas nuestras interacciones. Aseguramos que los desarrolladores sean compensados justamente por su trabajo y que nuestros clientes reciban servicios honestos y confiables."
+        }
+      }
+    },
+    "how_it_works": {
+      "title": "Cómo Funciona",
+      "clients": {
+        "title": "Para Clientes",
+        "item": {
+          "contact_us": {
+            "title": "Contáctanos",
+            "description": "Empieza por comunicarte con nosotros a través de nuestro formulario de contacto o correo electrónico. Nos interesa conocer tu proyecto y entender tu visión."
+          },
+          "schedule_call": {
+            "title": "Agenda una Llamada",
+            "description": "Una vez que nos contactes, agendaremos una llamada para discutir tu proyecto en detalle. Esta llamada nos ayuda a comprender el potencial de tu idea y alinearla con nuestra misión en Zitdevs."
+          },
+          "project_evaluation": {
+            "title": "Evaluación del Proyecto",
+            "description": "En Zitdevs, nos centramos en proyectos con alto potencial de negocio para que nuestros desarrolladores trabajen en iniciativas atractivas y motivadoras, complementando sus empleos formales."
+          },
+          "project_approval": {
+            "title": "Aprobación del Proyecto",
+            "description": "Después de evaluar tu proyecto, lo aprobaremos si cumple con nuestros criterios. Luego, formamos un equipo dedicado de desarrolladores apasionados por tu idea y listos para llevarla a cabo."
+          },
+          "cost_effective": {
+            "title": "Desarrollo Rentable",
+            "description": "Nuestro modelo nos permite mantener un proceso de desarrollo rentable asegurando un alto nivel de enfoque y compromiso con tu idea. Este enfoque nos ayuda a entregar resultados de calidad sin costos excesivos."
+          }
+        },
+        "cta": "Hablemos"
+      },
+      "zitlancers": {
+        "title": "Para Zitlancers",
+        "item": {
+          "register": {
+            "title": "Regístrate",
+            "description": "Para comenzar a colaborar con nosotros, regístrate en nuestra plataforma (actualmente en desarrollo). Esta plataforma será tu puerta de entrada a una variedad de proyectos emocionantes."
+          },
+          "browse_join": {
+            "title": "Explora Proyectos",
+            "description": "Una vez registrado, puedes explorar los proyectos disponibles y unirte a los que te interesen. Selecciona el número de horas que deseas dedicar cada semana, entre 5 y 15 horas."
+          },
+          "flexible_hours": {
+            "title": "Horas de Trabajo Flexibles",
+            "description": "Tienes la flexibilidad de elegir cuándo y cuánto trabajar cada semana. Tu principal compromiso es cumplir con los plazos del proyecto."
+          },
+          "early_bonus": {
+            "title": "Bonos por Entregas",
+            "description": "Algunos proyectos ofrecen bonos por entregas anticipadas, proporcionando incentivos adicionales por un trabajo puntual y eficiente."
+          },
+          "submit_get_paid": {
+            "title": "Entrega y Recibe tu Pago",
+            "description": "Completa tus tareas dentro del plazo estipulado y entrega tu trabajo. Los pagos se procesan puntualmente en función de las horas trabajadas."
+          }
+        },
+        "cta": "Únete a la Lista de Espera"
+      }
+    },
+    "services": {
+      "title": "Soluciones Innovadoras",
+      "subtitle": "para un Mundo Digital",
+      "learnMore": "Aprender más",
+      "cards": {
+        "softwareDevelopment": {
+          "title": "Desarrollo de Software",
+          "description": "Creamos software personalizado para satisfacer las necesidades de tu negocio, manejando todo el ciclo de desarrollo desde la consulta hasta la implementación. Nuestro enfoque ágil asegura flexibilidad, iteraciones rápidas y mejora continua."
+        },
+        "webDevelopment": {
+          "title": "Desarrollo Web",
+          "description": "Creamos sitios web responsivos, desarrollamos plataformas de comercio electrónico robustas e implementamos potentes soluciones CMS para una gestión de contenido fácil y no técnica."
+        },
+        "mobileAppDevelopment": {
+          "title": "Desarrollo de Apps Móviles",
+          "description": "Desarrollamos aplicaciones de alto rendimiento para iOS y Android con diseños centrados en el usuario e integración fluida con sistemas. También ofrecemos mantenimiento y soporte continuo para asegurar una operación sin problemas."
+        },
+        "consultingStrategy": {
+          "title": "Consultoría y Estrategia",
+          "description": "Ofrecemos consultoría estratégica en tecnología, servicios de gestión de proyectos y talleres de innovación para ayudarte a tomar decisiones informadas, completar proyectos eficientemente y fomentar el crecimiento y la innovación."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "subtitle": "¿Listo para empezar un proyecto? Escríbenos.",
+      "main_form": {
+        "label": {
+          "default": "¿Quién eres?",
+          "selected": {
+            "prefix": "Quiero ser",
+            "remove": "Eliminar selección"
+          }
+        },
+        "buttons": {
+          "client": "Cliente",
+          "zitlancer": "Zitlancer"
+        },
+        "privacy_policy_error": "Debes aceptar la política de privacidad",
+        "submit_messages": {
+          "client": "Hablemos",
+          "zitlancer": "Únete a la lista de espera",
+          "success": "Gracias por contactarnos. Nos pondremos en contacto contigo en breve.",
+          "zitlancer_success": "Gracias por unirte a nuestra lista de espera. Te notificaremos cuando nuestra plataforma esté lista.",
+          "error": "Ocurrió un error. Por favor, inténtalo de nuevo más tarde.",
+          "existing_email": "Este correo electrónico ya está registrado"
+        }
+      },
+      "client_form": {
+        "labels": {
+          "company": "Empresa",
+          "message": "Mensaje"
+        },
+        "placeholders": {
+          "company": "Empresa es obligatorio",
+          "message": "Mensaje es obligatorio"
+        }
+      },
+      "privacy_policy": {
+        "label": "Al seleccionar esto, aceptas nuestra",
+        "link_text": "política de privacidad",
+        "sr_only": "Aceptar políticas"
+      },
+      "zitlancer_form": {
+        "labels": {
+          "main_skill": "Habilidad Principal",
+          "other_skill": "Otra Habilidad",
+          "country": "País"
+        },
+        "placeholders": {
+          "main_skill": "Selecciona tu habilidad principal",
+          "other_skill": "Por favor especifica tu habilidad principal",
+          "country": "Selecciona tu país",
+          "country_search": "Buscar país",
+          "country_select": "Seleccionar país"
+        },
+        "validation_messages": {
+          "main_skill_required": "Habilidad principal es obligatoria",
+          "other_skill_required": "Otra habilidad es obligatoria",
+          "country_required": "País es obligatorio"
+        },
+        "skills": {
+          "other": "Otra"
+        }
+      },
+      "base_form": {
+        "labels": {
+          "first_name": "Nombre",
+          "last_name": "Apellido",
+          "email": "Correo Electrónico"
+        },
+        "validation_messages": {
+          "email_invalid": "Dirección de correo electrónico no válida",
+          "email_required": "Correo electrónico es obligatorio",
+          "first_name_required": "Nombre es obligatorio",
+          "last_name_required": "Apellido es obligatorio"
+        }
+      }
+    }
+  }
+}

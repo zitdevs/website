@@ -6,7 +6,21 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   server: {
-    port: 3000
+    port: 3000,
   },
-  integrations: [tailwind(), react()]
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "es"],
+    fallback: "en",
+    routing: {
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: true,
+    },
+  },
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    react(),
+  ],
 });
