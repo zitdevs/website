@@ -2,17 +2,22 @@
 import "../styles/globals.css";
 import Header from "../components/header/Header.astro";
 import Footer from "../modules/footer/Footer.astro";
-
 const { currentLocale } = Astro;
+
+const metadata = {
+  title: `ZitDevs | Legal`,
+  robots: "noindex, nofollow",
+};
 ---
 
-<!doctype html>
 <html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    <title>{metadata.title}</title>
+    <meta name="robots" content={metadata.robots} />
   </head>
   <body>
     <Header />
@@ -22,3 +27,4 @@ const { currentLocale } = Astro;
     <Footer />
   </body>
 </html>
+---
