@@ -8,6 +8,7 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
     "./node_modules/react-tailwindcss-select/dist/index.esm.js",
+    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
   ],
   prefix: "",
   theme: {

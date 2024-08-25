@@ -1,0 +1,55 @@
+---
+const { id, class: className, tClientForm } = Astro.props;
+---
+
+<div
+  id={id}
+  class={`col-span-2 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 ${className}`}
+>
+  <div class="col-span-2">
+    <div class="space-y-2">
+      <label
+        class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        for="company"
+      >
+        {tClientForm.labels.company}
+        <span class="text-red-500">*</span>
+      </label>
+      <input
+        autocomplete="organization"
+        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+        id="company"
+        aria-describedby="company-message"
+        aria-invalid="false"
+        type="text"
+        name="company"
+      />
+    </div>
+    <p id="company-message" class="text-sm font-medium text-destructive hidden">
+    </p>
+  </div>
+  <div class="col-span-2">
+    <div class="space-y-2">
+      <label
+        class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        for="message"
+      >
+        {tClientForm.labels.message}
+        <span class="text-red-500">*</span>
+      </label>
+      <textarea
+        id="message"
+        autocomplete="off"
+        rows="4"
+        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6 min-h-10 max-h-28"
+        name="message"
+        aria-describedby="message-message"
+        aria-invalid="false"></textarea>
+      <p
+        id="message-message"
+        class="text-sm font-medium text-destructive hidden"
+      >
+      </p>
+    </div>
+  </div>
+</div>

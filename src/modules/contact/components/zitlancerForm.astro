@@ -1,0 +1,84 @@
+---
+import ReactSelect from "react-tailwindcss-select";
+import getUnicodeFlagIcon from "country-flag-icons/unicode";
+import Select from "../../../components/Form/Select.astro";
+
+const { tZitLancerForm, tCountries } = Astro.props;
+const { id, class: clasnName } = Astro.props;
+---
+
+<div
+  id={id}
+  class={`col-span-2 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 ${clasnName}`}
+>
+  <div class="space-y-2 col-span-2">
+    <label
+      class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      for="country"
+    >
+      {tZitLancerForm.labels.country}
+      <span class="text-red-500">*</span>
+    </label>
+    <select
+      id="country"
+      name="country"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    >
+      <option selected>{tZitLancerForm.placeholders.country}</option>
+      {
+        Object.entries(tCountries).map(([code, name]) => (
+          <option value={code}>{name}</option>
+        ))
+      }
+    </select>
+    <p id="country-message" class="text-sm text-muted-foreground hidden"></p>
+  </div>
+  <div class="sm:col-span-2">
+    <div class="space-y-2">
+      <label
+        class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        for="skill"
+      >
+        {tZitLancerForm.labels.main_skill}
+        <span class="text-red-500">*</span>
+      </label>
+    </div>
+    <select
+      id="skill"
+      name="skill"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    >
+      <option value="">{tZitLancerForm.placeholders.main_skill}</option>
+      <option value="ito0jd6eck7wo6i">Software Development</option>
+      <option value="gqwu6h8pejq7lnj">Web Development</option>
+      <option value="9qzp74ilcicd7hx">Mobile Development</option>
+      <option value="y6v6o53xa85xpi8">Design</option>
+      <option value="tt4wkgbu6jetotr">Data Science</option>
+      <option value="other">Other</option>
+    </select>
+    <p id="skills-message" class="text-sm text-muted-foreground hidden"></p>
+  </div>
+  <div id="other-skill-form-item" class="sm:col-span-2 hidden">
+    <div class="space-y-2">
+      <label
+        class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+        for="other-skill"
+      >
+        Other Skill <span class="text-red-500">*</span>
+      </label>
+      <input
+        autocomplete="off"
+        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+        id="other-skill"
+        aria-describedby="other-skill-message"
+        aria-invalid="false"
+        type="text"
+        value=""
+        name="other-skill"
+      />
+      <p id="other-skill-message" class="text-sm text-muted-foreground hidden">
+      </p>
+    </div>
+  </div>
+</div>
+<!-- <FormMessage /> -->
