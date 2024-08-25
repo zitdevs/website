@@ -1,11 +1,10 @@
 ---
-import CardTitle from "./CardTitle.astro";
-import Icons from "../../../components/icons/Icons";
+import DynamicIcon from "../../../components/icons/DynamicIcon.astro";
 import { cn } from "../../../lib/utils";
 import BounceCard from "./BounceCard.astro";
+import CardTitle from "./CardTitle.astro";
 
 const { description, icon, title, variant } = Astro.props;
-const Icon = Icons[icon as keyof typeof Icons];
 
 let transition = "";
 let cols = "";
@@ -25,7 +24,7 @@ if (variant === "pink") cols = "col-span-12 md:col-span-6 lg:col-span-7";
   <CardTitle>
     <span class="flex items-center gap-2 justify-center">
       {title}
-      {Icon && <Icon aria-hidden />}
+      <DynamicIcon icon={icon} className="size-5 inline" aria-hidden />
     </span>
   </CardTitle>
   <div
