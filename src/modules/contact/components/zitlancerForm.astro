@@ -24,41 +24,46 @@ const { id, class: clasnName } = Astro.props;
       name="country"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
     >
-      <option selected>{tZitLancerForm.placeholders.country}</option>
+      <option value="">{tZitLancerForm.placeholders.country}</option>
       {
         Object.entries(tCountries).map(([code, name]) => (
           <option value={code}>{name}</option>
         ))
       }
     </select>
-    <p id="country-message" class="text-sm text-muted-foreground hidden"></p>
+    <p id="country-message" class="text-sm font-medium text-destructive hidden">
+    </p>
   </div>
   <div class="sm:col-span-2">
     <div class="space-y-2">
       <label
         class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-        for="skill"
+        for="main-skill"
       >
         {tZitLancerForm.labels.main_skill}
         <span class="text-red-500">*</span>
       </label>
+      <select
+        id="main-skill"
+        name="main-skill"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option value="">{tZitLancerForm.placeholders.main_skill}</option>
+        <option value="ito0jd6eck7wo6i">Software Development</option>
+        <option value="gqwu6h8pejq7lnj">Web Development</option>
+        <option value="9qzp74ilcicd7hx">Mobile Development</option>
+        <option value="y6v6o53xa85xpi8">Design</option>
+        <option value="tt4wkgbu6jetotr">Data Science</option>
+        <option value="other">Other</option>
+      </select>
+      <p
+        id="main-skill-message"
+        class="text-sm font-medium text-destructive hidden"
+      >
+      </p>
     </div>
-    <select
-      id="skill"
-      name="skill"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-    >
-      <option value="">{tZitLancerForm.placeholders.main_skill}</option>
-      <option value="ito0jd6eck7wo6i">Software Development</option>
-      <option value="gqwu6h8pejq7lnj">Web Development</option>
-      <option value="9qzp74ilcicd7hx">Mobile Development</option>
-      <option value="y6v6o53xa85xpi8">Design</option>
-      <option value="tt4wkgbu6jetotr">Data Science</option>
-      <option value="other">Other</option>
-    </select>
-    <p id="skills-message" class="text-sm text-muted-foreground hidden"></p>
   </div>
-  <div id="other-skill-form-item" class="sm:col-span-2 hidden">
+  <div id="other-skill-form-item" class="sm:col-span-2 space-y-2 hidden">
     <div class="space-y-2">
       <label
         class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -76,7 +81,10 @@ const { id, class: clasnName } = Astro.props;
         value=""
         name="other-skill"
       />
-      <p id="other-skill-message" class="text-sm text-muted-foreground hidden">
+      <p
+        id="other-skill-message"
+        class="text-sm font-medium text-destructive hidden"
+      >
       </p>
     </div>
   </div>
