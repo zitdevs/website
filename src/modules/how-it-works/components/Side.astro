@@ -1,5 +1,5 @@
 ---
-import { Button } from "../../../components/button/Button";
+import Button from "../../../components/button/Button.astro";
 import { cn } from "../../../lib/utils";
 
 interface Item {
@@ -28,10 +28,12 @@ const rounded =
       {
         !!cta && (
           <Button
+            data-cta="contact"
+            data-toggle={cta.toggle}
             className="mt-4 px-10"
+            type="button"
             size="sm"
             variant={variant === "left" ? "default" : "secondary"}
-            onClick={cta.onClick}
           >
             {cta.text}
           </Button>

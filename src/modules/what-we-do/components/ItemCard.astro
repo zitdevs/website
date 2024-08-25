@@ -1,14 +1,10 @@
 ---
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "../../../components/card/Card";
+import Card from "../../../components/card/Card.astro";
+import CardContent from "../../../components/card/CardContent.astro";
+import CardHeader from "../../../components/card/CardHeader.astro";
+import CardTitle from "../../services/components/CardTitle.astro";
 
 const { icon, title, description, image } = Astro.props;
-
-// console.log(icon, title, description, image);
 ---
 
 <Card className="h-full">

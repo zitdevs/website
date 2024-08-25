@@ -15,9 +15,6 @@ interface ZitLancerFormProps {
 export const POST: APIRoute = async ({ params, request }) => {
   const body = await request.json();
   const { locale, ...rest } = body as ZitLancerFormProps;
-  console.log(body);
-  console.log("locale", locale);
-
   const pb = await pbBuilder();
   const lang = await getLang(locale);
 
@@ -42,8 +39,6 @@ export const POST: APIRoute = async ({ params, request }) => {
     );
   } catch (error) {
     const err = error as { response: { data: any } };
-
-    console.log({ error });
 
     if (err?.response?.data?.email?.code === "validation_not_unique") {
       return new Response(

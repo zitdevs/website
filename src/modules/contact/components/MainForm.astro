@@ -1,8 +1,10 @@
 ---
-import { Trash } from "lucide-react";
+import { Trash } from "lucide-astro";
 import BaseForm from "./BaseForm.astro";
 import ClientForm from "./clientForm.astro";
 import ZitlancerForm from "./zitlancerForm.astro";
+import Button from "../../../components/button/Button.astro";
+const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
 
 const { tContact, tDefault } = Astro.props;
 
@@ -39,24 +41,23 @@ const form = {
           </div>
         </div>
         <div class="mt-2.5 grid grid-cols-2" id="user-type-buttons">
-          <button
-            class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-4 py-2 w-full block rounded-r-none"
+          <Button
+            className="rounded-r-none"
+            variant="secondary"
             id="client-button"
             type="button"
             tabindex="0"
-            style="transform: none;"
           >
             Client
-          </button>
-          <button
-            class="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full block rounded-l-none"
+          </Button>
+          <Button
+            className="rounded-l-none"
             id="zitlancer-button"
             type="button"
             tabindex="0"
-            style="transform: none;"
           >
             Zitlancer
-          </button>
+          </Button>
         </div>
       </div>
     </div>
@@ -123,47 +124,37 @@ const form = {
         <div class="mt-10 col-span-2">
           <button
             id="submit-button"
-            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-4 py-2 w-full"
+            class="g-recaptcha inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-4 py-2 w-full"
+            data-sitekey={captcha}
+            data-callback="onSubmit"
+            data-action="submit"
             type="submit"
             data-client-form={tContact.main_form.submit_messages.client}
             data-zitlancer-form={tContact.main_form.submit_messages.zitlancer}
             tabindex="0"
           >
           </button>
+          <script is:inline></script>
         </div>
       </div>
     </div>
   </div>
 </form>
 
-<script>
-  let userType: string | null = null;
-  const mainForm = document.getElementById("main-form") as HTMLFormElement;
-  const clientButton = document.getElementById(
-    "client-button"
-  ) as HTMLButtonElement;
-  const zitlancerButton = document.getElementById(
-    "zitlancer-button"
-  ) as HTMLButtonElement;
-  const usertypeLabel = document.getElementById(
-    "user-type-label"
-  ) as HTMLDivElement;
-  const removeSelection = document.getElementById(
-    "remove-selection"
-  ) as HTMLButtonElement;
-  const userTypeButtons = document.getElementById(
-    "user-type-buttons"
-  ) as HTMLDivElement;
-  const clientForm = document.getElementById("client-form") as HTMLDivElement;
-  const zitlancerForm = document.getElementById(
-    "zitlancer-form"
-  ) as HTMLDivElement;
-  const formFooter = document.getElementById("form-footer") as HTMLDivElement;
-  const submitButton = document.getElementById(
-    "submit-button"
-  ) as HTMLButtonElement;
+<script is:inline>
+  let userType = null;
+  const mainForm = document.getElementById("main-form");
+  const clientButton = document.getElementById("client-button");
+  const zitlancerButton = document.getElementById("zitlancer-button");
+  const usertypeLabel = document.getElementById("user-type-label");
+  const removeSelection = document.getElementById("remove-selection");
+  const userTypeButtons = document.getElementById("user-type-buttons");
+  const clientForm = document.getElementById("client-form");
+  const zitlancerForm = document.getElementById("zitlancer-form");
+  const formFooter = document.getElementById("form-footer");
+  const submitButton = document.getElementById("submit-button");
 
-  const setUserType = (type: string | null) => (userType = type);
+  const setUserType = (type) => (userType = type);
 
   const setClient = () => {
     setUserType("client");
@@ -250,245 +241,169 @@ const form = {
   const formValidation = () => {
     let formIsValid = true;
 
-    const firstName = document.getElementById("first-name") as HTMLInputElement;
-    const lastName = document.getElementById("last-name") as HTMLInputElement;
-    const email = document.getElementById("email") as HTMLInputElement;
+    const firstName = document.getElementById("first-name");
+    const lastName = document.getElementById("last-name");
+    const email = document.getElementById("email");
 
     if (!firstName.value) {
-      const label = document.querySelector(
-        "[for='first-name']"
-      ) as HTMLLabelElement;
-      const message = document.getElementById(
-        "first-name-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='first-name']");
+      const message = document.getElementById("first-name-message");
       label.classList.add("text-destructive");
       message.classList.remove("hidden");
       message.textContent = "First name is required";
       formIsValid = false;
     } else {
-      const label = document.querySelector(
-        "[for='first-name']"
-      ) as HTMLLabelElement;
-      const message = document.getElementById(
-        "first-name-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='first-name']");
+      const message = document.getElementById("first-name-message");
       label.classList.remove("text-destructive");
       message.classList.add("hidden");
       message.textContent = "";
     }
 
     if (!lastName.value) {
-      const label = document.querySelector(
-        "[for='last-name']"
-      ) as HTMLLabelElement;
-      const message = document.getElementById(
-        "last-name-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='last-name']");
+      const message = document.getElementById("last-name-message");
       label.classList.add("text-destructive");
       message.classList.remove("hidden");
       message.textContent = "Last name is required";
       formIsValid = false;
     } else {
-      const label = document.querySelector(
-        "[for='last-name']"
-      ) as HTMLLabelElement;
-      const message = document.getElementById(
-        "last-name-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='last-name']");
+      const message = document.getElementById("last-name-message");
       label.classList.remove("text-destructive");
       message.classList.add("hidden");
       message.textContent = "";
     }
 
     if (!email.value) {
-      const label = document.querySelector("[for='email']") as HTMLLabelElement;
-      const message = document.getElementById(
-        "email-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='email']");
+      const message = document.getElementById("email-message");
       label.classList.add("text-destructive");
       message.classList.remove("hidden");
       message.textContent = "Email is required";
       formIsValid = false;
     } else {
-      const label = document.querySelector("[for='email']") as HTMLLabelElement;
-      const message = document.getElementById(
-        "email-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='email']");
+      const message = document.getElementById("email-message");
       label.classList.remove("text-destructive");
       message.classList.add("hidden");
       message.textContent = "";
     }
 
     if (!email.value.match(/^[\w.%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/g)) {
-      const label = document.querySelector("[for='email']") as HTMLLabelElement;
-      const message = document.getElementById(
-        "email-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='email']");
+      const message = document.getElementById("email-message");
       label.classList.add("text-destructive");
       message.classList.remove("hidden");
       message.textContent = "Email is invalid";
       formIsValid = false;
     } else {
-      const label = document.querySelector("[for='email']") as HTMLLabelElement;
-      const message = document.getElementById(
-        "email-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='email']");
+      const message = document.getElementById("email-message");
       label.classList.remove("text-destructive");
       message.classList.add("hidden");
       message.textContent = "";
     }
 
     // client section
-    const company = document.getElementById("company") as HTMLInputElement;
-    const message = document.getElementById("message") as HTMLInputElement;
+    const company = document.getElementById("company");
+    const message = document.getElementById("message");
 
     if (userType === "client") {
       if (!company.value) {
-        const label = document.querySelector(
-          "[for='company']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "company-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='company']");
+        const message = document.getElementById("company-message");
         label.classList.add("text-destructive");
         message.classList.remove("hidden");
         message.textContent = "Company is required";
         formIsValid = false;
       } else {
-        const label = document.querySelector(
-          "[for='company']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "company-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='company']");
+        const message = document.getElementById("company-message");
         label.classList.remove("text-destructive");
         message.classList.add("hidden");
         message.textContent = "";
       }
 
       if (!message.value) {
-        const label = document.querySelector(
-          "[for='message']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "message-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='message']");
+        const message = document.getElementById("message-message");
         label.classList.add("text-destructive");
         message.classList.remove("hidden");
         message.textContent = "Message is required";
         formIsValid = false;
       } else {
-        const label = document.querySelector(
-          "[for='message']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "message-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='message']");
+        const message = document.getElementById("message-message");
         label.classList.remove("text-destructive");
         message.classList.add("hidden");
         message.textContent = "";
       }
     }
 
-    const country = document.getElementById("country") as HTMLInputElement;
-    const mainSkill = document.getElementById("main-skill") as HTMLInputElement;
-    const otherSkill = document.getElementById(
-      "other-skill"
-    ) as HTMLInputElement;
+    const country = document.getElementById("country");
+    const mainSkill = document.getElementById("main-skill");
+    const otherSkill = document.getElementById("other-skill");
 
     if (userType === "zitlancer") {
       if (!country.value) {
-        const label = document.querySelector(
-          "[for='country']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "country-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='country']");
+        const message = document.getElementById("country-message");
         label.classList.add("text-destructive");
         message.classList.remove("hidden");
         message.textContent = "Country is required";
         formIsValid = false;
       } else {
-        const label = document.querySelector(
-          "[for='country']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "country-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='country']");
+        const message = document.getElementById("country-message");
         label.classList.remove("text-destructive");
         message.classList.add("hidden");
         message.textContent = "";
       }
 
       if (!mainSkill.value) {
-        const label = document.querySelector(
-          "[for='main-skill']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "main-skill-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='main-skill']");
+        const message = document.getElementById("main-skill-message");
         label.classList.add("text-destructive");
         message.classList.remove("hidden");
         message.textContent = "Main skill is required";
         formIsValid = false;
       } else {
-        const label = document.querySelector(
-          "[for='main-skill']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "main-skill-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='main-skill']");
+        const message = document.getElementById("main-skill-message");
         label.classList.remove("text-destructive");
         message.classList.add("hidden");
         message.textContent = "";
       }
 
-      if (mainSkill.value === "Other" && !otherSkill.value) {
-        const label = document.querySelector(
-          "[for='other-skill']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "other-skill-message"
-        ) as HTMLParagraphElement;
+      if (!otherSkill.value && mainSkill.value === "other") {
+        const label = document.querySelector("[for='other-skill']");
+        const message = document.getElementById("other-skill-message");
         label.classList.add("text-destructive");
         message.classList.remove("hidden");
         message.textContent = "Other skill is required";
         formIsValid = false;
       } else {
-        const label = document.querySelector(
-          "[for='other-skill']"
-        ) as HTMLLabelElement;
-        const message = document.getElementById(
-          "other-skill-message"
-        ) as HTMLParagraphElement;
+        const label = document.querySelector("[for='other-skill']");
+        const message = document.getElementById("other-skill-message");
         label.classList.remove("text-destructive");
         message.classList.add("hidden");
         message.textContent = "";
       }
     }
 
-    const privacyPolicy = document.getElementById(
-      "privacy-policy"
-    ) as HTMLInputElement;
+    const privacyPolicy = document.getElementById("privacy-policy");
 
     if (!privacyPolicy.checked) {
-      const label = document.querySelector(
-        "[for='privacy-policy']"
-      ) as HTMLLabelElement;
-      const message = document.getElementById(
-        "privacy-policy-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='privacy-policy']");
+      const message = document.getElementById("privacy-policy-message");
       label.classList.add("text-destructive");
       message.classList.remove("hidden");
       message.textContent = "You need to accept the privacy policy";
       formIsValid = false;
     } else {
-      const label = document.querySelector(
-        "[for='privacy-policy']"
-      ) as HTMLLabelElement;
-      const message = document.getElementById(
-        "privacy-policy-message"
-      ) as HTMLParagraphElement;
+      const label = document.querySelector("[for='privacy-policy']");
+      const message = document.getElementById("privacy-policy-message");
       label.classList.remove("text-destructive");
       message.classList.add("hidden");
       message.textContent = "";
@@ -498,55 +413,83 @@ const form = {
   };
 
   const sendZitlancer = async (data) => {
-    return await fetch("/api/zitlanser", {
+    return await fetch("/api/zitlancer", {
       method: "POST",
       body: JSON.stringify({
-        name: _data.first_name,
-        last_name: _data.last_name,
-        email: _data.email,
-        country: _data.country,
-        locale: _data.locale,
-        main_skill: _data["main-skill"],
-        other_skill: _data["other-skill"],
+        locale: data.locale,
+        name: data.first_name,
+        last_name: data.last_name,
+        email: data.email,
+        country: data.country,
+        main_skill: data["main-skill"],
+        other_skill: data["other-skill"],
       }),
     });
   };
 
-  const sendClient = async () => {
-    return await fetch("/api/zitlanser", {
+  const sendClient = async (data) => {
+    return await fetch("/api/client", {
       method: "POST",
       body: JSON.stringify({
-        name: _data.first_name,
-        last_name: _data.last_name,
-        email: _data.email,
-        country: _data.country,
-        locale: _data.locale,
-        main_skill: _data["main-skill"],
-        other_skill: _data["other-skill"],
+        firstName: data.first_name,
+        lastName: data.last_name,
+        email: data.email,
+        message: data.message,
+        company: data.company,
       }),
     });
   };
 
-  mainForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
+  const formSubmit = async () => {
     if (!formValidation()) return;
 
     const formData = new FormData(mainForm);
-    let _data = {};
-    formData.forEach((value, key) => (_data[key] = value));
+    let dataForm = {
+      locale: "",
+      captcha: "",
+      name: "",
+      last_name: "",
+      email: "",
+      message: "",
+      country: "",
+      main_skill: "",
+      other_skill: "",
+    };
+    formData.forEach((value, key) => (dataForm[key] = value));
 
     try {
       const response =
         userType === "zitlancer"
-          ? await sendZitlancer(_data)
-          : await sendClient();
+          ? await sendZitlancer(dataForm)
+          : await sendClient(dataForm);
       const data = await response.json();
+
+      console.log(data);
 
       mainForm.reset();
       removeSelectionFn();
     } catch (error) {
       console.error(error);
     }
-  });
+  };
+
+  function onSubmit(token) {
+    fetch("/api/recaptcha", {
+      method: "POST",
+      body: JSON.stringify({ recaptcha: token }),
+    })
+      .then((response) => response.json())
+      .then((gResponse) => {
+        if (gResponse.success) {
+          console.log("Captcha verification was a success");
+          const mainForm = document.getElementById("main-form");
+
+          if (!mainForm) return;
+
+          formSubmit();
+        } else {
+          console.log("Captcha verification failed");
+        }
+      });
+  }
 </script>

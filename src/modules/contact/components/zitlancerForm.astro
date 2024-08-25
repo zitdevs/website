@@ -1,10 +1,19 @@
 ---
-import ReactSelect from "react-tailwindcss-select";
-import getUnicodeFlagIcon from "country-flag-icons/unicode";
-import Select from "../../../components/Form/Select.astro";
+import Option from "../../../components/Select/Option.astro";
+import Select from "../../../components/Select/Select.astro";
+import Label from "../../../components/label/Label.astro";
 
 const { tZitLancerForm, tCountries } = Astro.props;
 const { id, class: clasnName } = Astro.props;
+
+const skills = {
+  ito0jd6eck7wo6i: "Software Development",
+  gqwu6h8pejq7lnj: "Web Development",
+  "9qzp74ilcicd7hx": "Mobile Development",
+  y6v6o53xa85xpi8: "Design",
+  tt4wkgbu6jetotr: "Data Science",
+  other: "Other",
+};
 ---
 
 <div
@@ -19,43 +28,31 @@ const { id, class: clasnName } = Astro.props;
       {tZitLancerForm.labels.country}
       <span class="text-red-500">*</span>
     </label>
-    <select
-      id="country"
-      name="country"
-      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-    >
-      <option value="">{tZitLancerForm.placeholders.country}</option>
+    <Select id="country" name="country">
+      <Option value="">{tZitLancerForm.placeholders.country}</Option>
       {
         Object.entries(tCountries).map(([code, name]) => (
-          <option value={code}>{name}</option>
+          <Option value={code}>{name}</Option>
         ))
       }
-    </select>
+    </Select>
     <p id="country-message" class="text-sm font-medium text-destructive hidden">
     </p>
   </div>
   <div class="sm:col-span-2">
     <div class="space-y-2">
-      <label
-        class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-        for="main-skill"
-      >
+      <Label for="main-skill">
         {tZitLancerForm.labels.main_skill}
         <span class="text-red-500">*</span>
-      </label>
-      <select
-        id="main-skill"
-        name="main-skill"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-      >
-        <option value="">{tZitLancerForm.placeholders.main_skill}</option>
-        <option value="ito0jd6eck7wo6i">Software Development</option>
-        <option value="gqwu6h8pejq7lnj">Web Development</option>
-        <option value="9qzp74ilcicd7hx">Mobile Development</option>
-        <option value="y6v6o53xa85xpi8">Design</option>
-        <option value="tt4wkgbu6jetotr">Data Science</option>
-        <option value="other">Other</option>
-      </select>
+      </Label>
+      <Select id="main-skill" name="main-skill">
+        <Option value="">{tZitLancerForm.placeholders.main_skill}</Option>
+        {
+          Object.entries(skills).map(([code, name]) => (
+            <Option value={code}>{name}</Option>
+          ))
+        }
+      </Select>
       <p
         id="main-skill-message"
         class="text-sm font-medium text-destructive hidden"
@@ -65,12 +62,9 @@ const { id, class: clasnName } = Astro.props;
   </div>
   <div id="other-skill-form-item" class="sm:col-span-2 space-y-2 hidden">
     <div class="space-y-2">
-      <label
-        class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-        for="other-skill"
-      >
+      <Label for="other-skill">
         Other Skill <span class="text-red-500">*</span>
-      </label>
+      </Label>
       <input
         autocomplete="off"
         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
@@ -89,4 +83,21 @@ const { id, class: clasnName } = Astro.props;
     </div>
   </div>
 </div>
-<!-- <FormMessage /> -->
+
+<script>
+  const mainSkill = document.getElementById("main-skill") as HTMLSelectElement;
+
+  if (mainSkill) {
+    mainSkill.addEventListener("change", (event) => {
+      const otherSkillFormItem = document.getElementById(
+        "other-skill-form-item"
+      ) as HTMLDivElement;
+
+      if ((event?.target as HTMLSelectElement)?.value === "other") {
+        otherSkillFormItem.classList.remove("hidden");
+      } else {
+        otherSkillFormItem.classList.add("hidden");
+      }
+    });
+  }
+</script>

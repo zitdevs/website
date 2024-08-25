@@ -1,4 +1,6 @@
 ---
+import Label from "../../../components/label/Label.astro";
+
 const { id, class: className, tClientForm } = Astro.props;
 ---
 
@@ -8,13 +10,10 @@ const { id, class: className, tClientForm } = Astro.props;
 >
   <div class="col-span-2">
     <div class="space-y-2">
-      <label
-        class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-        for="company"
-      >
+      <Label for="company">
         {tClientForm.labels.company}
         <span class="text-red-500">*</span>
-      </label>
+      </Label>
       <input
         autocomplete="organization"
         class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
@@ -30,13 +29,10 @@ const { id, class: className, tClientForm } = Astro.props;
   </div>
   <div class="col-span-2">
     <div class="space-y-2">
-      <label
-        class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-        for="message"
-      >
+      <Label for="message">
         {tClientForm.labels.message}
         <span class="text-red-500">*</span>
-      </label>
+      </Label>
       <textarea
         id="message"
         autocomplete="off"

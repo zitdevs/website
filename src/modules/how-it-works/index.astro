@@ -1,4 +1,5 @@
 ---
+import DynamicIcon from "../../components/icons/DynamicIcon.astro";
 import Side from "./components/Side.astro";
 import SideItem from "./components/SideItem.astro";
 
@@ -22,13 +23,7 @@ const zitlancerItems = Object.keys(zitlancers.item).map(
       title={tHowItWorks.clients.title}
       cta={{
         text: tHowItWorks.clients.cta,
-        onClick: () => {
-          document.getElementById("contact")?.scrollIntoView({
-            behavior: "smooth",
-          });
-          const clientButton = document.getElementById("client-button");
-          clientButton?.click();
-        },
+        toggle: "client",
       }}
     >
       {
@@ -43,13 +38,7 @@ const zitlancerItems = Object.keys(zitlancers.item).map(
       title={tHowItWorks.zitlancers.title}
       cta={{
         text: tHowItWorks.zitlancers.cta,
-        onClick: () => {
-          document.getElementById("contact")?.scrollIntoView({
-            behavior: "smooth",
-          });
-          const zitlancerButton = document.getElementById("zitlancer-button");
-          zitlancerButton?.click();
-        },
+        toggle: "zitlancer",
       }}
     >
       {
@@ -60,3 +49,26 @@ const zitlancerItems = Object.keys(zitlancers.item).map(
     </Side>
   </div>
 </section>
+
+<script>
+  const buttons = document.querySelectorAll("[data-cta]");
+  buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const dataToggle = (event?.target as HTMLElement)?.getAttribute(
+        "data-toggle"
+      );
+      const dataCta = (event?.target as HTMLElement)?.getAttribute("data-cta");
+      const cta = document.querySelector(`#${dataCta}`);
+      const toggle = document.querySelector(
+        `#${dataToggle}-button`
+      ) as HTMLButtonElement;
+
+      if (!cta) return;
+      cta.scrollIntoView();
+      window.history.pushState({}, "", `#${dataCta}`);
+
+      if (!toggle) return;
+      toggle.click();
+    });
+  });
+</script>

@@ -1,9 +1,8 @@
 ---
+import DynamicIcon from "../../../components/icons/DynamicIcon.astro";
 import { cn } from "../../../lib/utils";
-import Icons from "../../../components/icons/Icons";
 
 const { index, item, items, variant } = Astro.props;
-const Icon = Icons[item.icon as keyof typeof Icons];
 const textColor = variant === "left" ? "text-primary" : "text-secondary";
 ---
 
@@ -18,7 +17,7 @@ const textColor = variant === "left" ? "text-primary" : "text-secondary";
         {index + 1}.
       </span>
       <span>{item.title}</span>
-      <Icon className="size-5 inline" aria-hidden />
+      <DynamicIcon icon={item.icon} className="size-5 inline" aria-hidden />
     </h4>
     <p
       class={cn("ml-6 text-sm text-white/80", {

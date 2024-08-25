@@ -1,8 +1,7 @@
-import { Dictionary } from "@/get-dictionary";
 import { z } from "zod";
 
 export interface MainFormProps {
-  tContact: Dictionary["home"]["contact"];
+  // tContact: Dictionary["home"]["contact"];
 }
 
 export type FormType = "client" | "zitlancer";

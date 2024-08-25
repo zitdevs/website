@@ -1,7 +1,7 @@
 ---
 import "../styles/globals.css";
 import "@fontsource/raleway";
-import Header from "../components/header/Header.astro";
+import Header from "../components/Header/Header.astro";
 import Footer from "../modules/footer/Footer.astro";
 import { getLangFromUrl } from "../i18n/utils";
 import { getI18n } from "../i18n";
@@ -10,10 +10,11 @@ const { currentLocale } = Astro;
 const lang = getLangFromUrl(Astro.url);
 const i18n = getI18n({ currentLocale: lang });
 const metadata = i18n.default.metadata;
+const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
 ---
 
 <!doctype html>
-<html lang={currentLocale}>
+<html lang={currentLocale} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -60,7 +61,10 @@ const metadata = i18n.default.metadata;
       content={metadata.twitterCard["twitter:image"]}
     />
 
-    <script is:inline src="https://www.google.com/recaptcha/api.js"></script>
+    <script
+      is:inline
+      src={`https://www.google.com/recaptcha/api.js?render=${captcha}`}
+    ></script>
   </head>
   <body style="font-family: 'Raleway', sans-serif;">
     <Header />

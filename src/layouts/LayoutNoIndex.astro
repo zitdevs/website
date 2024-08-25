@@ -4,9 +4,10 @@ import "@fontsource/raleway";
 import Header from "../components/Header/Header.astro";
 import Footer from "../modules/footer/Footer.astro";
 const { currentLocale } = Astro;
+const { title } = Astro.props;
 
 const metadata = {
-  title: `ZitDevs | Legal`,
+  title: title || "ZitDevs",
   robots: "noindex, nofollow",
 };
 ---
