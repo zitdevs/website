@@ -238,6 +238,14 @@ const form = {
   zitlancerButton.addEventListener("click", setZitlancer);
   removeSelection.addEventListener("click", removeSelectionFn);
 
+  const setButtonDisabled = () => {
+    submitButton.setAttribute("disabled", "true");
+  };
+
+  const setButtonEnabled = () => {
+    submitButton.removeAttribute("disabled");
+  };
+
   const formValidation = () => {
     let formIsValid = true;
 
@@ -441,7 +449,12 @@ const form = {
   };
 
   const formSubmit = async () => {
-    if (!formValidation()) return;
+    setButtonDisabled();
+
+    if (!formValidation()) {
+      setButtonEnabled();
+      return;
+    }
 
     const formData = new FormData(mainForm);
     let dataForm = {
@@ -464,11 +477,32 @@ const form = {
           : await sendClient(dataForm);
       const data = await response.json();
 
-      console.log(data);
+      if (data.error) {
+        showToast(data.error, "error", 5000);
+        setButtonEnabled();
+        return;
+      }
+
+      if (userType === "zitlancer") {
+        showToast(
+          "Thank you for joining our waitlist. We will notify you once our platform is ready.",
+          "success",
+          5000
+        );
+      } else {
+        showToast(
+          "Thank you for contacting us. We will get back to you shortly.",
+          "success",
+          5000
+        );
+      }
 
       mainForm.reset();
+      setButtonEnabled();
       removeSelectionFn();
     } catch (error) {
+      showToast("An error occurred. Please try again later.", "error", 5000);
+      setButtonEnabled();
       console.error(error);
     }
   };

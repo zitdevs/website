@@ -43,7 +43,7 @@ export const POST: APIRoute = async ({ params, request }) => {
     if (err?.response?.data?.email?.code === "validation_not_unique") {
       return new Response(
         JSON.stringify({
-          error: "email_already_exists",
+          error: "This email is already registered",
         }),
       );
     }

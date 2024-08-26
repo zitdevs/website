@@ -1,4 +1,3 @@
-"use server";
 import PocketBase from "pocketbase";
 
 const pbBuilder = async () => {

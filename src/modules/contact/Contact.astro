@@ -1,6 +1,7 @@
 ---
 import MainForm from "./components/MainForm.astro";
 const { tContact, tDefault } = Astro.props;
+const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
 ---
 
 <section
@@ -27,3 +28,36 @@ const { tContact, tDefault } = Astro.props;
   </div>
   <MainForm tContact={tContact} tDefault={tDefault} />
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const captchaButton = document.querySelector(
+      ".g-recaptcha"
+    ) as HTMLButtonElement;
+
+    if (!captchaButton) return;
+
+    const captchaToken = captchaButton.dataset.sitekey;
+    const contactSection = document.getElementById("contact");
+
+    if (!contactSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const script = document.createElement("script");
+            script.src = `https://www.google.com/recaptcha/api.js?render=${captchaToken}`;
+            script.async = true;
+            document.body.appendChild(script);
+
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(contactSection);
+  });
+</script>

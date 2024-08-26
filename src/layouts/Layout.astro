@@ -10,7 +10,6 @@ const { currentLocale } = Astro;
 const lang = getLangFromUrl(Astro.url);
 const i18n = getI18n({ currentLocale: lang });
 const metadata = i18n.default.metadata;
-const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
 ---
 
 <!doctype html>
@@ -61,10 +60,6 @@ const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
       content={metadata.twitterCard["twitter:image"]}
     />
 
-    <script
-      is:inline
-      src={`https://www.google.com/recaptcha/api.js?render=${captcha}`}
-    ></script>
     <!-- Google Tag Manager -->
     <script
       src="https://www.googletagmanager.com/gtag/js?id=G-V28YYZTMPB"

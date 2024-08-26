@@ -12,7 +12,10 @@ const { tHero, tSrOnly } = Astro.props;
   </div>
   <div class="absolute inset-0 overflow-hidden w-full h-[100vh]">
     <div class="h-[600px] mt-20 blur-lg -rotate-12 overflow-hidden">
-      <BgLogo class="blur-md" />
+      <!-- <BgLogo className="blur-md animate-spin-in-scale-in delay-1000" /> -->
+      <BgLogo
+        className="blur-md animate-in spin-in-[360deg] zoom-in delay-1000 duration-1000"
+      />
     </div>
   </div>
 </section>

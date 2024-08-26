@@ -7,6 +7,7 @@ import HowItWorks from "../../modules/how-it-works/index.astro";
 import Services from "../../modules/services/index.astro";
 import TopHero from "../../modules/TopHero.astro";
 import WhatWeDo from "../../modules/what-we-do/index.astro";
+import Toast from "../../components/Toast/Toast.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const i18n = getI18n({ currentLocale: lang });
@@ -20,4 +21,5 @@ const tDefault = i18n.default;
   <HowItWorks tHowItWorks={tHome.how_it_works} />
   <Services tServices={tHome.services} />
   <Contact tContact={tHome.contact} tDefault={tDefault} />
+  <Toast />
 </Layout>
