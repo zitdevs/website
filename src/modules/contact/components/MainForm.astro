@@ -1,0 +1,529 @@
+---
+import { Trash } from "lucide-astro";
+import BaseForm from "./BaseForm.astro";
+import ClientForm from "./clientForm.astro";
+import ZitlancerForm from "./zitlancerForm.astro";
+import Button from "../../../components/button/Button.astro";
+const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
+
+const { tContact, tDefault } = Astro.props;
+
+const form = {
+  name: "",
+  email: "",
+  message: "",
+};
+---
+
+<form id="main-form" class="mx-auto mt-16 max-w-xl sm:mt-20">
+  <BaseForm tBaseForm={tContact.base_form} form={form as any} />
+  <div class="mx-auto max-w-xl mt-6">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+      <div class="col-span-2">
+        <div class=""></div>
+        <div
+          class="font-semibold text-sm leading-6 text-gray-900"
+          id="user-type-label"
+        >
+          <div data-type-enabled="false">Who are you?</div>
+          <div class="items-center gap-2 hidden" data-type-enabled="true">
+            <span>I'm want to be</span>
+            <button
+              id="remove-selection"
+              type="button"
+              class="flex items-center gap-1 cursor-pointer hover:text-secondary transition-all"
+            >
+              <span>(</span>
+              <span>Remove Selection</span>
+              <Trash className="text-red-500 size-4" />
+              <span>)</span>
+            </button>
+          </div>
+        </div>
+        <div class="mt-2.5 grid grid-cols-2" id="user-type-buttons">
+          <Button
+            className="rounded-r-none"
+            variant="secondary"
+            id="client-button"
+            type="button"
+            tabindex="0"
+          >
+            Client
+          </Button>
+          <Button
+            className="rounded-l-none"
+            id="zitlancer-button"
+            type="button"
+            tabindex="0"
+          >
+            Zitlancer
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto max-w-xl mt-6">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+      <ClientForm
+        id="client-form"
+        class="hidden"
+        tClientForm={tContact.client_form}
+        form={form as any}
+      />
+      <ZitlancerForm
+        id="zitlancer-form"
+        class="hidden"
+        tZitLancerForm={tContact.zitlancer_form}
+        tCountries={tDefault.countries}
+        form={form as any}
+      />
+      <div id="form-footer" class="col-span-2 hidden">
+        <div class="flex flex-wrap gap-x-4 col-span-2">
+          <label
+            class="relative inline-flex items-center cursor-pointer focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-indigo-600 rounded-xl"
+          >
+            <span class="sr-only">
+              {tContact.privacy_policy.sr_only}
+            </span>
+            <input
+              type="checkbox"
+              value=""
+              class="sr-only peer"
+              id="privacy-policy"
+            />
+            <div
+              class="bg-gray-200 w-8 h-5 rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out
+                  after:duration-300
+                  peer-checked:bg-secondary peer-focus:outline-none after:rounded-full after:absolute after:bg-gray-50 after:outline-none after:size-4 after:top-1 after:left-[2px] after:flex after:justify-center after:items-center peer-checked:after:left-auto peer-checked:after:translate-x-[13px] peer-hover:after:scale-95"
+            >
+            </div>
+          </label>
+          <div>
+            <label
+              for="privacy-policy"
+              class="text-sm leading-6 text-gray-600"
+              data-headlessui-state=""
+            >
+              {tContact.privacy_policy.label}
+            </label>
+            <a
+              target="_blank"
+              class="font-semibold text-indigo-600"
+              href="/legal/privacy-policy"
+            >
+              {tContact.privacy_policy.link_text}
+            </a>
+          </div>
+          <p
+            id="privacy-policy-message"
+            class="text-sm w-full mt-2 font-medium text-destructive hidden"
+          >
+          </p>
+        </div>
+
+        <div class="mt-10 col-span-2">
+          <button
+            id="submit-button"
+            class="g-recaptcha inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-4 py-2 w-full"
+            data-sitekey={captcha}
+            data-callback="onSubmit"
+            data-action="submit"
+            type="submit"
+            data-client-form={tContact.main_form.submit_messages.client}
+            data-zitlancer-form={tContact.main_form.submit_messages.zitlancer}
+            tabindex="0"
+          >
+          </button>
+          <script is:inline></script>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<script is:inline>
+  let userType = null;
+  const mainForm = document.getElementById("main-form");
+  const clientButton = document.getElementById("client-button");
+  const zitlancerButton = document.getElementById("zitlancer-button");
+  const usertypeLabel = document.getElementById("user-type-label");
+  const removeSelection = document.getElementById("remove-selection");
+  const userTypeButtons = document.getElementById("user-type-buttons");
+  const clientForm = document.getElementById("client-form");
+  const zitlancerForm = document.getElementById("zitlancer-form");
+  const formFooter = document.getElementById("form-footer");
+  const submitButton = document.getElementById("submit-button");
+
+  const setUserType = (type) => (userType = type);
+
+  const setClient = () => {
+    setUserType("client");
+
+    clientForm.classList.remove("hidden");
+    zitlancerForm.classList.add("hidden");
+    clientButton.classList.add("w-full");
+    clientButton.classList.remove("rounded-r-none");
+    clientButton.setAttribute("disabled", "true");
+    zitlancerButton.classList.add("hidden");
+    userTypeButtons.classList.remove("grid-cols-2");
+    userTypeButtons.classList.add("grid-cols-1");
+    formFooter.classList.remove("hidden");
+    submitButton.textContent = submitButton.getAttribute("data-client-form");
+    submitButton.classList.remove("bg-primary");
+    submitButton.classList.add("bg-secondary");
+
+    usertypeLabel
+      ?.querySelector("[data-type-enabled='false']")
+      ?.classList.add("hidden");
+    usertypeLabel
+      ?.querySelector("[data-type-enabled='true']")
+      ?.classList.remove("hidden");
+    usertypeLabel
+      ?.querySelector("[data-type-enabled='true']")
+      ?.classList.add("flex");
+  };
+
+  const setZitlancer = () => {
+    setUserType("zitlancer");
+    zitlancerForm.classList.remove("hidden");
+    clientForm.classList.add("hidden");
+    zitlancerButton.classList.add("w-full");
+    zitlancerButton.classList.remove("rounded-l-none");
+    zitlancerButton.setAttribute("disabled", "true");
+    clientButton.classList.add("hidden");
+    userTypeButtons.classList.remove("grid-cols-2");
+    userTypeButtons.classList.add("grid-cols-1");
+    formFooter.classList.remove("hidden");
+    submitButton.textContent = submitButton.getAttribute("data-zitlancer-form");
+    submitButton.classList.remove("bg-secondary");
+    submitButton.classList.add("bg-primary");
+
+    usertypeLabel
+      ?.querySelector("[data-type-enabled='false']")
+      ?.classList.add("hidden");
+    usertypeLabel
+      ?.querySelector("[data-type-enabled='true']")
+      ?.classList.remove("hidden");
+    usertypeLabel
+      ?.querySelector("[data-type-enabled='true']")
+      ?.classList.add("flex");
+  };
+
+  const removeSelectionFn = () => {
+    setUserType(null);
+    clientForm.classList.add("hidden");
+    zitlancerForm.classList.add("hidden");
+    usertypeLabel
+      ?.querySelector("[data-type-enabled='false']")
+      ?.classList.remove("hidden");
+    usertypeLabel
+      ?.querySelector("[data-type-enabled='true']")
+      ?.classList.add("hidden");
+    formFooter.classList.add("hidden");
+
+    clientButton.classList.remove("w-full");
+    clientButton.classList.remove("hidden");
+    clientButton.classList.add("rounded-r-none");
+    clientButton.removeAttribute("disabled");
+    zitlancerButton.classList.remove("hidden");
+    zitlancerButton.classList.remove("w-full");
+    zitlancerButton.classList.add("rounded-l-none");
+    zitlancerButton.removeAttribute("disabled");
+    userTypeButtons.classList.remove("grid-cols-1");
+    userTypeButtons.classList.add("grid-cols-2");
+    submitButton.textContent = "";
+  };
+
+  clientButton.addEventListener("click", setClient);
+  zitlancerButton.addEventListener("click", setZitlancer);
+  removeSelection.addEventListener("click", removeSelectionFn);
+
+  const setButtonDisabled = () => {
+    submitButton.setAttribute("disabled", "true");
+  };
+
+  const setButtonEnabled = () => {
+    submitButton.removeAttribute("disabled");
+  };
+
+  const formValidation = () => {
+    let formIsValid = true;
+
+    const firstName = document.getElementById("first-name");
+    const lastName = document.getElementById("last-name");
+    const email = document.getElementById("email");
+
+    if (!firstName.value) {
+      const label = document.querySelector("[for='first-name']");
+      const message = document.getElementById("first-name-message");
+      label.classList.add("text-destructive");
+      message.classList.remove("hidden");
+      message.textContent = "First name is required";
+      formIsValid = false;
+    } else {
+      const label = document.querySelector("[for='first-name']");
+      const message = document.getElementById("first-name-message");
+      label.classList.remove("text-destructive");
+      message.classList.add("hidden");
+      message.textContent = "";
+    }
+
+    if (!lastName.value) {
+      const label = document.querySelector("[for='last-name']");
+      const message = document.getElementById("last-name-message");
+      label.classList.add("text-destructive");
+      message.classList.remove("hidden");
+      message.textContent = "Last name is required";
+      formIsValid = false;
+    } else {
+      const label = document.querySelector("[for='last-name']");
+      const message = document.getElementById("last-name-message");
+      label.classList.remove("text-destructive");
+      message.classList.add("hidden");
+      message.textContent = "";
+    }
+
+    if (!email.value) {
+      const label = document.querySelector("[for='email']");
+      const message = document.getElementById("email-message");
+      label.classList.add("text-destructive");
+      message.classList.remove("hidden");
+      message.textContent = "Email is required";
+      formIsValid = false;
+    } else {
+      const label = document.querySelector("[for='email']");
+      const message = document.getElementById("email-message");
+      label.classList.remove("text-destructive");
+      message.classList.add("hidden");
+      message.textContent = "";
+    }
+
+    if (!email.value.match(/^[\w.%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/g)) {
+      const label = document.querySelector("[for='email']");
+      const message = document.getElementById("email-message");
+      label.classList.add("text-destructive");
+      message.classList.remove("hidden");
+      message.textContent = "Email is invalid";
+      formIsValid = false;
+    } else {
+      const label = document.querySelector("[for='email']");
+      const message = document.getElementById("email-message");
+      label.classList.remove("text-destructive");
+      message.classList.add("hidden");
+      message.textContent = "";
+    }
+
+    // client section
+    const company = document.getElementById("company");
+    const message = document.getElementById("message");
+
+    if (userType === "client") {
+      if (!company.value) {
+        const label = document.querySelector("[for='company']");
+        const message = document.getElementById("company-message");
+        label.classList.add("text-destructive");
+        message.classList.remove("hidden");
+        message.textContent = "Company is required";
+        formIsValid = false;
+      } else {
+        const label = document.querySelector("[for='company']");
+        const message = document.getElementById("company-message");
+        label.classList.remove("text-destructive");
+        message.classList.add("hidden");
+        message.textContent = "";
+      }
+
+      if (!message.value) {
+        const label = document.querySelector("[for='message']");
+        const message = document.getElementById("message-message");
+        label.classList.add("text-destructive");
+        message.classList.remove("hidden");
+        message.textContent = "Message is required";
+        formIsValid = false;
+      } else {
+        const label = document.querySelector("[for='message']");
+        const message = document.getElementById("message-message");
+        label.classList.remove("text-destructive");
+        message.classList.add("hidden");
+        message.textContent = "";
+      }
+    }
+
+    const country = document.getElementById("country");
+    const mainSkill = document.getElementById("main-skill");
+    const otherSkill = document.getElementById("other-skill");
+
+    if (userType === "zitlancer") {
+      if (!country.value) {
+        const label = document.querySelector("[for='country']");
+        const message = document.getElementById("country-message");
+        label.classList.add("text-destructive");
+        message.classList.remove("hidden");
+        message.textContent = "Country is required";
+        formIsValid = false;
+      } else {
+        const label = document.querySelector("[for='country']");
+        const message = document.getElementById("country-message");
+        label.classList.remove("text-destructive");
+        message.classList.add("hidden");
+        message.textContent = "";
+      }
+
+      if (!mainSkill.value) {
+        const label = document.querySelector("[for='main-skill']");
+        const message = document.getElementById("main-skill-message");
+        label.classList.add("text-destructive");
+        message.classList.remove("hidden");
+        message.textContent = "Main skill is required";
+        formIsValid = false;
+      } else {
+        const label = document.querySelector("[for='main-skill']");
+        const message = document.getElementById("main-skill-message");
+        label.classList.remove("text-destructive");
+        message.classList.add("hidden");
+        message.textContent = "";
+      }
+
+      if (!otherSkill.value && mainSkill.value === "other") {
+        const label = document.querySelector("[for='other-skill']");
+        const message = document.getElementById("other-skill-message");
+        label.classList.add("text-destructive");
+        message.classList.remove("hidden");
+        message.textContent = "Other skill is required";
+        formIsValid = false;
+      } else {
+        const label = document.querySelector("[for='other-skill']");
+        const message = document.getElementById("other-skill-message");
+        label.classList.remove("text-destructive");
+        message.classList.add("hidden");
+        message.textContent = "";
+      }
+    }
+
+    const privacyPolicy = document.getElementById("privacy-policy");
+
+    if (!privacyPolicy.checked) {
+      const label = document.querySelector("[for='privacy-policy']");
+      const message = document.getElementById("privacy-policy-message");
+      label.classList.add("text-destructive");
+      message.classList.remove("hidden");
+      message.textContent = "You need to accept the privacy policy";
+      formIsValid = false;
+    } else {
+      const label = document.querySelector("[for='privacy-policy']");
+      const message = document.getElementById("privacy-policy-message");
+      label.classList.remove("text-destructive");
+      message.classList.add("hidden");
+      message.textContent = "";
+    }
+
+    return formIsValid;
+  };
+
+  const sendZitlancer = async (data) => {
+    return await fetch("/api/zitlancer", {
+      method: "POST",
+      body: JSON.stringify({
+        locale: data.locale,
+        name: data.first_name,
+        last_name: data.last_name,
+        email: data.email,
+        country: data.country,
+        main_skill: data["main-skill"],
+        other_skill: data["other-skill"],
+      }),
+    });
+  };
+
+  const sendClient = async (data) => {
+    return await fetch("/api/client", {
+      method: "POST",
+      body: JSON.stringify({
+        firstName: data.first_name,
+        lastName: data.last_name,
+        email: data.email,
+        message: data.message,
+        company: data.company,
+      }),
+    });
+  };
+
+  const formSubmit = async () => {
+    setButtonDisabled();
+
+    if (!formValidation()) {
+      setButtonEnabled();
+      return;
+    }
+
+    const formData = new FormData(mainForm);
+    let dataForm = {
+      locale: "",
+      captcha: "",
+      name: "",
+      last_name: "",
+      email: "",
+      message: "",
+      country: "",
+      main_skill: "",
+      other_skill: "",
+    };
+    formData.forEach((value, key) => (dataForm[key] = value));
+
+    try {
+      const response =
+        userType === "zitlancer"
+          ? await sendZitlancer(dataForm)
+          : await sendClient(dataForm);
+      const data = await response.json();
+
+      if (data.error) {
+        showToast(data.error, "error", 5000);
+        setButtonEnabled();
+        return;
+      }
+
+      if (userType === "zitlancer") {
+        showToast(
+          "Thank you for joining our waitlist. We will notify you once our platform is ready.",
+          "success",
+          5000
+        );
+      } else {
+        showToast(
+          "Thank you for contacting us. We will get back to you shortly.",
+          "success",
+          5000
+        );
+      }
+
+      mainForm.reset();
+      setButtonEnabled();
+      removeSelectionFn();
+    } catch (error) {
+      showToast("An error occurred. Please try again later.", "error", 5000);
+      setButtonEnabled();
+      console.error(error);
+    }
+  };
+
+  function onSubmit(token) {
+    fetch("/api/recaptcha", {
+      method: "POST",
+      body: JSON.stringify({ recaptcha: token }),
+    })
+      .then((response) => response.json())
+      .then((gResponse) => {
+        if (gResponse.success) {
+          console.log("Captcha verification was a success");
+          const mainForm = document.getElementById("main-form");
+
+          if (!mainForm) return;
+
+          formSubmit();
+        } else {
+          console.log("Captcha verification failed");
+        }
+      });
+  }
+</script>

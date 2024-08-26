@@ -1,0 +1,9 @@
+---
+const { className } = Astro.props;
+---
+
+<div
+  class={`group relative min-h-[300px] overflow-hidden rounded-2xl bg-slate-100 p-8 ${className} hover:scale-95 hover:rotate-[-1deg] transition-all duration-200`}
+>
+  <slot />
+</div>

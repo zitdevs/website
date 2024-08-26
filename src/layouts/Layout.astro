@@ -1,0 +1,95 @@
+---
+import "../styles/globals.css";
+import "@fontsource/raleway";
+import Header from "../components/Header/Header.astro";
+import Footer from "../modules/footer/Footer.astro";
+import { getLangFromUrl } from "../i18n/utils";
+import { getI18n } from "../i18n";
+
+const { currentLocale } = Astro;
+const lang = getLangFromUrl(Astro.url);
+const i18n = getI18n({ currentLocale: lang });
+const metadata = i18n.default.metadata;
+---
+
+<!doctype html>
+<html lang={currentLocale} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{metadata.title}</title>
+    <meta name="description" content={metadata.description} />
+    <meta
+      name="keywords"
+      content={Object.values(metadata.keywords).join(", ")}
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ZitDevs" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={metadata.openGraph["og:title"]} />
+    <meta
+      property="og:description"
+      content={metadata.openGraph["og:description"]}
+    />
+    <meta property="og:locale" content={metadata.openGraph["og:locale"]} />
+    <meta
+      property="og:site_name"
+      content={metadata.openGraph["og:site_name"]}
+    />
+    <meta property="og:url" content={metadata.openGraph["og:url"]} />
+    <meta property="og:image" content={metadata.openGraph["og:image"]} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={metadata.twitterCard["twitter:site"]} />
+    <meta
+      name="twitter:title"
+      content={metadata.twitterCard["twitter:title"]}
+    />
+    <meta
+      name="twitter:description"
+      content={metadata.twitterCard["twitter:description"]}
+    />
+    <meta
+      name="twitter:image"
+      content={metadata.twitterCard["twitter:image"]}
+    />
+
+    <!-- Google Tag Manager -->
+    <script
+      src="https://www.googletagmanager.com/gtag/js?id=G-V28YYZTMPB"
+      is:inline
+      async></script>
+
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-V28YYZTMPB");
+    </script>
+
+    <!-- Cookiebot -->
+    <script
+      is:inline
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="418e3622-e287-4d76-80f9-e43f27e0329f"
+      data-blockingmode="auto"
+      type="text/javascript"
+      async></script>
+  </head>
+  <body style="font-family: 'Raleway', sans-serif;">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

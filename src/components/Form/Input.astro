@@ -1,0 +1,27 @@
+---
+const { name, label, type, required, id, autocomplete } = Astro.props;
+---
+
+<div class="space-y-2">
+  <label
+    class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+    for={id}
+  >
+    {label}<!-- -->
+    {required && <span class="text-red-500">*</span>}
+  </label>
+  <input
+    type={type}
+    id={id}
+    autocomplete={autocomplete}
+    class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+    aria-describedby={`${id}-description`}
+    aria-invalid="false"
+    name={name}
+  />
+  <p
+    id={`${id}-description`}
+    class="text-sm font-medium text-destructive hidden"
+  >
+  </p>
+</div>

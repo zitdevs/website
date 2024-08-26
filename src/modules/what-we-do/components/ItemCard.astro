@@ -1,0 +1,32 @@
+---
+import Card from "../../../components/card/Card.astro";
+import CardContent from "../../../components/card/CardContent.astro";
+import CardHeader from "../../../components/card/CardHeader.astro";
+import CardTitle from "../../services/components/CardTitle.astro";
+
+const { icon, title, description, image } = Astro.props;
+---
+
+<Card className="h-full">
+  <CardHeader>
+    <div class="bg-[#F5F8FF] p-3 rounded-md max-w-fit mb-5">
+      <slot name="icon" />
+    </div>
+    <CardTitle className="font-semibold">{title}</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <p class="text-[#5a5967] text-sm">{description}</p>
+    {
+      !!image && (
+        <img
+          width={300}
+          height={200}
+          src={image.src}
+          alt={image.alt}
+          loading="lazy"
+          class="mt-10 rounded-md shadow-sm m-auto sm:mx-0"
+        />
+      )
+    }
+  </CardContent>
+</Card>

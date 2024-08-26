@@ -1,0 +1,31 @@
+---
+import DynamicIcon from "../../../components/icons/DynamicIcon.astro";
+import { cn } from "../../../lib/utils";
+
+const { index, item, items, variant } = Astro.props;
+const textColor = variant === "left" ? "text-primary" : "text-secondary";
+---
+
+<li
+  class={cn({
+    "col-span-1 sm:col-span-2": index === items.length - 1,
+  })}
+>
+  <div class="flex flex-col">
+    <h4 class="font-semibold text-lg flex items-center gap-2">
+      <span class={`${textColor} font-bold text-xl`}>
+        {index + 1}.
+      </span>
+      <span>{item.title}</span>
+      <DynamicIcon icon={item.icon} className="size-5 inline" aria-hidden />
+    </h4>
+    <p
+      class={cn("ml-6 text-sm text-white/80", {
+        "lg:min-h-[120px]": index !== items.length - 1,
+        "lg:min-h-[65px]": index === items.length - 1,
+      })}
+    >
+      {item.description}
+    </p>
+  </div>
+</li>

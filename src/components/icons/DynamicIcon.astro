@@ -1,0 +1,39 @@
+---
+import {
+  MessageSquareMore,
+  Calendar,
+  ScanEye,
+  Check,
+  HandCoins,
+  UserRoundCog,
+  SearchCode,
+  CalendarClock,
+  CircleDollarSign,
+  Code,
+  TabletSmartphone,
+  Globe,
+  Brain,
+} from "lucide-astro";
+
+const icons = {
+  "message-square-more": MessageSquareMore,
+  calendar: Calendar,
+  "scan-eye": ScanEye,
+  check: Check,
+  "hand-coins": HandCoins,
+  "user-round-cog": UserRoundCog,
+  "search-code": SearchCode,
+  "calendar-clock": CalendarClock,
+  "circle-dollar-sign": CircleDollarSign,
+  code: Code,
+  globe: Globe,
+  "tablet-smartphone": TabletSmartphone,
+  brain: Brain,
+};
+
+const { icon, className, ariaHidden } = Astro.props;
+
+const Icon = icons[icon as keyof typeof icons];
+---
+
+<Icon class={className} aria-hidden={ariaHidden} />

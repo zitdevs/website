@@ -1,8 +1,6 @@
-"use server";
-import { Locale } from "@/i18n-config";
 import { pbBuilder } from "./pocketbase";
 
-export const getLang = async (locale: Locale) => {
+export const getLang = async (locale: "en" | "es") => {
   const pb = await pbBuilder();
 
   const record = await pb.collection("languages").getList(1, 50, {

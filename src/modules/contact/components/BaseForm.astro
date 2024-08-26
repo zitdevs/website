@@ -1,0 +1,85 @@
+---
+import Label from "../../../components/label/Label.astro";
+import { getLangFromUrl } from "../../../i18n/utils";
+
+const { tBaseForm } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
+---
+
+<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+  <input id="locale" name="locale" type="hidden" value={lang} />
+  <!-- <input
+    id="captcha"
+    name="captcha"
+    type="hidden"
+    value={captcha}
+    class="g-recaptcha"
+    data-sitekey={captcha}
+    data-callback="onSubmit"
+    data-action="submit"
+  /> -->
+
+  <div class="space-y-2">
+    <Label
+      for="first-name"
+      class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+    >
+      {tBaseForm.labels.first_name}<!-- -->
+      <span class="text-red-500">*</span>
+    </Label>
+    <input
+      type="text"
+      autocomplete="given-name"
+      class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+      id="first-name"
+      aria-describedby="first-name-message"
+      aria-invalid="false"
+      name="first_name"
+    />
+    <p
+      id="first-name-message"
+      class="text-sm font-medium text-destructive hidden"
+    >
+    </p>
+  </div>
+  <div class="space-y-2">
+    <Label for="last-name">
+      {tBaseForm.labels.last_name}<!-- -->
+      <span class="text-red-500">*</span>
+    </Label>
+    <input
+      type="text"
+      autocomplete="family-name"
+      class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+      id="last-name"
+      aria-describedby="last-name-message"
+      aria-invalid="false"
+      name="last_name"
+    />
+    <p
+      id="last-name-message"
+      class="text-sm font-medium text-destructive hidden"
+    >
+    </p>
+  </div>
+  <div class="sm:col-span-2">
+    <div class="space-y-2">
+      <Label for="email">
+        {tBaseForm.labels.email}<!-- -->
+        <span class="text-red-500">*</span>
+      </Label>
+      <input
+        type="email"
+        autocomplete="email"
+        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+        id="email"
+        aria-describedby="email-message"
+        aria-invalid="false"
+        name="email"
+      />
+      <p id="email-message" class="text-sm font-medium text-destructive hidden">
+      </p>
+    </div>
+  </div>
+</div>

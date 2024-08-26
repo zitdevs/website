@@ -1,0 +1,103 @@
+---
+import Option from "../../../components/Select/Option.astro";
+import Select from "../../../components/Select/Select.astro";
+import Label from "../../../components/label/Label.astro";
+
+const { tZitLancerForm, tCountries } = Astro.props;
+const { id, class: clasnName } = Astro.props;
+
+const skills = {
+  ito0jd6eck7wo6i: "Software Development",
+  gqwu6h8pejq7lnj: "Web Development",
+  "9qzp74ilcicd7hx": "Mobile Development",
+  y6v6o53xa85xpi8: "Design",
+  tt4wkgbu6jetotr: "Data Science",
+  other: "Other",
+};
+---
+
+<div
+  id={id}
+  class={`col-span-2 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2 ${clasnName}`}
+>
+  <div class="space-y-2 col-span-2">
+    <label
+      class="text-sm font-semibold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+      for="country"
+    >
+      {tZitLancerForm.labels.country}
+      <span class="text-red-500">*</span>
+    </label>
+    <Select id="country" name="country">
+      <Option value="">{tZitLancerForm.placeholders.country}</Option>
+      {
+        Object.entries(tCountries).map(([code, name]) => (
+          <Option value={code}>{name}</Option>
+        ))
+      }
+    </Select>
+    <p id="country-message" class="text-sm font-medium text-destructive hidden">
+    </p>
+  </div>
+  <div class="sm:col-span-2">
+    <div class="space-y-2">
+      <Label for="main-skill">
+        {tZitLancerForm.labels.main_skill}
+        <span class="text-red-500">*</span>
+      </Label>
+      <Select id="main-skill" name="main-skill">
+        <Option value="">{tZitLancerForm.placeholders.main_skill}</Option>
+        {
+          Object.entries(skills).map(([code, name]) => (
+            <Option value={code}>{name}</Option>
+          ))
+        }
+      </Select>
+      <p
+        id="main-skill-message"
+        class="text-sm font-medium text-destructive hidden"
+      >
+      </p>
+    </div>
+  </div>
+  <div id="other-skill-form-item" class="sm:col-span-2 space-y-2 hidden">
+    <div class="space-y-2">
+      <Label for="other-skill">
+        Other Skill <span class="text-red-500">*</span>
+      </Label>
+      <input
+        autocomplete="off"
+        class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6"
+        id="other-skill"
+        aria-describedby="other-skill-message"
+        aria-invalid="false"
+        type="text"
+        value=""
+        name="other-skill"
+      />
+      <p
+        id="other-skill-message"
+        class="text-sm font-medium text-destructive hidden"
+      >
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const mainSkill = document.getElementById("main-skill") as HTMLSelectElement;
+
+  if (mainSkill) {
+    mainSkill.addEventListener("change", (event) => {
+      const otherSkillFormItem = document.getElementById(
+        "other-skill-form-item"
+      ) as HTMLDivElement;
+
+      if ((event?.target as HTMLSelectElement)?.value === "other") {
+        otherSkillFormItem.classList.remove("hidden");
+      } else {
+        otherSkillFormItem.classList.add("hidden");
+      }
+    });
+  }
+</script>

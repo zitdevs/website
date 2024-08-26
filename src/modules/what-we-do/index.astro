@@ -1,0 +1,86 @@
+---
+import ItemCard from "./components/ItemCard.astro";
+import Empowering from "./assets/empowering.png";
+import {
+  Clock,
+  Users,
+  Lightbulb,
+  Briefcase,
+  Heart,
+  Shield,
+} from "lucide-astro";
+
+const { tWhatWeDo } = Astro.props;
+---
+
+<section id="what-we-do" class="container z-10 pt-8">
+  <h2 class="text-4xl sm:text-5xl font-bold">{tWhatWeDo.title}</h2>
+  <ul
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-9"
+  >
+    <li>
+      <ItemCard
+        title={tWhatWeDo.item.flexible.title}
+        description={tWhatWeDo.item.flexible.description}
+      >
+        <Fragment slot="icon">
+          <Clock className="size-5" />
+        </Fragment>
+      </ItemCard>
+    </li>
+    <li>
+      <ItemCard
+        title={tWhatWeDo.item.community.title}
+        description={tWhatWeDo.item.community.description}
+      >
+        <Fragment slot="icon">
+          <Users className="size-5" />
+        </Fragment>
+      </ItemCard>
+    </li>
+    <li>
+      <ItemCard
+        title={tWhatWeDo.item.driven_by.title}
+        description={tWhatWeDo.item.driven_by.description}
+      >
+        <Fragment slot="icon">
+          <Lightbulb className="size-5" />
+        </Fragment>
+      </ItemCard>
+    </li>
+    <li class="sm:row-span-2">
+      <ItemCard
+        title={tWhatWeDo.item.empowering.title}
+        description={tWhatWeDo.item.empowering.description}
+        image={{
+          src: Empowering?.src,
+          alt: tWhatWeDo.item.empowering.image.alt,
+        }}
+      >
+        <Fragment slot="icon">
+          <Briefcase className="size-5" />
+        </Fragment>
+      </ItemCard>
+    </li>
+    <li class="md:col-span-2">
+      <ItemCard
+        title={tWhatWeDo.item.innovation.title}
+        description={tWhatWeDo.item.innovation.description}
+      >
+        <Fragment slot="icon">
+          <Heart className="size-5" />
+        </Fragment>
+      </ItemCard>
+    </li>
+    <li class="sm:col-span-2 xl:col-span-1">
+      <ItemCard
+        title={tWhatWeDo.item.transparency.title}
+        description={tWhatWeDo.item.transparency.description}
+      >
+        <Fragment slot="icon">
+          <Shield className="size-5" />
+        </Fragment>
+      </ItemCard>
+    </li>
+  </ul>
+</section>

@@ -1,11 +1,10 @@
-"use server";
 import PocketBase from "pocketbase";
 
 const pbBuilder = async () => {
   const [email, password, url] = [
-    process.env.POCKETBASE_EMAIL,
-    process.env.POCKETBASE_PASSWORD,
-    process.env.POCKETBASE_URL,
+    import.meta.env.POCKETBASE_EMAIL,
+    import.meta.env.POCKETBASE_PASSWORD,
+    import.meta.env.POCKETBASE_URL,
   ];
 
   if (!url) throw new Error("PocketBase URL is required");

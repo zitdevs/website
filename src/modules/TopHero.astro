@@ -1,0 +1,21 @@
+---
+import Hero from "../components/Hero/Hero.astro";
+import BgLogo from "../components/icons/BgLogo.astro";
+
+const { tHero, tSrOnly } = Astro.props;
+---
+
+<section id="hero" class="min-h-[70dvh]">
+  <div class="container relative z-10">
+    <h1 class="sr-only">{tSrOnly}</h1>
+    <Hero tHero={tHero} />
+  </div>
+  <div class="absolute inset-0 overflow-hidden w-full h-[100vh]">
+    <div class="h-[600px] mt-20 blur-lg -rotate-12 overflow-hidden">
+      <!-- <BgLogo className="blur-md animate-spin-in-scale-in delay-1000" /> -->
+      <BgLogo
+        className="blur-md animate-in spin-in-[360deg] zoom-in delay-1000 duration-1000"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+---
+import "../styles/globals.css";
+import "@fontsource/raleway";
+import Header from "../components/Header/Header.astro";
+import Footer from "../modules/footer/Footer.astro";
+const { currentLocale } = Astro;
+
+const metadata = {
+  title: `ZitDevs | Legal`,
+  robots: "noindex, nofollow",
+};
+---
+
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{metadata.title}</title>
+    <meta name="robots" content={metadata.robots} />
+  </head>
+  <body style="font-family: 'Raleway', sans-serif;">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+---
