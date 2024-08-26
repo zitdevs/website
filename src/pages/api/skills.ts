@@ -8,7 +8,7 @@ export type SkillParams = {
 
 export const getSkillsByLocale = async ({ locale }: SkillParams) => {
   const pb = await pbBuilder();
-  const lang = await getLang(locale);
+  const lang = await getLang(locale as any);
 
   if (!lang) {
     throw new Error("Language not found");

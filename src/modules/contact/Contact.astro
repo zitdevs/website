@@ -1,11 +1,6 @@
 ---
-import { Dictionary } from "@/get-dictionary";
 import MainForm from "./components/MainForm.astro";
-import { getSkillsByLocale } from "./actions/skills.action";
 const { tContact, tDefault } = Astro.props;
-
-// const skills = await getSkillsByLocale({ locale: lang });
-const skills = [];
 ---
 
 <section
@@ -30,5 +25,5 @@ const skills = [];
       {tContact.subtitle}
     </p>
   </div>
-  <MainForm tContact={tContact} tDefault={tDefault} skills={skills} />
+  <MainForm tContact={tContact} tDefault={tDefault} />
 </section>

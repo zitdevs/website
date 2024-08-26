@@ -65,6 +65,30 @@ const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
       is:inline
       src={`https://www.google.com/recaptcha/api.js?render=${captcha}`}
     ></script>
+    <!-- Google Tag Manager -->
+    <script
+      src="https://www.googletagmanager.com/gtag/js?id=G-V28YYZTMPB"
+      is:inline
+      async></script>
+
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-V28YYZTMPB");
+    </script>
+
+    <!-- Cookiebot -->
+    <script
+      is:inline
+      id="Cookiebot"
+      src="https://consent.cookiebot.com/uc.js"
+      data-cbid="418e3622-e287-4d76-80f9-e43f27e0329f"
+      data-blockingmode="auto"
+      type="text/javascript"
+      async></script>
   </head>
   <body style="font-family: 'Raleway', sans-serif;">
     <Header />
