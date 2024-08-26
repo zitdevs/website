@@ -1,6 +1,6 @@
 import { defineConfig } from "cypress";
 
-const TEST_PORT = import.meta.env.PORT || 3000;
+const TEST_PORT = import.meta.env.PORT || 4321;
 
 export default defineConfig({
   e2e: {
