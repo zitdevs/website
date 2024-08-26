@@ -21,6 +21,7 @@ const metadata = i18n.default.metadata;
     <meta name="generator" content={Astro.generator} />
 
     <title>{metadata.title}</title>
+
     <meta name="description" content={metadata.description} />
     <meta
       name="keywords"
@@ -59,6 +60,9 @@ const metadata = i18n.default.metadata;
       name="twitter:image"
       content={metadata.twitterCard["twitter:image"]}
     />
+
+    <!-- SiteMap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Google Tag Manager -->
     <script
