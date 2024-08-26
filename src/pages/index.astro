@@ -1,3 +1,6 @@
 ---
+const headerLang = Astro.request.headers.get("accept-language");
 
+const lang = headerLang?.split(",")[0].split("-")[0] || "en";
+return Astro.redirect(`/${lang === "es" ? "es" : "en"}/`);
 ---

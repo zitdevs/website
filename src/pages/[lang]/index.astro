@@ -1,6 +1,6 @@
 ---
+import type { GetStaticPaths } from "astro";
 import { getI18n } from "../../i18n";
-import { getLangFromUrl } from "../../i18n/utils";
 import Layout from "../../layouts/Layout.astro";
 import Contact from "../../modules/contact/Contact.astro";
 import HowItWorks from "../../modules/how-it-works/index.astro";
@@ -8,16 +8,30 @@ import Services from "../../modules/services/index.astro";
 import TopHero from "../../modules/TopHero.astro";
 import WhatWeDo from "../../modules/what-we-do/index.astro";
 
-const lang = getLangFromUrl(Astro.url);
-const i18n = getI18n({ currentLocale: "es" });
+export const getStaticPaths = (() => {
+  return [
+    {
+      params: {
+        lang: "en",
+      },
+    },
+    {
+      params: {
+        lang: "es",
+      },
+    },
+  ];
+}) satisfies GetStaticPaths;
 
-console.log("langj", lang);
+const { lang } = Astro.params;
+
+const i18n = getI18n({ currentLocale: lang });
 
 const tHome = i18n.home;
 const tDefault = i18n.default;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout>
   <TopHero tHero={tHome.hero} tSrOnly={tHome.sr_only} />
   <WhatWeDo tWhatWeDo={tHome.what_we_do} />
   <HowItWorks tHowItWorks={tHome.how_it_works} />
