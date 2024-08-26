@@ -21,6 +21,7 @@ const metadata = i18n.default.metadata;
     <meta name="generator" content={Astro.generator} />
 
     <title>{metadata.title}</title>
+
     <meta name="description" content={metadata.description} />
     <meta
       name="keywords"
@@ -60,13 +61,17 @@ const metadata = i18n.default.metadata;
       content={metadata.twitterCard["twitter:image"]}
     />
 
+    <!-- SiteMap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
     <!-- Google Tag Manager -->
     <script
+      type="text/partytown"
       src="https://www.googletagmanager.com/gtag/js?id=G-V28YYZTMPB"
       is:inline
       async></script>
 
-    <script is:inline>
+    <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);

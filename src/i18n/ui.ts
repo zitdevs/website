@@ -1,18 +1,16 @@
-import enLang from "./en";
+import enLang from "./en.json";
+import esLang from "./es.json";
 
 export const languages = {
-    en: 'English',
-    es: 'Español',
+  en: "English",
+  es: "Español",
 };
 
-export const defaultLang = 'en';
+export const defaultLang = "en";
 
 export const ui = {
-    en: enLang,
-    fr: {
-      'nav.home': 'Accueil',
-      'nav.about': 'À propos',
-    },
+  en: enLang,
+  es: esLang,
 } as const;
 
 export const showDefaultLang = false;
