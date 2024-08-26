@@ -23,7 +23,7 @@ export const onRequest = defineMiddleware((context, next) => {
   if (requestHasLocale(context)) {
     return next();
   }
-  // return next();
+
   return new Response("Not found", { status: 404 });
 
 });
