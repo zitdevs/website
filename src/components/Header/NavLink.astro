@@ -1,15 +1,9 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n";
-import { getLangFromUrl } from "../../i18n/utils";
-
 const { href } = Astro.props;
-
-const lang = getLangFromUrl(Astro.url);
-const tranlatedPath = getRelativeLocaleUrl(lang ?? "en", href);
 ---
 
 <li>
-  <a href={tranlatedPath} class="font-semibold">
+  <a href={href} class="font-semibold">
     <slot />
   </a>
 </li>
