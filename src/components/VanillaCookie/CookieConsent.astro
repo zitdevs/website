@@ -1,0 +1,25 @@
+---
+import "vanilla-cookieconsent/dist/cookieconsent.css";
+import "../../styles/ccElegantBlack.css";
+import { Cookie } from "lucide-astro";
+---
+
+<button
+  type="button"
+  data-cc="show-preferencesModal"
+  class="fixed bottom-2 left-2 p-2 bg-primary text-white rounded-full focus:ring-2 focus:ring-primary focus:ring-opacity-50 -translate-x-9 transform transition-all duration-300 hover:bg-secondary hover:text-white hover:translate-x-0"
+  aria-label="Privacy Preferences"
+  title="Privacy Preferences"
+>
+  <Cookie class="w-6 h-6" />
+</button>
+
+<script>
+  import { run } from "vanilla-cookieconsent";
+  import { config } from "./CookieConsentConfig";
+
+  // toggle custom black theme
+  document.body.classList.add("cc--elegant-black");
+
+  run(config);
+</script>

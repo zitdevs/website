@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import node from "@astrojs/node";
 import sitemap from '@astrojs/sitemap';
-import partytown from '@astrojs/partytown'
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,11 +30,6 @@ export default defineConfig({
     }),
     tailwind({
       applyBaseStyles: false,
-    }),
-    partytown({
-      config: {
-        forward: ["dataLayer.push"],
-      },
     })
   ],
 });

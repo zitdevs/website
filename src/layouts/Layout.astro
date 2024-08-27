@@ -5,6 +5,7 @@ import Header from "../components/Header/Header.astro";
 import Footer from "../modules/footer/Footer.astro";
 import { getLangFromUrl } from "../i18n/utils";
 import { getI18n } from "../i18n";
+import CookieConsent from "../components/VanillaCookie/CookieConsent.astro";
 
 const { currentLocale } = Astro;
 const lang = getLangFromUrl(Astro.url);
@@ -63,32 +64,6 @@ const metadata = i18n.default.metadata;
 
     <!-- SiteMap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
-
-    <!-- Google Tag Manager -->
-    <script
-      type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=G-V28YYZTMPB"
-      is:inline
-      async></script>
-
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-V28YYZTMPB");
-    </script>
-
-    <!-- Cookiebot -->
-    <script
-      is:inline
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="418e3622-e287-4d76-80f9-e43f27e0329f"
-      data-blockingmode="auto"
-      type="text/javascript"
-      async></script>
   </head>
   <body style="font-family: 'Raleway', sans-serif;">
     <Header />
@@ -96,5 +71,6 @@ const metadata = i18n.default.metadata;
       <slot />
     </main>
     <Footer />
+    <CookieConsent />
   </body>
 </html>

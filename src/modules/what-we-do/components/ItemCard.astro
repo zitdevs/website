@@ -12,7 +12,7 @@ const { icon, title, description, image } = Astro.props;
     <div class="bg-[#F5F8FF] p-3 rounded-md max-w-fit mb-5">
       <slot name="icon" />
     </div>
-    <CardTitle className="font-semibold">{title}</CardTitle>
+    <CardTitle class="font-semibold">{title}</CardTitle>
   </CardHeader>
   <CardContent>
     <p class="text-[#5a5967] text-sm">{description}</p>
