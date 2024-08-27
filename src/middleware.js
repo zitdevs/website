@@ -5,6 +5,8 @@ import { requestHasLocale } from "astro:i18n";
 export const onRequest = defineMiddleware((context, next) => {
   const pathNotFound = notFound(context);
 
+  if (context.url.pathname.match(`/((?!api|_next/static|_next/image|favicon.ico|assets|images|legal).*)`)) return next();
+
   if (context.url.pathname === '/') return next();
   if (context.url.pathname === '/robots.txt') return next();
   if (context.url.pathname === '/legal/privacy-policy') return next();

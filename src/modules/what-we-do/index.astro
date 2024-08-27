@@ -9,6 +9,7 @@ import {
   Heart,
   Shield,
 } from "lucide-astro";
+import Image from "astro/components/Image.astro";
 
 const { tWhatWeDo } = Astro.props;
 ---
@@ -56,10 +57,10 @@ const { tWhatWeDo } = Astro.props;
         <Fragment slot="icon">
           <Briefcase className="size-5" />
         </Fragment>
-        <img
+        <Image
           width={300}
           height={200}
-          src={Empowering.src}
+          src={Empowering}
           alt={tWhatWeDo.item.empowering.image.alt}
           class="mt-10 rounded-md shadow-sm m-auto sm:mx-0"
           slot={"image"}
