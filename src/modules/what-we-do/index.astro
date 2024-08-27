@@ -1,6 +1,6 @@
 ---
 import ItemCard from "./components/ItemCard.astro";
-import Empowering from "./assets/empowering.png";
+import Empowering from "./assets/empowering.webp";
 import {
   Clock,
   Users,
@@ -9,6 +9,7 @@ import {
   Heart,
   Shield,
 } from "lucide-astro";
+import { Image } from "astro:assets";
 
 const { tWhatWeDo } = Astro.props;
 ---
@@ -52,14 +53,21 @@ const { tWhatWeDo } = Astro.props;
       <ItemCard
         title={tWhatWeDo.item.empowering.title}
         description={tWhatWeDo.item.empowering.description}
-        image={{
-          src: Empowering?.src,
-          alt: tWhatWeDo.item.empowering.image.alt,
-        }}
       >
         <Fragment slot="icon">
           <Briefcase className="size-5" />
         </Fragment>
+        <Image
+          width={300}
+          height={200}
+          src={Empowering.src}
+          alt={tWhatWeDo.item.empowering.image.alt}
+          class="mt-10 rounded-md shadow-sm m-auto sm:mx-0"
+          slot={"image"}
+          loading="lazy"
+          fetchpriority="low"
+          decoding="async"
+        />
       </ItemCard>
     </li>
     <li class="md:col-span-2">

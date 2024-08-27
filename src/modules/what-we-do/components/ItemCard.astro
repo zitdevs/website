@@ -4,7 +4,12 @@ import CardContent from "../../../components/card/CardContent.astro";
 import CardHeader from "../../../components/card/CardHeader.astro";
 import CardTitle from "../../services/components/CardTitle.astro";
 
-const { icon, title, description, image } = Astro.props;
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
 ---
 
 <Card className="h-full">
@@ -16,17 +21,6 @@ const { icon, title, description, image } = Astro.props;
   </CardHeader>
   <CardContent>
     <p class="text-[#5a5967] text-sm">{description}</p>
-    {
-      !!image && (
-        <img
-          width={300}
-          height={200}
-          src={image.src}
-          alt={image.alt}
-          loading="lazy"
-          class="mt-10 rounded-md shadow-sm m-auto sm:mx-0"
-        />
-      )
-    }
+    <slot name="image" />
   </CardContent>
 </Card>
