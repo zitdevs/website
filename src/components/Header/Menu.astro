@@ -43,7 +43,6 @@ const { tNav, tCta } = Astro.props;
     "button-menu"
   ) as HTMLButtonElement;
   const menuMobile = document.getElementById("menu-mobile") as HTMLElement;
-  const setIsOpen = (value: boolean) => (isOpen = value);
   let isOpen = false;
 
   buttonMenu.addEventListener("click", () => {
@@ -61,8 +60,13 @@ const { tNav, tCta } = Astro.props;
   });
 
   window.addEventListener("click", (event) => {
-    if (!isOpen) return;
-    if ((event.target as HTMLElement)?.closest("menu-mobile")) return;
+    if (window.innerWidth >= 1024) return;
+    if (
+      (isOpen && (event.target as HTMLElement)?.closest("#button-menu")) ||
+      (!isOpen && (event.target as HTMLElement)?.closest("#menu-mobile"))
+    )
+      return;
+
     buttonMenu.setAttribute("aria-expanded", "false");
     menuMobile.setAttribute("aria-expanded", "false");
     isOpen = false;
