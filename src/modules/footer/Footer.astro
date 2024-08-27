@@ -1,5 +1,4 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n";
 import NavLink from "../../components/Header/NavLink.astro";
 import LogoIcon from "../../components/icons/Logo.astro";
 import { getI18n } from "../../i18n";
@@ -79,8 +78,9 @@ const footerNavs = [
               href="https://www.linkedin.com/company/zitdevs"
               target="_blank"
               class="w-10 h-10 flex items-center justify-center"
+              aria-label="Linkedin"
             >
-              <Linkedin size={20} />
+              <Linkedin size={20} aria-hidden="true" />
             </a>
           </li>
           <li
@@ -89,7 +89,7 @@ const footerNavs = [
             <a
               href="https://x.com/zitdevs"
               target="_blank"
-              rel="noreferrer"
+              aria-label="Twitter"
               class="w-10 h-10 flex items-center justify-center"
             >
               <Twitter size={20} />
@@ -101,10 +101,10 @@ const footerNavs = [
             <a
               href="https://www.instagram.com/zitdevs/"
               target="_blank"
-              rel="noreferrer"
+              aria-label="Instagram"
               class="w-10 h-10 flex items-center justify-center"
             >
-              <Instagram size={20} />
+              <Instagram size={20} aria-hidden="true" />
             </a>
           </li>
           <li
@@ -113,10 +113,10 @@ const footerNavs = [
             <a
               href="https://github.com/zitdevs"
               target="_blank"
-              rel="noreferrer"
+              aria-label="Github"
               class="w-10 h-10 flex items-center justify-center"
             >
-              <Github size={20} />
+              <Github size={20} aria-hidden="true" />
             </a>
           </li>
         </ul>

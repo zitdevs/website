@@ -132,6 +132,7 @@ const form = {
             data-client-form={tContact.main_form.submit_messages.client}
             data-zitlancer-form={tContact.main_form.submit_messages.zitlancer}
             tabindex="0"
+            title="Submit"
           >
           </button>
           <script is:inline></script>
@@ -487,13 +488,13 @@ const form = {
         showToast(
           "Thank you for joining our waitlist. We will notify you once our platform is ready.",
           "success",
-          5000
+          5000,
         );
       } else {
         showToast(
           "Thank you for contacting us. We will get back to you shortly.",
           "success",
-          5000
+          5000,
         );
       }
 

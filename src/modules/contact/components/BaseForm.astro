@@ -4,21 +4,10 @@ import { getLangFromUrl } from "../../../i18n/utils";
 
 const { tBaseForm } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
-const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
 ---
 
 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
   <input id="locale" name="locale" type="hidden" value={lang} />
-  <!-- <input
-    id="captcha"
-    name="captcha"
-    type="hidden"
-    value={captcha}
-    class="g-recaptcha"
-    data-sitekey={captcha}
-    data-callback="onSubmit"
-    data-action="submit"
-  /> -->
 
   <div class="space-y-2">
     <Label
@@ -66,7 +55,7 @@ const captcha = import.meta.env.NEXT_PUBLIC_RECAPTCHA;
   <div class="sm:col-span-2">
     <div class="space-y-2">
       <Label for="email">
-        {tBaseForm.labels.email}<!-- -->
+        {tBaseForm.labels.email}
         <span class="text-red-500">*</span>
       </Label>
       <input
