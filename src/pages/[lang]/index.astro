@@ -8,6 +8,8 @@ import Services from "../../modules/services/index.astro";
 import TopHero from "../../modules/TopHero.astro";
 import WhatWeDo from "../../modules/what-we-do/index.astro";
 
+export const prerender = true;
+
 export const getStaticPaths = (() => {
   return [
     {
