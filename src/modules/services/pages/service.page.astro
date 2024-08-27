@@ -1,0 +1,16 @@
+---
+import { getI18n } from "src/i18n";
+import Layout from "src/layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Offers from "../sections/Offers.astro";
+
+const { lang } = Astro.params as { lang: string };
+
+const i18n = getI18n({ currentLocale: lang });
+const tService = i18n.services;
+---
+
+<Layout class="container">
+  <Hero tHero={tService.hero} />
+  <Offers />
+</Layout>

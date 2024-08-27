@@ -7,7 +7,11 @@ import { getLangFromUrl } from "../i18n/utils";
 import { getI18n } from "../i18n";
 import CookieConsent from "../components/VanillaCookie/CookieConsent.astro";
 
-const { currentLocale } = Astro;
+interface Props {
+  class?: string;
+}
+
+const { currentLocale, props } = Astro;
 const lang = getLangFromUrl(Astro.url);
 const i18n = getI18n({ currentLocale: lang });
 const metadata = i18n.default.metadata;
@@ -66,7 +70,7 @@ const metadata = i18n.default.metadata;
   </head>
   <body style="font-family: 'Raleway', sans-serif;">
     <Header />
-    <main>
+    <main class={props.class}>
       <slot />
     </main>
     <Footer />

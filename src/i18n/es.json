@@ -520,5 +520,17 @@
         }
       }
     }
+  },
+  "services": {
+    "hero": {
+      "title": "",
+      "description": "",
+      "cta": ""
+    },
+    "softwareDevelopment": {
+      "title": "Software Development",
+      "description": "We create custom software to meet your business needs, handling the entire development lifecycle from consultation to deployment. Our agile approach ensures flexibility, rapid iterations, and continuous improvement.",
+      "cta": "Learn more"
+    }
   }
 }

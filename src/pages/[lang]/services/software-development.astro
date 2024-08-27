@@ -1,0 +1,13 @@
+---
+import { getI18n } from "../../../i18n";
+import Layout from "../../../layouts/Layout.astro";
+
+const { lang } = Astro.params as { lang: string };
+
+const i18n = getI18n({ currentLocale: lang });
+const tSoftwareDevlopment = i18n.services.softwareDevelopment;
+---
+
+<Layout class="container">
+  <h1>Test</h1>
+</Layout>

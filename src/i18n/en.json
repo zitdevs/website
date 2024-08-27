@@ -519,5 +519,17 @@
                 }
             }
         }
+    },
+    "services": {
+        "hero": {
+            "title": "Innovative Solutions for a Digital World",
+            "description": "At ZitDevs, we bring your digital ideas to life with a comprehensive range of services tailored to meet the demands of the modern business landscape. From custom software development to strategic consulting, our expert team is dedicated to driving your success through technology.",
+            "cta": "Explore our offerings below"
+        },
+        "softwareDevelopment": {
+            "title": "Software Development",
+            "description": "We create custom software to meet your business needs, handling the entire development lifecycle from consultation to deployment. Our agile approach ensures flexibility, rapid iterations, and continuous improvement.",
+            "cta": "Learn more"
+        }
     }
 }

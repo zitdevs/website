@@ -1,0 +1,26 @@
+---
+import type { Dictionary } from "src/get-dictionary";
+import OnlineArtilce from "../ilustrations/OnlineArtilce.astro";
+import Button from "src/components/button/Button.astro";
+
+interface Props {
+  tHero: Dictionary["services"]["hero"];
+}
+
+const { tHero } = Astro.props;
+---
+
+<section
+  class="flex items-center justify-between gap-10 max-w-screen-lg mx-auto"
+>
+  <div class="max-w-[600px]">
+    <h1 class="text-5xl font-semibold mb-2 text-pretty">{tHero.title}</h1>
+    <p class="mb-6 text-balance">{tHero.description}</p>
+    <Button href="#offers" variant="secondary">
+      {tHero.cta}
+    </Button>
+  </div>
+  <div>
+    <OnlineArtilce class="size-[500px]" />
+  </div>
+</section>
