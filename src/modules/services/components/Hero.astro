@@ -11,16 +11,16 @@ const { tHero } = Astro.props;
 ---
 
 <section
-  class="flex items-center justify-between gap-10 max-w-screen-lg mx-auto"
+  class="flex flex-col md:flex-row items-center justify-between gap-10 mx-auto max-w-screen-xl pt-4"
 >
   <div class="max-w-[600px]">
-    <h1 class="text-5xl font-semibold mb-2 text-pretty">{tHero.title}</h1>
+    <h1 class="text-4xl font-semibold mb-2 text-pretty">{tHero.title}</h1>
     <p class="mb-6 text-balance">{tHero.description}</p>
     <Button href="#offers" variant="secondary">
       {tHero.cta}
     </Button>
   </div>
-  <div>
-    <OnlineArtilce class="size-[500px]" />
+  <div class="p-4">
+    <OnlineArtilce class="size-[70vw] md:size-[300px] lg:size-[500px]" />
   </div>
 </section>
