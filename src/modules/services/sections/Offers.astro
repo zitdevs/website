@@ -1,5 +1,88 @@
 ---
+import type { Dictionary } from "src/i18n/ui";
+import ItemCard from "../components/ItemCard.astro";
+import Button from "src/components/button/Button.astro";
 
+interface Props {
+  tCards: Dictionary["services"]["cards"];
+}
+
+const { tCards } = Astro.props;
 ---
 
-<section id="offers"></section>
+<div
+  id="offers"
+  class="max-w-screen-2xl mx-auto mb-10 mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(30rem,1fr))]"
+>
+  <ItemCard
+    title={tCards.softwareDevelopment.title}
+    description={tCards.softwareDevelopment.description}
+    icon="code"
+    variant="blue"
+    cols="none"
+    classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
+    animation="allUp"
+  >
+    <a
+      href="#"
+      slot="cta"
+      class="block mt-8 font-bold text-white underline mx-auto"
+    >
+      {tCards.softwareDevelopment.cta}
+    </a>
+  </ItemCard>
+
+  <ItemCard
+    title={tCards.webDevelopment.title}
+    description={tCards.webDevelopment.description}
+    icon="globe"
+    variant="dark"
+    cols="none"
+    classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
+    animation="allUp"
+  >
+    <a
+      href="#"
+      slot="cta"
+      class="block mt-8 font-bold text-white underline mx-auto"
+    >
+      {tCards.webDevelopment.cta}
+    </a>
+  </ItemCard>
+
+  <ItemCard
+    title={tCards.mobileAppDevelopment.title}
+    description={tCards.mobileAppDevelopment.description}
+    icon="tablet-smartphone"
+    variant="orange"
+    cols="none"
+    classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
+    animation="allUp"
+  >
+    <a
+      href="#"
+      slot="cta"
+      class="block mt-8 font-bold text-white underline mx-auto"
+    >
+      {tCards.mobileAppDevelopment.cta}
+    </a>
+  </ItemCard>
+
+  <ItemCard
+    title={tCards.consultingStrategy.title}
+    description={tCards.consultingStrategy.description}
+    icon="brain"
+    variant="pink"
+    cols="none"
+    classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
+    animation="allUp"
+  >
+    <a
+      href="#"
+      slot="cta"
+      class="block mt-8 font-bold text-white underline mx-auto"
+    >
+      {tCards.consultingStrategy.cta}
+    </a>
+  </ItemCard>
+</div>

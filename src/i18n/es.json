@@ -523,14 +523,43 @@
   },
   "services": {
     "hero": {
-      "title": "",
-      "description": "",
-      "cta": ""
+      "title": "Soluciones Innovadoras para un Mundo Digital",
+      "description": "En ZitDevs, damos vida a tus ideas digitales con una amplia gama de servicios diseñados para satisfacer las demandas del entorno empresarial moderno. Desde el desarrollo de software a medida hasta la consultoría estratégica, nuestro equipo de expertos está dedicado a impulsar tu éxito a través de la tecnología.",
+      "cta": "Explora nuestras ofertas a continuación"
     },
-    "softwareDevelopment": {
-      "title": "Software Development",
-      "description": "We create custom software to meet your business needs, handling the entire development lifecycle from consultation to deployment. Our agile approach ensures flexibility, rapid iterations, and continuous improvement.",
-      "cta": "Learn more"
+    "cards": {
+      "softwareDevelopment": {
+        "title": "Desarrollo de Software",
+        "description": [
+          "Creamos soluciones de software personalizadas que se alinean con las necesidades únicas de tu negocio. Desde la consulta inicial hasta el despliegue final, gestionamos todo el ciclo de desarrollo con un enfoque ágil, asegurando flexibilidad, iteraciones rápidas y mejora continua. Ya sea que busques optimizar operaciones o introducir funciones innovadoras, ZitDevs ofrece soluciones confiables y escalables.",
+          "¿Listo para convertir tus ideas en realidad?"
+        ],
+        "cta": "Conoce más sobre nuestros servicios de desarrollo de software"
+      },
+      "webDevelopment": {
+        "title": "Desarrollo Web",
+        "description": [
+          "Potencia tu presencia en línea con nuestros servicios de desarrollo web. Nos especializamos en crear sitios web receptivos y fáciles de usar, construir plataformas de comercio electrónico robustas e implementar poderosas soluciones CMS que simplifican la gestión de contenidos. Nuestro equipo de desarrollo web asegura que tu sitio no solo luzca excelente, sino que también funcione sin problemas, proporcionando una experiencia de usuario excepcional.",
+          "Transforma tu presencia en línea."
+        ],
+        "cta": "Descubre nuestras soluciones de desarrollo web"
+      },
+      "mobileAppDevelopment": {
+        "title": "Desarrollo de Aplicaciones Móviles",
+        "description": [
+          "Llega a tu audiencia en cualquier lugar con nuestros servicios de desarrollo de aplicaciones móviles de alto rendimiento. Diseñamos y desarrollamos aplicaciones para iOS y Android que combinan diseños centrados en el usuario con una integración de sistemas impecable. Nuestro compromiso con el mantenimiento y soporte continuos asegura que tu aplicación funcione sin problemas, manteniendo a tus usuarios comprometidos y satisfechos.",
+          "Haz realidad tu idea de aplicación."
+        ],
+        "cta": "Explora nuestros servicios de desarrollo de aplicaciones móviles"
+      },
+      "consultingStrategy": {
+        "title": "Consultoría y Estrategia",
+        "description": [
+          "Navega por las complejidades de la tecnología con nuestros servicios de consultoría y estrategia. Ofrecemos orientación experta en planificación estratégica de tecnología, gestión de proyectos y talleres de innovación, ayudándote a tomar decisiones informadas y a alcanzar los objetivos de tu negocio. Ya sea que estés lanzando un nuevo proyecto u optimizando operaciones existentes, ZitDevs es tu socio para impulsar el crecimiento y la innovación.",
+          "Lleva tu negocio al siguiente nivel."
+        ],
+        "cta": "Conoce más sobre nuestros servicios de consultoría"
+      }
     }
   }
 }
