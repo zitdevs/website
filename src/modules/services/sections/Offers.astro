@@ -1,18 +1,19 @@
 ---
 import type { Dictionary } from "src/i18n/ui";
 import ItemCard from "../components/ItemCard.astro";
-import Button from "src/components/button/Button.astro";
 
 interface Props {
   tCards: Dictionary["services"]["cards"];
 }
 
-const { tCards } = Astro.props;
+const { props, params } = Astro;
+const { tCards } = props;
+const { lang } = params as { lang: string };
 ---
 
 <div
   id="offers"
-  class="max-w-screen-2xl mx-auto mb-10 mt-10 grid gap-4 grid-cols-[repeat(auto-fill,minmax(30rem,1fr))]"
+  class="max-w-screen-2xl mx-auto mb-10 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(30rem,1fr))]"
 >
   <ItemCard
     title={tCards.softwareDevelopment.title}
@@ -24,7 +25,7 @@ const { tCards } = Astro.props;
     animation="allUp"
   >
     <a
-      href="#"
+      href={`/${lang}/services/software-development`}
       slot="cta"
       class="block mt-8 font-bold text-white underline mx-auto"
     >
@@ -42,7 +43,7 @@ const { tCards } = Astro.props;
     animation="allUp"
   >
     <a
-      href="#"
+      href={`/${lang}/services/web-development`}
       slot="cta"
       class="block mt-8 font-bold text-white underline mx-auto"
     >
@@ -60,7 +61,7 @@ const { tCards } = Astro.props;
     animation="allUp"
   >
     <a
-      href="#"
+      href={`/${lang}/services/mobile-app-development`}
       slot="cta"
       class="block mt-8 font-bold text-white underline mx-auto"
     >
@@ -78,7 +79,7 @@ const { tCards } = Astro.props;
     animation="allUp"
   >
     <a
-      href="#"
+      href={`/${lang}/services/consulting-strategy`}
       slot="cta"
       class="block mt-8 font-bold text-white underline mx-auto"
     >
