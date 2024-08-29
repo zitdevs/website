@@ -39,11 +39,12 @@ const buttonVariants = cva(
   },
 );
 
-type Props = VariantProps<typeof buttonVariants> & {
-  asChild?: boolean;
-  href?: string;
-  className?: string;
-};
+type Props = VariantProps<typeof buttonVariants> &
+  astroHTML.JSX.ButtonHTMLAttributes & {
+    asChild?: boolean;
+    href?: string;
+    className?: string;
+  };
 
 const Comp = asChild ? "slot" : ((href ? "a" : "button") as any);
 ---
