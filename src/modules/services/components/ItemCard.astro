@@ -65,6 +65,10 @@ type Props = VariantProps<typeof containerVariants> &
       container?: string;
       card?: string;
     };
+    cta?: {
+      href: string;
+      text: string;
+    };
   };
 
 const {
@@ -76,11 +80,12 @@ const {
   classes,
   textAlignment,
   animation,
+  cta,
 } = Astro.props;
 ---
 
 <BounceCard className={cn(colsVariants({ variant, cols }), classes?.card)}>
-  <CardTitle class="!text-3xl text-center">
+  <CardTitle class="text-2xl md:text-3xl text-center">
     <span class="flex items-center gap-2 justify-center">
       {title}
       <DynamicIcon icon={icon} className="size-5 inline" aria-hidden />
@@ -88,6 +93,7 @@ const {
   </CardTitle>
   <div
     class={cn(
+      "relative",
       containerVariants({ variant, textAlignment, animation }),
       classes?.container,
     )}
@@ -95,12 +101,23 @@ const {
     {
       description instanceof Array ? (
         description.map((desc) => (
-          <p class="block font-semibold text-indigo-50 text-sm mb-4">{desc}</p>
+          <p class=" font-semibold text-indigo-50 text-sm mb-4 line-clamp-2 sm:line-clamp-3 md:line-clamp-2 lg:line-clamp-none">
+            {desc}
+          </p>
         ))
       ) : (
         <p class="block font-semibold text-indigo-50 text-sm">{description}</p>
       )
     }
-    <slot name="cta" />
+    {
+      cta && (
+        <a
+          href={cta?.href}
+          class="block mt-8 font-bold text-white underline mx-auto before:absolute before:content-[''] before:w-full before:h-full before:top-0 before:left-0"
+        >
+          {cta?.text}
+        </a>
+      )
+    }
   </div>
 </BounceCard>

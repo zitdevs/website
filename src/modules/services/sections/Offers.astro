@@ -23,15 +23,11 @@ const { lang } = params as { lang: string };
     cols="none"
     classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
     animation="allUp"
-  >
-    <a
-      href={`/${lang}/services/software-development`}
-      slot="cta"
-      class="block mt-8 font-bold text-white underline mx-auto"
-    >
-      {tCards.softwareDevelopment.cta}
-    </a>
-  </ItemCard>
+    cta={{
+      href: `/${lang}/services/software-development`,
+      text: tCards.softwareDevelopment.cta,
+    }}
+  />
 
   <ItemCard
     title={tCards.webDevelopment.title}
@@ -41,15 +37,11 @@ const { lang } = params as { lang: string };
     cols="none"
     classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
     animation="allUp"
-  >
-    <a
-      href={`/${lang}/services/web-development`}
-      slot="cta"
-      class="block mt-8 font-bold text-white underline mx-auto"
-    >
-      {tCards.webDevelopment.cta}
-    </a>
-  </ItemCard>
+    cta={{
+      href: `/${lang}/services/web-development`,
+      text: tCards.webDevelopment.cta,
+    }}
+  />
 
   <ItemCard
     title={tCards.mobileAppDevelopment.title}
@@ -59,15 +51,11 @@ const { lang } = params as { lang: string };
     cols="none"
     classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
     animation="allUp"
-  >
-    <a
-      href={`/${lang}/services/mobile-app-development`}
-      slot="cta"
-      class="block mt-8 font-bold text-white underline mx-auto"
-    >
-      {tCards.mobileAppDevelopment.cta}
-    </a>
-  </ItemCard>
+    cta={{
+      href: `/${lang}/services/mobile-app-development`,
+      text: tCards.mobileAppDevelopment.cta,
+    }}
+  />
 
   <ItemCard
     title={tCards.consultingStrategy.title}
@@ -77,13 +65,9 @@ const { lang } = params as { lang: string };
     cols="none"
     classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
     animation="allUp"
-  >
-    <a
-      href={`/${lang}/services/consulting-strategy`}
-      slot="cta"
-      class="block mt-8 font-bold text-white underline mx-auto"
-    >
-      {tCards.consultingStrategy.cta}
-    </a>
-  </ItemCard>
+    cta={{
+      href: `/${lang}/services/consulting-strategy`,
+      text: tCards.consultingStrategy.cta,
+    }}
+  />
 </div>

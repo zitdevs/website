@@ -1,0 +1,78 @@
+---
+import Button from "src/components/button/Button.astro";
+import Card from "src/components/card/Card.astro";
+import CardContent from "src/components/card/CardContent.astro";
+import CardFooter from "src/components/card/CardFooter.astro";
+import CardHeader from "src/components/card/CardHeader.astro";
+import { cn, formatNumber } from "src/lib/utils";
+import FeatureItems from "./FeatureItems.astro";
+
+type PlanData = {
+  name: string;
+  price: number;
+  monthlyPrice?: number;
+  description: string;
+  features: string[];
+  startingAt?: boolean;
+  cta?: {
+    text: string;
+    href: string;
+  };
+};
+
+type Props = {
+  plan: PlanData;
+  mostPopular?: boolean;
+};
+
+const { plan, mostPopular } = Astro.props;
+---
+
+<Card
+  className={cn("border-gray-200 bg-gray-border-gray-200/80 shadow-xl", {
+    "border-secondary": mostPopular,
+    "scale-105": mostPopular,
+    "-translate-y-3": mostPopular,
+  })}
+>
+  <CardHeader className="space-y-4">
+    <div>
+      <h2 class="text-2xl font-bold">{plan.name}</h2>
+      <p class="text-gray-500 text-sm mb-">{plan.description}</p>
+    </div>
+    <div class="flex items-center justify-between text-secondary">
+      <div class="">
+        <p class="text-sm">Starting at</p>
+        <p class="text-3xl font-bold">${formatNumber(plan.price)}</p>
+      </div>
+      {
+        plan.monthlyPrice && (
+          <p class="text-sm text-gray-500">+ ${plan.monthlyPrice}/Monthly</p>
+        )
+      }
+    </div>
+  </CardHeader>
+
+  <CardContent>
+    <ul>
+      {
+        plan.features.map((feature, index) => (
+          <FeatureItems key={index}>{feature}</FeatureItems>
+        ))
+      }
+    </ul>
+  </CardContent>
+
+  <CardFooter className="grid place-items-center gap-2">
+    <Button
+      className="w-full"
+      variant={mostPopular ? "secondary" : "outline"}
+      href={plan.cta?.href}
+    >
+      {plan.cta?.text || "Get Started"}
+    </Button>
+    <a href="#" class="text-xs text-center hover:underline text-secondary">
+      Learn More
+    </a>
+  </CardFooter>
+</Card>

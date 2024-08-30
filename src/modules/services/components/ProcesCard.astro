@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import { cn } from "src/lib/utils";
+
+type Props = {
+  title: string;
+  description: string;
+  image?: ImageMetadata;
+  class?: string;
+  classes?: {
+    image?: string;
+    imageContainer?: string;
+  };
+};
+
+const { title, description, image, ...props } = Astro.props;
+---
+
+<li
+  class={cn(
+    "max-w-2xl bg-secondary/10 px-5 py-6 rounded-2xl shadow-md space-y-5",
+    props.class,
+  )}
+>
+  {
+    image && (
+      <div
+        class={cn("grid place-content-center", props.classes?.imageContainer)}
+      >
+        <Image
+          class={cn(
+            "h-[150px] w-full object-contain rounded-lg",
+            props.classes?.image,
+          )}
+          src={image}
+          alt={title}
+          width={400}
+          height={400}
+          loading={"lazy"}
+        />
+      </div>
+    )
+  }
+  <div class="block space-y-2">
+    <h3 class="text-lg font-semibold">
+      {title}
+    </h3>
+    <p class="text-sm min-h-[60px] text-pretty">
+      {description}
+    </p>
+  </div>
+</li>
