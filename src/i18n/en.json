@@ -559,6 +559,241 @@
         ],
         "cta": "Learn more about our consulting services"
       }
+    },
+    "page": {
+      "softwareDevelopment": {
+        "title": "Software Development",
+        "description": "At <strong>ZitDevs</strong>, we create <strong>custom software solutions</strong> tailored to your specific business needs. Our process ensures quality and efficiency from the initial consultation to final deployment, supported by our experienced team of developers and project managers.",
+        "ourProcess": {
+          "title": "Our Process",
+          "steps": {
+            "project": {
+              "title": "Project Kickoff & Assignment",
+              "description": "Your project begins with the assignment of a dedicated Project Manager (PM) who will oversee the project and serve as your main point of contact"
+            },
+            "development": {
+              "title": "Development Team Assembly",
+              "description": "We assemble a team of expert developers tailored to the specific technologies and needs of your project."
+            },
+            "quality": {
+              "title": "Code Review & Quality Assurance",
+              "description": "Throughout development, our team conducts rigorous code reviews and quality assurance testing to ensure the software meets all required standards."
+            },
+            "client": {
+              "title": "Staging & Client Review",
+              "description": "Your software is deployed in a staging environment for final testing and client feedback before the official launch."
+            },
+            "deployment": {
+              "title": "Deployment & Support",
+              "description": "We handle the deployment to your live environment and provide ongoing support to ensure the software runs smoothly. We also offer post-launch support for any issues that may arise."
+            }
+          }
+        },
+        "pricing": {
+          "title": "Pricing",
+          "description": "Our pricing plans are designed to accommodate businesses of all sizes and budgets. Whether you're a startup looking to develop an <strong>MVP</strong> or a large enterprise seeking a highly customized solution, <strong>we have a plan that fits your needs.</strong>",
+          "plans": {
+            "growth": {
+              "title": "Growth Plan",
+              "description": "Ideal for mid-sized companies looking for more complex solutions.",
+              "features": [
+                "Development Hours: Up to 800",
+                "Project Management: Enhanced PM with bi-weekly reports",
+                "Technology Stack: Multi-tech stack support",
+                "Support: 60 days post-launch",
+                "Extra Hours: $44.99/hour"
+              ],
+              "cta": "Quote Request"
+            },
+            "essentials": {
+              "title": "Essentials Plan",
+              "description": "Perfect for startups and small businesses.",
+              "features": [
+                "Development Hours: Up to 400",
+                "Project Management: Dedicated PM",
+                "Technology Stack: Single tech stack",
+                "Support: 90 days post-launch",
+                "Extra Hours: $39.99/hour"
+              ],
+              "cta": "Quote Request"
+            },
+            "enterprise": {
+              "title": "Enterprise Excellence Plan",
+              "description": "Tailored for large enterprises needing a comprehensive solution.",
+              "features": [
+                "Development Hours: From 1200",
+                "Project Management: Premium PM with daily updates and BA included",
+                "Technology Stack: Custom tech stack and full integration",
+                "Support: 3 months with priority support",
+                "Extra Hours: $49.99/hour"
+              ],
+              "cta": "Quote Request"
+            },
+            "flexible": {
+              "title": "FlexiDev Plan",
+              "description": "Flexible and scalable for businesses with changing needs.",
+              "features": [
+                "Development Hours: Minimum 36 hours",
+                "Project Management: Available on request",
+                "Support: Pay-as-you-go",
+                "Unlimited development hours"
+              ],
+              "frequency": "hour",
+              "cta": "Quote Request"
+            }
+          }
+        },
+        "comparePricing": {
+          "title": "Compare Pricing Plans",
+          "plans": {
+            "flexible": {
+              "title": "FlexiDev Plan<br/>(Pay-As-You-Go)",
+              "description": "Businesses needing flexible development hours or ongoing support without long-term commitment.",
+              "frequency": "hour",
+              "cta": "Quote Request"
+            },
+            "essentials": {
+              "title": "Essentials Plan",
+              "description": "Small businesses or startups looking to develop a basic MVP or small-scale application.",
+              "cta": "Quote Request"
+            },
+            "growth": {
+              "title": "Growth Plan",
+              "description": "Mid-sized companies needing more complex software with additional features.",
+              "cta": "Quote Request"
+            },
+            "enterprise": {
+              "title": "Enterprise Excellence Plan",
+              "description": "Large enterprises seeking highly customized solutions with advanced features.",
+              "cta": "Quote Request"
+            }
+          },
+          "details": {
+            "coreFeatures": {
+              "title": "Core Development Features",
+              "features": {
+                "development": {
+                  "title": "Development Hours",
+                  "columns": {
+                    "flexible": "Minimum 36 hours",
+                    "essentials": "Up to 400 hours",
+                    "growth": "Up to 800 hours",
+                    "enterprise": "From 1200 hours"
+                  }
+                },
+                "dedicated": {
+                  "title": "Dedicated Project Manager",
+                  "columns": {
+                    "flexible": "per request (hourly rate)",
+                    "growth": "with bi-weekly reports",
+                    "enterprise": "with daily updates, BA included"
+                  }
+                },
+                "tech": {
+                  "title": "Technology Stack",
+                  "columns": {
+                    "flexible": "Flexible tech stack",
+                    "essentials": "Single tech stack",
+                    "growth": "Multi-tech stack support",
+                    "enterprise": "Custom tech stack, full integration"
+                  }
+                }
+              }
+            },
+            "quality": {
+              "title": "Quality Assurance & Support",
+              "features": {
+                "codeReview": {
+                  "title": "Code Review"
+                },
+                "qaTesting": {
+                  "title": "QA & Testing",
+                  "columns": {
+                    "flexible": "Basic testing (hourly rate)",
+                    "essentials": "Standard testing",
+                    "growth": "Advanced automated testing",
+                    "enterprise": "Extensive testing including security audits"
+                  }
+                },
+                "userAcceptance": {
+                  "title": "User Acceptance Testing",
+                  "columns": {
+                    "flexible": "Available as an add-on"
+                  }
+                }
+              }
+            },
+            "support": {
+              "title": "Support & Maintenance",
+              "features": {
+                "postLaunch": {
+                  "title": "Post-Launch Support",
+                  "columns": {
+                    "flexible": "Available on an hourly basis",
+                    "essentials": "90 days",
+                    "growth": "180 days",
+                    "enterprise": "3 months, with priority support"
+                  }
+                },
+                "maintenance": {
+                  "title": "Maintenance",
+                  "columns": {
+                    "flexible": "Available as an add-on",
+                    "essentials": "Basic maintenance",
+                    "growth": "Extended maintenance",
+                    "enterprise": "Full maintenance package"
+                  }
+                },
+                "staging": {
+                  "title": "Staging Environment",
+                  "columns": {
+                    "flexible": "Available as an add-on"
+                  }
+                }
+              }
+            },
+            "additional": {
+              "title": "Additional Features",
+              "features": {
+                "consultation": {
+                  "title": "Consultation",
+                  "columns": {
+                    "flexible": "$300 upfront fee for 5 hours",
+                    "essentials": "5 hours per month",
+                    "growth": "10 hours per month",
+                    "enterprise": "Unlimited consultations"
+                  }
+                },
+                "customIntegration": {
+                  "title": "Custom Integrations",
+                  "columns": {
+                    "flexible": "Available on an hourly basis",
+                    "essentials": "Limited",
+                    "growth": "Multiple integrations",
+                    "enterprise": "Full integration support"
+                  }
+                },
+                "performanceOptimization": {
+                  "title": "Performance Optimization",
+                  "columns": {
+                    "flexible": "Available as an add-on",
+                    "enterprise": "Advanced optimization"
+                  }
+                },
+                "extraHours": {
+                  "title": "Extra Hours",
+                  "columns": {
+                    "flexible": "Included in hourly rate",
+                    "essentials": "From $39.99/hour",
+                    "growth": "From $44.99/hour",
+                    "enterprise": "From $49.99/hour"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

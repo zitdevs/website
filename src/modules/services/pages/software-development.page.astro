@@ -14,6 +14,11 @@ import PricingDetail from "../components/PricingDetail.astro";
 const { lang } = Astro.params as { lang: string };
 
 const i18n = getI18n({ currentLocale: lang });
+const tSoftwareDevelopment = i18n.services.page.softwareDevelopment;
+const tOurProcess = tSoftwareDevelopment.ourProcess;
+const tPricing = tSoftwareDevelopment.pricing;
+const tComparePricing = tSoftwareDevelopment.comparePricing;
+const tDetails = tComparePricing.details;
 ---
 
 <Layout class="">
@@ -22,51 +27,48 @@ const i18n = getI18n({ currentLocale: lang });
   >
     <div class="container">
       <h1 class="text-xl md:text-4xl font-bold text-center">
-        Software Development
+        {tSoftwareDevelopment.title}
       </h1>
-      <p class="text-sm md:text-[16px] text-center mt-4 max-w-[900px] mx-auto">
-        At <strong>ZitDevs</strong>, we create
-        <strong>custom software solutions</strong> tailored to your specific business
-        needs. Our process ensures quality and efficiency from the initial consultation
-        to final deployment, supported by our experienced team of developers and
-        project managers.
-      </p>
+      <p
+        class="text-sm md:text-[16px] text-center mt-4 max-w-[900px] mx-auto"
+        set:html={tSoftwareDevelopment.description}
+      />
     </div>
   </section>
 
   <div class="container mb-10">
     <section>
       <h2 class="text-4xl font-semibold text-center mt-[70px] mb-10">
-        Our Process
+        {tOurProcess.title}
       </h2>
 
       <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <ProcesCard
-          title="Project Kickoff & Assignment"
-          description="Your project begins with the assignment of a dedicated Project Manager (PM) who will oversee the project and serve as your main point of contact"
+          title={tOurProcess.steps.project.title}
+          description={tOurProcess.steps.project.description}
           image={ManagementSvg}
         />
 
         <ProcesCard
-          title="Development Team Assembly"
-          description="We assemble a team of expert developers tailored to the specific technologies and needs of your project."
+          title={tOurProcess.steps.development.title}
+          description={tOurProcess.steps.development.description}
           image={DevTeamSvg}
         />
 
         <ProcesCard
-          title="Code Review & Quality Assurance"
-          description="Throughout development, our team conducts rigorous code reviews and quality assurance testing to ensure the software meets all required standards."
+          title={tOurProcess.steps.quality.title}
+          description={tOurProcess.steps.quality.description}
           image={CodeReviewSvg}
         />
         <ProcesCard
-          title="Staging & Client Review"
-          description="Your software is deployed in a staging environment for final testing and client feedback before the official launch."
+          title={tOurProcess.steps.client.title}
+          description={tOurProcess.steps.client.description}
           image={ClientChecksSvg}
         />
 
         <ProcesCard
-          title="Deployment & Support"
-          description="We handle the deployment to your live environment and provide ongoing support to ensure the software runs smoothly. We also offer post-launch support for any issues that may arise."
+          title={tOurProcess.steps.deployment.title}
+          description={tOurProcess.steps.deployment.description}
           image={DeploySupportSvg}
           class="sm:col-span-2 sm:w-full sm:min-w-full sm:flex sm:items-center sm:justify-center sm:gap-8 sm:px-10"
           classes={{
@@ -80,18 +82,13 @@ const i18n = getI18n({ currentLocale: lang });
     <section>
       <div class="mb-12 space-y-2">
         <h2 class="text-4xl font-semibold text-center">
-          <span class="text-4xl font-semibold">Pricing</span>
+          <span class="text-4xl font-semibold">{tPricing.title}</span>
         </h2>
         <div>
-          <p class="text-center text-gray-800 max-w-[700px] mx-auto">
-            Our pricing plans are designed to accommodate businesses of all
-            sizes and budgets.<br /> Whether you're a startup looking to develop
-            an
-            <strong>MVP</strong> or a large enterprise seeking a highly customized
-            solution,
-
-            <strong>we have a plan that fits your needs.</strong>
-          </p>
+          <p
+            class="text-center text-gray-800 max-w-[700px] mx-auto"
+            set:html={tPricing.description}
+          />
         </div>
       </div>
 
@@ -106,19 +103,12 @@ const i18n = getI18n({ currentLocale: lang });
           }}
           plan={{
             startingAt: true,
-            description:
-              "Ideal for mid-sized companies looking for more complex solutions.",
-            name: "Growth Plan",
-            features: [
-              "Development Hours: Up to 800",
-              "Project Management: Enhanced PM with bi-weekly reports",
-              "Technology Stack: Multi-tech stack support",
-              "Support: 60 days post-launch",
-              "Extra Hours: $44.99/hour",
-            ],
+            name: tPricing.plans.growth.title,
+            description: tPricing.plans.growth.description,
+            features: tPricing.plans.growth.features,
             price: 36000,
             cta: {
-              text: "Contact Us",
+              text: tPricing.plans.growth.cta,
               href: `/${lang}/contact`,
             },
           }}
@@ -132,18 +122,12 @@ const i18n = getI18n({ currentLocale: lang });
           }}
           plan={{
             startingAt: true,
-            description: "Perfect for startups and small businesses.",
-            name: "Essentials Plan",
-            features: [
-              "Development Hours: Up to 400",
-              "Project Management: Dedicated PM",
-              "Technology Stack: Single tech stack",
-              "Support: 90 days post-launch",
-              "Extra Hours: $39.99/hour",
-            ],
+            name: tPricing.plans.essentials.title,
+            description: tPricing.plans.essentials.description,
+            features: tPricing.plans.essentials.features,
             price: 12000,
             cta: {
-              text: "Contact Us",
+              text: tPricing.plans.essentials.cta,
               href: `/${lang}/contact`,
             },
           }}
@@ -156,19 +140,12 @@ const i18n = getI18n({ currentLocale: lang });
           }}
           plan={{
             startingAt: true,
-            name: "Enterprise Excellence Plan",
-            description:
-              "Tailored for large enterprises needing a comprehensive solution.",
-            features: [
-              "Development Hours: From 1200",
-              "Project Management: Premium PM with daily updates and BA included",
-              "Technology Stack: Custom tech stack and full integration",
-              "Support: 3 months with priority support",
-              "Extra Hours: $49.99/hour",
-            ],
+            name: tPricing.plans.enterprise.title,
+            description: tPricing.plans.enterprise.description,
+            features: tPricing.plans.enterprise.features,
             price: 95000,
             cta: {
-              text: "Contact Us",
+              text: tPricing.plans.essentials.cta,
               href: `/${lang}/contact`,
             },
           }}
@@ -183,19 +160,13 @@ const i18n = getI18n({ currentLocale: lang });
             footer: "lg:flex",
           }}
           plan={{
-            name: "FlexiDev Plan",
-            description:
-              "Flexible and scalable for businesses with changing needs.",
-            features: [
-              "Development Hours: Minimum 36 hours",
-              "Project Management: Available on request",
-              "Support: Pay-as-you-go",
-              "Unlimited development hours",
-            ],
+            name: tPricing.plans.flexible.title,
+            description: tPricing.plans.flexible.description,
+            features: tPricing.plans.flexible.features,
             price: 25,
-            priceFrequency: "hour",
+            priceFrequency: tPricing.plans.flexible.frequency,
             cta: {
-              text: "Contact Us",
+              text: tPricing.plans.essentials.cta,
               href: `/${lang}/contact`,
             },
           }}
@@ -209,7 +180,7 @@ const i18n = getI18n({ currentLocale: lang });
       <div class="mb-12 space-y-2">
         <h2 class="text-4xl font-semibold text-center">
           <span class="text-4xl font-semibold">
-            Compare Our Pricing Plans
+            {tComparePricing.title}
           </span>
         </h2>
       </div>
@@ -218,19 +189,17 @@ const i18n = getI18n({ currentLocale: lang });
           <span class="col-span-1"></span>
           <PricingCard
             classes={{
-              header: "min-h-[140px]",
+              header: "min-h-[160px]",
               title: "min-h-[65px] text-lg xl:text-2xl",
               price: "text-xl xl:text-2xl",
             }}
             plan={{
-              name: "FlexiDev Plan<br/>(Pay-As-You-Go)",
-              description:
-                "Businesses needing flexible development hours or ongoing support without long-term commitment.",
-
               price: 25,
-              priceFrequency: "hour",
+              name: tComparePricing.plans.flexible.title,
+              description: tComparePricing.plans.flexible.description,
+              priceFrequency: tComparePricing.plans.flexible.frequency,
               cta: {
-                text: "Contact Us",
+                text: tComparePricing.plans.flexible.cta,
                 href: `/${lang}/contact`,
               },
             }}
@@ -238,55 +207,51 @@ const i18n = getI18n({ currentLocale: lang });
           <PricingCard
             mostPopular
             classes={{
-              header: "min-h-[140px]",
+              header: "min-h-[160px]",
               title: "min-h-[65px] text-xl xl:text-2xl",
               price: "text-xl xl:text-2xl",
             }}
             plan={{
               startingAt: true,
-              description:
-                "Small businesses or startups looking to develop a basic MVP or small-scale application.",
-
-              name: "Essentials Plan",
               price: 12000,
+              name: tComparePricing.plans.essentials.title,
+              description: tComparePricing.plans.essentials.description,
               cta: {
-                text: "Contact Us",
+                text: tComparePricing.plans.essentials.cta,
                 href: `/${lang}/contact`,
               },
             }}
           />
           <PricingCard
             classes={{
-              header: "min-h-[140px]",
+              header: "min-h-[160px]",
               title: "min-h-[65px] text-xl xl:text-2xl",
               price: "text-xl xl:text-2xl",
             }}
             plan={{
               startingAt: true,
-              description:
-                "Mid-sized companies needing more complex software with additional features.",
-              name: "Growth Plan",
               price: 36000,
+              name: tComparePricing.plans.growth.title,
+              description: tComparePricing.plans.growth.description,
               cta: {
-                text: "Contact Us",
+                text: tComparePricing.plans.growth.cta,
                 href: `/${lang}/contact`,
               },
             }}
           />
           <PricingCard
             classes={{
-              header: "min-h-[140px]",
-              title: "min-h-[65px] text-xl xl:text-3xl",
+              header: "min-h-[160px]",
+              title: "min-h-[65px] text-xl xl:text-2xl",
               price: "text-xl xl:text-2xl",
             }}
             plan={{
               startingAt: true,
-              name: "Enterprise Excellence Plan",
-              description:
-                "Large enterprises seeking highly customized solutions with advanced features.",
               price: 95000,
+              name: tComparePricing.plans.enterprise.title,
+              description: tComparePricing.plans.enterprise.description,
               cta: {
-                text: "Contact Us",
+                text: tComparePricing.plans.enterprise.cta,
                 href: `/${lang}/contact`,
               },
             }}
@@ -296,55 +261,88 @@ const i18n = getI18n({ currentLocale: lang });
         <PricingDetail
           isOpen
           popularColumn={1}
-          category="Core Development Features"
+          category={tDetails.coreFeatures.title}
           features={[
             {
-              title: "Development Hours",
+              title: tDetails.coreFeatures.features.development.title,
               columns: [
-                { type: "text", title: "Minimum 36 hours" },
-                { type: "text", title: "Up to 400 hours" },
-                { type: "text", title: "Up to 800 hours" },
-                { type: "text", title: "From 1200 hours" },
+                {
+                  type: "text",
+                  title:
+                    tDetails.coreFeatures.features.development.columns.flexible,
+                },
+                {
+                  type: "text",
+                  title:
+                    tDetails.coreFeatures.features.development.columns
+                      .essentials,
+                },
+                {
+                  type: "text",
+                  title:
+                    tDetails.coreFeatures.features.development.columns.growth,
+                },
+                {
+                  type: "text",
+                  title:
+                    tDetails.coreFeatures.features.development.columns
+                      .enterprise,
+                },
               ],
             },
             {
-              title: "Dedicated Project Manager",
+              title: tDetails.coreFeatures.features.dedicated.title,
               columns: [
                 {
                   type: "icon",
                   included: true,
-                  note: "per request (hourly rate)",
+                  note: tDetails.coreFeatures.features.dedicated.columns
+                    .flexible,
                 },
                 { type: "icon", included: true },
                 {
                   type: "icon",
                   included: true,
-                  note: "with bi-weekly reports",
+                  note: tDetails.coreFeatures.features.dedicated.columns.growth,
                 },
                 {
                   type: "icon",
                   included: true,
-                  note: "with daily updates, BA included",
+                  note: tDetails.coreFeatures.features.dedicated.columns
+                    .enterprise,
                 },
               ],
             },
             {
-              title: "Technology Stack",
+              title: tDetails.coreFeatures.features.tech.title,
               columns: [
-                { type: "text", title: "Flexible tech stack" },
-                { type: "text", title: "Single tech stack" },
-                { type: "text", title: "Multi-tech stack support" },
-                { type: "text", title: "Custom tech stack, full integration" },
+                {
+                  type: "text",
+                  title: tDetails.coreFeatures.features.tech.columns.flexible,
+                },
+                {
+                  type: "text",
+                  title: tDetails.coreFeatures.features.tech.columns.essentials,
+                },
+                {
+                  type: "text",
+                  title: tDetails.coreFeatures.features.tech.columns.growth,
+                },
+                {
+                  type: "text",
+                  title: tDetails.coreFeatures.features.tech.columns.enterprise,
+                },
               ],
             },
           ]}
         />
         <PricingDetail
           popularColumn={1}
-          category="Quality Assurance & Testing"
+          category={tDetails.quality.title}
+          ,
           features={[
             {
-              title: "Code Review",
+              title: tDetails.quality.features.codeReview.title,
               columns: [
                 {
                   type: "icon",
@@ -362,32 +360,33 @@ const i18n = getI18n({ currentLocale: lang });
               ],
             },
             {
-              title: "QA & Testing",
+              title: tDetails.quality.features.qaTesting.title,
               columns: [
                 {
                   type: "text",
-                  title: "Basic testing (hourly rate)",
+                  title: tDetails.quality.features.qaTesting.columns.flexible,
                 },
                 {
                   type: "text",
-                  title: "Standard testing",
+                  title: tDetails.quality.features.qaTesting.columns.essentials,
                 },
                 {
                   type: "text",
-                  title: "Advanced automated testing",
+                  title: tDetails.quality.features.qaTesting.columns.growth,
                 },
                 {
                   type: "text",
-                  title: "Extensive testing including security audits",
+                  title: tDetails.quality.features.qaTesting.columns.enterprise,
                 },
               ],
             },
             {
-              title: "User Acceptance Testing",
+              title: tDetails.quality.features.userAcceptance.title,
               columns: [
                 {
                   type: "text",
-                  title: "Available as an add-on",
+                  title:
+                    tDetails.quality.features.userAcceptance.columns.flexible,
                 },
                 {
                   type: "icon",
@@ -407,56 +406,60 @@ const i18n = getI18n({ currentLocale: lang });
         />
         <PricingDetail
           popularColumn={1}
-          category="Support & Maintenance"
+          category={tDetails.support.title}
           features={[
             {
-              title: "Post-Launch Support",
+              title: tDetails.support.features.postLaunch.title,
               columns: [
                 {
                   type: "text",
-                  title: "Available on an hourly basis",
+                  title: tDetails.support.features.postLaunch.columns.flexible,
                 },
                 {
                   type: "text",
-                  title: "90 days",
+                  title:
+                    tDetails.support.features.postLaunch.columns.essentials,
                 },
                 {
-                  title: "180 days",
+                  title: tDetails.support.features.postLaunch.columns.growth,
                   type: "text",
                 },
                 {
-                  title: "3 months, with priority support",
+                  title:
+                    tDetails.support.features.postLaunch.columns.enterprise,
                   type: "text",
                 },
               ],
             },
             {
-              title: "Maintenance",
+              title: tDetails.support.features.maintenance.title,
               columns: [
                 {
                   type: "text",
-                  title: "Available as an add-on",
+                  title: tDetails.support.features.maintenance.columns.flexible,
                 },
                 {
                   type: "text",
-                  title: "Basic maintenance",
+                  title:
+                    tDetails.support.features.maintenance.columns.essentials,
                 },
                 {
                   type: "text",
-                  title: "Extended maintenance",
+                  title: tDetails.support.features.maintenance.columns.growth,
                 },
                 {
                   type: "text",
-                  title: "Full maintenance package",
+                  title:
+                    tDetails.support.features.maintenance.columns.enterprise,
                 },
               ],
             },
             {
-              title: "Staging Environment",
+              title: tDetails.support.features.staging.title,
               columns: [
                 {
                   type: "text",
-                  title: "Available as an add-on",
+                  title: tDetails.support.features.staging.columns.flexible,
                 },
                 {
                   type: "icon",
@@ -476,56 +479,72 @@ const i18n = getI18n({ currentLocale: lang });
         />
         <PricingDetail
           popularColumn={1}
-          category="Additional Services"
+          category={tDetails.additional.title}
           features={[
             {
-              title: "Consultation",
+              title: tDetails.additional.features.consultation.title,
               columns: [
                 {
                   type: "text",
-                  title: "$300 upfront fee for 5 hours",
+                  title:
+                    tDetails.additional.features.consultation.columns.flexible,
                 },
                 {
                   type: "text",
-                  title: "5 hours per month",
+                  title:
+                    tDetails.additional.features.consultation.columns
+                      .essentials,
                 },
                 {
                   type: "text",
-                  title: "10 hours per month",
+                  title:
+                    tDetails.additional.features.consultation.columns.growth,
                 },
                 {
                   type: "text",
-                  title: "Unlimited consultations",
+                  title:
+                    tDetails.additional.features.consultation.columns
+                      .enterprise,
                 },
               ],
             },
             {
-              title: "Custom Integrations",
+              title: tDetails.additional.features.customIntegration.title,
               columns: [
                 {
                   type: "text",
-                  title: "Available on an hourly basis",
+                  title:
+                    tDetails.additional.features.customIntegration.columns
+                      .flexible,
                 },
                 {
                   type: "text",
-                  title: "Limited",
+                  title:
+                    tDetails.additional.features.customIntegration.columns
+                      .essentials,
                 },
                 {
                   type: "text",
-                  title: "Multiple integrations",
+                  title:
+                    tDetails.additional.features.customIntegration.columns
+                      .growth,
                 },
                 {
                   type: "text",
-                  title: "Full integration support",
+                  title:
+                    tDetails.additional.features.customIntegration.columns
+                      .enterprise,
                 },
               ],
             },
             {
-              title: "Performance Optimization",
+              title: tDetails.additional.features.performanceOptimization.title,
               columns: [
                 {
                   type: "text",
-                  title: "Available as an add-on",
+                  title:
+                    tDetails.additional.features.performanceOptimization.columns
+                      .flexible,
                 },
                 {
                   type: "icon",
@@ -538,28 +557,32 @@ const i18n = getI18n({ currentLocale: lang });
                 {
                   type: "icon",
                   included: true,
-                  note: "Advanced optimization",
+                  note: tDetails.additional.features.performanceOptimization
+                    .columns.enterprise,
                 },
               ],
             },
             {
-              title: "Extra Hours",
+              title: tDetails.additional.features.extraHours.title,
               columns: [
                 {
                   type: "text",
-                  title: "Included in hourly rate",
+                  title:
+                    tDetails.additional.features.extraHours.columns.flexible,
                 },
                 {
                   type: "text",
-                  title: "From $$39.99/hour",
+                  title:
+                    tDetails.additional.features.extraHours.columns.essentials,
                 },
                 {
                   type: "text",
-                  title: "From $$44.99/hour",
+                  title: tDetails.additional.features.extraHours.columns.growth,
                 },
                 {
                   type: "text",
-                  title: "From $$49.99/hour",
+                  title:
+                    tDetails.additional.features.extraHours.columns.enterprise,
                 },
               ],
             },

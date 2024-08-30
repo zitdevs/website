@@ -560,6 +560,241 @@
         ],
         "cta": "Conoce más sobre nuestros servicios de consultoría"
       }
+    },
+    "page": {
+      "softwareDevelopment": {
+        "title": "Desarrollo de Software",
+        "description": "En <strong>ZitDevs</strong>, creamos <strong>soluciones de software personalizadas</strong> adaptadas a las necesidades específicas de su negocio. Nuestro proceso garantiza calidad y eficiencia desde la consulta inicial hasta la implementación final, apoyado por nuestro equipo experimentado de desarrolladores y gestores de proyectos.",
+        "ourProcess": {
+          "title": "Nuestro Proceso",
+          "steps": {
+            "project": {
+              "title": "Inicio y Asignación del Proyecto",
+              "description": "Su proyecto comienza con la asignación de un Gestor de Proyecto (PM) dedicado, quien supervisará el proyecto y será su principal punto de contacto."
+            },
+            "development": {
+              "title": "Formación del Equipo de Desarrollo",
+              "description": "Formamos un equipo de desarrolladores expertos según las tecnologías y necesidades específicas de su proyecto."
+            },
+            "quality": {
+              "title": "Revisión de Código y Garantía de Calidad",
+              "description": "Durante el desarrollo, nuestro equipo realiza rigurosas revisiones de código y pruebas de garantía de calidad para asegurar que el software cumpla con todos los estándares requeridos."
+            },
+            "client": {
+              "title": "Pruebas en Staging y Revisión del Cliente",
+              "description": "Su software se despliega en un entorno de staging para pruebas finales y retroalimentación del cliente antes del lanzamiento oficial."
+            },
+            "deployment": {
+              "title": "Despliegue y Soporte",
+              "description": "Nos encargamos del despliegue en su entorno en vivo y brindamos soporte continuo para asegurar que el software funcione sin problemas. También ofrecemos soporte post-lanzamiento para cualquier problema que pueda surgir."
+            }
+          }
+        },
+        "pricing": {
+          "title": "Precios",
+          "description": "Nuestros planes de precios están diseñados para adaptarse a empresas de todos los tamaños y presupuestos. Ya sea que sea una startup que busca desarrollar un <strong>MVP</strong> o una gran empresa que necesita una solución altamente personalizada, <strong>tenemos un plan que se ajusta a sus necesidades.</strong>",
+          "plans": {
+            "growth": {
+              "title": "Plan Crecimiento",
+              "description": "Ideal para empresas medianas que buscan soluciones más complejas.",
+              "features": [
+                "Horas de Desarrollo: Hasta 800",
+                "Gestión de Proyectos: PM avanzado con informes quincenales",
+                "Stack Tecnológico: Soporte para múltiples stacks tecnológicos",
+                "Soporte: 60 días post-lanzamiento",
+                "Horas Extra: $44.99/hora"
+              ],
+              "cta": "Solicitar Cotización"
+            },
+            "essentials": {
+              "title": "Plan Esencial",
+              "description": "Perfecto para startups y pequeñas empresas.",
+              "features": [
+                "Horas de Desarrollo: Hasta 400",
+                "Gestión de Proyectos: PM dedicado",
+                "Stack Tecnológico: Un solo stack tecnológico",
+                "Soporte: 90 días post-lanzamiento",
+                "Horas Extra: $39.99/hora"
+              ],
+              "cta": "Solicitar Cotización"
+            },
+            "enterprise": {
+              "title": "Plan Empresarial",
+              "description": "Diseñado para grandes empresas que necesitan una solución integral.",
+              "features": [
+                "Horas de Desarrollo: Desde 1200",
+                "Gestión de Proyectos: PM premium con actualizaciones diarias e incluye BA",
+                "Stack Tecnológico: Stack tecnológico personalizado e integración completa",
+                "Soporte: 3 meses con soporte prioritario",
+                "Horas Extra: $49.99/hora"
+              ],
+              "cta": "Solicitar Cotización"
+            },
+            "flexible": {
+              "title": "Plan FlexiDev",
+              "description": "Flexible y escalable para empresas con necesidades cambiantes.",
+              "features": [
+                "Horas de Desarrollo: Mínimo 36 horas",
+                "Gestión de Proyectos: Disponible bajo solicitud",
+                "Soporte: Pago por uso",
+                "Horas de desarrollo ilimitadas"
+              ],
+              "frequency": "hora",
+              "cta": "Solicitar Cotización"
+            }
+          }
+        },
+        "comparePricing": {
+          "title": "Comparar Planes de Precios",
+          "plans": {
+            "flexible": {
+              "title": "Plan FlexiDev<br/>(Pago por Uso)",
+              "description": "Empresas que necesitan horas de desarrollo flexibles o soporte continuo sin compromiso a largo plazo.",
+              "frequency": "hora",
+              "cta": "Solicitar Cotización"
+            },
+            "essentials": {
+              "title": "Plan Esencial",
+              "description": "Pequeñas empresas o startups que buscan desarrollar un MVP básico o una aplicación de pequeña escala.",
+              "cta": "Solicitar Cotización"
+            },
+            "growth": {
+              "title": "Plan Crecimiento",
+              "description": "Empresas medianas que necesitan software más complejo con características adicionales.",
+              "cta": "Solicitar Cotización"
+            },
+            "enterprise": {
+              "title": "Plan Empresarial",
+              "description": "Grandes empresas que buscan soluciones altamente personalizadas con características avanzadas.",
+              "cta": "Solicitar Cotización"
+            }
+          },
+          "details": {
+            "coreFeatures": {
+              "title": "Características de Desarrollo Esenciales",
+              "features": {
+                "development": {
+                  "title": "Horas de Desarrollo",
+                  "columns": {
+                    "flexible": "Mínimo 36 horas",
+                    "essentials": "Hasta 400 horas",
+                    "growth": "Hasta 800 horas",
+                    "enterprise": "Desde 1200 horas"
+                  }
+                },
+                "dedicated": {
+                  "title": "Gestor de Proyecto Dedicado",
+                  "columns": {
+                    "flexible": "por solicitud (tarifa por hora)",
+                    "growth": "con informes quincenales",
+                    "enterprise": "con actualizaciones diarias, incluye BA"
+                  }
+                },
+                "tech": {
+                  "title": "Stack Tecnológico",
+                  "columns": {
+                    "flexible": "Stack tecnológico flexible",
+                    "essentials": "Un solo stack tecnológico",
+                    "growth": "Soporte para múltiples stacks tecnológicos",
+                    "enterprise": "Stack tecnológico personalizado, integración completa"
+                  }
+                }
+              }
+            },
+            "quality": {
+              "title": "Garantía de Calidad y Soporte",
+              "features": {
+                "codeReview": {
+                  "title": "Revisión de Código"
+                },
+                "qaTesting": {
+                  "title": "QA y Pruebas",
+                  "columns": {
+                    "flexible": "Pruebas básicas (tarifa por hora)",
+                    "essentials": "Pruebas estándar",
+                    "growth": "Pruebas avanzadas automatizadas",
+                    "enterprise": "Pruebas extensivas, incluyendo auditorías de seguridad"
+                  }
+                },
+                "userAcceptance": {
+                  "title": "Pruebas de Aceptación del Usuario",
+                  "columns": {
+                    "flexible": "Disponible como complemento"
+                  }
+                }
+              }
+            },
+            "support": {
+              "title": "Soporte y Mantenimiento",
+              "features": {
+                "postLaunch": {
+                  "title": "Soporte Post-Lanzamiento",
+                  "columns": {
+                    "flexible": "Disponible por horas",
+                    "essentials": "90 días",
+                    "growth": "180 días",
+                    "enterprise": "3 meses con soporte prioritario"
+                  }
+                },
+                "maintenance": {
+                  "title": "Mantenimiento",
+                  "columns": {
+                    "flexible": "Disponible como complemento",
+                    "essentials": "Mantenimiento básico",
+                    "growth": "Mantenimiento extendido",
+                    "enterprise": "Paquete de mantenimiento completo"
+                  }
+                },
+                "staging": {
+                  "title": "Entorno de Staging",
+                  "columns": {
+                    "flexible": "Disponible como complemento"
+                  }
+                }
+              }
+            },
+            "additional": {
+              "title": "Características Adicionales",
+              "features": {
+                "consultation": {
+                  "title": "Consultoría",
+                  "columns": {
+                    "flexible": "$300 tarifa inicial por 5 horas",
+                    "essentials": "5 horas por mes",
+                    "growth": "10 horas por mes",
+                    "enterprise": "Consultorías ilimitadas"
+                  }
+                },
+                "customIntegration": {
+                  "title": "Integraciones Personalizadas",
+                  "columns": {
+                    "flexible": "Disponible por horas",
+                    "essentials": "Limitado",
+                    "growth": "Múltiples integraciones",
+                    "enterprise": "Soporte completo de integraciones"
+                  }
+                },
+                "performanceOptimization": {
+                  "title": "Optimización de Rendimiento",
+                  "columns": {
+                    "flexible": "Disponible como complemento",
+                    "enterprise": "Optimización avanzada"
+                  }
+                },
+                "extraHours": {
+                  "title": "Horas Extra",
+                  "columns": {
+                    "flexible": "Incluidas en la tarifa por hora",
+                    "essentials": "Desde $39.99/hora",
+                    "growth": "Desde $44.99/hora",
+                    "enterprise": "Desde $49.99/hora"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
