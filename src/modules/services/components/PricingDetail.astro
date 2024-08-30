@@ -1,6 +1,6 @@
 ---
 import { cn } from "src/lib/utils";
-import { CheckCircle, XCircle } from "lucide-astro";
+import { CheckCircle, XCircle , ChevronRight } from "lucide-astro";
 
 type Column =
   | {
@@ -28,8 +28,17 @@ interface Props {
 const { isOpen, category, features } = Astro.props;
 ---
 
-<details open={isOpen}>
-  <summary class="px-4 cursor-pointer">{category}</summary>
+<details open={isOpen} class="group">
+  <summary class="px-4 cursor-pointer text-lg font-medium marker: flex items-center gap-5">
+    <ChevronRight
+      class={cn(
+        "transform transition-transform group-open:rotate-90",
+        
+      )}
+      aria-hidden="true"
+    />
+    <h3>{category}</h3>
+  </summary>
   <span class="h-[2px] block w-full bg-black mb-4 mt-1"></span>
   {
     features.map((feature) => (

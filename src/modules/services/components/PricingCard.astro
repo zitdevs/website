@@ -24,17 +24,22 @@ type PlanData = {
 type Props = {
   plan: PlanData;
   mostPopular?: boolean;
+  class?: string;
   classes?: {
     header?: string;
     title?: string;
+    feature?: string;
+    button?: string;
+    footer?: string;
+    price?: string;
   };
 };
 
-const { plan, mostPopular, classes } = Astro.props;
+const { plan, mostPopular, classes, ...props } = Astro.props;
 ---
 
 <Card
-  className={cn("bg-gray-50 border-gray-200/80", {
+  className={cn("bg-gray-50 border-gray-200/80", props.class, {
     "border-secondary bg-secondary/10": mostPopular,
     "rounded-none rounded-t-xl border-b-0": !plan.features,
     "shadow-xl": !!plan.features,
@@ -57,7 +62,7 @@ const { plan, mostPopular, classes } = Astro.props;
             <span class="h-[20px] block" />
           )
         }
-        <p class="text-3xl font-semibold">
+        <p class={cn("text-3xl font-semibold", classes?.price)}>
           ${formatNumber(plan.price)}
           <span class="text-base font-normal">
             {plan.priceFrequency ? `/${plan.priceFrequency}` : ""}
@@ -75,7 +80,7 @@ const { plan, mostPopular, classes } = Astro.props;
   {
     plan.features && (
       <CardContent>
-        <ul>
+        <ul class={cn(classes?.feature)}>
           {plan.features.map((feature, index) => (
             <FeatureItems key={index}>{feature}</FeatureItems>
           ))}
@@ -84,9 +89,9 @@ const { plan, mostPopular, classes } = Astro.props;
     )
   }
 
-  <CardFooter className="grid place-items-center gap-2">
+  <CardFooter className={cn("grid place-items-center gap-2", classes?.footer)}>
     <Button
-      className="w-full"
+      className={cn("w-full", classes?.button)}
       variant={mostPopular ? "secondary" : "outline"}
       href={plan.cta?.href}
     >

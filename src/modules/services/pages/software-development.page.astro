@@ -77,11 +77,10 @@ const i18n = getI18n({ currentLocale: lang });
       </ul>
     </section>
     <span class="h-[100px] w-full block"></span>
-    <section class="mb-[120px]">
+    <section>
       <div class="mb-12 space-y-2">
         <h2 class="text-4xl font-semibold text-center">
           <span class="text-4xl font-semibold">Pricing</span>
-          <span class="text-sm text-gray-500">/per project</span>
         </h2>
         <div>
           <p class="text-center text-gray-800 max-w-[700px] mx-auto">
@@ -95,13 +94,133 @@ const i18n = getI18n({ currentLocale: lang });
           </p>
         </div>
       </div>
+
+      <div
+        class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-[40px]"
+      >
+        <PricingCard
+          classes={{
+            header: "min-h-[90px]",
+            title: "min-h-[45px]",
+            feature: "min-h-[270px]",
+          }}
+          plan={{
+            startingAt: true,
+            description:
+              "Ideal for mid-sized companies looking for more complex solutions.",
+            name: "Growth Plan",
+            features: [
+              "Development Hours: Up to 800",
+              "Project Management: Enhanced PM with bi-weekly reports",
+              "Technology Stack: Multi-tech stack support",
+              "Support: 60 days post-launch",
+              "Extra Hours: $44.99/hour",
+            ],
+            price: 36000,
+            cta: {
+              text: "Contact Us",
+              href: `/${lang}/contact`,
+            },
+          }}
+        />
+        <PricingCard
+          mostPopular
+          classes={{
+            header: "min-h-[90px]",
+            title: "min-h-[45px]",
+            feature: "min-h-[270px]",
+          }}
+          plan={{
+            startingAt: true,
+            description: "Perfect for startups and small businesses.",
+            name: "Essentials Plan",
+            features: [
+              "Development Hours: Up to 400",
+              "Project Management: Dedicated PM",
+              "Technology Stack: Single tech stack",
+              "Support: 90 days post-launch",
+              "Extra Hours: $39.99/hour",
+            ],
+            price: 12000,
+            cta: {
+              text: "Contact Us",
+              href: `/${lang}/contact`,
+            },
+          }}
+        />
+        <PricingCard
+          classes={{
+            header: "min-h-[90px]",
+            title: "min-h-[45px]",
+            feature: "min-h-[270px]",
+          }}
+          plan={{
+            startingAt: true,
+            name: "Enterprise Excellence Plan",
+            description:
+              "Tailored for large enterprises needing a comprehensive solution.",
+            features: [
+              "Development Hours: From 1200",
+              "Project Management: Premium PM with daily updates and BA included",
+              "Technology Stack: Custom tech stack and full integration",
+              "Support: 3 months with priority support",
+              "Extra Hours: $49.99/hour",
+            ],
+            price: 95000,
+            cta: {
+              text: "Contact Us",
+              href: `/${lang}/contact`,
+            },
+          }}
+        />
+        <PricingCard
+          class="lg:col-span-3"
+          classes={{
+            header: "min-h-[90px] lg:min-h-fit",
+            title: "min-h-[45px] lg:min-h-fit",
+            feature: "min-h-[270px] lg:min-h-fit",
+            button: "lg:w-fit",
+            footer: "lg:flex",
+          }}
+          plan={{
+            name: "FlexiDev Plan",
+            description:
+              "Flexible and scalable for businesses with changing needs.",
+            features: [
+              "Development Hours: Minimum 36 hours",
+              "Project Management: Available on request",
+              "Support: Pay-as-you-go",
+              "Unlimited development hours",
+            ],
+            price: 25,
+            priceFrequency: "hour",
+            cta: {
+              text: "Contact Us",
+              href: `/${lang}/contact`,
+            },
+          }}
+        />
+      </div>
+    </section>
+
+    <span class="h-[120px] w-full block"></span>
+
+    <section class="mb-[120px] hidden lg:block">
+      <div class="mb-12 space-y-2">
+        <h2 class="text-4xl font-semibold text-center">
+          <span class="text-4xl font-semibold">
+            Compare Our Pricing Plans
+          </span>
+        </h2>
+      </div>
       <div class="space-y-8">
         <div class="grid gap-4 grid-cols-1 sm:grid-cols-5 pt-[40px]">
           <span class="col-span-1"></span>
           <PricingCard
             classes={{
               header: "min-h-[140px]",
-              title: "min-h-[65px]",
+              title: "min-h-[65px] text-lg xl:text-2xl",
+              price: "text-xl xl:text-2xl",
             }}
             plan={{
               name: "FlexiDev Plan<br/>(Pay-As-You-Go)",
@@ -120,7 +239,8 @@ const i18n = getI18n({ currentLocale: lang });
             mostPopular
             classes={{
               header: "min-h-[140px]",
-              title: "min-h-[65px]",
+              title: "min-h-[65px] text-xl xl:text-2xl",
+              price: "text-xl xl:text-2xl",
             }}
             plan={{
               startingAt: true,
@@ -138,7 +258,8 @@ const i18n = getI18n({ currentLocale: lang });
           <PricingCard
             classes={{
               header: "min-h-[140px]",
-              title: "min-h-[65px]",
+              title: "min-h-[65px] text-xl xl:text-2xl",
+              price: "text-xl xl:text-2xl",
             }}
             plan={{
               startingAt: true,
@@ -155,7 +276,8 @@ const i18n = getI18n({ currentLocale: lang });
           <PricingCard
             classes={{
               header: "min-h-[140px]",
-              title: "min-h-[65px]",
+              title: "min-h-[65px] text-xl xl:text-3xl",
+              price: "text-xl xl:text-2xl",
             }}
             plan={{
               startingAt: true,
@@ -417,6 +539,27 @@ const i18n = getI18n({ currentLocale: lang });
                   type: "icon",
                   included: true,
                   note: "Advanced optimization",
+                },
+              ],
+            },
+            {
+              title: "Extra Hours",
+              columns: [
+                {
+                  type: "text",
+                  title: "Included in hourly rate",
+                },
+                {
+                  type: "text",
+                  title: "From $$39.99/hour",
+                },
+                {
+                  type: "text",
+                  title: "From $$44.99/hour",
+                },
+                {
+                  type: "text",
+                  title: "From $$49.99/hour",
                 },
               ],
             },
