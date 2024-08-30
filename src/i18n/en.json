@@ -320,7 +320,8 @@
       "included": "Included",
       "not_included": "Not Included",
       "starting_at": "Starting at",
-      "monthly": "monthly"
+      "monthly": "monthly",
+      "hour": "hour"
     }
   },
   "home": {
@@ -566,35 +567,35 @@
         "cta": "Learn more about our consulting services"
       }
     },
+    "ourProcess": {
+      "title": "Our Process",
+      "steps": {
+        "project": {
+          "title": "Project Kickoff & Assignment",
+          "description": "Your project begins with the assignment of a dedicated Project Manager (PM) who will oversee the project and serve as your main point of contact"
+        },
+        "development": {
+          "title": "Development Team Assembly",
+          "description": "We assemble a team of expert developers tailored to the specific technologies and needs of your project."
+        },
+        "quality": {
+          "title": "Code Review & Quality Assurance",
+          "description": "Throughout development, our team conducts rigorous code reviews and quality assurance testing to ensure the software meets all required standards."
+        },
+        "client": {
+          "title": "Staging & Client Review",
+          "description": "Your software is deployed in a staging environment for final testing and client feedback before the official launch."
+        },
+        "deployment": {
+          "title": "Deployment & Support",
+          "description": "We handle the deployment to your live environment and provide ongoing support to ensure the software runs smoothly. We also offer post-launch support for any issues that may arise."
+        }
+      }
+    },
     "page": {
       "softwareDevelopment": {
         "title": "Software Development",
         "description": "At <strong>ZitDevs</strong>, we create <strong>custom software solutions</strong> tailored to your specific business needs. Our process ensures quality and efficiency from the initial consultation to final deployment, supported by our experienced team of developers and project managers.",
-        "ourProcess": {
-          "title": "Our Process",
-          "steps": {
-            "project": {
-              "title": "Project Kickoff & Assignment",
-              "description": "Your project begins with the assignment of a dedicated Project Manager (PM) who will oversee the project and serve as your main point of contact"
-            },
-            "development": {
-              "title": "Development Team Assembly",
-              "description": "We assemble a team of expert developers tailored to the specific technologies and needs of your project."
-            },
-            "quality": {
-              "title": "Code Review & Quality Assurance",
-              "description": "Throughout development, our team conducts rigorous code reviews and quality assurance testing to ensure the software meets all required standards."
-            },
-            "client": {
-              "title": "Staging & Client Review",
-              "description": "Your software is deployed in a staging environment for final testing and client feedback before the official launch."
-            },
-            "deployment": {
-              "title": "Deployment & Support",
-              "description": "We handle the deployment to your live environment and provide ongoing support to ensure the software runs smoothly. We also offer post-launch support for any issues that may arise."
-            }
-          }
-        },
         "pricing": {
           "title": "Pricing",
           "description": "Our pricing plans are designed to accommodate businesses of all sizes and budgets. Whether you're a startup looking to develop an <strong>MVP</strong> or a large enterprise seeking a highly customized solution, <strong>we have a plan that fits your needs.</strong>",
@@ -796,6 +797,67 @@
                   }
                 }
               }
+            }
+          }
+        }
+      },
+      "websiteDevelopment": {
+        "title": "Build Your Online Presence with ZitDevs",
+        "description": "At <strong>ZitDevs</strong>, we specialize in creating tailored web solutions that help your business stand out online. Whether you’re a startup looking to establish your first website or a growing company needing a more robust online presence, our web development plans are designed to meet your needs without breaking your budget. From template-based designs to fully custom solutions, we ensure your website is not only visually appealing but also optimized for performance and SEO. With our competitive pricing and ongoing support, getting online has never been easier.",
+        "pricing": {
+          "title": "Choose Your Plan",
+          "description": "Get your business online with a plan that fits your needs and budget. Whether you’re just starting or looking to expand, ZitDevs offers affordable solutions with no compromise on quality.",
+          "plans": {
+            "essentials": {
+              "title": "Essential Web",
+              "description": "Perfect for startups or small businesses starting their online journey.",
+              "features": [
+                "Template-Based Design: Choose from professional templates.",
+                "Pages: Up to 3 customizable pages.",
+                "SEO Setup: Basic SEO to help you get noticed.",
+                "Responsive Design: Optimized for mobile and desktop.",
+                "Hosting: Shared hosting for 1 year.",
+                "Support: 30 days of post-launch support."
+              ],
+              "cta": "Choose Plan"
+            },
+            "growth": {
+              "title": "Growth Web",
+              "description": "Ideal for growing businesses needing a more customized solution.",
+              "features": [
+                "Custom Design: Tailored design that represents your brand.",
+                "Pages: Up to 5 custom pages.",
+                "SEO Setup: Enhanced SEO to boost visibility.",
+                "Project Manager: Dedicated PM for smooth project execution.",
+                "Production Time: Site live within 3 to 6 weeks.",
+                "Hosting: Enhanced shared hosting with better performance.",
+                "Support: 60 days of post-launch support."
+              ],
+              "cta": "Choose Plan"
+            },
+            "professional": {
+              "title": "Professional Web",
+              "description": "Best for businesses that need a comprehensive and professional online presence.",
+              "features": [
+                "Fully Custom Design: Unique design created just for you.",
+                "Pages: Up to 10 custom pages.",
+                "Comprehensive SEO: Advanced SEO to drive traffic.",
+                "Project Manager: Dedicated PM and strategic planning with a Business Analyst.",
+                "Custom Production Timeline: Tailored to your business needs.",
+                "Hosting: Premium dedicated hosting with top-tier features.",
+                "Support: 90 days of premium support."
+              ],
+              "cta": "Contact Sales"
+            },
+            "flexidev": {
+              "title": "FlexiDev Web",
+              "description": "Perfect for businesses with ongoing needs or specific, smaller projects.",
+              "features": [
+                "Custom Development: Flexible hours to suit your needs.",
+                "Consultation: $300 upfront fee for initial planning and consultation.",
+                "Support: Available as needed with flexible options."
+              ],
+              "cta": "Choose Plan"
             }
           }
         }

@@ -1,268 +1,130 @@
 ---
 import { getI18n } from "src/i18n";
 import Layout from "src/layouts/Layout.astro";
-import ProcesCard from "../components/ProcesCard.astro";
-import PricingCard from "../components/PricingCard.astro";
 
-import ManagementSvg from "../assets/management.svg";
-import DevTeamSvg from "../assets/dev-team.svg";
-import CodeReviewSvg from "../assets/code-review.svg";
-import ClientChecksSvg from "../assets/client-checks.svg";
-import DeploySupportSvg from "../assets/deploy-support.svg";
-import PricingDetail from "../components/PricingDetail.astro";
+import PageHeading from "../components/PageHeading.astro";
+import OurProcess from "../components/OurProcess.astro";
+import PricingSection from "../components/PricingSection.astro";
+import ComparePlanSection from "../components/ComparePlanSection.astro";
 
 const { lang } = Astro.params as { lang: string };
 
 const i18n = getI18n({ currentLocale: lang });
 const tSoftwareDevelopment = i18n.services.page.softwareDevelopment;
-const tOurProcess = tSoftwareDevelopment.ourProcess;
 const tPricing = tSoftwareDevelopment.pricing;
 const tComparePricing = tSoftwareDevelopment.comparePricing;
 const tDetails = tComparePricing.details;
 ---
 
-<Layout class="">
-  <section
-    class="md:h-screen md:max-h-[30vh] flex items-center flex-col justify-center text-white py-[40px] lg:px-60 bg-gradient-to-b from-secondary to-indigo-400 mb-10"
-  >
-    <div class="container">
-      <h1 class="text-xl md:text-4xl font-bold text-center">
-        {tSoftwareDevelopment.title}
-      </h1>
-      <p
-        class="text-sm md:text-[16px] text-center mt-4 max-w-[900px] mx-auto"
-        set:html={tSoftwareDevelopment.description}
-      />
-    </div>
-  </section>
+<Layout>
+  <PageHeading
+    title={tSoftwareDevelopment.title}
+    description={tSoftwareDevelopment.description}
+  />
 
   <div class="container mb-10">
-    <section>
-      <h2 class="text-4xl font-semibold text-center mt-[70px] mb-10">
-        {tOurProcess.title}
-      </h2>
-
-      <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <ProcesCard
-          title={tOurProcess.steps.project.title}
-          description={tOurProcess.steps.project.description}
-          image={ManagementSvg}
-        />
-
-        <ProcesCard
-          title={tOurProcess.steps.development.title}
-          description={tOurProcess.steps.development.description}
-          image={DevTeamSvg}
-        />
-
-        <ProcesCard
-          title={tOurProcess.steps.quality.title}
-          description={tOurProcess.steps.quality.description}
-          image={CodeReviewSvg}
-        />
-        <ProcesCard
-          title={tOurProcess.steps.client.title}
-          description={tOurProcess.steps.client.description}
-          image={ClientChecksSvg}
-        />
-
-        <ProcesCard
-          title={tOurProcess.steps.deployment.title}
-          description={tOurProcess.steps.deployment.description}
-          image={DeploySupportSvg}
-          class="sm:col-span-2 sm:w-full sm:min-w-full sm:flex sm:items-center sm:justify-center sm:gap-8 sm:px-10"
-          classes={{
-            image: "sm:h-[200px]",
-            imageContainer: "sm:w-[550px]",
-          }}
-        />
-      </ul>
-    </section>
+    <OurProcess />
     <span class="h-[100px] w-full block"></span>
-    <section>
-      <div class="mb-12 space-y-2">
-        <h2 class="text-4xl font-semibold text-center">
-          <span class="text-4xl font-semibold">{tPricing.title}</span>
-        </h2>
-        <div>
-          <p
-            class="text-center text-gray-800 max-w-[700px] mx-auto"
-            set:html={tPricing.description}
-          />
-        </div>
-      </div>
-
-      <div
-        class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-[40px]"
-      >
-        <PricingCard
-          classes={{
-            header: "min-h-[90px]",
-            title: "min-h-[45px]",
-            feature: "min-h-[270px]",
-          }}
-          plan={{
-            startingAt: true,
-            name: tPricing.plans.growth.title,
-            description: tPricing.plans.growth.description,
-            features: tPricing.plans.growth.features,
-            price: 36000,
-            cta: {
-              text: tPricing.plans.growth.cta,
-              href: `/${lang}/contact`,
-            },
-          }}
-        />
-        <PricingCard
-          mostPopular
-          classes={{
-            header: "min-h-[90px]",
-            title: "min-h-[45px]",
-            feature: "min-h-[270px]",
-          }}
-          plan={{
-            startingAt: true,
-            name: tPricing.plans.essentials.title,
-            description: tPricing.plans.essentials.description,
-            features: tPricing.plans.essentials.features,
-            price: 12000,
-            cta: {
-              text: tPricing.plans.essentials.cta,
-              href: `/${lang}/contact`,
-            },
-          }}
-        />
-        <PricingCard
-          classes={{
-            header: "min-h-[90px]",
-            title: "min-h-[45px]",
-            feature: "min-h-[270px]",
-          }}
-          plan={{
-            startingAt: true,
-            name: tPricing.plans.enterprise.title,
-            description: tPricing.plans.enterprise.description,
-            features: tPricing.plans.enterprise.features,
-            price: 95000,
-            cta: {
-              text: tPricing.plans.essentials.cta,
-              href: `/${lang}/contact`,
-            },
-          }}
-        />
-        <PricingCard
-          class="lg:col-span-3"
-          classes={{
-            header: "min-h-[90px] lg:min-h-fit",
-            title: "min-h-[45px] lg:min-h-fit",
-            feature: "min-h-[270px] lg:min-h-fit",
-            button: "lg:w-fit",
-            footer: "lg:flex",
-          }}
-          plan={{
-            name: tPricing.plans.flexible.title,
-            description: tPricing.plans.flexible.description,
-            features: tPricing.plans.flexible.features,
-            price: 25,
-            priceFrequency: tPricing.plans.flexible.frequency,
-            cta: {
-              text: tPricing.plans.essentials.cta,
-              href: `/${lang}/contact`,
-            },
-          }}
-        />
-      </div>
-    </section>
-
+    <PricingSection
+      title={tPricing.title}
+      description={tPricing.description}
+      popularPlanIndex={1}
+      pricing={[
+        {
+          startingAt: true,
+          name: tPricing.plans.growth.title,
+          description: tPricing.plans.growth.description,
+          features: tPricing.plans.growth.features,
+          price: 36000,
+          cta: {
+            text: tPricing.plans.growth.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          name: tPricing.plans.essentials.title,
+          description: tPricing.plans.essentials.description,
+          features: tPricing.plans.essentials.features,
+          price: 12000,
+          cta: {
+            text: tPricing.plans.essentials.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          name: tPricing.plans.enterprise.title,
+          description: tPricing.plans.enterprise.description,
+          features: tPricing.plans.enterprise.features,
+          price: 95000,
+          cta: {
+            text: tPricing.plans.essentials.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          name: tPricing.plans.flexible.title,
+          description: tPricing.plans.flexible.description,
+          features: tPricing.plans.flexible.features,
+          price: 25,
+          priceFrequency: tPricing.plans.flexible.frequency,
+          cta: {
+            text: tPricing.plans.essentials.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+      ]}
+    />
     <span class="h-[120px] w-full block"></span>
-
-    <section class="mb-[120px] hidden lg:block">
-      <div class="mb-12 space-y-2">
-        <h2 class="text-4xl font-semibold text-center">
-          <span class="text-4xl font-semibold">
-            {tComparePricing.title}
-          </span>
-        </h2>
-      </div>
-      <div class="space-y-8">
-        <div class="grid gap-4 grid-cols-1 sm:grid-cols-5 pt-[40px]">
-          <span class="col-span-1"></span>
-          <PricingCard
-            classes={{
-              header: "min-h-[160px]",
-              title: "min-h-[65px] text-lg xl:text-2xl",
-              price: "text-xl xl:text-2xl",
-            }}
-            plan={{
-              price: 25,
-              name: tComparePricing.plans.flexible.title,
-              description: tComparePricing.plans.flexible.description,
-              priceFrequency: tComparePricing.plans.flexible.frequency,
-              cta: {
-                text: tComparePricing.plans.flexible.cta,
-                href: `/${lang}/contact`,
-              },
-            }}
-          />
-          <PricingCard
-            mostPopular
-            classes={{
-              header: "min-h-[160px]",
-              title: "min-h-[65px] text-xl xl:text-2xl",
-              price: "text-xl xl:text-2xl",
-            }}
-            plan={{
-              startingAt: true,
-              price: 12000,
-              name: tComparePricing.plans.essentials.title,
-              description: tComparePricing.plans.essentials.description,
-              cta: {
-                text: tComparePricing.plans.essentials.cta,
-                href: `/${lang}/contact`,
-              },
-            }}
-          />
-          <PricingCard
-            classes={{
-              header: "min-h-[160px]",
-              title: "min-h-[65px] text-xl xl:text-2xl",
-              price: "text-xl xl:text-2xl",
-            }}
-            plan={{
-              startingAt: true,
-              price: 36000,
-              name: tComparePricing.plans.growth.title,
-              description: tComparePricing.plans.growth.description,
-              cta: {
-                text: tComparePricing.plans.growth.cta,
-                href: `/${lang}/contact`,
-              },
-            }}
-          />
-          <PricingCard
-            classes={{
-              header: "min-h-[160px]",
-              title: "min-h-[65px] text-xl xl:text-2xl",
-              price: "text-xl xl:text-2xl",
-            }}
-            plan={{
-              startingAt: true,
-              price: 95000,
-              name: tComparePricing.plans.enterprise.title,
-              description: tComparePricing.plans.enterprise.description,
-              cta: {
-                text: tComparePricing.plans.enterprise.cta,
-                href: `/${lang}/contact`,
-              },
-            }}
-          />
-        </div>
-
-        <PricingDetail
-          isOpen
-          popularColumn={1}
-          category={tDetails.coreFeatures.title}
-          features={[
+    <ComparePlanSection
+      title={tComparePricing.title}
+      plans={[
+        {
+          price: 25,
+          name: tComparePricing.plans.flexible.title,
+          description: tComparePricing.plans.flexible.description,
+          priceFrequency: tComparePricing.plans.flexible.frequency,
+          cta: {
+            text: tComparePricing.plans.flexible.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          price: 12000,
+          name: tComparePricing.plans.essentials.title,
+          description: tComparePricing.plans.essentials.description,
+          cta: {
+            text: tComparePricing.plans.essentials.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          price: 36000,
+          name: tComparePricing.plans.growth.title,
+          description: tComparePricing.plans.growth.description,
+          cta: {
+            text: tComparePricing.plans.growth.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          price: 95000,
+          name: tComparePricing.plans.enterprise.title,
+          description: tComparePricing.plans.enterprise.description,
+          cta: {
+            text: tComparePricing.plans.enterprise.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+      ]}
+      details={[
+        {
+          category: tDetails.coreFeatures.title,
+          features: [
             {
               title: tDetails.coreFeatures.features.development.title,
               columns: [
@@ -334,13 +196,11 @@ const tDetails = tComparePricing.details;
                 },
               ],
             },
-          ]}
-        />
-        <PricingDetail
-          popularColumn={1}
-          category={tDetails.quality.title}
-          ,
-          features={[
+          ],
+        },
+        {
+          category: tDetails.quality.title,
+          features: [
             {
               title: tDetails.quality.features.codeReview.title,
               columns: [
@@ -402,12 +262,11 @@ const tDetails = tComparePricing.details;
                 },
               ],
             },
-          ]}
-        />
-        <PricingDetail
-          popularColumn={1}
-          category={tDetails.support.title}
-          features={[
+          ],
+        },
+        {
+          category: tDetails.support.title,
+          features: [
             {
               title: tDetails.support.features.postLaunch.title,
               columns: [
@@ -475,12 +334,11 @@ const tDetails = tComparePricing.details;
                 },
               ],
             },
-          ]}
-        />
-        <PricingDetail
-          popularColumn={1}
-          category={tDetails.additional.title}
-          features={[
+          ],
+        },
+        {
+          category: tDetails.additional.title,
+          features: [
             {
               title: tDetails.additional.features.consultation.title,
               columns: [
@@ -586,9 +444,11 @@ const tDetails = tComparePricing.details;
                 },
               ],
             },
-          ]}
-        />
-      </div>
-    </section>
+          ],
+        },
+      ]}
+      popularPlanIndex={1}
+      openDetailIndex={0}
+    />
   </div>
 </Layout>

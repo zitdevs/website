@@ -1,0 +1,68 @@
+---
+import ProcesCard from "./ProcesCard.astro";
+import ManagementSvg from "../assets/management.svg";
+import DevTeamSvg from "../assets/dev-team.svg";
+import CodeReviewSvg from "../assets/code-review.svg";
+import ClientChecksSvg from "../assets/client-checks.svg";
+import DeploySupportSvg from "../assets/deploy-support.svg";
+import { getI18n } from "src/i18n";
+
+type Props = {
+  variant?: "blue" | "dark" | "orange" | "pink";
+};
+
+const { lang } = Astro.params as { lang: string };
+
+const i18n = getI18n({ currentLocale: lang });
+const tServices = i18n.services;
+const tOurProcess = tServices.ourProcess;
+
+const { variant } = Astro.props as Props;
+---
+
+<section>
+  <h2 class="text-4xl font-semibold text-center mt-[70px] mb-10">
+    {tOurProcess.title}
+  </h2>
+
+  <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <ProcesCard
+      title={tOurProcess.steps.project.title}
+      description={tOurProcess.steps.project.description}
+      image={ManagementSvg}
+      variant={variant}
+    />
+
+    <ProcesCard
+      title={tOurProcess.steps.development.title}
+      description={tOurProcess.steps.development.description}
+      image={DevTeamSvg}
+      variant={variant}
+    />
+
+    <ProcesCard
+      title={tOurProcess.steps.quality.title}
+      description={tOurProcess.steps.quality.description}
+      image={CodeReviewSvg}
+      variant={variant}
+    />
+    <ProcesCard
+      title={tOurProcess.steps.client.title}
+      description={tOurProcess.steps.client.description}
+      image={ClientChecksSvg}
+      variant={variant}
+    />
+
+    <ProcesCard
+      title={tOurProcess.steps.deployment.title}
+      description={tOurProcess.steps.deployment.description}
+      image={DeploySupportSvg}
+      variant={variant}
+      class="sm:col-span-2 sm:w-full sm:min-w-full sm:flex sm:items-center sm:justify-center sm:gap-8 sm:px-10"
+      classes={{
+        image: "sm:h-[200px]",
+        imageContainer: "sm:w-[550px]",
+      }}
+    />
+  </ul>
+</section>

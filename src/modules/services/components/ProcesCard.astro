@@ -1,8 +1,26 @@
 ---
 import { Image } from "astro:assets";
+import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "src/lib/utils";
 
-type Props = {
+const ProcessCardVariants = cva(
+  "max-w-2xl px-5 py-6 rounded-2xl shadow-md space-y-5",
+  {
+    variants: {
+      variant: {
+        blue: "bg-secondary/10",
+        dark: "bg-primary/10",
+        orange: "bg-amber-400/10",
+        pink: "bg-fuchsia-600/10",
+      },
+    },
+    defaultVariants: {
+      variant: "blue",
+    },
+  },
+);
+
+type Props = VariantProps<typeof ProcessCardVariants> & {
   title: string;
   description: string;
   image?: ImageMetadata;
@@ -13,15 +31,10 @@ type Props = {
   };
 };
 
-const { title, description, image, ...props } = Astro.props;
+const { title, description, image, variant, ...props } = Astro.props;
 ---
 
-<li
-  class={cn(
-    "max-w-2xl bg-secondary/10 px-5 py-6 rounded-2xl shadow-md space-y-5",
-    props.class,
-  )}
->
+<li class={cn(ProcessCardVariants({ variant }), props.class)}>
   {
     image && (
       <div

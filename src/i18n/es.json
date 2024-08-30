@@ -320,7 +320,8 @@
       "included": "Incluido",
       "not_included": "No incluido",
       "starting_at": "Desde",
-      "monthly": "mensual"
+      "monthly": "mensual",
+      "hour": "hora"
     }
   },
   "home": {
@@ -567,35 +568,35 @@
         "cta": "Conoce más sobre nuestros servicios de consultoría"
       }
     },
+    "ourProcess": {
+      "title": "Nuestro Proceso",
+      "steps": {
+        "project": {
+          "title": "Inicio y Asignación del Proyecto",
+          "description": "Su proyecto comienza con la asignación de un Gestor de Proyecto (PM) dedicado, quien supervisará el proyecto y será su principal punto de contacto."
+        },
+        "development": {
+          "title": "Formación del Equipo de Desarrollo",
+          "description": "Formamos un equipo de desarrolladores expertos según las tecnologías y necesidades específicas de su proyecto."
+        },
+        "quality": {
+          "title": "Revisión de Código y Garantía de Calidad",
+          "description": "Durante el desarrollo, nuestro equipo realiza rigurosas revisiones de código y pruebas de garantía de calidad para asegurar que el software cumpla con todos los estándares requeridos."
+        },
+        "client": {
+          "title": "Pruebas en Staging y Revisión del Cliente",
+          "description": "Su software se despliega en un entorno de staging para pruebas finales y retroalimentación del cliente antes del lanzamiento oficial."
+        },
+        "deployment": {
+          "title": "Despliegue y Soporte",
+          "description": "Nos encargamos del despliegue en su entorno en vivo y brindamos soporte continuo para asegurar que el software funcione sin problemas. También ofrecemos soporte post-lanzamiento para cualquier problema que pueda surgir."
+        }
+      }
+    },
     "page": {
       "softwareDevelopment": {
         "title": "Desarrollo de Software",
         "description": "En <strong>ZitDevs</strong>, creamos <strong>soluciones de software personalizadas</strong> adaptadas a las necesidades específicas de su negocio. Nuestro proceso garantiza calidad y eficiencia desde la consulta inicial hasta la implementación final, apoyado por nuestro equipo experimentado de desarrolladores y gestores de proyectos.",
-        "ourProcess": {
-          "title": "Nuestro Proceso",
-          "steps": {
-            "project": {
-              "title": "Inicio y Asignación del Proyecto",
-              "description": "Su proyecto comienza con la asignación de un Gestor de Proyecto (PM) dedicado, quien supervisará el proyecto y será su principal punto de contacto."
-            },
-            "development": {
-              "title": "Formación del Equipo de Desarrollo",
-              "description": "Formamos un equipo de desarrolladores expertos según las tecnologías y necesidades específicas de su proyecto."
-            },
-            "quality": {
-              "title": "Revisión de Código y Garantía de Calidad",
-              "description": "Durante el desarrollo, nuestro equipo realiza rigurosas revisiones de código y pruebas de garantía de calidad para asegurar que el software cumpla con todos los estándares requeridos."
-            },
-            "client": {
-              "title": "Pruebas en Staging y Revisión del Cliente",
-              "description": "Su software se despliega en un entorno de staging para pruebas finales y retroalimentación del cliente antes del lanzamiento oficial."
-            },
-            "deployment": {
-              "title": "Despliegue y Soporte",
-              "description": "Nos encargamos del despliegue en su entorno en vivo y brindamos soporte continuo para asegurar que el software funcione sin problemas. También ofrecemos soporte post-lanzamiento para cualquier problema que pueda surgir."
-            }
-          }
-        },
         "pricing": {
           "title": "Precios",
           "description": "Nuestros planes de precios están diseñados para adaptarse a empresas de todos los tamaños y presupuestos. Ya sea que sea una startup que busca desarrollar un <strong>MVP</strong> o una gran empresa que necesita una solución altamente personalizada, <strong>tenemos un plan que se ajusta a sus necesidades.</strong>",
@@ -797,6 +798,67 @@
                   }
                 }
               }
+            }
+          }
+        }
+      },
+      "websiteDevelopment": {
+        "title": "Build Your Online Presence with ZitDevs",
+        "description": "At <strong>ZitDevs</strong>, we specialize in creating tailored web solutions that help your business stand out online. Whether you’re a startup looking to establish your first website or a growing company needing a more robust online presence, our web development plans are designed to meet your needs without breaking your budget. From template-based designs to fully custom solutions, we ensure your website is not only visually appealing but also optimized for performance and SEO. With our competitive pricing and ongoing support, getting online has never been easier.",
+        "pricing": {
+          "title": "Choose Your Plan",
+          "description": "Get your business online with a plan that fits your needs and budget. Whether you’re just starting or looking to expand, ZitDevs offers affordable solutions with no compromise on quality.",
+          "plans": {
+            "essentials": {
+              "title": "Essential Web",
+              "description": "Perfect for startups or small businesses starting their online journey.",
+              "features": [
+                "Template-Based Design: Choose from professional templates.",
+                "Pages: Up to 3 customizable pages.",
+                "SEO Setup: Basic SEO to help you get noticed.",
+                "Responsive Design: Optimized for mobile and desktop.",
+                "Hosting: Shared hosting for 1 year.",
+                "Support: 30 days of post-launch support."
+              ],
+              "cta": "Choose Plan"
+            },
+            "growth": {
+              "title": "Growth Web",
+              "description": "Ideal for growing businesses needing a more customized solution.",
+              "features": [
+                "Custom Design: Tailored design that represents your brand.",
+                "Pages: Up to 5 custom pages.",
+                "SEO Setup: Enhanced SEO to boost visibility.",
+                "Project Manager: Dedicated PM for smooth project execution.",
+                "Production Time: Site live within 3 to 6 weeks.",
+                "Hosting: Enhanced shared hosting with better performance.",
+                "Support: 60 days of post-launch support."
+              ],
+              "cta": "Choose Plan"
+            },
+            "professional": {
+              "title": "Professional Web",
+              "description": "Best for businesses that need a comprehensive and professional online presence.",
+              "features": [
+                "Fully Custom Design: Unique design created just for you.",
+                "Pages: Up to 10 custom pages.",
+                "Comprehensive SEO: Advanced SEO to drive traffic.",
+                "Project Manager: Dedicated PM and strategic planning with a Business Analyst.",
+                "Custom Production Timeline: Tailored to your business needs.",
+                "Hosting: Premium dedicated hosting with top-tier features.",
+                "Support: 90 days of premium support."
+              ],
+              "cta": "Contact Sales"
+            },
+            "flexidev": {
+              "title": "FlexiDev Web",
+              "description": "Perfect for businesses with ongoing needs or specific, smaller projects.",
+              "features": [
+                "Custom Development: Flexible hours to suit your needs.",
+                "Consultation: $300 upfront fee for initial planning and consultation.",
+                "Support: Available as needed with flexible options."
+              ],
+              "cta": "Choose Plan"
             }
           }
         }

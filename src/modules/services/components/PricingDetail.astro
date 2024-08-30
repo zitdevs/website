@@ -2,36 +2,39 @@
 import { cn } from "src/lib/utils";
 import { CheckCircle, XCircle , ChevronRight } from "lucide-astro";
 import { getI18n } from "src/i18n";
+import type { DetailProps } from "../types";
 
-type Column =
-  | {
-      type: "text";
-      title: string;
-    }
-  | {
-      type: "icon";
-      included: boolean;
-      note?: string;
-    };
 
-interface Feature {
-  title: string;
-  columns: Column[];
+type Props = DetailProps & {
+  variant?: 'blue' | 'dark' | 'orange' | 'pink';
 }
-
-interface Props {
-  isOpen?: boolean;
-  category: string;
-  features: Feature[];
-  popularColumn?: number;
-}
-
-const { isOpen, category, features } = Astro.props;
+ 
+const { isOpen, category, features, variant } = Astro.props;
 
 const { lang } = Astro.params as { lang: string };
 
 const i18n = getI18n({ currentLocale: lang });
 const tShared = i18n.default.shared;
+
+let popularVariant = 'border-secondary bg-secondary/10';
+
+switch (variant) {
+  case 'blue':
+    popularVariant = 'border-secondary bg-secondary/10';
+    break;
+  case 'dark':
+    popularVariant = 'border-primary border-primary/10';
+    break;
+  case 'orange':
+    popularVariant = 'border-amber-400 bg-amber-400/10';
+    break;
+  case 'pink':
+    popularVariant = 'border-fuchsia-600 bg-red-400/10';
+    break;
+  default:
+    break;
+}
+
 ---
 
 <details open={isOpen} class="group">
@@ -55,7 +58,7 @@ const tShared = i18n.default.shared;
             class={cn(
               "bg-gray-50 border-gray-200/80 px-6 py-4 text-sm text-center w-full grid place-items-center border-x",
               {
-                "border-secondary bg-secondary/10":
+                [popularVariant]:
                   i === Astro.props.popularColumn,
               },
             )}
