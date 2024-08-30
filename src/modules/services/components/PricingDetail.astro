@@ -1,6 +1,7 @@
 ---
 import { cn } from "src/lib/utils";
 import { CheckCircle, XCircle , ChevronRight } from "lucide-astro";
+import { getI18n } from "src/i18n";
 
 type Column =
   | {
@@ -26,6 +27,11 @@ interface Props {
 }
 
 const { isOpen, category, features } = Astro.props;
+
+const { lang } = Astro.params as { lang: string };
+
+const i18n = getI18n({ currentLocale: lang });
+const tShared = i18n.default.shared;
 ---
 
 <details open={isOpen} class="group">
@@ -56,7 +62,7 @@ const { isOpen, category, features } = Astro.props;
           >
             {column.type === "text" && <span>{column.title}</span>}
             {column.type === "icon" && (
-              <span aria-label={column.included ? "Included" : "Not included"}>
+              <span aria-label={column.included ? tShared.included : tShared.not_included}>
                 {column.included ? (
                   <CheckCircle
                     aria-hidden="true"

@@ -315,6 +315,12 @@
       "YE": "Yemen",
       "ZM": "Zambia",
       "ZW": "Zimbabwe"
+    },
+    "shared": {
+      "included": "Included",
+      "not_included": "Not Included",
+      "starting_at": "Starting at",
+      "monthly": "monthly"
     }
   },
   "home": {
