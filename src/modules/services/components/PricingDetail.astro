@@ -1,0 +1,67 @@
+---
+import { cn } from "src/lib/utils";
+import { CheckCircle, XCircle } from "lucide-astro";
+
+type Column =
+  | {
+      type: "text";
+      title: string;
+    }
+  | {
+      type: "icon";
+      included: boolean;
+      note?: string;
+    };
+
+interface Feature {
+  title: string;
+  columns: Column[];
+}
+
+interface Props {
+  isOpen?: boolean;
+  category: string;
+  features: Feature[];
+  popularColumn?: number;
+}
+
+const { isOpen, category, features } = Astro.props;
+---
+
+<details open={isOpen}>
+  <summary class="px-4 cursor-pointer">{category}</summary>
+  <span class="h-[2px] block w-full bg-black mb-4 mt-1"></span>
+  {
+    features.map((feature) => (
+      <div class="grid gap-4 grid-cols-1 sm:grid-cols-5">
+        <p class="py-4 px-4">{feature.title}</p>
+        {feature.columns.map((column, i) => (
+          <div
+            class={cn(
+              "bg-gray-50 border-gray-200/80 px-6 py-4 text-sm text-center w-full grid place-items-center border-x",
+              {
+                "border-secondary bg-secondary/10":
+                  i === Astro.props.popularColumn,
+              },
+            )}
+          >
+            {column.type === "text" && <span>{column.title}</span>}
+            {column.type === "icon" && (
+              <span aria-label={column.included ? "Included" : "Not included"}>
+                {column.included ? (
+                  <CheckCircle
+                    aria-hidden="true"
+                    class="text-green-600 size-6"
+                  />
+                ) : (
+                  <XCircle aria-hidden="true" class="text-gray-700 size-6" />
+                )}
+              </span>
+              <p class="text-gray-700 text-xs mt-1 min-h-[16px]">{column.note}</p>
+            )}
+          </div>
+        ))}
+      </div>
+    ))
+  }
+</details>

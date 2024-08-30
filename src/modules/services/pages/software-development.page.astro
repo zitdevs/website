@@ -1,9 +1,7 @@
 ---
 import { getI18n } from "src/i18n";
 import Layout from "src/layouts/Layout.astro";
-import { UserCheck, Users, Code, Monitor, Rocket } from "lucide-astro";
 import ProcesCard from "../components/ProcesCard.astro";
-import Button from "src/components/button/Button.astro";
 import PricingCard from "../components/PricingCard.astro";
 
 import ManagementSvg from "../assets/management.svg";
@@ -11,6 +9,7 @@ import DevTeamSvg from "../assets/dev-team.svg";
 import CodeReviewSvg from "../assets/code-review.svg";
 import ClientChecksSvg from "../assets/client-checks.svg";
 import DeploySupportSvg from "../assets/deploy-support.svg";
+import PricingDetail from "../components/PricingDetail.astro";
 
 const { lang } = Astro.params as { lang: string };
 
@@ -36,105 +35,394 @@ const i18n = getI18n({ currentLocale: lang });
   </section>
 
   <div class="container mb-10">
-    <h2 class="text-4xl font-semibold text-center mt-[70px] mb-10">
-      Our Process
-    </h2>
+    <section>
+      <h2 class="text-4xl font-semibold text-center mt-[70px] mb-10">
+        Our Process
+      </h2>
 
-    <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      <ProcesCard
-        title="Project Kickoff & Assignment"
-        description="Your project begins with the assignment of a dedicated Project Manager (PM) who will oversee the project and serve as your main point of contact"
-        image={ManagementSvg}
-      />
+      <ul class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <ProcesCard
+          title="Project Kickoff & Assignment"
+          description="Your project begins with the assignment of a dedicated Project Manager (PM) who will oversee the project and serve as your main point of contact"
+          image={ManagementSvg}
+        />
 
-      <ProcesCard
-        title="Development Team Assembly"
-        description="We assemble a team of expert developers tailored to the specific technologies and needs of your project."
-        image={DevTeamSvg}
-      />
+        <ProcesCard
+          title="Development Team Assembly"
+          description="We assemble a team of expert developers tailored to the specific technologies and needs of your project."
+          image={DevTeamSvg}
+        />
 
-      <ProcesCard
-        title="Code Review & Quality Assurance"
-        description="Throughout development, our team conducts rigorous code reviews and quality assurance testing to ensure the software meets all required standards."
-        image={CodeReviewSvg}
-      />
-      <ProcesCard
-        title="Staging & Client Review"
-        description="Your software is deployed in a staging environment for final testing and client feedback before the official launch."
-        image={ClientChecksSvg}
-      />
+        <ProcesCard
+          title="Code Review & Quality Assurance"
+          description="Throughout development, our team conducts rigorous code reviews and quality assurance testing to ensure the software meets all required standards."
+          image={CodeReviewSvg}
+        />
+        <ProcesCard
+          title="Staging & Client Review"
+          description="Your software is deployed in a staging environment for final testing and client feedback before the official launch."
+          image={ClientChecksSvg}
+        />
 
-      <ProcesCard
-        title="Deployment & Support"
-        description="We handle the deployment to your live environment and provide ongoing support to ensure the software runs smoothly. We also offer post-launch support for any issues that may arise."
-        image={DeploySupportSvg}
-        class="sm:col-span-2 sm:w-full sm:min-w-full sm:flex sm:items-center sm:justify-center sm:gap-8 sm:px-10"
-        classes={{
-          image: "sm:h-[200px]",
-          imageContainer: "sm:w-[550px]",
-        }}
-      />
-    </ul>
+        <ProcesCard
+          title="Deployment & Support"
+          description="We handle the deployment to your live environment and provide ongoing support to ensure the software runs smoothly. We also offer post-launch support for any issues that may arise."
+          image={DeploySupportSvg}
+          class="sm:col-span-2 sm:w-full sm:min-w-full sm:flex sm:items-center sm:justify-center sm:gap-8 sm:px-10"
+          classes={{
+            image: "sm:h-[200px]",
+            imageContainer: "sm:w-[550px]",
+          }}
+        />
+      </ul>
+    </section>
+    <span class="h-[100px] w-full block"></span>
+    <section class="mb-[120px]">
+      <div class="mb-12 space-y-2">
+        <h2 class="text-4xl font-semibold text-center">
+          <span class="text-4xl font-semibold">Pricing</span>
+          <span class="text-sm text-gray-500">/per project</span>
+        </h2>
+        <div>
+          <p class="text-center text-gray-800 max-w-[700px] mx-auto">
+            Our pricing plans are designed to accommodate businesses of all
+            sizes and budgets.<br /> Whether you're a startup looking to develop
+            an
+            <strong>MVP</strong> or a large enterprise seeking a highly customized
+            solution,
 
-    <div class="grid gap-8 grid-cols-1 sm:grid-cols-3 mt-[120px] mb-[120px]">
-      <PricingCard
-        plan={{
-          description:
-            "Mid-sized companies needing more complex software with additional features.",
-          features: [
-            "Up to 800 development hours.",
-            "Includes regular progress reports and bi-weekly meetings.",
-            "Thorough testing processes, including automated testing for critical functionalities.",
-            "90 days of post-launch support, including performance optimization.",
-            "Multi-technology stack support",
-          ],
-          name: "Growth Plan",
-          price: 36000,
-          cta: {
-            text: "Contact Us",
-            href: `/${lang}/contact`,
-          },
-        }}
-      />
-      <PricingCard
-        mostPopular
-        plan={{
-          description:
-            "Small businesses or startups looking to develop a basic MVP or small-scale application.",
-          features: [
-            "Up to 400 development hours",
-            "Dedicated PM for the duration of the project.",
-            "Standard quality assurance and testing to ensure your software is ready for launch.",
-            "60 days of post-launch support for bug fixes and minor updates.",
-            "Limited to one core technology.",
-          ],
-          name: "Essentials Plan",
-          price: 12000,
-          cta: {
-            text: "Contact Us",
-            href: `/${lang}/contact`,
-          },
-        }}
-      />
-      <PricingCard
-        plan={{
-          name: "Enterprise Excellence Plan",
-          description:
-            "Large enterprises seeking highly customized solutions with advanced features.",
-          features: [
-            "Over 1200 development hours, with options to scale further.",
-            "Daily updates, a dedicated PM, and access to a Business Analyst (BA) for strategic alignment.",
-            "Extensive testing, including security audits, load testing, and user acceptance testing (UAT).",
-            "5 months of post-launch support, including on-site visits (if applicable) and priority issue resolution.",
-            "Custom technology stack with integration support for third-party services and APIs.",
-          ],
-          price: 95000,
-          cta: {
-            text: "Contact Us",
-            href: `/${lang}/contact`,
-          },
-        }}
-      />
-    </div>
+            <strong>we have a plan that fits your needs.</strong>
+          </p>
+        </div>
+      </div>
+      <div class="space-y-8">
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-5 pt-[40px]">
+          <span class="col-span-1"></span>
+          <PricingCard
+            classes={{
+              header: "min-h-[140px]",
+              title: "min-h-[65px]",
+            }}
+            plan={{
+              name: "FlexiDev Plan<br/>(Pay-As-You-Go)",
+              description:
+                "Businesses needing flexible development hours or ongoing support without long-term commitment.",
+
+              price: 25,
+              priceFrequency: "hour",
+              cta: {
+                text: "Contact Us",
+                href: `/${lang}/contact`,
+              },
+            }}
+          />
+          <PricingCard
+            mostPopular
+            classes={{
+              header: "min-h-[140px]",
+              title: "min-h-[65px]",
+            }}
+            plan={{
+              startingAt: true,
+              description:
+                "Small businesses or startups looking to develop a basic MVP or small-scale application.",
+
+              name: "Essentials Plan",
+              price: 12000,
+              cta: {
+                text: "Contact Us",
+                href: `/${lang}/contact`,
+              },
+            }}
+          />
+          <PricingCard
+            classes={{
+              header: "min-h-[140px]",
+              title: "min-h-[65px]",
+            }}
+            plan={{
+              startingAt: true,
+              description:
+                "Mid-sized companies needing more complex software with additional features.",
+              name: "Growth Plan",
+              price: 36000,
+              cta: {
+                text: "Contact Us",
+                href: `/${lang}/contact`,
+              },
+            }}
+          />
+          <PricingCard
+            classes={{
+              header: "min-h-[140px]",
+              title: "min-h-[65px]",
+            }}
+            plan={{
+              startingAt: true,
+              name: "Enterprise Excellence Plan",
+              description:
+                "Large enterprises seeking highly customized solutions with advanced features.",
+              price: 95000,
+              cta: {
+                text: "Contact Us",
+                href: `/${lang}/contact`,
+              },
+            }}
+          />
+        </div>
+
+        <PricingDetail
+          isOpen
+          popularColumn={1}
+          category="Core Development Features"
+          features={[
+            {
+              title: "Development Hours",
+              columns: [
+                { type: "text", title: "Minimum 36 hours" },
+                { type: "text", title: "Up to 400 hours" },
+                { type: "text", title: "Up to 800 hours" },
+                { type: "text", title: "From 1200 hours" },
+              ],
+            },
+            {
+              title: "Dedicated Project Manager",
+              columns: [
+                {
+                  type: "icon",
+                  included: true,
+                  note: "per request (hourly rate)",
+                },
+                { type: "icon", included: true },
+                {
+                  type: "icon",
+                  included: true,
+                  note: "with bi-weekly reports",
+                },
+                {
+                  type: "icon",
+                  included: true,
+                  note: "with daily updates, BA included",
+                },
+              ],
+            },
+            {
+              title: "Technology Stack",
+              columns: [
+                { type: "text", title: "Flexible tech stack" },
+                { type: "text", title: "Single tech stack" },
+                { type: "text", title: "Multi-tech stack support" },
+                { type: "text", title: "Custom tech stack, full integration" },
+              ],
+            },
+          ]}
+        />
+        <PricingDetail
+          popularColumn={1}
+          category="Quality Assurance & Testing"
+          features={[
+            {
+              title: "Code Review",
+              columns: [
+                {
+                  type: "icon",
+                  included: true,
+                },
+                { type: "icon", included: true },
+                {
+                  type: "icon",
+                  included: true,
+                },
+                {
+                  type: "icon",
+                  included: true,
+                },
+              ],
+            },
+            {
+              title: "QA & Testing",
+              columns: [
+                {
+                  type: "text",
+                  title: "Basic testing (hourly rate)",
+                },
+                {
+                  type: "text",
+                  title: "Standard testing",
+                },
+                {
+                  type: "text",
+                  title: "Advanced automated testing",
+                },
+                {
+                  type: "text",
+                  title: "Extensive testing including security audits",
+                },
+              ],
+            },
+            {
+              title: "User Acceptance Testing",
+              columns: [
+                {
+                  type: "text",
+                  title: "Available as an add-on",
+                },
+                {
+                  type: "icon",
+                  included: false,
+                },
+                {
+                  type: "icon",
+                  included: true,
+                },
+                {
+                  type: "icon",
+                  included: true,
+                },
+              ],
+            },
+          ]}
+        />
+        <PricingDetail
+          popularColumn={1}
+          category="Support & Maintenance"
+          features={[
+            {
+              title: "Post-Launch Support",
+              columns: [
+                {
+                  type: "text",
+                  title: "Available on an hourly basis",
+                },
+                {
+                  type: "text",
+                  title: "90 days",
+                },
+                {
+                  title: "180 days",
+                  type: "text",
+                },
+                {
+                  title: "3 months, with priority support",
+                  type: "text",
+                },
+              ],
+            },
+            {
+              title: "Maintenance",
+              columns: [
+                {
+                  type: "text",
+                  title: "Available as an add-on",
+                },
+                {
+                  type: "text",
+                  title: "Basic maintenance",
+                },
+                {
+                  type: "text",
+                  title: "Extended maintenance",
+                },
+                {
+                  type: "text",
+                  title: "Full maintenance package",
+                },
+              ],
+            },
+            {
+              title: "Staging Environment",
+              columns: [
+                {
+                  type: "text",
+                  title: "Available as an add-on",
+                },
+                {
+                  type: "icon",
+                  included: false,
+                },
+                {
+                  type: "icon",
+                  included: true,
+                },
+                {
+                  type: "icon",
+                  included: true,
+                },
+              ],
+            },
+          ]}
+        />
+        <PricingDetail
+          popularColumn={1}
+          category="Additional Services"
+          features={[
+            {
+              title: "Consultation",
+              columns: [
+                {
+                  type: "text",
+                  title: "$300 upfront fee for 5 hours",
+                },
+                {
+                  type: "text",
+                  title: "5 hours per month",
+                },
+                {
+                  type: "text",
+                  title: "10 hours per month",
+                },
+                {
+                  type: "text",
+                  title: "Unlimited consultations",
+                },
+              ],
+            },
+            {
+              title: "Custom Integrations",
+              columns: [
+                {
+                  type: "text",
+                  title: "Available on an hourly basis",
+                },
+                {
+                  type: "text",
+                  title: "Limited",
+                },
+                {
+                  type: "text",
+                  title: "Multiple integrations",
+                },
+                {
+                  type: "text",
+                  title: "Full integration support",
+                },
+              ],
+            },
+            {
+              title: "Performance Optimization",
+              columns: [
+                {
+                  type: "text",
+                  title: "Available as an add-on",
+                },
+                {
+                  type: "icon",
+                  included: false,
+                },
+                {
+                  type: "icon",
+                  included: true,
+                },
+                {
+                  type: "icon",
+                  included: true,
+                  note: "Advanced optimization",
+                },
+              ],
+            },
+          ]}
+        />
+      </div>
+    </section>
   </div>
 </Layout>
