@@ -803,62 +803,219 @@
         }
       },
       "websiteDevelopment": {
-        "title": "Build Your Online Presence with ZitDevs",
-        "description": "At <strong>ZitDevs</strong>, we specialize in creating tailored web solutions that help your business stand out online. Whether you’re a startup looking to establish your first website or a growing company needing a more robust online presence, our web development plans are designed to meet your needs without breaking your budget. From template-based designs to fully custom solutions, we ensure your website is not only visually appealing but also optimized for performance and SEO. With our competitive pricing and ongoing support, getting online has never been easier.",
+        "title": "Construye Tu Presencia en Línea con ZitDevs",
+        "description": "En <strong>ZitDevs</strong>, nos especializamos en crear soluciones web a medida que ayudan a que tu negocio se destaque en línea. Ya sea que estés comenzando y necesites tu primer sitio web o seas una empresa en crecimiento que requiere una presencia en línea más sólida, nuestros planes de desarrollo web están diseñados para satisfacer tus necesidades sin afectar tu presupuesto. Desde diseños basados en plantillas hasta soluciones totalmente personalizadas, aseguramos que tu sitio web no solo sea visualmente atractivo, sino también optimizado para el rendimiento y el SEO. Con nuestros precios competitivos y soporte continuo, estar en línea nunca ha sido tan fácil.",
         "pricing": {
-          "title": "Choose Your Plan",
-          "description": "Get your business online with a plan that fits your needs and budget. Whether you’re just starting or looking to expand, ZitDevs offers affordable solutions with no compromise on quality.",
+          "title": "Elige Tu Plan",
+          "description": "Haz que tu negocio esté en línea con un plan que se ajuste a tus necesidades y presupuesto. Ya sea que estés comenzando o buscando expandirte, ZitDevs ofrece soluciones asequibles sin comprometer la calidad.",
           "plans": {
             "essentials": {
-              "title": "Essential Web",
-              "description": "Perfect for startups or small businesses starting their online journey.",
+              "title": "Web Esencial",
+              "description": "Perfecto para startups o pequeñas empresas que están comenzando su viaje en línea.",
               "features": [
-                "Template-Based Design: Choose from professional templates.",
-                "Pages: Up to 3 customizable pages.",
-                "SEO Setup: Basic SEO to help you get noticed.",
-                "Responsive Design: Optimized for mobile and desktop.",
-                "Hosting: Shared hosting for 1 year.",
-                "Support: 30 days of post-launch support."
+                "Diseño Basado en Plantillas: Elige entre plantillas profesionales.",
+                "Páginas: Hasta 3 páginas personalizables.",
+                "Configuración de SEO: SEO básico para ayudarte a destacar.",
+                "Diseño Responsivo: Optimizado para móvil y escritorio.",
+                "Alojamiento: Alojamiento compartido.",
+                "Soporte: 90 días de soporte post-lanzamiento."
               ],
-              "cta": "Choose Plan"
+              "cta": "Elegir Plan"
             },
             "growth": {
-              "title": "Growth Web",
-              "description": "Ideal for growing businesses needing a more customized solution.",
+              "title": "Web en Crecimiento",
+              "description": "Ideal para empresas en crecimiento que necesitan una solución más personalizada.",
               "features": [
-                "Custom Design: Tailored design that represents your brand.",
-                "Pages: Up to 5 custom pages.",
-                "SEO Setup: Enhanced SEO to boost visibility.",
-                "Project Manager: Dedicated PM for smooth project execution.",
-                "Production Time: Site live within 3 to 6 weeks.",
-                "Hosting: Enhanced shared hosting with better performance.",
-                "Support: 60 days of post-launch support."
+                "Diseño Personalizado: Diseño a medida que representa tu marca.",
+                "Páginas: Hasta 5 páginas personalizadas.",
+                "Configuración de SEO: SEO mejorado para aumentar la visibilidad.",
+                "Gerente de Proyecto: PM dedicado para una ejecución fluida del proyecto.",
+                "Tiempo de Producción: Sitio en vivo en 3 a 6 semanas.",
+                "Alojamiento: Alojamiento compartido mejorado con mayor rendimiento.",
+                "Soporte: 180 días de soporte post-lanzamiento."
               ],
-              "cta": "Choose Plan"
+              "cta": "Elegir Plan"
             },
             "professional": {
-              "title": "Professional Web",
-              "description": "Best for businesses that need a comprehensive and professional online presence.",
+              "title": "Web Profesional",
+              "description": "El mejor para empresas que necesitan una presencia en línea completa y profesional.",
               "features": [
-                "Fully Custom Design: Unique design created just for you.",
-                "Pages: Up to 10 custom pages.",
-                "Comprehensive SEO: Advanced SEO to drive traffic.",
-                "Project Manager: Dedicated PM and strategic planning with a Business Analyst.",
-                "Custom Production Timeline: Tailored to your business needs.",
-                "Hosting: Premium dedicated hosting with top-tier features.",
-                "Support: 90 days of premium support."
+                "Diseño Completamente Personalizado: Diseño único creado solo para ti.",
+                "Páginas: Hasta 10 páginas personalizadas.",
+                "SEO Integral: SEO avanzado para generar tráfico.",
+                "Gerente de Proyecto: PM dedicado y planificación estratégica con un Analista de Negocios.",
+                "Cronograma de Producción Personalizado: Adaptado a las necesidades de tu negocio.",
+                "Alojamiento: Alojamiento dedicado premium con características de primer nivel.",
+                "Soporte: 3 meses de soporte premium."
               ],
-              "cta": "Contact Sales"
+              "cta": "Contactar Ventas"
             },
             "flexidev": {
-              "title": "FlexiDev Web",
-              "description": "Perfect for businesses with ongoing needs or specific, smaller projects.",
+              "title": "Web FlexiDev",
+              "description": "Perfecto para empresas con necesidades continuas o proyectos específicos y más pequeños.",
               "features": [
-                "Custom Development: Flexible hours to suit your needs.",
-                "Consultation: $300 upfront fee for initial planning and consultation.",
-                "Support: Available as needed with flexible options."
+                "Desarrollo Personalizado: Horas flexibles para adaptarse a tus necesidades.",
+                "Consultoría: Tarifa inicial de $300 para la planificación y consultoría inicial.",
+                "Soporte: Disponible según sea necesario con opciones flexibles."
               ],
-              "cta": "Choose Plan"
+              "cta": "Elegir Plan"
+            }
+          }
+        },
+        "comparePricing": {
+          "title": "Elige Tu Plan",
+          "description": "Encuentra el plan de desarrollo web perfecto para tu negocio. Ya sea que estés comenzando o expandiendo tu presencia en línea, ZitDevs tiene lo que necesitas.",
+          "plans": {
+            "flexidev": {
+              "title": "Web FlexiDev (Pago por Uso)",
+              "description": "Perfecto para empresas con necesidades continuas o proyectos específicos y más pequeños.",
+              "cta": "Elegir Plan"
+            },
+            "essentials": {
+              "title": "Web Esencial",
+              "description": "Perfecto para startups o pequeñas empresas que están comenzando su viaje en línea.",
+              "cta": "Elegir Plan"
+            },
+            "growth": {
+              "title": "Web en Crecimiento",
+              "description": "Ideal para empresas en crecimiento que necesitan una solución más personalizada.",
+              "cta": "Elegir Plan"
+            },
+            "professional": {
+              "title": "Web Profesional",
+              "description": "El mejor para empresas que necesitan una presencia en línea completa y profesional.",
+              "cta": "Contactar Ventas"
+            }
+          },
+          "details": {
+            "designAndPages": {
+              "title": "Diseño y Páginas",
+              "features": {
+                "designType": {
+                  "title": "Tipo de Diseño",
+                  "columns": {
+                    "flexidev": "Desarrollo personalizado",
+                    "essentials": "Basado en plantillas",
+                    "growth": "Diseño personalizado",
+                    "professional": "Diseño completamente personalizado"
+                  }
+                },
+                "numberOfPage": {
+                  "title": "Número de Páginas",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "Hasta 3 páginas",
+                    "growth": "Hasta 5 páginas",
+                    "professional": "Hasta 10 páginas"
+                  }
+                },
+                "responsiveDesign": {
+                  "title": "Diseño Responsivo"
+                },
+                "customizationOptions": {
+                  "title": "Opciones de Personalización",
+                  "columns": {
+                    "flexidev": "Completamente personalizable",
+                    "essentials": "Limitadas",
+                    "growth": "Moderadas",
+                    "professional": "Personalización completa"
+                  }
+                }
+              }
+            },
+            "SEOAndPerformance": {
+              "title": "SEO y Rendimiento",
+              "features": {
+                "SeoSetup": {
+                  "title": "Configuración de SEO",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "SEO básico",
+                    "growth": "SEO mejorado",
+                    "professional": "SEO integral"
+                  }
+                },
+                "pageLoadOptimization": {
+                  "title": "Optimización de Carga de Página",
+                  "columns": {
+                    "flexidev": "Personalizable"
+                  }
+                },
+                "performanceMonitoring": {
+                  "title": "Monitoreo de Rendimiento",
+                  "columns": {
+                    "flexidev": "Personalizable"
+                  }
+                }
+              }
+            },
+            "projectManagementAndSupport": {
+              "title": "Gestión de Proyectos y Soporte",
+              "features": {
+                "projectManager": {
+                  "title": "Gerente de Proyecto",
+                  "columns": {
+                    "flexidev": "Disponible según sea necesario",
+                    "growth": "PM dedicado",
+                    "professional": "PM dedicado y Analista de Negocios"
+                  }
+                },
+                "postLaunchSupport": {
+                  "title": "Soporte Post-Lanzamiento",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "90 días",
+                    "growth": "180 días",
+                    "professional": "3 meses con soporte prioritario"
+                  }
+                },
+                "consultationHours": {
+                  "title": "Horas de Consultoría",
+                  "columns": {
+                    "flexidev": "Tarifa inicial de $300 por 5 horas",
+                    "growth": "Hasta 5 horas",
+                    "professional": "Hasta 10 horas"
+                  }
+                }
+              }
+            },
+            "hostingAndMaintenance": {
+              "title": "Alojamiento y Mantenimiento",
+              "features": {
+                "hosting": {
+                  "title": "Tipo de Alojamiento",
+                  "columns": {
+                    "flexidev": "Disponible según sea necesario",
+                    "essentials": "Compartido",
+                    "growth": "Compartido mejorado",
+                    "professional": "Alojamiento dedicado"
+                  }
+                },
+                "storage": {
+                  "title": "Almacenamiento",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "Hasta 10 GB",
+                    "growth": "Hasta 20 GB",
+                    "professional": "A partir de 50 GB"
+                  }
+                },
+                "bandWidth": {
+                  "title": "Ancho de Banda",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "Hasta 5 GB",
+                    "growth": "Hasta 10 GB",
+                    "professional": "Ilimitado"
+                  }
+                },
+                "monthlyMaintenance": {
+                  "title": "Mantenimiento Mensual",
+                  "columns": {
+                    "flexidev": "Disponible según sea necesario"
+                  }
+                }
+              }
             }
           }
         }

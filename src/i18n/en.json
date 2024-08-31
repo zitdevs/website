@@ -816,8 +816,8 @@
                 "Pages: Up to 3 customizable pages.",
                 "SEO Setup: Basic SEO to help you get noticed.",
                 "Responsive Design: Optimized for mobile and desktop.",
-                "Hosting: Shared hosting for 1 year.",
-                "Support: 30 days of post-launch support."
+                "Hosting: Shared hosting.",
+                "Support: 90 days of post-launch support."
               ],
               "cta": "Choose Plan"
             },
@@ -831,7 +831,7 @@
                 "Project Manager: Dedicated PM for smooth project execution.",
                 "Production Time: Site live within 3 to 6 weeks.",
                 "Hosting: Enhanced shared hosting with better performance.",
-                "Support: 60 days of post-launch support."
+                "Support: 180 days of post-launch support."
               ],
               "cta": "Choose Plan"
             },
@@ -845,7 +845,7 @@
                 "Project Manager: Dedicated PM and strategic planning with a Business Analyst.",
                 "Custom Production Timeline: Tailored to your business needs.",
                 "Hosting: Premium dedicated hosting with top-tier features.",
-                "Support: 90 days of premium support."
+                "Support: 3 months of premium support."
               ],
               "cta": "Contact Sales"
             },
@@ -858,6 +858,163 @@
                 "Support: Available as needed with flexible options."
               ],
               "cta": "Choose Plan"
+            }
+          }
+        },
+        "comparePricing": {
+          "title": "Choose Your Plan",
+          "description": "Find the perfect web development plan for your business. Whether you’re just starting out or expanding your online presence, ZitDevs has you covered.",
+          "plans": {
+            "flexidev": {
+              "title": "FlexiDev Web (Pay-As-You-Go)",
+              "description": "Perfect for businesses with ongoing needs or specific, smaller projects.",
+              "cta": "Choose Plan"
+            },
+            "essentials": {
+              "title": "Essential Web",
+              "description": "Perfect for startups or small businesses starting their online journey.",
+              "cta": "Choose Plan"
+            },
+            "growth": {
+              "title": "Growth Web",
+              "description": "Ideal for growing businesses needing a more customized solution.",
+              "cta": "Choose Plan"
+            },
+            "professional": {
+              "title": "Professional Web",
+              "description": "Best for businesses that need a comprehensive and professional online presence.",
+              "cta": "Contact Sales"
+            }
+          },
+          "details": {
+            "designAndPages": {
+              "title": "Design & Pages",
+              "features": {
+                "designType": {
+                  "title": "Design Type",
+                  "columns": {
+                    "flexidev": "Custom development",
+                    "essentials": "Template-based",
+                    "growth": "Custom design",
+                    "professional": "Fully Custom Design"
+                  }
+                },
+                "numberOfPage": {
+                  "title": "Number of Pages",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "Up to 3 pages",
+                    "growth": "Up to 5 pages",
+                    "professional": "Up to 10 pages"
+                  }
+                },
+                "responsiveDesign": {
+                  "title": "Responsive Design"
+                },
+                "customizationOptions": {
+                  "title": "Customization Options",
+                  "columns": {
+                    "flexidev": "Fully Customizable",
+                    "essentials": "Limited",
+                    "growth": "Moderate",
+                    "professional": "Full Customization"
+                  }
+                }
+              }
+            },
+            "SEOAndPerformance": {
+              "title": "SEO & Performance",
+              "features": {
+                "SeoSetup": {
+                  "title": "SEO Setup",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "Basic SEO",
+                    "growth": "Enhanced SEO",
+                    "professional": "Comprehensive SEO"
+                  }
+                },
+                "pageLoadOptimization": {
+                  "title": "Page Load Optimization",
+                  "columns": {
+                    "flexidev": "Customizable"
+                  }
+                },
+                "performanceMonitoring": {
+                  "title": "Performance Monitoring",
+                  "columns": {
+                    "flexidev": "Customizable"
+                  }
+                }
+              }
+            },
+            "projectManagementAndSupport": {
+              "title": "Project Management & Support",
+              "features": {
+                "projectManager": {
+                  "title": "Project Manager",
+                  "columns": {
+                    "flexidev": "Available as needed",
+                    "growth": "Dedicated PM",
+                    "professional": "Dedicated PM & BA"
+                  }
+                },
+                "postLaunchSupport": {
+                  "title": "Post-Launch Support",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "90 days",
+                    "growth": "180 days",
+                    "professional": "3 months with priority support"
+                  }
+                },
+                "consultationHours": {
+                  "title": "Consultation Hours",
+                  "columns": {
+                    "flexidev": "$300 upfront fee for 5 hours",
+                    "growth": "Up to 5 hours",
+                    "professional": "Up to 10 hours"
+                  }
+                }
+              }
+            },
+            "hostingAndMaintenance": {
+              "title": "Hosting & Maintenance",
+              "features": {
+                "hosting": {
+                  "title": "Hosting Type",
+                  "columns": {
+                    "flexidev": "Available as needed",
+                    "essentials": "Shared",
+                    "growth": "Enhanced Shared",
+                    "professional": "Dedicated Hosting"
+                  }
+                },
+                "storage": {
+                  "title": "Storage",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "Up to 10 GB",
+                    "growth": "Up to 20 GB",
+                    "professional": "From 50 GB"
+                  }
+                },
+                "bandWidth": {
+                  "title": "Bandwidth",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "Up to 5 GB",
+                    "growth": "Up to 10 GB",
+                    "professional": "Unlimited"
+                  }
+                },
+                "monthlyMaintenance": {
+                  "title": "Monthly Maintenance",
+                  "columns": {
+                    "flexidev": "Available as needed"
+                  }
+                }
+              }
             }
           }
         }

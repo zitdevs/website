@@ -12,7 +12,7 @@ export type PlanData = {
   };
 };
 
-type Column =
+export type Column =
   | {
       type: "text";
       title: string;
