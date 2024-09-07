@@ -1018,6 +1018,15 @@
             }
           }
         }
+      },
+      "mobileAppDevelopment": {
+        "title": "Transform Your Business with Custom Mobile Apps",
+        "description": "At ZitDevs, we specialize in crafting mobile applications that bring your ideas to life. Whether you’re looking to build an app for iOS, Android, or both, our team of expert developers is equipped to deliver high-quality, user-friendly, and scalable mobile solutions that drive business growth.",
+        "contact": {
+          "title": "Get Started with ZitDevs",
+          "description": "Ready to turn your app idea into reality? Contact us today to get a custom quote tailored to your specific needs and goals. Our team is here to guide you through every step of the mobile app development journey.",
+          "cta": "Contact Us"
+        }
       }
     }
   }

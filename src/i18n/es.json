@@ -1019,6 +1019,15 @@
             }
           }
         }
+      },
+      "mobileAppDevelopment": {
+        "title": "Transforma Tu Negocio con Aplicaciones Móviles Personalizadas",
+        "description": "En ZitDevs, nos especializamos en desarrollar aplicaciones móviles que dan vida a tus ideas. Ya sea que quieras crear una aplicación para iOS, Android o ambas plataformas, nuestro equipo de desarrolladores expertos está preparado para ofrecer soluciones móviles de alta calidad, fáciles de usar y escalables que impulsen el crecimiento de tu negocio.",
+        "contact": {
+          "title": "Comienza con ZitDevs",
+          "description": "¿Listo para convertir tu idea de aplicación en realidad? Contáctanos hoy para obtener una cotización personalizada adaptada a tus necesidades y objetivos específicos. Nuestro equipo está aquí para guiarte en cada paso del proceso de desarrollo de aplicaciones móviles.",
+          "cta": "Contáctanos"
+        }
       }
     }
   }
