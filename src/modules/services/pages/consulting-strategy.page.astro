@@ -1,12 +1,129 @@
 ---
 import { getI18n } from "src/i18n";
 import Layout from "src/layouts/Layout.astro";
+import PageHeading from "../components/PageHeading.astro";
+import {
+  ArrowRight,
+  Box,
+  CheckCircle,
+  ClipboardList,
+  Cog,
+  Cpu,
+  Globe,
+  Lightbulb,
+  RefreshCw,
+  Zap,
+} from "lucide-astro";
+import Card from "src/components/card/Card.astro";
+import CardHeader from "src/components/card/CardHeader.astro";
+import CardTitle from "../components/CardTitle.astro";
+import CardContent from "src/components/card/CardContent.astro";
+import Button from "src/components/button/Button.astro";
 
 const { lang } = Astro.params as { lang: string };
 
 const i18n = getI18n({ currentLocale: lang });
+const tConsultingStrategy = i18n.services.page.consultingStrategy;
 ---
 
-<Layout class="container">
-  <h1>Consulting & Strategy</h1>
+<Layout>
+  <PageHeading
+    variant="pink"
+    title={tConsultingStrategy.title}
+    description={tConsultingStrategy.description}
+  />
+
+  <div class="container mt-14">
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold text-center mb-8">
+        {tConsultingStrategy.whyChoose.title}
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        {
+          tConsultingStrategy.whyChoose.items.map((item, index) => {
+            const icons = [Lightbulb, Zap, RefreshCw];
+            const IconComponent = icons[index];
+            return (
+              <Card key={index}>
+                <CardHeader>
+                  <CardTitle class="flex items-center gap-2">
+                    <IconComponent class="h-6 w-6" />
+                    {item.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>{item.description}</p>
+                </CardContent>
+              </Card>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold text-center mb-10">
+        {tConsultingStrategy.servicesSection.title}
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          tConsultingStrategy.servicesSection.services.map((service, index) => {
+            const icons = [Cpu, Cog, Box, Globe, ClipboardList];
+            const IconComponent = icons[index];
+            return (
+              <div class="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-105">
+                <div class="flex flex-col items-center text-center">
+                  <div class="bg-primary/10 rounded-full p-4 mb-4">
+                    <IconComponent class="h-12 w-12" />
+                  </div>
+                  <h3 class="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p class="text-gray-600">{service.description}</p>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    \ <section class="mb-16">
+      <h2 class="text-3xl font-semibold text-center mb-8">
+        {tConsultingStrategy.ourApproach.title}
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        {
+          tConsultingStrategy.ourApproach.steps.map((step, index) => (
+            <Card key={index}>
+              <CardHeader>
+                <CardTitle class="flex items-center gap-2">
+                  <CheckCircle class="h-5 w-5 text-green-500" />
+                  {step.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>{step.description}</p>
+              </CardContent>
+            </Card>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="text-center mb-16">
+      <h2 class="text-3xl font-semibold mb-4">
+        {tConsultingStrategy.ctaSection.title}
+      </h2>
+      <p class="text-xl text-muted-foreground mb-8">
+        {tConsultingStrategy.ctaSection.description}
+      </p>
+      <Button
+        size="lg"
+        className="font-semibold text-lg"
+        href={`/${lang}/contact`}
+      >
+        {tConsultingStrategy.ctaSection.cta}
+        <ArrowRight class="ml-2 h-5 w-5" />
+      </Button>
+    </section>
+  </div>
 </Layout>

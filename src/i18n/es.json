@@ -1028,6 +1028,78 @@
           "description": "¿Listo para convertir tu idea de aplicación en realidad? Contáctanos hoy para obtener una cotización personalizada adaptada a tus necesidades y objetivos específicos. Nuestro equipo está aquí para guiarte en cada paso del proceso de desarrollo de aplicaciones móviles.",
           "cta": "Contáctanos"
         }
+      },
+      "consultingStrategy": {
+        "title": "Convierta Su Visión en Acción con Orientación Estratégica",
+        "description": "En ZitDevs, ofrecemos servicios de consultoría y estrategia personalizados diseñados para ayudarle a navegar las complejidades del panorama tecnológico. Ya sea que usted sea una startup que necesite dirección o una empresa establecida que busque optimizar sus operaciones, le proporcionamos los conocimientos y marcos necesarios para tener éxito.",
+        "whyChoose": {
+          "title": "¿Por Qué Elegir ZitDevs para Consultoría y Estrategia?",
+          "items": [
+            {
+              "title": "Equipo Asesor Experto",
+              "description": "Nuestros consultores experimentados tienen años de experiencia en múltiples industrias, ofreciendo asesoramiento estratégico para ayudarle a tomar decisiones informadas y de impacto."
+            },
+            {
+              "title": "Soluciones Personalizadas",
+              "description": "No creemos en estrategias de talla única. Cada recomendación se personaliza según sus objetivos comerciales, mercado y desafíos específicos."
+            },
+            {
+              "title": "Metodologías Ágiles",
+              "description": "Implementamos marcos ágiles para asegurar que su empresa pueda adaptarse rápida y eficazmente a los cambios del mercado y avances tecnológicos."
+            }
+          ]
+        },
+        "servicesSection": {
+          "title": "Nuestros Servicios de Consultoría y Estrategia",
+          "services": [
+            {
+              "title": "Consultoría Tecnológica",
+              "description": "Alinee su estrategia de TI con los objetivos de negocio. Le ayudamos a elegir las herramientas y plataformas correctas para garantizar la escalabilidad y el éxito a largo plazo."
+            },
+            {
+              "title": "Optimización de Procesos Empresariales",
+              "description": "Optimice sus operaciones para aumentar la eficiencia y reducir costos. Identificamos cuellos de botella e implementamos soluciones que maximicen la productividad."
+            },
+            {
+              "title": "Estrategia de Desarrollo de Productos",
+              "description": "Desde la ideación hasta el lanzamiento, le brindamos orientación durante todo el ciclo de vida del producto, asegurando que su producto resuene con su público objetivo y satisfaga las demandas del mercado."
+            },
+            {
+              "title": "Transformación Digital",
+              "description": "Transicione su negocio hacia la era digital. Le asistimos en la integración de tecnologías y procesos modernos para que su empresa sea más innovadora, ágil y competitiva."
+            },
+            {
+              "title": "Consultoría en Gestión de Proyectos",
+              "description": "Optimice sus flujos de trabajo de proyectos con estrategias de gestión de proyectos expertas. Le proporcionamos orientación sobre mejores prácticas para asegurar que sus proyectos se entreguen a tiempo, dentro del presupuesto y con la más alta calidad."
+            }
+          ]
+        },
+        "ourApproach": {
+          "title": "Nuestro Enfoque",
+          "steps": [
+            {
+              "title": "Consulta Inicial",
+              "description": "Comenzamos con un análisis profundo de su negocio, discutiendo sus puntos de dolor, objetivos y visión. Evaluamos sus sistemas actuales e identificamos áreas de mejora."
+            },
+            {
+              "title": "Planificación Estratégica",
+              "description": "Nuestros consultores trabajan estrechamente con su equipo para desarrollar una estrategia personalizada que se alinee con sus objetivos comerciales. Esto incluye planes de acción detallados y hitos claros."
+            },
+            {
+              "title": "Implementación",
+              "description": "Ayudamos a supervisar la implementación de nuestras estrategias, asegurándonos de que los cambios se ejecuten de manera fluida y eficiente. Nuestro equipo está presente, trabajando con sus partes interesadas para llevar a cabo la transformación."
+            },
+            {
+              "title": "Soporte Continuo y Evaluación",
+              "description": "Una vez implementada la estrategia, ofrecemos soporte continuo y evaluaciones de rendimiento para garantizar que su negocio continúe prosperando y evolucionando."
+            }
+          ]
+        },
+        "ctaSection": {
+          "title": "¿Listo para Elevar Su Negocio?",
+          "description": "Contáctenos hoy para una sesión personalizada de consultoría y estrategia. Ya sea que necesite asistencia con la adopción de tecnología, estrategia de productos o la optimización operativa, estamos aquí para ayudarle a crecer.",
+          "cta": "Contáctenos"
+        }
       }
     }
   }

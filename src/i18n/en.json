@@ -1027,6 +1027,78 @@
           "description": "Ready to turn your app idea into reality? Contact us today to get a custom quote tailored to your specific needs and goals. Our team is here to guide you through every step of the mobile app development journey.",
           "cta": "Contact Us"
         }
+      },
+      "consultingStrategy": {
+        "title": "Turn Your Vision Into Action with Strategic Guidance",
+        "description": "At ZitDevs, we offer tailored consulting and strategy services designed to help you navigate the complexities of the tech landscape. Whether you’re a startup needing direction or an established company looking to optimize operations, we provide the insights and frameworks you need to succeed.",
+        "whyChoose": {
+          "title": "Why Choose ZitDevs for Consulting & Strategy?",
+          "items": [
+            {
+              "title": "Expert Advisory Team",
+              "description": "Our seasoned consultants have years of experience across multiple industries, offering strategic advice to help you make informed, impactful decisions."
+            },
+            {
+              "title": "Tailored Solutions",
+              "description": "We don't believe in one-size-fits-all strategies. Every recommendation is customized to your business goals, market, and specific challenges."
+            },
+            {
+              "title": "Agile Methodologies",
+              "description": "We implement agile frameworks to ensure that your business can adapt quickly and effectively to market changes and technological advancements."
+            }
+          ]
+        },
+        "servicesSection": {
+          "title": "Our Consulting & Strategy Services",
+          "services": [
+            {
+              "title": "Technology Consulting",
+              "description": "Align your IT strategy with business objectives. We help you choose the right tools and platforms to ensure long-term scalability and success."
+            },
+            {
+              "title": "Business Process Optimization",
+              "description": "Streamline your operations to increase efficiency and reduce costs. We identify bottlenecks and implement solutions that maximize productivity."
+            },
+            {
+              "title": "Product Development Strategy",
+              "description": "From ideation to launch, we provide guidance throughout the product lifecycle, ensuring that your product resonates with your target audience and meets market demands."
+            },
+            {
+              "title": "Digital Transformation",
+              "description": "Transition your business into the digital age. We assist with integrating modern technologies and processes to make your company more innovative, agile, and competitive."
+            },
+            {
+              "title": "Project Management Consulting",
+              "description": "Optimize your project workflows with expert project management strategies. We provide guidance on best practices to ensure your projects are delivered on time, within budget, and to the highest quality."
+            }
+          ]
+        },
+        "ourApproach": {
+          "title": "Our Approach",
+          "steps": [
+            {
+              "title": "Initial Consultation",
+              "description": "We begin with a deep dive into your business, discussing your pain points, objectives, and vision. We assess your current systems and identify areas for improvement."
+            },
+            {
+              "title": "Strategic Planning",
+              "description": "Our consultants work closely with your team to develop a customized strategy that aligns with your business goals. This includes detailed action plans and clear milestones."
+            },
+            {
+              "title": "Implementation",
+              "description": "We help oversee the implementation of our strategies, ensuring that changes are executed smoothly and efficiently. Our team is hands-on, working with your stakeholders to bring about transformation."
+            },
+            {
+              "title": "Ongoing Support & Evaluation",
+              "description": "Once the strategy is implemented, we offer continued support and performance evaluations to ensure that your business continues to thrive and evolve."
+            }
+          ]
+        },
+        "ctaSection": {
+          "title": "Ready to Elevate Your Business?",
+          "description": "Contact us today for a tailored consulting and strategy session. Whether you need assistance with technology adoption, product strategy, or operational optimization, we're here to help you grow.",
+          "cta": "Contact Us"
+        }
       }
     }
   }
