@@ -68,6 +68,11 @@
       "links": {
         "privacy": "Privacy Policy",
         "terms": "Terms of Service"
+      },
+      "copyright": {
+        "rights": "All Rights Reserved.",
+        "icons": "Some icons made by",
+        "illustrations": "Some illustrations made by"
       }
     },
     "countries": {

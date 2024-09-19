@@ -68,6 +68,11 @@
       "links": {
         "privacy": "Política de Privacidad",
         "terms": "Términos del Servicio"
+      },
+      "copyright": {
+        "rights": "Todos los derechos reservados.",
+        "icons": "Algunos iconos creados por",
+        "illustrations": "Algunas ilustraciones creadas por"
       }
     },
     "countries": {
