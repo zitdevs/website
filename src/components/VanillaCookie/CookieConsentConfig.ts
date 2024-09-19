@@ -1,6 +1,7 @@
 import type { CookieConsentConfig } from "vanilla-cookieconsent";
 
 export const config: CookieConsentConfig = {
+  revision: 1,
   guiOptions: {
     consentModal: {
       layout: "box",
