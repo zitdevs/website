@@ -5,6 +5,7 @@ import { getLangFromUrl } from "../i18n/utils";
 import { getI18n } from "../i18n";
 import CookieConsent from "../components/VanillaCookie/CookieConsent.astro";
 import BaseLayout from "./BaseLayout.astro";
+import Toast from "src/components/Toast/Toast.astro";
 
 interface Props {
   class?: string;
@@ -148,5 +149,6 @@ const metadata = props.metadata ?? i18n.default.metadata;
     </main>
     <Footer />
     <CookieConsent />
+    <Toast />
   </body>
 </BaseLayout>
