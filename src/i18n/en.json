@@ -528,6 +528,49 @@
     }
   },
   "services": {
+    "metadata": {
+      "title": "Top Custom Software Development Services | ZitDevs",
+      "description": "ZitDevs provides expert custom software development services designed to meet your unique business needs. From consultation to deployment, our agile team ensures top-notch solutions that deliver results.",
+      "keywords": [
+        "Custom Software Development",
+        "Software Development Services",
+        "Agile Software Solutions",
+        "Custom Software Solutions",
+        "Business Software Development",
+        "Software Development Company",
+        "Tailored Software Development",
+        "Enterprise Software Solutions",
+        "Software Development Consultation",
+        "End-to-End Software Development",
+        "Software Project Management",
+        "Custom Software Pricing",
+        "Software Development Lifecycle",
+        "Scalable Software Development",
+        "Cloud Software Solutions",
+        "Software Development Support",
+        "Web and Mobile Development",
+        "Software Development Quality Assurance",
+        "Custom Application Development",
+        "Software Development Consulting"
+      ],
+      "openGraph": {
+        "og:title": "Top Custom Software Development Services | ZitDevs",
+        "og:description": "ZitDevs offers premium custom software development services, tailored to fit your business requirements and ensure success in every stage, from consultation to deployment.",
+        "og:image": "https://zitdevs.com/images/og-image.jpeg",
+        "og:url": "https://zitdevs.com",
+        "og:type": "website",
+        "og:site_name": "ZitDevs",
+        "og:locale": "en_US"
+      },
+      "twitterCard": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Top Custom Software Development Services | ZitDevs",
+        "twitter:description": "ZitDevs delivers expert custom software development services, ensuring high-quality results that drive business growth.",
+        "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+        "twitter:site": "@zitdevs",
+        "twitter:creator": "@zitdevs"
+      }
+    },
     "hero": {
       "title": "Innovative Solutions for a Digital World",
       "description": "At ZitDevs, we bring your digital ideas to life with a comprehensive range of services tailored to meet the demands of the modern business landscape. From custom software development to strategic consulting, our expert team is dedicated to driving your success through technology.",
@@ -594,6 +637,39 @@
     },
     "page": {
       "softwareDevelopment": {
+        "metadata": {
+          "title": "Custom Software Development Plans | ZitDevs",
+          "description": "ZitDevs offers a variety of software development plans tailored to meet the needs of businesses of all sizes. From startups to large enterprises, our custom solutions ensure quality, efficiency, and scalable results.",
+          "keywords": [
+            "Custom Software Development",
+            "Software Development Pricing",
+            "Software Development Plans",
+            "MVP Development",
+            "Enterprise Software Solutions",
+            "Business Software Development",
+            "Agile Software Development",
+            "Scalable Software Solutions",
+            "Software Development Consulting",
+            "Tailored Software Development"
+          ],
+          "openGraph": {
+            "og:title": "Custom Software Development Plans | ZitDevs",
+            "og:description": "Explore ZitDevs' flexible software development plans, offering tailored solutions for businesses of all sizes. Get the custom software you need with pricing options to fit your budget.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "en_US"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Custom Software Development Plans | ZitDevs",
+            "twitter:description": "ZitDevs provides flexible software development plans for businesses, ranging from startups to large enterprises. Discover our tailored solutions and competitive pricing.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
         "title": "Software Development",
         "description": "At <strong>ZitDevs</strong>, we create <strong>custom software solutions</strong> tailored to your specific business needs. Our process ensures quality and efficiency from the initial consultation to final deployment, supported by our experienced team of developers and project managers.",
         "pricing": {
@@ -802,6 +878,39 @@
         }
       },
       "websiteDevelopment": {
+        "metadata": {
+          "title": "Professional Web Development Services | ZitDevs",
+          "description": "ZitDevs offers tailored web development solutions for businesses of all sizes. From startups to enterprises, our plans cover everything from template-based designs to fully custom websites, ensuring your business has a strong and optimized online presence.",
+          "keywords": [
+            "Web Development Services",
+            "Custom Website Design",
+            "Responsive Web Design",
+            "SEO Optimized Websites",
+            "Business Websites",
+            "Affordable Web Development",
+            "Website Development Plans",
+            "Professional Web Development",
+            "Website Development for Startups",
+            "Website Development for Enterprises"
+          ],
+          "openGraph": {
+            "og:title": "Professional Web Development Services | ZitDevs",
+            "og:description": "Build your online presence with ZitDevs. From simple, template-based websites to fully customized solutions, we offer web development services that are tailored to fit your business needs and budget.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "en_US"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Professional Web Development Services | ZitDevs",
+            "twitter:description": "ZitDevs specializes in affordable web development solutions for businesses of all sizes. Get online with custom web development plans tailored to your needs.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
         "title": "Build Your Online Presence with ZitDevs",
         "description": "At <strong>ZitDevs</strong>, we specialize in creating tailored web solutions that help your business stand out online. Whether you’re a startup looking to establish your first website or a growing company needing a more robust online presence, our web development plans are designed to meet your needs without breaking your budget. From template-based designs to fully custom solutions, we ensure your website is not only visually appealing but also optimized for performance and SEO. With our competitive pricing and ongoing support, getting online has never been easier.",
         "pricing": {
@@ -1020,6 +1129,39 @@
         }
       },
       "mobileAppDevelopment": {
+        "metadata": {
+          "title": "Custom Mobile App Development Services | ZitDevs",
+          "description": "ZitDevs specializes in developing high-quality mobile applications for iOS and Android. Our expert team delivers scalable, user-friendly mobile solutions that help businesses grow and succeed.",
+          "keywords": [
+            "Mobile App Development",
+            "Custom Mobile Apps",
+            "iOS App Development",
+            "Android App Development",
+            "Cross-Platform App Development",
+            "Business Mobile Applications",
+            "App Development Services",
+            "Scalable Mobile Solutions",
+            "User-Friendly Mobile Apps",
+            "Mobile App Development Company"
+          ],
+          "openGraph": {
+            "og:title": "Custom Mobile App Development Services | ZitDevs",
+            "og:description": "Transform your business with ZitDevs' custom mobile app development services. Our team of experts creates high-quality, user-friendly apps for iOS and Android that drive business growth.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "en_US"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Custom Mobile App Development Services | ZitDevs",
+            "twitter:description": "ZitDevs offers expert mobile app development for iOS and Android. Build a scalable, user-friendly mobile app that accelerates business growth.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
         "title": "Transform Your Business with Custom Mobile Apps",
         "description": "At ZitDevs, we specialize in crafting mobile applications that bring your ideas to life. Whether you’re looking to build an app for iOS, Android, or both, our team of expert developers is equipped to deliver high-quality, user-friendly, and scalable mobile solutions that drive business growth.",
         "contact": {
@@ -1029,6 +1171,39 @@
         }
       },
       "consultingStrategy": {
+        "metadata": {
+          "title": "Expert Consulting & Strategy Services | ZitDevs",
+          "description": "ZitDevs provides tailored consulting and strategy services to help businesses of all sizes navigate the complexities of the tech landscape. Our expert advisory team offers strategic insights to guide your business toward growth and success.",
+          "keywords": [
+            "Consulting Services",
+            "Business Strategy",
+            "Technology Consulting",
+            "Business Process Optimization",
+            "Product Development Strategy",
+            "Digital Transformation",
+            "Project Management Consulting",
+            "Strategic Consulting",
+            "Agile Methodologies",
+            "Business Growth Strategy"
+          ],
+          "openGraph": {
+            "og:title": "Expert Consulting & Strategy Services | ZitDevs",
+            "og:description": "Turn your vision into action with ZitDevs' expert consulting and strategy services. From business process optimization to digital transformation, we provide strategic guidance to help you succeed.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "en_US"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Expert Consulting & Strategy Services | ZitDevs",
+            "twitter:description": "ZitDevs offers tailored consulting and strategy services designed to help businesses optimize operations, develop products, and drive digital transformation.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
         "title": "Turn Your Vision Into Action with Strategic Guidance",
         "description": "At ZitDevs, we offer tailored consulting and strategy services designed to help you navigate the complexities of the tech landscape. Whether you’re a startup needing direction or an established company looking to optimize operations, we provide the insights and frameworks you need to succeed.",
         "whyChoose": {

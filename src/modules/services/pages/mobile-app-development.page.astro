@@ -11,7 +11,7 @@ const i18n = getI18n({ currentLocale: lang });
 const tMobileAppDevelopment = i18n.services.page.mobileAppDevelopment;
 ---
 
-<Layout>
+<Layout metadata={tMobileAppDevelopment.metadata}>
   <PageHeading
     variant="orange"
     title={tMobileAppDevelopment.title}
@@ -32,7 +32,7 @@ const tMobileAppDevelopment = i18n.services.page.mobileAppDevelopment;
       </p>
 
       <div class="mt-6">
-        <Button href="/contact">
+        <Button href={`/${lang}/contact`}>
           {tMobileAppDevelopment.contact.cta}
         </Button>
       </div>

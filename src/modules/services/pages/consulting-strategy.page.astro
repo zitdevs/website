@@ -26,7 +26,7 @@ const i18n = getI18n({ currentLocale: lang });
 const tConsultingStrategy = i18n.services.page.consultingStrategy;
 ---
 
-<Layout>
+<Layout metadata={tConsultingStrategy.metadata}>
   <PageHeading
     variant="pink"
     title={tConsultingStrategy.title}
@@ -86,7 +86,7 @@ const tConsultingStrategy = i18n.services.page.consultingStrategy;
       </div>
     </section>
 
-    \ <section class="mb-16">
+    <section class="mb-16">
       <h2 class="text-3xl font-semibold text-center mb-8">
         {tConsultingStrategy.ourApproach.title}
       </h2>

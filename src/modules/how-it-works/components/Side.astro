@@ -2,14 +2,6 @@
 import Button from "../../../components/button/Button.astro";
 import { cn } from "../../../lib/utils";
 
-interface Item {
-  title: string;
-  description: string;
-  icon: {
-    name: string;
-  };
-}
-
 const { id, title, cta, variant } = Astro.props;
 const bg = variant === "left" ? "bg-primary" : "bg-[#0A0046]";
 const rounded =

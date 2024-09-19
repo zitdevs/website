@@ -529,6 +529,49 @@
     }
   },
   "services": {
+    "metadata": {
+      "title": "Servicios de Desarrollo de Software Personalizado | ZitDevs",
+      "description": "ZitDevs ofrece servicios expertos de desarrollo de software personalizado diseñados para satisfacer las necesidades únicas de tu empresa. Desde la consulta hasta la implementación, nuestro equipo ágil garantiza soluciones de alta calidad que generan resultados.",
+      "keywords": [
+        "Desarrollo de Software Personalizado",
+        "Servicios de Desarrollo de Software",
+        "Soluciones de Software Ágil",
+        "Soluciones de Software Personalizado",
+        "Desarrollo de Software Empresarial",
+        "Empresa de Desarrollo de Software",
+        "Desarrollo de Software a Medida",
+        "Soluciones de Software para Empresas",
+        "Consulta de Desarrollo de Software",
+        "Desarrollo de Software de Principio a Fin",
+        "Gestión de Proyectos de Software",
+        "Precios de Software Personalizado",
+        "Ciclo de Vida del Desarrollo de Software",
+        "Desarrollo de Software Escalable",
+        "Soluciones de Software en la Nube",
+        "Soporte de Desarrollo de Software",
+        "Desarrollo Web y Móvil",
+        "Garantía de Calidad en el Desarrollo de Software",
+        "Desarrollo de Aplicaciones Personalizadas",
+        "Consultoría de Desarrollo de Software"
+      ],
+      "openGraph": {
+        "og:title": "Servicios de Desarrollo de Software Personalizado | ZitDevs",
+        "og:description": "ZitDevs ofrece servicios premium de desarrollo de software personalizado, adaptados a las necesidades de tu negocio para garantizar el éxito en cada etapa, desde la consulta hasta la implementación.",
+        "og:image": "https://zitdevs.com/images/og-image.jpeg",
+        "og:url": "https://zitdevs.com",
+        "og:type": "website",
+        "og:site_name": "ZitDevs",
+        "og:locale": "es_ES"
+      },
+      "twitterCard": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Servicios de Desarrollo de Software Personalizado | ZitDevs",
+        "twitter:description": "ZitDevs ofrece servicios expertos de desarrollo de software personalizado, garantizando resultados de alta calidad que impulsan el crecimiento empresarial.",
+        "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+        "twitter:site": "@zitdevs",
+        "twitter:creator": "@zitdevs"
+      }
+    },
     "hero": {
       "title": "Soluciones Innovadoras para un Mundo Digital",
       "description": "En ZitDevs, damos vida a tus ideas digitales con una amplia gama de servicios diseñados para satisfacer las demandas del entorno empresarial moderno. Desde el desarrollo de software a medida hasta la consultoría estratégica, nuestro equipo de expertos está dedicado a impulsar tu éxito a través de la tecnología.",
@@ -595,6 +638,39 @@
     },
     "page": {
       "softwareDevelopment": {
+        "metadata": {
+          "title": "Planes de Desarrollo de Software Personalizado | ZitDevs",
+          "description": "ZitDevs ofrece una variedad de planes de desarrollo de software adaptados para satisfacer las necesidades de empresas de todos los tamaños. Desde startups hasta grandes empresas, nuestras soluciones personalizadas garantizan calidad, eficiencia y resultados escalables.",
+          "keywords": [
+            "Desarrollo de Software Personalizado",
+            "Precios de Desarrollo de Software",
+            "Planes de Desarrollo de Software",
+            "Desarrollo de MVP",
+            "Soluciones de Software Empresarial",
+            "Desarrollo de Software Empresarial",
+            "Desarrollo Ágil de Software",
+            "Soluciones de Software Escalables",
+            "Consultoría de Desarrollo de Software",
+            "Desarrollo de Software a Medida"
+          ],
+          "openGraph": {
+            "og:title": "Planes de Desarrollo de Software Personalizado | ZitDevs",
+            "og:description": "Explora los planes flexibles de desarrollo de software de ZitDevs, que ofrecen soluciones personalizadas para empresas de todos los tamaños. Obtén el software personalizado que necesitas con opciones de precios que se ajustan a tu presupuesto.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "es_ES"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Planes de Desarrollo de Software Personalizado | ZitDevs",
+            "twitter:description": "ZitDevs ofrece planes flexibles de desarrollo de software para empresas, desde startups hasta grandes empresas. Descubre nuestras soluciones personalizadas y precios competitivos.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
         "title": "Desarrollo de Software",
         "description": "En <strong>ZitDevs</strong>, creamos <strong>soluciones de software personalizadas</strong> adaptadas a las necesidades específicas de su negocio. Nuestro proceso garantiza calidad y eficiencia desde la consulta inicial hasta la implementación final, apoyado por nuestro equipo experimentado de desarrolladores y gestores de proyectos.",
         "pricing": {
@@ -803,6 +879,39 @@
         }
       },
       "websiteDevelopment": {
+        "metadata": {
+          "title": "Servicios Profesionales de Desarrollo Web | ZitDevs",
+          "description": "ZitDevs ofrece soluciones de desarrollo web personalizadas para empresas de todos los tamaños. Desde startups hasta grandes empresas, nuestros planes cubren desde diseños basados en plantillas hasta sitios web totalmente personalizados, garantizando una presencia en línea sólida y optimizada para tu negocio.",
+          "keywords": [
+            "Servicios de Desarrollo Web",
+            "Diseño de Sitios Web Personalizados",
+            "Diseño Web Responsive",
+            "Sitios Web Optimizados para SEO",
+            "Sitios Web Empresariales",
+            "Desarrollo Web Asequible",
+            "Planes de Desarrollo de Sitios Web",
+            "Desarrollo Web Profesional",
+            "Desarrollo de Sitios Web para Startups",
+            "Desarrollo de Sitios Web para Grandes Empresas"
+          ],
+          "openGraph": {
+            "og:title": "Servicios Profesionales de Desarrollo Web | ZitDevs",
+            "og:description": "Construye tu presencia en línea con ZitDevs. Desde sitios web simples basados en plantillas hasta soluciones totalmente personalizadas, ofrecemos servicios de desarrollo web adaptados a las necesidades y presupuesto de tu empresa.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "es_ES"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Servicios Profesionales de Desarrollo Web | ZitDevs",
+            "twitter:description": "ZitDevs se especializa en soluciones de desarrollo web asequibles para empresas de todos los tamaños. Establece tu presencia en línea con planes de desarrollo web personalizados según tus necesidades.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
         "title": "Construye Tu Presencia en Línea con ZitDevs",
         "description": "En <strong>ZitDevs</strong>, nos especializamos en crear soluciones web a medida que ayudan a que tu negocio se destaque en línea. Ya sea que estés comenzando y necesites tu primer sitio web o seas una empresa en crecimiento que requiere una presencia en línea más sólida, nuestros planes de desarrollo web están diseñados para satisfacer tus necesidades sin afectar tu presupuesto. Desde diseños basados en plantillas hasta soluciones totalmente personalizadas, aseguramos que tu sitio web no solo sea visualmente atractivo, sino también optimizado para el rendimiento y el SEO. Con nuestros precios competitivos y soporte continuo, estar en línea nunca ha sido tan fácil.",
         "pricing": {
@@ -1021,6 +1130,39 @@
         }
       },
       "mobileAppDevelopment": {
+        "metadata": {
+          "title": "Servicios de Desarrollo de Aplicaciones Móviles Personalizadas | ZitDevs",
+          "description": "ZitDevs se especializa en el desarrollo de aplicaciones móviles de alta calidad para iOS y Android. Nuestro equipo de expertos ofrece soluciones móviles escalables y fáciles de usar que ayudan a las empresas a crecer y tener éxito.",
+          "keywords": [
+            "Desarrollo de Aplicaciones Móviles",
+            "Aplicaciones Móviles Personalizadas",
+            "Desarrollo de Apps para iOS",
+            "Desarrollo de Apps para Android",
+            "Desarrollo de Apps Multiplataforma",
+            "Aplicaciones Móviles Empresariales",
+            "Servicios de Desarrollo de Apps",
+            "Soluciones Móviles Escalables",
+            "Aplicaciones Móviles Fáciles de Usar",
+            "Empresa de Desarrollo de Apps Móviles"
+          ],
+          "openGraph": {
+            "og:title": "Servicios de Desarrollo de Aplicaciones Móviles Personalizadas | ZitDevs",
+            "og:description": "Transforma tu negocio con los servicios de desarrollo de aplicaciones móviles personalizadas de ZitDevs. Nuestro equipo de expertos crea apps de alta calidad y fáciles de usar para iOS y Android que impulsan el crecimiento empresarial.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "es_ES"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Servicios de Desarrollo de Aplicaciones Móviles Personalizadas | ZitDevs",
+            "twitter:description": "ZitDevs ofrece desarrollo experto de aplicaciones móviles para iOS y Android. Crea una app móvil escalable y fácil de usar que acelere el crecimiento de tu negocio.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
         "title": "Transforma Tu Negocio con Aplicaciones Móviles Personalizadas",
         "description": "En ZitDevs, nos especializamos en desarrollar aplicaciones móviles que dan vida a tus ideas. Ya sea que quieras crear una aplicación para iOS, Android o ambas plataformas, nuestro equipo de desarrolladores expertos está preparado para ofrecer soluciones móviles de alta calidad, fáciles de usar y escalables que impulsen el crecimiento de tu negocio.",
         "contact": {
@@ -1030,6 +1172,39 @@
         }
       },
       "consultingStrategy": {
+        "metadata": {
+          "title": "Servicios Expertos de Consultoría y Estrategia | ZitDevs",
+          "description": "ZitDevs ofrece servicios personalizados de consultoría y estrategia para ayudar a empresas de todos los tamaños a navegar las complejidades del panorama tecnológico. Nuestro equipo de asesores expertos brinda conocimientos estratégicos para guiar tu negocio hacia el crecimiento y el éxito.",
+          "keywords": [
+            "Servicios de Consultoría",
+            "Estrategia Empresarial",
+            "Consultoría Tecnológica",
+            "Optimización de Procesos Empresariales",
+            "Estrategia de Desarrollo de Productos",
+            "Transformación Digital",
+            "Consultoría en Gestión de Proyectos",
+            "Consultoría Estratégica",
+            "Metodologías Ágiles",
+            "Estrategia de Crecimiento Empresarial"
+          ],
+          "openGraph": {
+            "og:title": "Servicios Expertos de Consultoría y Estrategia | ZitDevs",
+            "og:description": "Convierte tu visión en acción con los servicios expertos de consultoría y estrategia de ZitDevs. Desde la optimización de procesos empresariales hasta la transformación digital, ofrecemos orientación estratégica para ayudarte a tener éxito.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "es_ES"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Servicios Expertos de Consultoría y Estrategia | ZitDevs",
+            "twitter:description": "ZitDevs ofrece servicios personalizados de consultoría y estrategia diseñados para ayudar a las empresas a optimizar operaciones, desarrollar productos y fomentar la transformación digital.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
         "title": "Convierta Su Visión en Acción con Orientación Estratégica",
         "description": "En ZitDevs, ofrecemos servicios de consultoría y estrategia personalizados diseñados para ayudarle a navegar las complejidades del panorama tecnológico. Ya sea que usted sea una startup que necesite dirección o una empresa establecida que busque optimizar sus operaciones, le proporcionamos los conocimientos y marcos necesarios para tener éxito.",
         "whyChoose": {

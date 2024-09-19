@@ -10,7 +10,7 @@ const i18n = getI18n({ currentLocale: lang });
 const tService = i18n.services;
 ---
 
-<Layout class="container">
+<Layout class="container" metadata={tService.metadata}>
   <Hero tHero={tService.hero} />
   <Offers tCards={tService.cards} />
 </Layout>

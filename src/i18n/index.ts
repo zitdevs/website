@@ -14,3 +14,16 @@ export const getI18n = ({
   if (currentLocale === LANG.SPANISH) return espanol;
   return english;
 };
+
+export const AvailableLanguages = [
+  {
+    params: {
+      lang: "en",
+    },
+  },
+  {
+    params: {
+      lang: "es",
+    },
+  },
+];

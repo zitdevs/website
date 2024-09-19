@@ -55,6 +55,7 @@ const PricingVariant = cva("", {
 type Props = VariantProps<typeof PricingCardVariants> & {
   plan: PlanData;
   mostPopular?: boolean;
+  hiddeCTA?: boolean;
   class?: string;
   classes?: {
     header?: string;
@@ -131,7 +132,11 @@ const tShared = i18n.default.shared;
     )
   }
 
-  <CardFooter className={cn("grid place-items-center gap-2", classes?.footer)}>
+  <CardFooter
+    className={cn("grid place-items-center gap-2", classes?.footer, {
+      hidden: props.hiddeCTA,
+    })}
+  >
     <Button
       className={cn(
         "w-full",

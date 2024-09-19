@@ -8,12 +8,34 @@ import BaseLayout from "./BaseLayout.astro";
 
 interface Props {
   class?: string;
+  metadata?: {
+    title: string;
+    description: string;
+    keywords: string[];
+    openGraph: {
+      "og:title": string;
+      "og:description": string;
+      "og:image": string;
+      "og:url": string;
+      "og:type": string;
+      "og:site_name": string;
+      "og:locale": string;
+    };
+    twitterCard: {
+      "twitter:card": string;
+      "twitter:title": string;
+      "twitter:description": string;
+      "twitter:image": string;
+      "twitter:site": string;
+      "twitter:creator": string;
+    };
+  };
 }
 
 const { props } = Astro;
 const lang = getLangFromUrl(Astro.url);
 const i18n = getI18n({ currentLocale: lang });
-const metadata = i18n.default.metadata;
+const metadata = props.metadata ?? i18n.default.metadata;
 ---
 
 <BaseLayout>
