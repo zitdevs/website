@@ -1,0 +1,152 @@
+---
+import Button from "src/components/button/Button.astro";
+import Card from "src/components/card/Card.astro";
+import CardContent from "src/components/card/CardContent.astro";
+import CardFooter from "src/components/card/CardFooter.astro";
+import CardHeader from "src/components/card/CardHeader.astro";
+import { cn, formatNumber } from "src/lib/utils";
+import FeatureItems from "./FeatureItems.astro";
+import { getI18n } from "src/i18n";
+import type { PlanData } from "../types";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const PricingCardVariants = cva("", {
+  variants: {
+    variant: {
+      blue: "bg-secondary/10 border-secondary",
+      dark: "bg-primary/10 border-primary",
+      orange: "bg-amber-400/10 border-amber-400",
+      pink: "bg-fuchsia-600/10 border-fuchsia-600",
+    },
+  },
+  defaultVariants: {
+    variant: "blue",
+  },
+});
+
+const ButtondVariants = cva("", {
+  variants: {
+    variant: {
+      blue: "bg-secondary",
+      dark: "bg-primary",
+      orange: "bg-amber-400",
+      pink: "bg-fuchsia-600",
+    },
+  },
+  defaultVariants: {
+    variant: "blue",
+  },
+});
+
+const PricingVariant = cva("", {
+  variants: {
+    variant: {
+      blue: "text-secondary",
+      dark: "text-primary",
+      orange: "text-amber-400",
+      pink: "text-fuchsia-600",
+    },
+  },
+  defaultVariants: {
+    variant: "blue",
+  },
+});
+
+type Props = VariantProps<typeof PricingCardVariants> & {
+  plan: PlanData;
+  mostPopular?: boolean;
+  hiddeCTA?: boolean;
+  class?: string;
+  classes?: {
+    header?: string;
+    title?: string;
+    feature?: string;
+    button?: string;
+    footer?: string;
+    price?: string;
+  };
+};
+
+const { plan, mostPopular, classes, variant, ...props } = Astro.props;
+const { lang } = Astro.params as { lang: string };
+
+const i18n = getI18n({ currentLocale: lang });
+const tShared = i18n.default.shared;
+---
+
+<Card
+  className={cn("bg-gray-50 border-gray-200/80", props.class, {
+    [cn(PricingCardVariants({ variant }))]: mostPopular,
+    "rounded-none rounded-t-xl border-b-0": !plan.features,
+    "shadow-xl": !!plan.features,
+  })}
+>
+  <CardHeader className="space-y-4">
+    <div class={cn(classes?.header)}>
+      <h2
+        class={cn("text-2xl font-bold", classes?.title)}
+        set:html={plan.name}
+      />
+      <p class="text-gray-700 text-sm mb-">{plan.description}</p>
+    </div>
+    <div
+      class={cn(
+        "flex items-center justify-between max-w-[330px]",
+        PricingVariant({ variant }),
+      )}
+    >
+      <div class="">
+        {
+          plan.startingAt ? (
+            <p class="text-sm">{tShared.starting_at}</p>
+          ) : (
+            <span class="h-[20px] block" />
+          )
+        }
+        <p class={cn("text-3xl font-semibold", classes?.price)}>
+          ${formatNumber(plan.price)}
+          <span class="text-base font-normal">
+            {plan.priceFrequency ? `/${plan.priceFrequency}` : ""}
+          </span>
+        </p>
+      </div>
+      {
+        plan.monthlyPrice && (
+          <p class="text-sm text-gray-500">
+            + ${plan.monthlyPrice}/{tShared.monthly}
+          </p>
+        )
+      }
+    </div>
+  </CardHeader>
+
+  {
+    plan.features && (
+      <CardContent>
+        <ul class={cn(classes?.feature)}>
+          {plan.features.map((feature) => (
+            <FeatureItems variant={variant}>{feature}</FeatureItems>
+          ))}
+        </ul>
+      </CardContent>
+    )
+  }
+
+  <CardFooter
+    className={cn("grid place-items-center gap-2", classes?.footer, {
+      hidden: props.hiddeCTA,
+    })}
+  >
+    <Button
+      className={cn(
+        "w-full",
+        mostPopular && ButtondVariants({ variant }),
+        classes?.button,
+      )}
+      variant={!mostPopular ? "outline" : undefined}
+      href={plan.cta?.href}
+    >
+      {plan.cta?.text || "Get Started"}
+    </Button>
+  </CardFooter>
+</Card>

@@ -12,7 +12,7 @@ interface ZitLancerFormProps {
   other_skill?: string;
 }
 
-export const POST: APIRoute = async ({ params, request }) => {
+export const POST: APIRoute = async ({ request }) => {
   const body = await request.json();
   const { locale, ...rest } = body as ZitLancerFormProps;
   const pb = await pbBuilder();

@@ -1,0 +1,13 @@
+---
+import type { GetStaticPaths } from "astro";
+import { AvailableLanguages } from "src/i18n";
+import ServicePage from "src/modules/services/pages/service.page.astro";
+
+export const prerender = true;
+
+export const getStaticPaths = (() => {
+  return AvailableLanguages;
+}) satisfies GetStaticPaths;
+---
+
+<ServicePage />

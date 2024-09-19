@@ -1,0 +1,15 @@
+---
+import { getI18n } from "src/i18n";
+import ContactC from "../Contact.astro";
+import Layout from "src/layouts/Layout.astro";
+const { lang } = Astro.params;
+
+const i18n = getI18n({ currentLocale: lang ?? "en" });
+
+const tHome = i18n.home;
+const tDefault = i18n.default;
+---
+
+<Layout>
+  <ContactC tContact={tHome.contact} tDefault={tDefault} />
+</Layout>

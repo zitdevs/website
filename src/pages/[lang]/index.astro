@@ -1,6 +1,6 @@
 ---
 import type { GetStaticPaths } from "astro";
-import { getI18n } from "../../i18n";
+import { AvailableLanguages, getI18n } from "../../i18n";
 import Layout from "../../layouts/Layout.astro";
 import Contact from "../../modules/contact/Contact.astro";
 import HowItWorks from "../../modules/how-it-works/index.astro";
@@ -11,18 +11,7 @@ import WhatWeDo from "../../modules/what-we-do/index.astro";
 export const prerender = true;
 
 export const getStaticPaths = (() => {
-  return [
-    {
-      params: {
-        lang: "en",
-      },
-    },
-    {
-      params: {
-        lang: "es",
-      },
-    },
-  ];
+  return AvailableLanguages;
 }) satisfies GetStaticPaths;
 
 const { lang } = Astro.params;

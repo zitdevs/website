@@ -315,6 +315,13 @@
       "YE": "Yemen",
       "ZM": "Zambia",
       "ZW": "Zimbabue"
+    },
+    "shared": {
+      "included": "Incluido",
+      "not_included": "No incluido",
+      "starting_at": "Desde",
+      "monthly": "mensual",
+      "hour": "hora"
     }
   },
   "home": {
@@ -517,6 +524,756 @@
           "email_required": "Correo electrónico es obligatorio",
           "first_name_required": "Nombre es obligatorio",
           "last_name_required": "Apellido es obligatorio"
+        }
+      }
+    }
+  },
+  "services": {
+    "metadata": {
+      "title": "Servicios de Desarrollo de Software Personalizado | ZitDevs",
+      "description": "ZitDevs ofrece servicios expertos de desarrollo de software personalizado diseñados para satisfacer las necesidades únicas de tu empresa. Desde la consulta hasta la implementación, nuestro equipo ágil garantiza soluciones de alta calidad que generan resultados.",
+      "keywords": [
+        "Desarrollo de Software Personalizado",
+        "Servicios de Desarrollo de Software",
+        "Soluciones de Software Ágil",
+        "Soluciones de Software Personalizado",
+        "Desarrollo de Software Empresarial",
+        "Empresa de Desarrollo de Software",
+        "Desarrollo de Software a Medida",
+        "Soluciones de Software para Empresas",
+        "Consulta de Desarrollo de Software",
+        "Desarrollo de Software de Principio a Fin",
+        "Gestión de Proyectos de Software",
+        "Precios de Software Personalizado",
+        "Ciclo de Vida del Desarrollo de Software",
+        "Desarrollo de Software Escalable",
+        "Soluciones de Software en la Nube",
+        "Soporte de Desarrollo de Software",
+        "Desarrollo Web y Móvil",
+        "Garantía de Calidad en el Desarrollo de Software",
+        "Desarrollo de Aplicaciones Personalizadas",
+        "Consultoría de Desarrollo de Software"
+      ],
+      "openGraph": {
+        "og:title": "Servicios de Desarrollo de Software Personalizado | ZitDevs",
+        "og:description": "ZitDevs ofrece servicios premium de desarrollo de software personalizado, adaptados a las necesidades de tu negocio para garantizar el éxito en cada etapa, desde la consulta hasta la implementación.",
+        "og:image": "https://zitdevs.com/images/og-image.jpeg",
+        "og:url": "https://zitdevs.com",
+        "og:type": "website",
+        "og:site_name": "ZitDevs",
+        "og:locale": "es_ES"
+      },
+      "twitterCard": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Servicios de Desarrollo de Software Personalizado | ZitDevs",
+        "twitter:description": "ZitDevs ofrece servicios expertos de desarrollo de software personalizado, garantizando resultados de alta calidad que impulsan el crecimiento empresarial.",
+        "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+        "twitter:site": "@zitdevs",
+        "twitter:creator": "@zitdevs"
+      }
+    },
+    "hero": {
+      "title": "Soluciones Innovadoras para un Mundo Digital",
+      "description": "En ZitDevs, damos vida a tus ideas digitales con una amplia gama de servicios diseñados para satisfacer las demandas del entorno empresarial moderno. Desde el desarrollo de software a medida hasta la consultoría estratégica, nuestro equipo de expertos está dedicado a impulsar tu éxito a través de la tecnología.",
+      "cta": "Explora nuestras ofertas a continuación"
+    },
+    "cards": {
+      "softwareDevelopment": {
+        "title": "Desarrollo de Software",
+        "description": [
+          "Creamos soluciones de software personalizadas que se alinean con las necesidades únicas de tu negocio. Desde la consulta inicial hasta el despliegue final, gestionamos todo el ciclo de desarrollo con un enfoque ágil, asegurando flexibilidad, iteraciones rápidas y mejora continua. Ya sea que busques optimizar operaciones o introducir funciones innovadoras, ZitDevs ofrece soluciones confiables y escalables.",
+          "¿Listo para convertir tus ideas en realidad?"
+        ],
+        "cta": "Conoce más sobre nuestros servicios de desarrollo de software"
+      },
+      "webDevelopment": {
+        "title": "Desarrollo Web",
+        "description": [
+          "Potencia tu presencia en línea con nuestros servicios de desarrollo web. Nos especializamos en crear sitios web receptivos y fáciles de usar, construir plataformas de comercio electrónico robustas e implementar poderosas soluciones CMS que simplifican la gestión de contenidos. Nuestro equipo de desarrollo web asegura que tu sitio no solo luzca excelente, sino que también funcione sin problemas, proporcionando una experiencia de usuario excepcional.",
+          "Transforma tu presencia en línea."
+        ],
+        "cta": "Descubre nuestras soluciones de desarrollo web"
+      },
+      "mobileAppDevelopment": {
+        "title": "Desarrollo de Aplicaciones Móviles",
+        "description": [
+          "Llega a tu audiencia en cualquier lugar con nuestros servicios de desarrollo de aplicaciones móviles de alto rendimiento. Diseñamos y desarrollamos aplicaciones para iOS y Android que combinan diseños centrados en el usuario con una integración de sistemas impecable. Nuestro compromiso con el mantenimiento y soporte continuos asegura que tu aplicación funcione sin problemas, manteniendo a tus usuarios comprometidos y satisfechos.",
+          "Haz realidad tu idea de aplicación."
+        ],
+        "cta": "Explora nuestros servicios de desarrollo de aplicaciones móviles"
+      },
+      "consultingStrategy": {
+        "title": "Consultoría y Estrategia",
+        "description": [
+          "Navega por las complejidades de la tecnología con nuestros servicios de consultoría y estrategia. Ofrecemos orientación experta en planificación estratégica de tecnología, gestión de proyectos y talleres de innovación, ayudándote a tomar decisiones informadas y a alcanzar los objetivos de tu negocio. Ya sea que estés lanzando un nuevo proyecto u optimizando operaciones existentes, ZitDevs es tu socio para impulsar el crecimiento y la innovación.",
+          "Lleva tu negocio al siguiente nivel."
+        ],
+        "cta": "Conoce más sobre nuestros servicios de consultoría"
+      }
+    },
+    "ourProcess": {
+      "title": "Nuestro Proceso",
+      "steps": {
+        "project": {
+          "title": "Inicio y Asignación del Proyecto",
+          "description": "Su proyecto comienza con la asignación de un Gestor de Proyecto (PM) dedicado, quien supervisará el proyecto y será su principal punto de contacto."
+        },
+        "development": {
+          "title": "Formación del Equipo de Desarrollo",
+          "description": "Formamos un equipo de desarrolladores expertos según las tecnologías y necesidades específicas de su proyecto."
+        },
+        "quality": {
+          "title": "Revisión de Código y Garantía de Calidad",
+          "description": "Durante el desarrollo, nuestro equipo realiza rigurosas revisiones de código y pruebas de garantía de calidad para asegurar que el software cumpla con todos los estándares requeridos."
+        },
+        "client": {
+          "title": "Pruebas en Staging y Revisión del Cliente",
+          "description": "Su software se despliega en un entorno de staging para pruebas finales y retroalimentación del cliente antes del lanzamiento oficial."
+        },
+        "deployment": {
+          "title": "Despliegue y Soporte",
+          "description": "Nos encargamos del despliegue en su entorno en vivo y brindamos soporte continuo para asegurar que el software funcione sin problemas. También ofrecemos soporte post-lanzamiento para cualquier problema que pueda surgir."
+        }
+      }
+    },
+    "page": {
+      "softwareDevelopment": {
+        "metadata": {
+          "title": "Planes de Desarrollo de Software Personalizado | ZitDevs",
+          "description": "ZitDevs ofrece una variedad de planes de desarrollo de software adaptados para satisfacer las necesidades de empresas de todos los tamaños. Desde startups hasta grandes empresas, nuestras soluciones personalizadas garantizan calidad, eficiencia y resultados escalables.",
+          "keywords": [
+            "Desarrollo de Software Personalizado",
+            "Precios de Desarrollo de Software",
+            "Planes de Desarrollo de Software",
+            "Desarrollo de MVP",
+            "Soluciones de Software Empresarial",
+            "Desarrollo de Software Empresarial",
+            "Desarrollo Ágil de Software",
+            "Soluciones de Software Escalables",
+            "Consultoría de Desarrollo de Software",
+            "Desarrollo de Software a Medida"
+          ],
+          "openGraph": {
+            "og:title": "Planes de Desarrollo de Software Personalizado | ZitDevs",
+            "og:description": "Explora los planes flexibles de desarrollo de software de ZitDevs, que ofrecen soluciones personalizadas para empresas de todos los tamaños. Obtén el software personalizado que necesitas con opciones de precios que se ajustan a tu presupuesto.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "es_ES"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Planes de Desarrollo de Software Personalizado | ZitDevs",
+            "twitter:description": "ZitDevs ofrece planes flexibles de desarrollo de software para empresas, desde startups hasta grandes empresas. Descubre nuestras soluciones personalizadas y precios competitivos.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
+        "title": "Desarrollo de Software",
+        "description": "En <strong>ZitDevs</strong>, creamos <strong>soluciones de software personalizadas</strong> adaptadas a las necesidades específicas de su negocio. Nuestro proceso garantiza calidad y eficiencia desde la consulta inicial hasta la implementación final, apoyado por nuestro equipo experimentado de desarrolladores y gestores de proyectos.",
+        "pricing": {
+          "title": "Precios",
+          "description": "Nuestros planes de precios están diseñados para adaptarse a empresas de todos los tamaños y presupuestos. Ya sea que sea una startup que busca desarrollar un <strong>MVP</strong> o una gran empresa que necesita una solución altamente personalizada, <strong>tenemos un plan que se ajusta a sus necesidades.</strong>",
+          "plans": {
+            "growth": {
+              "title": "Plan Crecimiento",
+              "description": "Ideal para empresas medianas que buscan soluciones más complejas.",
+              "features": [
+                "Horas de Desarrollo: Hasta 800",
+                "Gestión de Proyectos: PM avanzado con informes quincenales",
+                "Stack Tecnológico: Soporte para múltiples stacks tecnológicos",
+                "Soporte: 60 días post-lanzamiento",
+                "Horas Extra: $44.99/hora"
+              ],
+              "cta": "Solicitar Cotización"
+            },
+            "essentials": {
+              "title": "Plan Esencial",
+              "description": "Perfecto para startups y pequeñas empresas.",
+              "features": [
+                "Horas de Desarrollo: Hasta 400",
+                "Gestión de Proyectos: PM dedicado",
+                "Stack Tecnológico: Un solo stack tecnológico",
+                "Soporte: 90 días post-lanzamiento",
+                "Horas Extra: $39.99/hora"
+              ],
+              "cta": "Solicitar Cotización"
+            },
+            "enterprise": {
+              "title": "Plan Empresarial",
+              "description": "Diseñado para grandes empresas que necesitan una solución integral.",
+              "features": [
+                "Horas de Desarrollo: Desde 1200",
+                "Gestión de Proyectos: PM premium con actualizaciones diarias e incluye BA",
+                "Stack Tecnológico: Stack tecnológico personalizado e integración completa",
+                "Soporte: 3 meses con soporte prioritario",
+                "Horas Extra: $49.99/hora"
+              ],
+              "cta": "Solicitar Cotización"
+            },
+            "flexible": {
+              "title": "Plan FlexiDev",
+              "description": "Flexible y escalable para empresas con necesidades cambiantes.",
+              "features": [
+                "Horas de Desarrollo: Mínimo 36 horas",
+                "Gestión de Proyectos: Disponible bajo solicitud",
+                "Soporte: Pago por uso",
+                "Horas de desarrollo ilimitadas"
+              ],
+              "frequency": "hora",
+              "cta": "Solicitar Cotización"
+            }
+          }
+        },
+        "comparePricing": {
+          "title": "Comparar Planes de Precios",
+          "plans": {
+            "flexible": {
+              "title": "Plan FlexiDev<br/>(Pago por Uso)",
+              "description": "Empresas que necesitan horas de desarrollo flexibles o soporte continuo sin compromiso a largo plazo.",
+              "frequency": "hora",
+              "cta": "Solicitar Cotización"
+            },
+            "essentials": {
+              "title": "Plan Esencial",
+              "description": "Pequeñas empresas o startups que buscan desarrollar un MVP básico o una aplicación de pequeña escala.",
+              "cta": "Solicitar Cotización"
+            },
+            "growth": {
+              "title": "Plan Crecimiento",
+              "description": "Empresas medianas que necesitan software más complejo con características adicionales.",
+              "cta": "Solicitar Cotización"
+            },
+            "enterprise": {
+              "title": "Plan Empresarial",
+              "description": "Grandes empresas que buscan soluciones altamente personalizadas con características avanzadas.",
+              "cta": "Solicitar Cotización"
+            }
+          },
+          "details": {
+            "coreFeatures": {
+              "title": "Características de Desarrollo Esenciales",
+              "features": {
+                "development": {
+                  "title": "Horas de Desarrollo",
+                  "columns": {
+                    "flexible": "Mínimo 36 horas",
+                    "essentials": "Hasta 400 horas",
+                    "growth": "Hasta 800 horas",
+                    "enterprise": "Desde 1200 horas"
+                  }
+                },
+                "dedicated": {
+                  "title": "Gestor de Proyecto Dedicado",
+                  "columns": {
+                    "flexible": "por solicitud (tarifa por hora)",
+                    "growth": "con informes quincenales",
+                    "enterprise": "con actualizaciones diarias, incluye BA"
+                  }
+                },
+                "tech": {
+                  "title": "Stack Tecnológico",
+                  "columns": {
+                    "flexible": "Stack tecnológico flexible",
+                    "essentials": "Un solo stack tecnológico",
+                    "growth": "Soporte para múltiples stacks tecnológicos",
+                    "enterprise": "Stack tecnológico personalizado, integración completa"
+                  }
+                }
+              }
+            },
+            "quality": {
+              "title": "Garantía de Calidad y Soporte",
+              "features": {
+                "codeReview": {
+                  "title": "Revisión de Código"
+                },
+                "qaTesting": {
+                  "title": "QA y Pruebas",
+                  "columns": {
+                    "flexible": "Pruebas básicas (tarifa por hora)",
+                    "essentials": "Pruebas estándar",
+                    "growth": "Pruebas avanzadas automatizadas",
+                    "enterprise": "Pruebas extensivas, incluyendo auditorías de seguridad"
+                  }
+                },
+                "userAcceptance": {
+                  "title": "Pruebas de Aceptación del Usuario",
+                  "columns": {
+                    "flexible": "Disponible como complemento"
+                  }
+                }
+              }
+            },
+            "support": {
+              "title": "Soporte y Mantenimiento",
+              "features": {
+                "postLaunch": {
+                  "title": "Soporte Post-Lanzamiento",
+                  "columns": {
+                    "flexible": "Disponible por horas",
+                    "essentials": "90 días",
+                    "growth": "180 días",
+                    "enterprise": "3 meses con soporte prioritario"
+                  }
+                },
+                "maintenance": {
+                  "title": "Mantenimiento",
+                  "columns": {
+                    "flexible": "Disponible como complemento",
+                    "essentials": "Mantenimiento básico",
+                    "growth": "Mantenimiento extendido",
+                    "enterprise": "Paquete de mantenimiento completo"
+                  }
+                },
+                "staging": {
+                  "title": "Entorno de Staging",
+                  "columns": {
+                    "flexible": "Disponible como complemento"
+                  }
+                }
+              }
+            },
+            "additional": {
+              "title": "Características Adicionales",
+              "features": {
+                "consultation": {
+                  "title": "Consultoría",
+                  "columns": {
+                    "flexible": "$300 tarifa inicial por 5 horas",
+                    "essentials": "5 horas por mes",
+                    "growth": "10 horas por mes",
+                    "enterprise": "Consultorías ilimitadas"
+                  }
+                },
+                "customIntegration": {
+                  "title": "Integraciones Personalizadas",
+                  "columns": {
+                    "flexible": "Disponible por horas",
+                    "essentials": "Limitado",
+                    "growth": "Múltiples integraciones",
+                    "enterprise": "Soporte completo de integraciones"
+                  }
+                },
+                "performanceOptimization": {
+                  "title": "Optimización de Rendimiento",
+                  "columns": {
+                    "flexible": "Disponible como complemento",
+                    "enterprise": "Optimización avanzada"
+                  }
+                },
+                "extraHours": {
+                  "title": "Horas Extra",
+                  "columns": {
+                    "flexible": "Incluidas en la tarifa por hora",
+                    "essentials": "Desde $39.99/hora",
+                    "growth": "Desde $44.99/hora",
+                    "enterprise": "Desde $49.99/hora"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "websiteDevelopment": {
+        "metadata": {
+          "title": "Servicios Profesionales de Desarrollo Web | ZitDevs",
+          "description": "ZitDevs ofrece soluciones de desarrollo web personalizadas para empresas de todos los tamaños. Desde startups hasta grandes empresas, nuestros planes cubren desde diseños basados en plantillas hasta sitios web totalmente personalizados, garantizando una presencia en línea sólida y optimizada para tu negocio.",
+          "keywords": [
+            "Servicios de Desarrollo Web",
+            "Diseño de Sitios Web Personalizados",
+            "Diseño Web Responsive",
+            "Sitios Web Optimizados para SEO",
+            "Sitios Web Empresariales",
+            "Desarrollo Web Asequible",
+            "Planes de Desarrollo de Sitios Web",
+            "Desarrollo Web Profesional",
+            "Desarrollo de Sitios Web para Startups",
+            "Desarrollo de Sitios Web para Grandes Empresas"
+          ],
+          "openGraph": {
+            "og:title": "Servicios Profesionales de Desarrollo Web | ZitDevs",
+            "og:description": "Construye tu presencia en línea con ZitDevs. Desde sitios web simples basados en plantillas hasta soluciones totalmente personalizadas, ofrecemos servicios de desarrollo web adaptados a las necesidades y presupuesto de tu empresa.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "es_ES"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Servicios Profesionales de Desarrollo Web | ZitDevs",
+            "twitter:description": "ZitDevs se especializa en soluciones de desarrollo web asequibles para empresas de todos los tamaños. Establece tu presencia en línea con planes de desarrollo web personalizados según tus necesidades.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
+        "title": "Construye Tu Presencia en Línea con ZitDevs",
+        "description": "En <strong>ZitDevs</strong>, nos especializamos en crear soluciones web a medida que ayudan a que tu negocio se destaque en línea. Ya sea que estés comenzando y necesites tu primer sitio web o seas una empresa en crecimiento que requiere una presencia en línea más sólida, nuestros planes de desarrollo web están diseñados para satisfacer tus necesidades sin afectar tu presupuesto. Desde diseños basados en plantillas hasta soluciones totalmente personalizadas, aseguramos que tu sitio web no solo sea visualmente atractivo, sino también optimizado para el rendimiento y el SEO. Con nuestros precios competitivos y soporte continuo, estar en línea nunca ha sido tan fácil.",
+        "pricing": {
+          "title": "Elige Tu Plan",
+          "description": "Haz que tu negocio esté en línea con un plan que se ajuste a tus necesidades y presupuesto. Ya sea que estés comenzando o buscando expandirte, ZitDevs ofrece soluciones asequibles sin comprometer la calidad.",
+          "plans": {
+            "essentials": {
+              "title": "Web Esencial",
+              "description": "Perfecto para startups o pequeñas empresas que están comenzando su viaje en línea.",
+              "features": [
+                "Diseño Basado en Plantillas: Elige entre plantillas profesionales.",
+                "Páginas: Hasta 3 páginas personalizables.",
+                "Configuración de SEO: SEO básico para ayudarte a destacar.",
+                "Diseño Responsivo: Optimizado para móvil y escritorio.",
+                "Alojamiento: Alojamiento compartido.",
+                "Soporte: 90 días de soporte post-lanzamiento."
+              ],
+              "cta": "Elegir Plan"
+            },
+            "growth": {
+              "title": "Web en Crecimiento",
+              "description": "Ideal para empresas en crecimiento que necesitan una solución más personalizada.",
+              "features": [
+                "Diseño Personalizado: Diseño a medida que representa tu marca.",
+                "Páginas: Hasta 5 páginas personalizadas.",
+                "Configuración de SEO: SEO mejorado para aumentar la visibilidad.",
+                "Gerente de Proyecto: PM dedicado para una ejecución fluida del proyecto.",
+                "Tiempo de Producción: Sitio en vivo en 3 a 6 semanas.",
+                "Alojamiento: Alojamiento compartido mejorado con mayor rendimiento.",
+                "Soporte: 180 días de soporte post-lanzamiento."
+              ],
+              "cta": "Elegir Plan"
+            },
+            "professional": {
+              "title": "Web Profesional",
+              "description": "El mejor para empresas que necesitan una presencia en línea completa y profesional.",
+              "features": [
+                "Diseño Completamente Personalizado: Diseño único creado solo para ti.",
+                "Páginas: Hasta 10 páginas personalizadas.",
+                "SEO Integral: SEO avanzado para generar tráfico.",
+                "Gerente de Proyecto: PM dedicado y planificación estratégica con un Analista de Negocios.",
+                "Cronograma de Producción Personalizado: Adaptado a las necesidades de tu negocio.",
+                "Alojamiento: Alojamiento dedicado premium con características de primer nivel.",
+                "Soporte: 3 meses de soporte premium."
+              ],
+              "cta": "Contactar Ventas"
+            },
+            "flexidev": {
+              "title": "Web FlexiDev",
+              "description": "Perfecto para empresas con necesidades continuas o proyectos específicos y más pequeños.",
+              "features": [
+                "Desarrollo Personalizado: Horas flexibles para adaptarse a tus necesidades.",
+                "Consultoría: Tarifa inicial de $300 para la planificación y consultoría inicial.",
+                "Soporte: Disponible según sea necesario con opciones flexibles."
+              ],
+              "cta": "Elegir Plan"
+            }
+          }
+        },
+        "comparePricing": {
+          "title": "Elige Tu Plan",
+          "description": "Encuentra el plan de desarrollo web perfecto para tu negocio. Ya sea que estés comenzando o expandiendo tu presencia en línea, ZitDevs tiene lo que necesitas.",
+          "plans": {
+            "flexidev": {
+              "title": "Web FlexiDev (Pago por Uso)",
+              "description": "Perfecto para empresas con necesidades continuas o proyectos específicos y más pequeños.",
+              "cta": "Elegir Plan"
+            },
+            "essentials": {
+              "title": "Web Esencial",
+              "description": "Perfecto para startups o pequeñas empresas que están comenzando su viaje en línea.",
+              "cta": "Elegir Plan"
+            },
+            "growth": {
+              "title": "Web en Crecimiento",
+              "description": "Ideal para empresas en crecimiento que necesitan una solución más personalizada.",
+              "cta": "Elegir Plan"
+            },
+            "professional": {
+              "title": "Web Profesional",
+              "description": "El mejor para empresas que necesitan una presencia en línea completa y profesional.",
+              "cta": "Contactar Ventas"
+            }
+          },
+          "details": {
+            "designAndPages": {
+              "title": "Diseño y Páginas",
+              "features": {
+                "designType": {
+                  "title": "Tipo de Diseño",
+                  "columns": {
+                    "flexidev": "Desarrollo personalizado",
+                    "essentials": "Basado en plantillas",
+                    "growth": "Diseño personalizado",
+                    "professional": "Diseño completamente personalizado"
+                  }
+                },
+                "numberOfPage": {
+                  "title": "Número de Páginas",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "Hasta 3 páginas",
+                    "growth": "Hasta 5 páginas",
+                    "professional": "Hasta 10 páginas"
+                  }
+                },
+                "responsiveDesign": {
+                  "title": "Diseño Responsivo"
+                },
+                "customizationOptions": {
+                  "title": "Opciones de Personalización",
+                  "columns": {
+                    "flexidev": "Completamente personalizable",
+                    "essentials": "Limitadas",
+                    "growth": "Moderadas",
+                    "professional": "Personalización completa"
+                  }
+                }
+              }
+            },
+            "SEOAndPerformance": {
+              "title": "SEO y Rendimiento",
+              "features": {
+                "SeoSetup": {
+                  "title": "Configuración de SEO",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "SEO básico",
+                    "growth": "SEO mejorado",
+                    "professional": "SEO integral"
+                  }
+                },
+                "pageLoadOptimization": {
+                  "title": "Optimización de Carga de Página",
+                  "columns": {
+                    "flexidev": "Personalizable"
+                  }
+                },
+                "performanceMonitoring": {
+                  "title": "Monitoreo de Rendimiento",
+                  "columns": {
+                    "flexidev": "Personalizable"
+                  }
+                }
+              }
+            },
+            "projectManagementAndSupport": {
+              "title": "Gestión de Proyectos y Soporte",
+              "features": {
+                "projectManager": {
+                  "title": "Gerente de Proyecto",
+                  "columns": {
+                    "flexidev": "Disponible según sea necesario",
+                    "growth": "PM dedicado",
+                    "professional": "PM dedicado y Analista de Negocios"
+                  }
+                },
+                "postLaunchSupport": {
+                  "title": "Soporte Post-Lanzamiento",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "90 días",
+                    "growth": "180 días",
+                    "professional": "3 meses con soporte prioritario"
+                  }
+                },
+                "consultationHours": {
+                  "title": "Horas de Consultoría",
+                  "columns": {
+                    "flexidev": "Tarifa inicial de $300 por 5 horas",
+                    "growth": "Hasta 5 horas",
+                    "professional": "Hasta 10 horas"
+                  }
+                }
+              }
+            },
+            "hostingAndMaintenance": {
+              "title": "Alojamiento y Mantenimiento",
+              "features": {
+                "hosting": {
+                  "title": "Tipo de Alojamiento",
+                  "columns": {
+                    "flexidev": "Disponible según sea necesario",
+                    "essentials": "Compartido",
+                    "growth": "Compartido mejorado",
+                    "professional": "Alojamiento dedicado"
+                  }
+                },
+                "storage": {
+                  "title": "Almacenamiento",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "Hasta 10 GB",
+                    "growth": "Hasta 20 GB",
+                    "professional": "A partir de 50 GB"
+                  }
+                },
+                "bandWidth": {
+                  "title": "Ancho de Banda",
+                  "columns": {
+                    "flexidev": "Personalizable",
+                    "essentials": "Hasta 5 GB",
+                    "growth": "Hasta 10 GB",
+                    "professional": "Ilimitado"
+                  }
+                },
+                "monthlyMaintenance": {
+                  "title": "Mantenimiento Mensual",
+                  "columns": {
+                    "flexidev": "Disponible según sea necesario"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "mobileAppDevelopment": {
+        "metadata": {
+          "title": "Servicios de Desarrollo de Aplicaciones Móviles Personalizadas | ZitDevs",
+          "description": "ZitDevs se especializa en el desarrollo de aplicaciones móviles de alta calidad para iOS y Android. Nuestro equipo de expertos ofrece soluciones móviles escalables y fáciles de usar que ayudan a las empresas a crecer y tener éxito.",
+          "keywords": [
+            "Desarrollo de Aplicaciones Móviles",
+            "Aplicaciones Móviles Personalizadas",
+            "Desarrollo de Apps para iOS",
+            "Desarrollo de Apps para Android",
+            "Desarrollo de Apps Multiplataforma",
+            "Aplicaciones Móviles Empresariales",
+            "Servicios de Desarrollo de Apps",
+            "Soluciones Móviles Escalables",
+            "Aplicaciones Móviles Fáciles de Usar",
+            "Empresa de Desarrollo de Apps Móviles"
+          ],
+          "openGraph": {
+            "og:title": "Servicios de Desarrollo de Aplicaciones Móviles Personalizadas | ZitDevs",
+            "og:description": "Transforma tu negocio con los servicios de desarrollo de aplicaciones móviles personalizadas de ZitDevs. Nuestro equipo de expertos crea apps de alta calidad y fáciles de usar para iOS y Android que impulsan el crecimiento empresarial.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "es_ES"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Servicios de Desarrollo de Aplicaciones Móviles Personalizadas | ZitDevs",
+            "twitter:description": "ZitDevs ofrece desarrollo experto de aplicaciones móviles para iOS y Android. Crea una app móvil escalable y fácil de usar que acelere el crecimiento de tu negocio.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
+        "title": "Transforma Tu Negocio con Aplicaciones Móviles Personalizadas",
+        "description": "En ZitDevs, nos especializamos en desarrollar aplicaciones móviles que dan vida a tus ideas. Ya sea que quieras crear una aplicación para iOS, Android o ambas plataformas, nuestro equipo de desarrolladores expertos está preparado para ofrecer soluciones móviles de alta calidad, fáciles de usar y escalables que impulsen el crecimiento de tu negocio.",
+        "contact": {
+          "title": "Comienza con ZitDevs",
+          "description": "¿Listo para convertir tu idea de aplicación en realidad? Contáctanos hoy para obtener una cotización personalizada adaptada a tus necesidades y objetivos específicos. Nuestro equipo está aquí para guiarte en cada paso del proceso de desarrollo de aplicaciones móviles.",
+          "cta": "Contáctanos"
+        }
+      },
+      "consultingStrategy": {
+        "metadata": {
+          "title": "Servicios Expertos de Consultoría y Estrategia | ZitDevs",
+          "description": "ZitDevs ofrece servicios personalizados de consultoría y estrategia para ayudar a empresas de todos los tamaños a navegar las complejidades del panorama tecnológico. Nuestro equipo de asesores expertos brinda conocimientos estratégicos para guiar tu negocio hacia el crecimiento y el éxito.",
+          "keywords": [
+            "Servicios de Consultoría",
+            "Estrategia Empresarial",
+            "Consultoría Tecnológica",
+            "Optimización de Procesos Empresariales",
+            "Estrategia de Desarrollo de Productos",
+            "Transformación Digital",
+            "Consultoría en Gestión de Proyectos",
+            "Consultoría Estratégica",
+            "Metodologías Ágiles",
+            "Estrategia de Crecimiento Empresarial"
+          ],
+          "openGraph": {
+            "og:title": "Servicios Expertos de Consultoría y Estrategia | ZitDevs",
+            "og:description": "Convierte tu visión en acción con los servicios expertos de consultoría y estrategia de ZitDevs. Desde la optimización de procesos empresariales hasta la transformación digital, ofrecemos orientación estratégica para ayudarte a tener éxito.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "es_ES"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Servicios Expertos de Consultoría y Estrategia | ZitDevs",
+            "twitter:description": "ZitDevs ofrece servicios personalizados de consultoría y estrategia diseñados para ayudar a las empresas a optimizar operaciones, desarrollar productos y fomentar la transformación digital.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
+        "title": "Convierta Su Visión en Acción con Orientación Estratégica",
+        "description": "En ZitDevs, ofrecemos servicios de consultoría y estrategia personalizados diseñados para ayudarle a navegar las complejidades del panorama tecnológico. Ya sea que usted sea una startup que necesite dirección o una empresa establecida que busque optimizar sus operaciones, le proporcionamos los conocimientos y marcos necesarios para tener éxito.",
+        "whyChoose": {
+          "title": "¿Por Qué Elegir ZitDevs para Consultoría y Estrategia?",
+          "items": [
+            {
+              "title": "Equipo Asesor Experto",
+              "description": "Nuestros consultores experimentados tienen años de experiencia en múltiples industrias, ofreciendo asesoramiento estratégico para ayudarle a tomar decisiones informadas y de impacto."
+            },
+            {
+              "title": "Soluciones Personalizadas",
+              "description": "No creemos en estrategias de talla única. Cada recomendación se personaliza según sus objetivos comerciales, mercado y desafíos específicos."
+            },
+            {
+              "title": "Metodologías Ágiles",
+              "description": "Implementamos marcos ágiles para asegurar que su empresa pueda adaptarse rápida y eficazmente a los cambios del mercado y avances tecnológicos."
+            }
+          ]
+        },
+        "servicesSection": {
+          "title": "Nuestros Servicios de Consultoría y Estrategia",
+          "services": [
+            {
+              "title": "Consultoría Tecnológica",
+              "description": "Alinee su estrategia de TI con los objetivos de negocio. Le ayudamos a elegir las herramientas y plataformas correctas para garantizar la escalabilidad y el éxito a largo plazo."
+            },
+            {
+              "title": "Optimización de Procesos Empresariales",
+              "description": "Optimice sus operaciones para aumentar la eficiencia y reducir costos. Identificamos cuellos de botella e implementamos soluciones que maximicen la productividad."
+            },
+            {
+              "title": "Estrategia de Desarrollo de Productos",
+              "description": "Desde la ideación hasta el lanzamiento, le brindamos orientación durante todo el ciclo de vida del producto, asegurando que su producto resuene con su público objetivo y satisfaga las demandas del mercado."
+            },
+            {
+              "title": "Transformación Digital",
+              "description": "Transicione su negocio hacia la era digital. Le asistimos en la integración de tecnologías y procesos modernos para que su empresa sea más innovadora, ágil y competitiva."
+            },
+            {
+              "title": "Consultoría en Gestión de Proyectos",
+              "description": "Optimice sus flujos de trabajo de proyectos con estrategias de gestión de proyectos expertas. Le proporcionamos orientación sobre mejores prácticas para asegurar que sus proyectos se entreguen a tiempo, dentro del presupuesto y con la más alta calidad."
+            }
+          ]
+        },
+        "ourApproach": {
+          "title": "Nuestro Enfoque",
+          "steps": [
+            {
+              "title": "Consulta Inicial",
+              "description": "Comenzamos con un análisis profundo de su negocio, discutiendo sus puntos de dolor, objetivos y visión. Evaluamos sus sistemas actuales e identificamos áreas de mejora."
+            },
+            {
+              "title": "Planificación Estratégica",
+              "description": "Nuestros consultores trabajan estrechamente con su equipo para desarrollar una estrategia personalizada que se alinee con sus objetivos comerciales. Esto incluye planes de acción detallados y hitos claros."
+            },
+            {
+              "title": "Implementación",
+              "description": "Ayudamos a supervisar la implementación de nuestras estrategias, asegurándonos de que los cambios se ejecuten de manera fluida y eficiente. Nuestro equipo está presente, trabajando con sus partes interesadas para llevar a cabo la transformación."
+            },
+            {
+              "title": "Soporte Continuo y Evaluación",
+              "description": "Una vez implementada la estrategia, ofrecemos soporte continuo y evaluaciones de rendimiento para garantizar que su negocio continúe prosperando y evolucionando."
+            }
+          ]
+        },
+        "ctaSection": {
+          "title": "¿Listo para Elevar Su Negocio?",
+          "description": "Contáctenos hoy para una sesión personalizada de consultoría y estrategia. Ya sea que necesite asistencia con la adopción de tecnología, estrategia de productos o la optimización operativa, estamos aquí para ayudarle a crecer.",
+          "cta": "Contáctenos"
         }
       }
     }

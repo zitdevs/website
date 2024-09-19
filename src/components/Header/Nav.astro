@@ -4,8 +4,6 @@ import NavItems from "./NavItems.astro";
 const { tNav } = Astro.props;
 ---
 
-<ul
-  class="lg:flex gap-10 list-none px-14 py-4 rounded-2xl border border-white bg-white/70 hidden"
->
+<ul class="lg:flex gap-10 list-none hidden">
   <NavItems tNav={tNav.menu} />
 </ul>

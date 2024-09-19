@@ -7,8 +7,7 @@ export const onRequest = defineMiddleware((context, next) => {
 
   if (context.url.pathname === "/") return next();
 
-  if (context.url.pathname.match(`/((api|_astro/static|_astro/image|favicon.ico|assets|robots.txt|images|legal).*)`)) {
-    console.log('found');
+  if (context.url.pathname.match(`/((api|_astro/static|_astro/image|_image|favicon.ico|assets|robots.txt|images|legal|sitemap).*)`)) {
     return next();
   }
 

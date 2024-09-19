@@ -1,0 +1,73 @@
+---
+import type { Dictionary } from "src/i18n/ui";
+import ItemCard from "../components/ItemCard.astro";
+
+interface Props {
+  tCards: Dictionary["services"]["cards"];
+}
+
+const { props, params } = Astro;
+const { tCards } = props;
+const { lang } = params as { lang: string };
+---
+
+<div
+  id="offers"
+  class="max-w-screen-2xl mx-auto mb-10 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(30rem,1fr))]"
+>
+  <ItemCard
+    title={tCards.softwareDevelopment.title}
+    description={tCards.softwareDevelopment.description}
+    icon="code"
+    variant="blue"
+    cols="none"
+    classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
+    animation="allUp"
+    cta={{
+      href: `/${lang}/services/software-development`,
+      text: tCards.softwareDevelopment.cta,
+    }}
+  />
+
+  <ItemCard
+    title={tCards.webDevelopment.title}
+    description={tCards.webDevelopment.description}
+    icon="globe"
+    variant="dark"
+    cols="none"
+    classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
+    animation="allUp"
+    cta={{
+      href: `/${lang}/services/web-development`,
+      text: tCards.webDevelopment.cta,
+    }}
+  />
+
+  <ItemCard
+    title={tCards.mobileAppDevelopment.title}
+    description={tCards.mobileAppDevelopment.description}
+    icon="tablet-smartphone"
+    variant="orange"
+    cols="none"
+    classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
+    animation="allUp"
+    cta={{
+      href: `/${lang}/services/mobile-app-development`,
+      text: tCards.mobileAppDevelopment.cta,
+    }}
+  />
+
+  <ItemCard
+    title={tCards.consultingStrategy.title}
+    description={tCards.consultingStrategy.description}
+    icon="brain"
+    variant="pink"
+    cols="none"
+    classes={{ container: "min-h-[260px]", card: "min-h-[320px]" }}
+    animation="allUp"
+    cta={{
+      href: `/${lang}/services/consulting-strategy`,
+      text: tCards.consultingStrategy.cta,
+    }}
+  />
+</div>

@@ -1,0 +1,142 @@
+---
+import { getI18n } from "src/i18n";
+import Layout from "src/layouts/Layout.astro";
+import PageHeading from "../components/PageHeading.astro";
+import OurProcess from "../components/OurProcess.astro";
+import PricingSection from "../components/PricingSection.astro";
+import ComparePlanSection from "../components/ComparePlanSection.astro";
+import { GetPlanDetails } from "../utils/transformers/WebDevelopment";
+
+const { lang } = Astro.params as { lang: string };
+
+const i18n = getI18n({ currentLocale: lang });
+const tWebDevelopment = i18n.services.page.websiteDevelopment;
+const tPricing = tWebDevelopment.pricing;
+const tShared = i18n.default.shared;
+const tComparePricing = tWebDevelopment.comparePricing;
+const tDetails = tComparePricing.details;
+---
+
+<Layout metadata={tWebDevelopment.metadata}>
+  <PageHeading
+    variant="dark"
+    title={tWebDevelopment.title}
+    description={tWebDevelopment.description}
+  />
+
+  <div class="container">
+    <OurProcess variant="dark" />
+    <span class="h-[100px] w-full block"></span>
+    <PricingSection
+      variant="dark"
+      title={tPricing.title}
+      description={tPricing.description}
+      popularPlanIndex={1}
+      classes={{
+        feature: "min-h-[385px]",
+      }}
+      pricing={[
+        {
+          startingAt: true,
+          name: tPricing.plans.growth.title,
+          description: tPricing.plans.growth.description,
+          features: tPricing.plans.growth.features,
+          price: 779.99,
+          monthlyPrice: 43.52,
+          cta: {
+            text: tPricing.plans.growth.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          name: tPricing.plans.essentials.title,
+          description: tPricing.plans.essentials.description,
+          features: tPricing.plans.essentials.features,
+          price: 349.99,
+          monthlyPrice: 29.99,
+          cta: {
+            text: tPricing.plans.essentials.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          name: tPricing.plans.professional.title,
+          description: tPricing.plans.professional.description,
+          features: tPricing.plans.professional.features,
+          price: 1900.0,
+          monthlyPrice: 99.99,
+          cta: {
+            text: tPricing.plans.professional.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          name: tPricing.plans.flexidev.title,
+          description: tPricing.plans.flexidev.description,
+          features: tPricing.plans.flexidev.features,
+          price: 20,
+          monthlyPrice: 34.99,
+          priceFrequency: tShared.hour,
+          cta: {
+            text: tPricing.plans.flexidev.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+      ]}
+    />
+    <span class="h-[120px] w-full block"></span>
+
+    <ComparePlanSection
+      title={tComparePricing.title}
+      variant="dark"
+      popularPlanIndex={1}
+      plans={[
+        {
+          price: 20,
+          name: tComparePricing.plans.flexidev.title,
+          description: tComparePricing.plans.flexidev.description,
+          priceFrequency: tShared.hour,
+          cta: {
+            text: tComparePricing.plans.flexidev.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          price: 349.99,
+          name: tComparePricing.plans.essentials.title,
+          description: tComparePricing.plans.essentials.description,
+          cta: {
+            text: tComparePricing.plans.essentials.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          price: 779.99,
+          name: tComparePricing.plans.growth.title,
+          description: tComparePricing.plans.growth.description,
+          cta: {
+            text: tComparePricing.plans.growth.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+        {
+          startingAt: true,
+          price: 1900.0,
+          name: tComparePricing.plans.professional.title,
+          description: tComparePricing.plans.professional.description,
+          cta: {
+            text: tComparePricing.plans.professional.cta,
+            href: `/${lang}/contact`,
+          },
+        },
+      ]}
+      details={GetPlanDetails(tDetails)}
+      popularPlanIndex={1}
+      openDetailIndex={0}
+    />
+  </div>
+</Layout>

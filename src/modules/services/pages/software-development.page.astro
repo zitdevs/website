@@ -1,0 +1,48 @@
+---
+import { getI18n } from "src/i18n";
+import Layout from "src/layouts/Layout.astro";
+
+import PageHeading from "../components/PageHeading.astro";
+import OurProcess from "../components/OurProcess.astro";
+import PricingSection from "../components/PricingSection.astro";
+import ComparePlanSection from "../components/ComparePlanSection.astro";
+import {
+  GetPlanCompare,
+  GetPlanDetails,
+  GetPlans,
+} from "../utils/transformers/SoftwareDevelopment";
+
+const { lang } = Astro.params as { lang: string };
+
+const i18n = getI18n({ currentLocale: lang });
+const tSoftwareDevelopment = i18n.services.page.softwareDevelopment;
+const tPricing = tSoftwareDevelopment.pricing;
+const tComparePricing = tSoftwareDevelopment.comparePricing;
+const tDetails = tComparePricing.details;
+---
+
+<Layout metadata={tSoftwareDevelopment.metadata}>
+  <PageHeading
+    title={tSoftwareDevelopment.title}
+    description={tSoftwareDevelopment.description}
+  />
+
+  <div class="container mb-10">
+    <OurProcess />
+    <span class="h-[100px] w-full block"></span>
+    <PricingSection
+      title={tPricing.title}
+      description={tPricing.description}
+      popularPlanIndex={1}
+      pricing={GetPlans(tPricing, lang)}
+    />
+    <span class="h-[120px] w-full block"></span>
+    <ComparePlanSection
+      title={tComparePricing.title}
+      plans={GetPlanCompare(tComparePricing, lang)}
+      details={GetPlanDetails(tDetails)}
+      popularPlanIndex={1}
+      openDetailIndex={0}
+    />
+  </div>
+</Layout>

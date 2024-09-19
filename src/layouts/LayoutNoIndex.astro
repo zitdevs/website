@@ -1,9 +1,7 @@
 ---
-import "../styles/globals.css";
-import "@fontsource/raleway";
 import Header from "../components/Header/Header.astro";
 import Footer from "../modules/footer/Footer.astro";
-const { currentLocale } = Astro;
+import BaseLayout from "./BaseLayout.astro";
 const { title } = Astro.props;
 
 const metadata = {
@@ -12,7 +10,7 @@ const metadata = {
 };
 ---
 
-<html lang={currentLocale}>
+<BaseLayout>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -20,12 +18,11 @@ const metadata = {
     <title>{metadata.title}</title>
     <meta name="robots" content={metadata.robots} />
   </head>
-  <body style="font-family: 'Raleway', sans-serif;">
+  <body>
     <Header />
     <main>
       <slot />
     </main>
     <Footer />
   </body>
-</html>
----
+</BaseLayout>

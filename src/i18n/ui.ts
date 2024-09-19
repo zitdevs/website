@@ -13,4 +13,6 @@ export const ui = {
   es: esLang,
 } as const;
 
+export type Dictionary = typeof ui.en;
+
 export const showDefaultLang = false;

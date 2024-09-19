@@ -1,20 +1,44 @@
 ---
-import "../styles/globals.css";
-import "@fontsource/raleway";
 import Header from "../components/Header/Header.astro";
 import Footer from "../modules/footer/Footer.astro";
 import { getLangFromUrl } from "../i18n/utils";
 import { getI18n } from "../i18n";
 import CookieConsent from "../components/VanillaCookie/CookieConsent.astro";
+import BaseLayout from "./BaseLayout.astro";
 
-const { currentLocale } = Astro;
+interface Props {
+  class?: string;
+  metadata?: {
+    title: string;
+    description: string;
+    keywords: string[];
+    openGraph: {
+      "og:title": string;
+      "og:description": string;
+      "og:image": string;
+      "og:url": string;
+      "og:type": string;
+      "og:site_name": string;
+      "og:locale": string;
+    };
+    twitterCard: {
+      "twitter:card": string;
+      "twitter:title": string;
+      "twitter:description": string;
+      "twitter:image": string;
+      "twitter:site": string;
+      "twitter:creator": string;
+    };
+  };
+}
+
+const { props } = Astro;
 const lang = getLangFromUrl(Astro.url);
 const i18n = getI18n({ currentLocale: lang });
-const metadata = i18n.default.metadata;
+const metadata = props.metadata ?? i18n.default.metadata;
 ---
 
-<!doctype html>
-<html lang={currentLocale} class="scroll-smooth">
+<BaseLayout>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -64,12 +88,12 @@ const metadata = i18n.default.metadata;
     <!-- SiteMap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
-  <body style="font-family: 'Raleway', sans-serif;">
+  <body>
     <Header />
-    <main>
+    <main class={props.class}>
       <slot />
     </main>
     <Footer />
     <CookieConsent />
   </body>
-</html>
+</BaseLayout>

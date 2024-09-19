@@ -1,0 +1,13 @@
+---
+import type { GetStaticPaths } from "astro";
+import { AvailableLanguages } from "src/i18n";
+import SoftwareDevelopmentPage from "src/modules/services/pages/software-development.page.astro";
+
+export const prerender = true;
+
+export const getStaticPaths = (() => {
+  return AvailableLanguages;
+}) satisfies GetStaticPaths;
+---
+
+<SoftwareDevelopmentPage />

@@ -1,7 +1,6 @@
 import { Resend } from "resend";
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
-const verifyEndpoint = "https://www.google.com/recaptcha/api/siteverify";
 
 import type { APIRoute } from "astro";
 
@@ -13,10 +12,7 @@ interface ClientFormProps {
   company: string;
 }
 
-export const POST: APIRoute = async ({
-  params,
-  request,
-}): Promise<Response> => {
+export const POST: APIRoute = async ({ request }): Promise<Response> => {
   const body = await request.json();
   const { email, firstName, lastName, message, company } =
     body as ClientFormProps;

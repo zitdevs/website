@@ -1,9 +1,11 @@
 ---
-const { href } = Astro.props;
+import { cn } from "src/lib/utils";
+
+const { href, ...props } = Astro.props;
 ---
 
 <li>
-  <a href={href} class="font-semibold">
+  <a href={href} class={cn("font-medium", props.class )}>
     <slot />
   </a>
 </li>

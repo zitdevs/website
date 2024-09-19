@@ -1,0 +1,42 @@
+---
+import { getI18n } from "src/i18n";
+import Layout from "src/layouts/Layout.astro";
+import OurProcess from "../components/OurProcess.astro";
+import PageHeading from "../components/PageHeading.astro";
+import Button from "src/components/button/Button.astro";
+
+const { lang } = Astro.params as { lang: string };
+
+const i18n = getI18n({ currentLocale: lang });
+const tMobileAppDevelopment = i18n.services.page.mobileAppDevelopment;
+---
+
+<Layout metadata={tMobileAppDevelopment.metadata}>
+  <PageHeading
+    variant="orange"
+    title={tMobileAppDevelopment.title}
+    description={tMobileAppDevelopment.description}
+  />
+
+  <div class="container">
+    <OurProcess variant="orange" />
+    <span class="h-[100px] w-full block"></span>
+    <section
+      class="border-amber-400 bg-amber-400/10 px-10 py-8 rounded-lg shadow-lg max-w-[800px] mx-auto"
+    >
+      <h2 class="text-2xl font-semibold mb-2">
+        {tMobileAppDevelopment.contact.title}
+      </h2>
+      <p>
+        {tMobileAppDevelopment.contact.description}
+      </p>
+
+      <div class="mt-6">
+        <Button href={`/${lang}/contact`}>
+          {tMobileAppDevelopment.contact.cta}
+        </Button>
+      </div>
+    </section>
+    <span class="h-[100px] w-full block"></span>
+  </div>
+</Layout>

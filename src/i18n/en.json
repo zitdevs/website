@@ -1,523 +1,1280 @@
 {
-    "default": {
-        "metadata": {
-            "title": "ZitDevs: Passionate about building great software",
-            "description": "ZitDevs is a forward-thinking development company dedicated to transforming big ideas into impactful technological solutions. We focus on creating products and services that make a significant difference, reaching and benefiting millions rather than just generating revenue. At ZitDevs, innovation and social impact are at the heart of everything we do.",
-            "keywords": [
-                "ZitDevs",
-                "Software Development",
-                "Web Development",
-                "Mobile App Development",
-                "Consulting and Strategy",
-                "Innovative Solutions",
-                "Digital World",
-                "Custom Software",
-                "E-commerce Platforms",
-                "IT Services",
-                "Digital Transformation",
-                "Technology Consulting",
-                "Project Management",
-                "Innovation Workshops",
-                "Agile Approach",
-                "Community-Focused Development",
-                "Flexible Work Hours",
-                "Dominican Republic",
-                "Zitlancers",
-                "Zitdevs Platform",
-                "Zitdevs Waitlist",
-                "Zitdevs Contact",
-                "Zitdevs Services",
-                "Zitdevs How It Works",
-                "Zitdevs About",
-                "Zitdevs Home",
-                "Santo Domingo"
-            ],
-            "openGraph": {
-                "og:title": "Zitdevs - Leading the Way in Software Development",
-                "og:description": "Discover innovative software development solutions with Zitdevs. Our services include custom software development, web and mobile application development, and IT consulting.",
-                "og:image": "https://zitdevs.com/images/og-image.jpeg",
-                "og:url": "https://zitdevs.com",
-                "og:type": "website",
-                "og:site_name": "Zitdevs",
-                "og:locale": "en_US"
-            },
-            "twitterCard": {
-                "twitter:card": "summary_large_image",
-                "twitter:title": "Zitdevs - Leading the Way in Software Development",
-                "twitter:description": "Discover innovative software development solutions with Zitdevs. Our services include custom software development, web and mobile application development, and IT consulting.",
-                "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
-                "twitter:site": "@zitdevs",
-                "twitter:creator": "@zitdevs"
-            }
-        },
-        "header": {
-            "title": "ZitDevs",
-            "menu": {
-                "home": "Home",
-                "about": "About",
-                "how_it_works": "How it works",
-                "services": "Services",
-                "contact": "Contact"
-            },
-            "cta": {
-                "contact": "Contact"
-            }
-        },
-        "footer": {
-            "description": "At ZitDevs, we prioritize big dreams over big profits, striving to create ideas that impact millions rather than chasing millions in revenue.",
-            "links": {
-                "privacy": "Privacy Policy",
-                "terms": "Terms of Service"
-            }
-        },
-        "countries": {
-            "AF": "Afghanistan",
-            "AX": "Åland Islands",
-            "AL": "Albania",
-            "DZ": "Algeria",
-            "AS": "American Samoa",
-            "AD": "Andorra",
-            "AO": "Angola",
-            "AI": "Anguilla",
-            "AQ": "Antarctica",
-            "AG": "Antigua and Barbuda",
-            "AR": "Argentina",
-            "AM": "Armenia",
-            "AW": "Aruba",
-            "AU": "Australia",
-            "AT": "Austria",
-            "AZ": "Azerbaijan",
-            "BS": "Bahamas",
-            "BH": "Bahrain",
-            "BD": "Bangladesh",
-            "BB": "Barbados",
-            "BY": "Belarus",
-            "BE": "Belgium",
-            "BZ": "Belize",
-            "BJ": "Benin",
-            "BM": "Bermuda",
-            "BT": "Bhutan",
-            "BO": "Bolivia",
-            "BA": "Bosnia and Herzegovina",
-            "BW": "Botswana",
-            "BV": "Bouvet Island",
-            "BR": "Brazil",
-            "IO": "British Indian Ocean Territory",
-            "BN": "Brunei Darussalam",
-            "BG": "Bulgaria",
-            "BF": "Burkina Faso",
-            "BI": "Burundi",
-            "KH": "Cambodia",
-            "CM": "Cameroon",
-            "CA": "Canada",
-            "CV": "Cape Verde",
-            "KY": "Cayman Islands",
-            "CF": "Central African Republic",
-            "TD": "Chad",
-            "CL": "Chile",
-            "CN": "China",
-            "CX": "Christmas Island",
-            "CC": "Cocos (Keeling) Islands",
-            "CO": "Colombia",
-            "KM": "Comoros",
-            "CG": "Congo",
-            "CD": "Congo, The Democratic Republic of The",
-            "CK": "Cook Islands",
-            "CR": "Costa Rica",
-            "CI": "Cote D'ivoire",
-            "HR": "Croatia",
-            "CU": "Cuba",
-            "CY": "Cyprus",
-            "CZ": "Czech Republic",
-            "DK": "Denmark",
-            "DJ": "Djibouti",
-            "DM": "Dominica",
-            "DO": "Dominican Republic",
-            "EC": "Ecuador",
-            "EG": "Egypt",
-            "SV": "El Salvador",
-            "GQ": "Equatorial Guinea",
-            "ER": "Eritrea",
-            "EE": "Estonia",
-            "ET": "Ethiopia",
-            "FK": "Falkland Islands (Malvinas)",
-            "FO": "Faroe Islands",
-            "FJ": "Fiji",
-            "FI": "Finland",
-            "FR": "France",
-            "GF": "French Guiana",
-            "PF": "French Polynesia",
-            "TF": "French Southern Territories",
-            "GA": "Gabon",
-            "GM": "Gambia",
-            "GE": "Georgia",
-            "DE": "Germany",
-            "GH": "Ghana",
-            "GI": "Gibraltar",
-            "GR": "Greece",
-            "GL": "Greenland",
-            "GD": "Grenada",
-            "GP": "Guadeloupe",
-            "GU": "Guam",
-            "GT": "Guatemala",
-            "GG": "Guernsey",
-            "GN": "Guinea",
-            "GW": "Guinea-bissau",
-            "GY": "Guyana",
-            "HT": "Haiti",
-            "HM": "Heard Island and Mcdonald Islands",
-            "VA": "Holy See (Vatican City State)",
-            "HN": "Honduras",
-            "HK": "Hong Kong",
-            "HU": "Hungary",
-            "IS": "Iceland",
-            "IN": "India",
-            "ID": "Indonesia",
-            "IR": "Iran, Islamic Republic of",
-            "IQ": "Iraq",
-            "IE": "Ireland",
-            "IM": "Isle of Man",
-            "IL": "Israel",
-            "IT": "Italy",
-            "JM": "Jamaica",
-            "JP": "Japan",
-            "JE": "Jersey",
-            "JO": "Jordan",
-            "KZ": "Kazakhstan",
-            "KE": "Kenya",
-            "KI": "Kiribati",
-            "KP": "Korea, Democratic People's Republic of",
-            "KR": "Korea, Republic of",
-            "KW": "Kuwait",
-            "KG": "Kyrgyzstan",
-            "LA": "Lao People's Democratic Republic",
-            "LV": "Latvia",
-            "LB": "Lebanon",
-            "LS": "Lesotho",
-            "LR": "Liberia",
-            "LY": "Libyan Arab Jamahiriya",
-            "LI": "Liechtenstein",
-            "LT": "Lithuania",
-            "LU": "Luxembourg",
-            "MO": "Macao",
-            "MK": "Macedonia, The Former Yugoslav Republic of",
-            "MG": "Madagascar",
-            "MW": "Malawi",
-            "MY": "Malaysia",
-            "MV": "Maldives",
-            "ML": "Mali",
-            "MT": "Malta",
-            "MH": "Marshall Islands",
-            "MQ": "Martinique",
-            "MR": "Mauritania",
-            "MU": "Mauritius",
-            "YT": "Mayotte",
-            "MX": "Mexico",
-            "FM": "Micronesia, Federated States of",
-            "MD": "Moldova, Republic of",
-            "MC": "Monaco",
-            "MN": "Mongolia",
-            "ME": "Montenegro",
-            "MS": "Montserrat",
-            "MA": "Morocco",
-            "MZ": "Mozambique",
-            "MM": "Myanmar",
-            "NA": "Namibia",
-            "NR": "Nauru",
-            "NP": "Nepal",
-            "NL": "Netherlands",
-            "AN": "Netherlands Antilles",
-            "NC": "New Caledonia",
-            "NZ": "New Zealand",
-            "NI": "Nicaragua",
-            "NE": "Niger",
-            "NG": "Nigeria",
-            "NU": "Niue",
-            "NF": "Norfolk Island",
-            "MP": "Northern Mariana Islands",
-            "NO": "Norway",
-            "OM": "Oman",
-            "PK": "Pakistan",
-            "PW": "Palau",
-            "PS": "Palestinian Territory, Occupied",
-            "PA": "Panama",
-            "PG": "Papua New Guinea",
-            "PY": "Paraguay",
-            "PE": "Peru",
-            "PH": "Philippines",
-            "PN": "Pitcairn",
-            "PL": "Poland",
-            "PT": "Portugal",
-            "PR": "Puerto Rico",
-            "QA": "Qatar",
-            "RE": "Reunion",
-            "RO": "Romania",
-            "RU": "Russian Federation",
-            "RW": "Rwanda",
-            "SH": "Saint Helena",
-            "KN": "Saint Kitts and Nevis",
-            "LC": "Saint Lucia",
-            "PM": "Saint Pierre and Miquelon",
-            "VC": "Saint Vincent and The Grenadines",
-            "WS": "Samoa",
-            "SM": "San Marino",
-            "ST": "Sao Tome and Principe",
-            "SA": "Saudi Arabia",
-            "SN": "Senegal",
-            "RS": "Serbia",
-            "SC": "Seychelles",
-            "SL": "Sierra Leone",
-            "SG": "Singapore",
-            "SK": "Slovakia",
-            "SI": "Slovenia",
-            "SB": "Solomon Islands",
-            "SO": "Somalia",
-            "ZA": "South Africa",
-            "GS": "South Georgia and The South Sandwich Islands",
-            "ES": "Spain",
-            "LK": "Sri Lanka",
-            "SD": "Sudan",
-            "SR": "Suriname",
-            "SJ": "Svalbard and Jan Mayen",
-            "SZ": "Swaziland",
-            "SE": "Sweden",
-            "CH": "Switzerland",
-            "SY": "Syrian Arab Republic",
-            "TW": "Taiwan, Province of China",
-            "TJ": "Tajikistan",
-            "TZ": "Tanzania, United Republic of",
-            "TH": "Thailand",
-            "TL": "Timor-leste",
-            "TG": "Togo",
-            "TK": "Tokelau",
-            "TO": "Tonga",
-            "TT": "Trinidad and Tobago",
-            "TN": "Tunisia",
-            "TR": "Turkey",
-            "TM": "Turkmenistan",
-            "TC": "Turks and Caicos Islands",
-            "TV": "Tuvalu",
-            "UG": "Uganda",
-            "UA": "Ukraine",
-            "AE": "United Arab Emirates",
-            "GB": "United Kingdom",
-            "US": "United States",
-            "UM": "United States Minor Outlying Islands",
-            "UY": "Uruguay",
-            "UZ": "Uzbekistan",
-            "VU": "Vanuatu",
-            "VE": "Venezuela",
-            "VN": "Viet Nam",
-            "VG": "Virgin Islands, British",
-            "VI": "Virgin Islands, U.S.",
-            "WF": "Wallis and Futuna",
-            "EH": "Western Sahara",
-            "YE": "Yemen",
-            "ZM": "Zambia",
-            "ZW": "Zimbabwe"
-        }
+  "default": {
+    "metadata": {
+      "title": "ZitDevs: Passionate about building great software",
+      "description": "ZitDevs is a forward-thinking development company dedicated to transforming big ideas into impactful technological solutions. We focus on creating products and services that make a significant difference, reaching and benefiting millions rather than just generating revenue. At ZitDevs, innovation and social impact are at the heart of everything we do.",
+      "keywords": [
+        "ZitDevs",
+        "Software Development",
+        "Web Development",
+        "Mobile App Development",
+        "Consulting and Strategy",
+        "Innovative Solutions",
+        "Digital World",
+        "Custom Software",
+        "E-commerce Platforms",
+        "IT Services",
+        "Digital Transformation",
+        "Technology Consulting",
+        "Project Management",
+        "Innovation Workshops",
+        "Agile Approach",
+        "Community-Focused Development",
+        "Flexible Work Hours",
+        "Dominican Republic",
+        "Zitlancers",
+        "Zitdevs Platform",
+        "Zitdevs Waitlist",
+        "Zitdevs Contact",
+        "Zitdevs Services",
+        "Zitdevs How It Works",
+        "Zitdevs About",
+        "Zitdevs Home",
+        "Santo Domingo"
+      ],
+      "openGraph": {
+        "og:title": "Zitdevs - Leading the Way in Software Development",
+        "og:description": "Discover innovative software development solutions with Zitdevs. Our services include custom software development, web and mobile application development, and IT consulting.",
+        "og:image": "https://zitdevs.com/images/og-image.jpeg",
+        "og:url": "https://zitdevs.com",
+        "og:type": "website",
+        "og:site_name": "Zitdevs",
+        "og:locale": "en_US"
+      },
+      "twitterCard": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Zitdevs - Leading the Way in Software Development",
+        "twitter:description": "Discover innovative software development solutions with Zitdevs. Our services include custom software development, web and mobile application development, and IT consulting.",
+        "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+        "twitter:site": "@zitdevs",
+        "twitter:creator": "@zitdevs"
+      }
     },
-    "home": {
-        "sr_only": "ZitDevs: Passionate about building great software",
-        "hero": {
-            "title": "We work for dreams, and dreams bring incomes",
-            "cta": "Tell me More"
-        },
-        "what_we_do": {
-            "title": "What we do",
-            "item": {
-                "flexible": {
-                    "title": "Flexible Work Hours for Developers",
-                    "description": "At Zitdevs, we believe in providing developers with the flexibility to choose their own work hours. Our platform allows developers to work as many hours as they want each week, offering them the opportunity to earn extra income while maintaining a healthy work-life balance."
-                },
-                "community": {
-                    "title": "Community-Focused Product Development",
-                    "description": "Our team is dedicated to creating products that benefit the community. We aim to develop solutions that address real-world problems and improve the quality of life for people around the globe. Whether it’s a new app, a website, or a tool, our projects are designed with the community’s needs in mind."
-                },
-                "driven_by": {
-                    "title": "Driven by Great Ideas, Not Just Profits",
-                    "description": "We are a collective of developers motivated by the pursuit of impactful ideas rather than financial gain. Our primary goal is to work on projects that have the potential to make a significant difference, focusing on innovation and creativity over monetary rewards."
-                },
-                "empowering": {
-                    "title": "Empowering DevelopersProfits",
-                    "description": "Zitdevs provides a platform where developers can grow their skills and work on meaningful projects. We offer resources, mentorship, and a collaborative environment that fosters professional growth and development.",
-                    "image": {
-                        "alt": "Empowering Developers"
-                    }
-                },
-                "innovation": {
-                    "title": "Collaboration and Innovation",
-                    "description": "Our approach is centered around collaboration and innovation. We bring together talented developers from various backgrounds to work on cutting-edge projects. By sharing knowledge and ideas, we push the boundaries of what’s possible and deliver exceptional results."
-                },
-                "transparency": {
-                    "title": "Transparency and Fairness",
-                    "description": "At Zitdevs, we value transparency and fairness in all our dealings. We ensure that developers are fairly compensated for their work and that our clients receive honest and reliable services."
-                }
-            }
-        },
-        "how_it_works": {
-            "title": "How It Works",
-            "clients": {
-                "title": "For Clients",
-                "item": {
-                    "contact_us": {
-                        "title": "Contact Us",
-                        "description": "Start by reaching out to us through our contact form or email. We’re eager to hear about your project and understand your vision.",
-                        "icon": "message-square-more"
-                    },
-                    "schedule_call": {
-                        "title": "Schedule a Call",
-                        "description": "Once you contact us, we will schedule a call to discuss your project in detail. This call helps us grasp the potential of your idea and align it with our mission at Zitdevs.",
-                        "icon": "calendar"
-                    },
-                    "project_evaluation": {
-                        "title": "Project Evaluation",
-                        "description": "At Zitdevs, we focus on projects that show great potential as a business. Our goal is to ensure that our developers are engaged in projects that are attractive and motivating, as they often work on these after their formal jobs.",
-                        "icon": "scan-eye"
-                    },
-                    "project_approval": {
-                        "title": "Project Approval",
-                        "description": "After evaluating your project, we will approve it if it aligns with our criteria. We then assemble a dedicated team of developers who are passionate about your idea and ready to bring it to life.",
-                        "icon": "check"
-                    },
-                    "cost_effective": {
-                        "title": "Cost-Effective Development",
-                        "description": "Our model allows us to maintain a cost-effective development process while ensuring a high level of focus and commitment to your idea. This approach helps us deliver quality results without excessive costs.",
-                        "icon": "hand-coins"
-                    }
-                },
-                "cta": "Let's Talk"
-            },
-            "zitlancers": {
-                "title": "For Zitlancers",
-                "item": {
-                    "register": {
-                        "title": "Register on Our Platform",
-                        "description": "To start collaborating with us, register on our platform (currently in development). This platform will be your gateway to a variety of exciting projects.",
-                        "icon": "user-round-cog"
-                    },
-                    "browse_join": {
-                        "title": "Browse and Join Projects",
-                        "description": "Once registered, you can browse through available projects and join those that interest you. Select the number of hours you wish to dedicate each week, ranging from 5 to 15 hours.",
-                        "icon": "search-code"
-                    },
-                    "flexible_hours": {
-                        "title": "Flexible Work Hours",
-                        "description": "You have the flexibility to choose when and how much you work each week. Your main commitment is to meet the project deadlines.",
-                        "icon": "calendar-clock"
-                    },
-                    "early_bonus": {
-                        "title": "Early Delivery Bonuses",
-                        "description": "Some projects offer bonuses for early delivery, providing additional incentives for timely and efficient work.",
-                        "icon": "calendar-clock"
-                    },
-                    "submit_get_paid": {
-                        "title": "Submit Work and Get Paid",
-                        "description": "Complete your tasks within the stipulated timeline and submit your work. Payments are processed promptly based on the hours worked.",
-                        "icon": "circle-dollar-sign"
-                    }
-                },
-                "cta": "Join To Waitlist"
-            }
-        },
-        "services": {
-            "title": "Innovative Solutions",
-            "subtitle": "for a Digital World",
-            "learnMore": "Learn more",
-            "cards": {
-                "softwareDevelopment": {
-                    "title": "Software Development",
-                    "description": "We create custom software to meet your business needs, handling the entire development lifecycle from consultation to deployment. Our agile approach ensures flexibility, rapid iterations, and continuous improvement."
-                },
-                "webDevelopment": {
-                    "title": "Web Development",
-                    "description": "We create responsive websites, develop robust e-commerce platforms, and implement powerful CMS solutions for easy, non-technical content management."
-                },
-                "mobileAppDevelopment": {
-                    "title": "Mobile App Development",
-                    "description": "We develop high-performance iOS and Android apps with user-centric designs and seamless system integration. We also provide ongoing maintenance and support to ensure smooth operation."
-                },
-                "consultingStrategy": {
-                    "title": "Consulting and Strategy",
-                    "description": "We provide strategic technology consulting, project management services, and innovation workshops to help you make informed decisions, complete projects efficiently, and drive growth and innovation."
-                }
-            }
-        },
-        "contact": {
-            "title": "Contact Us",
-            "subtitle": "Ready to start a project? Drop us a line.",
-            "main_form": {
-                "label": {
-                    "default": "Who are you?",
-                    "selected": {
-                        "prefix": "I'm want to be",
-                        "remove": "Remove Selection"
-                    }
-                },
-                "buttons": {
-                    "client": "Client",
-                    "zitlancer": "Zitlancer"
-                },
-                "privacy_policy_error": "You need to accept the privacy policy",
-                "submit_messages": {
-                    "client": "Let's talk",
-                    "zitlancer": "Join To Waitlist",
-                    "success": "Thank you for contacting us. We will get back to you shortly.",
-                    "zitlancer_success": "Thank you for joining our waitlist. We will notify you once our platform is ready.",
-                    "error": "An error occurred. Please try again later.",
-                    "existing_email": "This email is already registered"
-                }
-            },
-            "client_form": {
-                "labels": {
-                    "company": "Company",
-                    "message": "Message"
-                },
-                "placeholders": {
-                    "company": "Company is required",
-                    "message": "Message is required"
-                }
-            },
-            "privacy_policy": {
-                "label": "By selecting this, you agree to our",
-                "link_text": "privacy policy",
-                "sr_only": "Agree to policies"
-            },
-            "zitlancer_form": {
-                "labels": {
-                    "main_skill": "Main Skill",
-                    "other_skill": "Other Skill",
-                    "country": "Country"
-                },
-                "placeholders": {
-                    "main_skill": "Select your main skill",
-                    "other_skill": "Please specify your main skill",
-                    "country": "Select your country",
-                    "country_search": "Search for a country",
-                    "country_select": "Select a country"
-                },
-                "validation_messages": {
-                    "main_skill_required": "Main skill is required",
-                    "other_skill_required": "Other skill is required",
-                    "country_required": "Country is required"
-                },
-                "skills": {
-                    "other": "Other"
-                }
-            },
-            "base_form": {
-                "labels": {
-                    "first_name": "First name",
-                    "last_name": "Last name",
-                    "email": "Email"
-                },
-                "validation_messages": {
-                    "email_invalid": "Invalid email address",
-                    "email_required": "Email is required",
-                    "first_name_required": "First name is required",
-                    "last_name_required": "Last name is required"
-                }
-            }
-        }
+    "header": {
+      "title": "ZitDevs",
+      "menu": {
+        "home": "Home",
+        "about": "About",
+        "how_it_works": "How it works",
+        "services": "Services",
+        "contact": "Contact"
+      },
+      "cta": {
+        "contact": "Contact"
+      }
+    },
+    "footer": {
+      "description": "At ZitDevs, we prioritize big dreams over big profits, striving to create ideas that impact millions rather than chasing millions in revenue.",
+      "links": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      }
+    },
+    "countries": {
+      "AF": "Afghanistan",
+      "AX": "Åland Islands",
+      "AL": "Albania",
+      "DZ": "Algeria",
+      "AS": "American Samoa",
+      "AD": "Andorra",
+      "AO": "Angola",
+      "AI": "Anguilla",
+      "AQ": "Antarctica",
+      "AG": "Antigua and Barbuda",
+      "AR": "Argentina",
+      "AM": "Armenia",
+      "AW": "Aruba",
+      "AU": "Australia",
+      "AT": "Austria",
+      "AZ": "Azerbaijan",
+      "BS": "Bahamas",
+      "BH": "Bahrain",
+      "BD": "Bangladesh",
+      "BB": "Barbados",
+      "BY": "Belarus",
+      "BE": "Belgium",
+      "BZ": "Belize",
+      "BJ": "Benin",
+      "BM": "Bermuda",
+      "BT": "Bhutan",
+      "BO": "Bolivia",
+      "BA": "Bosnia and Herzegovina",
+      "BW": "Botswana",
+      "BV": "Bouvet Island",
+      "BR": "Brazil",
+      "IO": "British Indian Ocean Territory",
+      "BN": "Brunei Darussalam",
+      "BG": "Bulgaria",
+      "BF": "Burkina Faso",
+      "BI": "Burundi",
+      "KH": "Cambodia",
+      "CM": "Cameroon",
+      "CA": "Canada",
+      "CV": "Cape Verde",
+      "KY": "Cayman Islands",
+      "CF": "Central African Republic",
+      "TD": "Chad",
+      "CL": "Chile",
+      "CN": "China",
+      "CX": "Christmas Island",
+      "CC": "Cocos (Keeling) Islands",
+      "CO": "Colombia",
+      "KM": "Comoros",
+      "CG": "Congo",
+      "CD": "Congo, The Democratic Republic of The",
+      "CK": "Cook Islands",
+      "CR": "Costa Rica",
+      "CI": "Cote D'ivoire",
+      "HR": "Croatia",
+      "CU": "Cuba",
+      "CY": "Cyprus",
+      "CZ": "Czech Republic",
+      "DK": "Denmark",
+      "DJ": "Djibouti",
+      "DM": "Dominica",
+      "DO": "Dominican Republic",
+      "EC": "Ecuador",
+      "EG": "Egypt",
+      "SV": "El Salvador",
+      "GQ": "Equatorial Guinea",
+      "ER": "Eritrea",
+      "EE": "Estonia",
+      "ET": "Ethiopia",
+      "FK": "Falkland Islands (Malvinas)",
+      "FO": "Faroe Islands",
+      "FJ": "Fiji",
+      "FI": "Finland",
+      "FR": "France",
+      "GF": "French Guiana",
+      "PF": "French Polynesia",
+      "TF": "French Southern Territories",
+      "GA": "Gabon",
+      "GM": "Gambia",
+      "GE": "Georgia",
+      "DE": "Germany",
+      "GH": "Ghana",
+      "GI": "Gibraltar",
+      "GR": "Greece",
+      "GL": "Greenland",
+      "GD": "Grenada",
+      "GP": "Guadeloupe",
+      "GU": "Guam",
+      "GT": "Guatemala",
+      "GG": "Guernsey",
+      "GN": "Guinea",
+      "GW": "Guinea-bissau",
+      "GY": "Guyana",
+      "HT": "Haiti",
+      "HM": "Heard Island and Mcdonald Islands",
+      "VA": "Holy See (Vatican City State)",
+      "HN": "Honduras",
+      "HK": "Hong Kong",
+      "HU": "Hungary",
+      "IS": "Iceland",
+      "IN": "India",
+      "ID": "Indonesia",
+      "IR": "Iran, Islamic Republic of",
+      "IQ": "Iraq",
+      "IE": "Ireland",
+      "IM": "Isle of Man",
+      "IL": "Israel",
+      "IT": "Italy",
+      "JM": "Jamaica",
+      "JP": "Japan",
+      "JE": "Jersey",
+      "JO": "Jordan",
+      "KZ": "Kazakhstan",
+      "KE": "Kenya",
+      "KI": "Kiribati",
+      "KP": "Korea, Democratic People's Republic of",
+      "KR": "Korea, Republic of",
+      "KW": "Kuwait",
+      "KG": "Kyrgyzstan",
+      "LA": "Lao People's Democratic Republic",
+      "LV": "Latvia",
+      "LB": "Lebanon",
+      "LS": "Lesotho",
+      "LR": "Liberia",
+      "LY": "Libyan Arab Jamahiriya",
+      "LI": "Liechtenstein",
+      "LT": "Lithuania",
+      "LU": "Luxembourg",
+      "MO": "Macao",
+      "MK": "Macedonia, The Former Yugoslav Republic of",
+      "MG": "Madagascar",
+      "MW": "Malawi",
+      "MY": "Malaysia",
+      "MV": "Maldives",
+      "ML": "Mali",
+      "MT": "Malta",
+      "MH": "Marshall Islands",
+      "MQ": "Martinique",
+      "MR": "Mauritania",
+      "MU": "Mauritius",
+      "YT": "Mayotte",
+      "MX": "Mexico",
+      "FM": "Micronesia, Federated States of",
+      "MD": "Moldova, Republic of",
+      "MC": "Monaco",
+      "MN": "Mongolia",
+      "ME": "Montenegro",
+      "MS": "Montserrat",
+      "MA": "Morocco",
+      "MZ": "Mozambique",
+      "MM": "Myanmar",
+      "NA": "Namibia",
+      "NR": "Nauru",
+      "NP": "Nepal",
+      "NL": "Netherlands",
+      "AN": "Netherlands Antilles",
+      "NC": "New Caledonia",
+      "NZ": "New Zealand",
+      "NI": "Nicaragua",
+      "NE": "Niger",
+      "NG": "Nigeria",
+      "NU": "Niue",
+      "NF": "Norfolk Island",
+      "MP": "Northern Mariana Islands",
+      "NO": "Norway",
+      "OM": "Oman",
+      "PK": "Pakistan",
+      "PW": "Palau",
+      "PS": "Palestinian Territory, Occupied",
+      "PA": "Panama",
+      "PG": "Papua New Guinea",
+      "PY": "Paraguay",
+      "PE": "Peru",
+      "PH": "Philippines",
+      "PN": "Pitcairn",
+      "PL": "Poland",
+      "PT": "Portugal",
+      "PR": "Puerto Rico",
+      "QA": "Qatar",
+      "RE": "Reunion",
+      "RO": "Romania",
+      "RU": "Russian Federation",
+      "RW": "Rwanda",
+      "SH": "Saint Helena",
+      "KN": "Saint Kitts and Nevis",
+      "LC": "Saint Lucia",
+      "PM": "Saint Pierre and Miquelon",
+      "VC": "Saint Vincent and The Grenadines",
+      "WS": "Samoa",
+      "SM": "San Marino",
+      "ST": "Sao Tome and Principe",
+      "SA": "Saudi Arabia",
+      "SN": "Senegal",
+      "RS": "Serbia",
+      "SC": "Seychelles",
+      "SL": "Sierra Leone",
+      "SG": "Singapore",
+      "SK": "Slovakia",
+      "SI": "Slovenia",
+      "SB": "Solomon Islands",
+      "SO": "Somalia",
+      "ZA": "South Africa",
+      "GS": "South Georgia and The South Sandwich Islands",
+      "ES": "Spain",
+      "LK": "Sri Lanka",
+      "SD": "Sudan",
+      "SR": "Suriname",
+      "SJ": "Svalbard and Jan Mayen",
+      "SZ": "Swaziland",
+      "SE": "Sweden",
+      "CH": "Switzerland",
+      "SY": "Syrian Arab Republic",
+      "TW": "Taiwan, Province of China",
+      "TJ": "Tajikistan",
+      "TZ": "Tanzania, United Republic of",
+      "TH": "Thailand",
+      "TL": "Timor-leste",
+      "TG": "Togo",
+      "TK": "Tokelau",
+      "TO": "Tonga",
+      "TT": "Trinidad and Tobago",
+      "TN": "Tunisia",
+      "TR": "Turkey",
+      "TM": "Turkmenistan",
+      "TC": "Turks and Caicos Islands",
+      "TV": "Tuvalu",
+      "UG": "Uganda",
+      "UA": "Ukraine",
+      "AE": "United Arab Emirates",
+      "GB": "United Kingdom",
+      "US": "United States",
+      "UM": "United States Minor Outlying Islands",
+      "UY": "Uruguay",
+      "UZ": "Uzbekistan",
+      "VU": "Vanuatu",
+      "VE": "Venezuela",
+      "VN": "Viet Nam",
+      "VG": "Virgin Islands, British",
+      "VI": "Virgin Islands, U.S.",
+      "WF": "Wallis and Futuna",
+      "EH": "Western Sahara",
+      "YE": "Yemen",
+      "ZM": "Zambia",
+      "ZW": "Zimbabwe"
+    },
+    "shared": {
+      "included": "Included",
+      "not_included": "Not Included",
+      "starting_at": "Starting at",
+      "monthly": "monthly",
+      "hour": "hour"
     }
+  },
+  "home": {
+    "sr_only": "ZitDevs: Passionate about building great software",
+    "hero": {
+      "title": "We work for dreams, and dreams bring incomes",
+      "cta": "Tell me More"
+    },
+    "what_we_do": {
+      "title": "What we do",
+      "item": {
+        "flexible": {
+          "title": "Flexible Work Hours for Developers",
+          "description": "At Zitdevs, we believe in providing developers with the flexibility to choose their own work hours. Our platform allows developers to work as many hours as they want each week, offering them the opportunity to earn extra income while maintaining a healthy work-life balance."
+        },
+        "community": {
+          "title": "Community-Focused Product Development",
+          "description": "Our team is dedicated to creating products that benefit the community. We aim to develop solutions that address real-world problems and improve the quality of life for people around the globe. Whether it’s a new app, a website, or a tool, our projects are designed with the community’s needs in mind."
+        },
+        "driven_by": {
+          "title": "Driven by Great Ideas, Not Just Profits",
+          "description": "We are a collective of developers motivated by the pursuit of impactful ideas rather than financial gain. Our primary goal is to work on projects that have the potential to make a significant difference, focusing on innovation and creativity over monetary rewards."
+        },
+        "empowering": {
+          "title": "Empowering DevelopersProfits",
+          "description": "Zitdevs provides a platform where developers can grow their skills and work on meaningful projects. We offer resources, mentorship, and a collaborative environment that fosters professional growth and development.",
+          "image": {
+            "alt": "Empowering Developers"
+          }
+        },
+        "innovation": {
+          "title": "Collaboration and Innovation",
+          "description": "Our approach is centered around collaboration and innovation. We bring together talented developers from various backgrounds to work on cutting-edge projects. By sharing knowledge and ideas, we push the boundaries of what’s possible and deliver exceptional results."
+        },
+        "transparency": {
+          "title": "Transparency and Fairness",
+          "description": "At Zitdevs, we value transparency and fairness in all our dealings. We ensure that developers are fairly compensated for their work and that our clients receive honest and reliable services."
+        }
+      }
+    },
+    "how_it_works": {
+      "title": "How It Works",
+      "clients": {
+        "title": "For Clients",
+        "item": {
+          "contact_us": {
+            "title": "Contact Us",
+            "description": "Start by reaching out to us through our contact form or email. We’re eager to hear about your project and understand your vision.",
+            "icon": "message-square-more"
+          },
+          "schedule_call": {
+            "title": "Schedule a Call",
+            "description": "Once you contact us, we will schedule a call to discuss your project in detail. This call helps us grasp the potential of your idea and align it with our mission at Zitdevs.",
+            "icon": "calendar"
+          },
+          "project_evaluation": {
+            "title": "Project Evaluation",
+            "description": "At Zitdevs, we focus on projects that show great potential as a business. Our goal is to ensure that our developers are engaged in projects that are attractive and motivating, as they often work on these after their formal jobs.",
+            "icon": "scan-eye"
+          },
+          "project_approval": {
+            "title": "Project Approval",
+            "description": "After evaluating your project, we will approve it if it aligns with our criteria. We then assemble a dedicated team of developers who are passionate about your idea and ready to bring it to life.",
+            "icon": "check"
+          },
+          "cost_effective": {
+            "title": "Cost-Effective Development",
+            "description": "Our model allows us to maintain a cost-effective development process while ensuring a high level of focus and commitment to your idea. This approach helps us deliver quality results without excessive costs.",
+            "icon": "hand-coins"
+          }
+        },
+        "cta": "Let's Talk"
+      },
+      "zitlancers": {
+        "title": "For Zitlancers",
+        "item": {
+          "register": {
+            "title": "Register on Our Platform",
+            "description": "To start collaborating with us, register on our platform (currently in development). This platform will be your gateway to a variety of exciting projects.",
+            "icon": "user-round-cog"
+          },
+          "browse_join": {
+            "title": "Browse and Join Projects",
+            "description": "Once registered, you can browse through available projects and join those that interest you. Select the number of hours you wish to dedicate each week, ranging from 5 to 15 hours.",
+            "icon": "search-code"
+          },
+          "flexible_hours": {
+            "title": "Flexible Work Hours",
+            "description": "You have the flexibility to choose when and how much you work each week. Your main commitment is to meet the project deadlines.",
+            "icon": "calendar-clock"
+          },
+          "early_bonus": {
+            "title": "Early Delivery Bonuses",
+            "description": "Some projects offer bonuses for early delivery, providing additional incentives for timely and efficient work.",
+            "icon": "calendar-clock"
+          },
+          "submit_get_paid": {
+            "title": "Submit Work and Get Paid",
+            "description": "Complete your tasks within the stipulated timeline and submit your work. Payments are processed promptly based on the hours worked.",
+            "icon": "circle-dollar-sign"
+          }
+        },
+        "cta": "Join To Waitlist"
+      }
+    },
+    "services": {
+      "title": "Innovative Solutions",
+      "subtitle": "for a Digital World",
+      "learnMore": "Learn more",
+      "cards": {
+        "softwareDevelopment": {
+          "title": "Software Development",
+          "description": "We create custom software to meet your business needs, handling the entire development lifecycle from consultation to deployment. Our agile approach ensures flexibility, rapid iterations, and continuous improvement."
+        },
+        "webDevelopment": {
+          "title": "Web Development",
+          "description": "We create responsive websites, develop robust e-commerce platforms, and implement powerful CMS solutions for easy, non-technical content management."
+        },
+        "mobileAppDevelopment": {
+          "title": "Mobile App Development",
+          "description": "We develop high-performance iOS and Android apps with user-centric designs and seamless system integration. We also provide ongoing maintenance and support to ensure smooth operation."
+        },
+        "consultingStrategy": {
+          "title": "Consulting and Strategy",
+          "description": "We provide strategic technology consulting, project management services, and innovation workshops to help you make informed decisions, complete projects efficiently, and drive growth and innovation."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Ready to start a project? Drop us a line.",
+      "main_form": {
+        "label": {
+          "default": "Who are you?",
+          "selected": {
+            "prefix": "I'm want to be",
+            "remove": "Remove Selection"
+          }
+        },
+        "buttons": {
+          "client": "Client",
+          "zitlancer": "Zitlancer"
+        },
+        "privacy_policy_error": "You need to accept the privacy policy",
+        "submit_messages": {
+          "client": "Let's talk",
+          "zitlancer": "Join To Waitlist",
+          "success": "Thank you for contacting us. We will get back to you shortly.",
+          "zitlancer_success": "Thank you for joining our waitlist. We will notify you once our platform is ready.",
+          "error": "An error occurred. Please try again later.",
+          "existing_email": "This email is already registered"
+        }
+      },
+      "client_form": {
+        "labels": {
+          "company": "Company",
+          "message": "Message"
+        },
+        "placeholders": {
+          "company": "Company is required",
+          "message": "Message is required"
+        }
+      },
+      "privacy_policy": {
+        "label": "By selecting this, you agree to our",
+        "link_text": "privacy policy",
+        "sr_only": "Agree to policies"
+      },
+      "zitlancer_form": {
+        "labels": {
+          "main_skill": "Main Skill",
+          "other_skill": "Other Skill",
+          "country": "Country"
+        },
+        "placeholders": {
+          "main_skill": "Select your main skill",
+          "other_skill": "Please specify your main skill",
+          "country": "Select your country",
+          "country_search": "Search for a country",
+          "country_select": "Select a country"
+        },
+        "validation_messages": {
+          "main_skill_required": "Main skill is required",
+          "other_skill_required": "Other skill is required",
+          "country_required": "Country is required"
+        },
+        "skills": {
+          "other": "Other"
+        }
+      },
+      "base_form": {
+        "labels": {
+          "first_name": "First name",
+          "last_name": "Last name",
+          "email": "Email"
+        },
+        "validation_messages": {
+          "email_invalid": "Invalid email address",
+          "email_required": "Email is required",
+          "first_name_required": "First name is required",
+          "last_name_required": "Last name is required"
+        }
+      }
+    }
+  },
+  "services": {
+    "metadata": {
+      "title": "Top Custom Software Development Services | ZitDevs",
+      "description": "ZitDevs provides expert custom software development services designed to meet your unique business needs. From consultation to deployment, our agile team ensures top-notch solutions that deliver results.",
+      "keywords": [
+        "Custom Software Development",
+        "Software Development Services",
+        "Agile Software Solutions",
+        "Custom Software Solutions",
+        "Business Software Development",
+        "Software Development Company",
+        "Tailored Software Development",
+        "Enterprise Software Solutions",
+        "Software Development Consultation",
+        "End-to-End Software Development",
+        "Software Project Management",
+        "Custom Software Pricing",
+        "Software Development Lifecycle",
+        "Scalable Software Development",
+        "Cloud Software Solutions",
+        "Software Development Support",
+        "Web and Mobile Development",
+        "Software Development Quality Assurance",
+        "Custom Application Development",
+        "Software Development Consulting"
+      ],
+      "openGraph": {
+        "og:title": "Top Custom Software Development Services | ZitDevs",
+        "og:description": "ZitDevs offers premium custom software development services, tailored to fit your business requirements and ensure success in every stage, from consultation to deployment.",
+        "og:image": "https://zitdevs.com/images/og-image.jpeg",
+        "og:url": "https://zitdevs.com",
+        "og:type": "website",
+        "og:site_name": "ZitDevs",
+        "og:locale": "en_US"
+      },
+      "twitterCard": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Top Custom Software Development Services | ZitDevs",
+        "twitter:description": "ZitDevs delivers expert custom software development services, ensuring high-quality results that drive business growth.",
+        "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+        "twitter:site": "@zitdevs",
+        "twitter:creator": "@zitdevs"
+      }
+    },
+    "hero": {
+      "title": "Innovative Solutions for a Digital World",
+      "description": "At ZitDevs, we bring your digital ideas to life with a comprehensive range of services tailored to meet the demands of the modern business landscape. From custom software development to strategic consulting, our expert team is dedicated to driving your success through technology.",
+      "cta": "Explore our offerings below"
+    },
+    "cards": {
+      "softwareDevelopment": {
+        "title": "Software Development",
+        "description": [
+          "We craft custom software solutions that align with your unique business needs. From initial consultation to final deployment, we handle the entire development lifecycle with an agile approach, ensuring flexibility, rapid iterations, and continuous improvement. Whether you’re looking to streamline operations or introduce innovative features, ZitDevs delivers reliable, scalable solutions.",
+          "Ready to turn your ideas into reality?"
+        ],
+        "cta": "Learn more about our software development services"
+      },
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": [
+          "Empower your online presence with our web development services. We specialize in creating responsive, user-friendly websites, building robust e-commerce platforms, and implementing powerful CMS solutions that simplify content management. Our web development team ensures that your site not only looks great but also performs seamlessly, providing an exceptional user experience.",
+          "Transform your online presence."
+        ],
+        "cta": "Discover our web development solutions "
+      },
+      "mobileAppDevelopment": {
+        "title": "Mobile App Development",
+        "description": [
+          "Reach your audience on the go with our high-performance mobile app development services. We design and develop iOS and Android apps that combine user-centric designs with flawless system integration. Our commitment to ongoing maintenance and support ensures your app operates smoothly, keeping your users engaged and satisfied.",
+          "Bring your app idea to life."
+        ],
+        "cta": "Explore our mobile app development services"
+      },
+      "consultingStrategy": {
+        "title": "Consulting and Strategy",
+        "description": [
+          "Navigate the complexities of technology with our consulting and strategy services. We provide expert guidance in strategic technology planning, project management, and innovation workshops, helping you make informed decisions and achieve your business goals. Whether you’re launching a new project or optimizing existing operations, ZitDevs is your partner in driving growth and innovation.",
+          "Take your business to the next level."
+        ],
+        "cta": "Learn more about our consulting services"
+      }
+    },
+    "ourProcess": {
+      "title": "Our Process",
+      "steps": {
+        "project": {
+          "title": "Project Kickoff & Assignment",
+          "description": "Your project begins with the assignment of a dedicated Project Manager (PM) who will oversee the project and serve as your main point of contact"
+        },
+        "development": {
+          "title": "Development Team Assembly",
+          "description": "We assemble a team of expert developers tailored to the specific technologies and needs of your project."
+        },
+        "quality": {
+          "title": "Code Review & Quality Assurance",
+          "description": "Throughout development, our team conducts rigorous code reviews and quality assurance testing to ensure the software meets all required standards."
+        },
+        "client": {
+          "title": "Staging & Client Review",
+          "description": "Your software is deployed in a staging environment for final testing and client feedback before the official launch."
+        },
+        "deployment": {
+          "title": "Deployment & Support",
+          "description": "We handle the deployment to your live environment and provide ongoing support to ensure the software runs smoothly. We also offer post-launch support for any issues that may arise."
+        }
+      }
+    },
+    "page": {
+      "softwareDevelopment": {
+        "metadata": {
+          "title": "Custom Software Development Plans | ZitDevs",
+          "description": "ZitDevs offers a variety of software development plans tailored to meet the needs of businesses of all sizes. From startups to large enterprises, our custom solutions ensure quality, efficiency, and scalable results.",
+          "keywords": [
+            "Custom Software Development",
+            "Software Development Pricing",
+            "Software Development Plans",
+            "MVP Development",
+            "Enterprise Software Solutions",
+            "Business Software Development",
+            "Agile Software Development",
+            "Scalable Software Solutions",
+            "Software Development Consulting",
+            "Tailored Software Development"
+          ],
+          "openGraph": {
+            "og:title": "Custom Software Development Plans | ZitDevs",
+            "og:description": "Explore ZitDevs' flexible software development plans, offering tailored solutions for businesses of all sizes. Get the custom software you need with pricing options to fit your budget.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "en_US"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Custom Software Development Plans | ZitDevs",
+            "twitter:description": "ZitDevs provides flexible software development plans for businesses, ranging from startups to large enterprises. Discover our tailored solutions and competitive pricing.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
+        "title": "Software Development",
+        "description": "At <strong>ZitDevs</strong>, we create <strong>custom software solutions</strong> tailored to your specific business needs. Our process ensures quality and efficiency from the initial consultation to final deployment, supported by our experienced team of developers and project managers.",
+        "pricing": {
+          "title": "Pricing",
+          "description": "Our pricing plans are designed to accommodate businesses of all sizes and budgets. Whether you're a startup looking to develop an <strong>MVP</strong> or a large enterprise seeking a highly customized solution, <strong>we have a plan that fits your needs.</strong>",
+          "plans": {
+            "growth": {
+              "title": "Growth Plan",
+              "description": "Ideal for mid-sized companies looking for more complex solutions.",
+              "features": [
+                "Development Hours: Up to 800",
+                "Project Management: Enhanced PM with bi-weekly reports",
+                "Technology Stack: Multi-tech stack support",
+                "Support: 60 days post-launch",
+                "Extra Hours: $44.99/hour"
+              ],
+              "cta": "Quote Request"
+            },
+            "essentials": {
+              "title": "Essentials Plan",
+              "description": "Perfect for startups and small businesses.",
+              "features": [
+                "Development Hours: Up to 400",
+                "Project Management: Dedicated PM",
+                "Technology Stack: Single tech stack",
+                "Support: 90 days post-launch",
+                "Extra Hours: $39.99/hour"
+              ],
+              "cta": "Quote Request"
+            },
+            "enterprise": {
+              "title": "Enterprise Excellence Plan",
+              "description": "Tailored for large enterprises needing a comprehensive solution.",
+              "features": [
+                "Development Hours: From 1200",
+                "Project Management: Premium PM with daily updates and BA included",
+                "Technology Stack: Custom tech stack and full integration",
+                "Support: 3 months with priority support",
+                "Extra Hours: $49.99/hour"
+              ],
+              "cta": "Quote Request"
+            },
+            "flexible": {
+              "title": "FlexiDev Plan",
+              "description": "Flexible and scalable for businesses with changing needs.",
+              "features": [
+                "Development Hours: Minimum 36 hours",
+                "Project Management: Available on request",
+                "Support: Pay-as-you-go",
+                "Unlimited development hours"
+              ],
+              "frequency": "hour",
+              "cta": "Quote Request"
+            }
+          }
+        },
+        "comparePricing": {
+          "title": "Compare Pricing Plans",
+          "plans": {
+            "flexible": {
+              "title": "FlexiDev Plan<br/>(Pay-As-You-Go)",
+              "description": "Businesses needing flexible development hours or ongoing support without long-term commitment.",
+              "frequency": "hour",
+              "cta": "Quote Request"
+            },
+            "essentials": {
+              "title": "Essentials Plan",
+              "description": "Small businesses or startups looking to develop a basic MVP or small-scale application.",
+              "cta": "Quote Request"
+            },
+            "growth": {
+              "title": "Growth Plan",
+              "description": "Mid-sized companies needing more complex software with additional features.",
+              "cta": "Quote Request"
+            },
+            "enterprise": {
+              "title": "Enterprise Excellence Plan",
+              "description": "Large enterprises seeking highly customized solutions with advanced features.",
+              "cta": "Quote Request"
+            }
+          },
+          "details": {
+            "coreFeatures": {
+              "title": "Core Development Features",
+              "features": {
+                "development": {
+                  "title": "Development Hours",
+                  "columns": {
+                    "flexible": "Minimum 36 hours",
+                    "essentials": "Up to 400 hours",
+                    "growth": "Up to 800 hours",
+                    "enterprise": "From 1200 hours"
+                  }
+                },
+                "dedicated": {
+                  "title": "Dedicated Project Manager",
+                  "columns": {
+                    "flexible": "per request (hourly rate)",
+                    "growth": "with bi-weekly reports",
+                    "enterprise": "with daily updates, BA included"
+                  }
+                },
+                "tech": {
+                  "title": "Technology Stack",
+                  "columns": {
+                    "flexible": "Flexible tech stack",
+                    "essentials": "Single tech stack",
+                    "growth": "Multi-tech stack support",
+                    "enterprise": "Custom tech stack, full integration"
+                  }
+                }
+              }
+            },
+            "quality": {
+              "title": "Quality Assurance & Support",
+              "features": {
+                "codeReview": {
+                  "title": "Code Review"
+                },
+                "qaTesting": {
+                  "title": "QA & Testing",
+                  "columns": {
+                    "flexible": "Basic testing (hourly rate)",
+                    "essentials": "Standard testing",
+                    "growth": "Advanced automated testing",
+                    "enterprise": "Extensive testing including security audits"
+                  }
+                },
+                "userAcceptance": {
+                  "title": "User Acceptance Testing",
+                  "columns": {
+                    "flexible": "Available as an add-on"
+                  }
+                }
+              }
+            },
+            "support": {
+              "title": "Support & Maintenance",
+              "features": {
+                "postLaunch": {
+                  "title": "Post-Launch Support",
+                  "columns": {
+                    "flexible": "Available on an hourly basis",
+                    "essentials": "90 days",
+                    "growth": "180 days",
+                    "enterprise": "3 months, with priority support"
+                  }
+                },
+                "maintenance": {
+                  "title": "Maintenance",
+                  "columns": {
+                    "flexible": "Available as an add-on",
+                    "essentials": "Basic maintenance",
+                    "growth": "Extended maintenance",
+                    "enterprise": "Full maintenance package"
+                  }
+                },
+                "staging": {
+                  "title": "Staging Environment",
+                  "columns": {
+                    "flexible": "Available as an add-on"
+                  }
+                }
+              }
+            },
+            "additional": {
+              "title": "Additional Features",
+              "features": {
+                "consultation": {
+                  "title": "Consultation",
+                  "columns": {
+                    "flexible": "$300 upfront fee for 5 hours",
+                    "essentials": "5 hours per month",
+                    "growth": "10 hours per month",
+                    "enterprise": "Unlimited consultations"
+                  }
+                },
+                "customIntegration": {
+                  "title": "Custom Integrations",
+                  "columns": {
+                    "flexible": "Available on an hourly basis",
+                    "essentials": "Limited",
+                    "growth": "Multiple integrations",
+                    "enterprise": "Full integration support"
+                  }
+                },
+                "performanceOptimization": {
+                  "title": "Performance Optimization",
+                  "columns": {
+                    "flexible": "Available as an add-on",
+                    "enterprise": "Advanced optimization"
+                  }
+                },
+                "extraHours": {
+                  "title": "Extra Hours",
+                  "columns": {
+                    "flexible": "Included in hourly rate",
+                    "essentials": "From $39.99/hour",
+                    "growth": "From $44.99/hour",
+                    "enterprise": "From $49.99/hour"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "websiteDevelopment": {
+        "metadata": {
+          "title": "Professional Web Development Services | ZitDevs",
+          "description": "ZitDevs offers tailored web development solutions for businesses of all sizes. From startups to enterprises, our plans cover everything from template-based designs to fully custom websites, ensuring your business has a strong and optimized online presence.",
+          "keywords": [
+            "Web Development Services",
+            "Custom Website Design",
+            "Responsive Web Design",
+            "SEO Optimized Websites",
+            "Business Websites",
+            "Affordable Web Development",
+            "Website Development Plans",
+            "Professional Web Development",
+            "Website Development for Startups",
+            "Website Development for Enterprises"
+          ],
+          "openGraph": {
+            "og:title": "Professional Web Development Services | ZitDevs",
+            "og:description": "Build your online presence with ZitDevs. From simple, template-based websites to fully customized solutions, we offer web development services that are tailored to fit your business needs and budget.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "en_US"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Professional Web Development Services | ZitDevs",
+            "twitter:description": "ZitDevs specializes in affordable web development solutions for businesses of all sizes. Get online with custom web development plans tailored to your needs.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
+        "title": "Build Your Online Presence with ZitDevs",
+        "description": "At <strong>ZitDevs</strong>, we specialize in creating tailored web solutions that help your business stand out online. Whether you’re a startup looking to establish your first website or a growing company needing a more robust online presence, our web development plans are designed to meet your needs without breaking your budget. From template-based designs to fully custom solutions, we ensure your website is not only visually appealing but also optimized for performance and SEO. With our competitive pricing and ongoing support, getting online has never been easier.",
+        "pricing": {
+          "title": "Choose Your Plan",
+          "description": "Get your business online with a plan that fits your needs and budget. Whether you’re just starting or looking to expand, ZitDevs offers affordable solutions with no compromise on quality.",
+          "plans": {
+            "essentials": {
+              "title": "Essential Web",
+              "description": "Perfect for startups or small businesses starting their online journey.",
+              "features": [
+                "Template-Based Design: Choose from professional templates.",
+                "Pages: Up to 3 customizable pages.",
+                "SEO Setup: Basic SEO to help you get noticed.",
+                "Responsive Design: Optimized for mobile and desktop.",
+                "Hosting: Shared hosting.",
+                "Support: 90 days of post-launch support."
+              ],
+              "cta": "Choose Plan"
+            },
+            "growth": {
+              "title": "Growth Web",
+              "description": "Ideal for growing businesses needing a more customized solution.",
+              "features": [
+                "Custom Design: Tailored design that represents your brand.",
+                "Pages: Up to 5 custom pages.",
+                "SEO Setup: Enhanced SEO to boost visibility.",
+                "Project Manager: Dedicated PM for smooth project execution.",
+                "Production Time: Site live within 3 to 6 weeks.",
+                "Hosting: Enhanced shared hosting with better performance.",
+                "Support: 180 days of post-launch support."
+              ],
+              "cta": "Choose Plan"
+            },
+            "professional": {
+              "title": "Professional Web",
+              "description": "Best for businesses that need a comprehensive and professional online presence.",
+              "features": [
+                "Fully Custom Design: Unique design created just for you.",
+                "Pages: Up to 10 custom pages.",
+                "Comprehensive SEO: Advanced SEO to drive traffic.",
+                "Project Manager: Dedicated PM and strategic planning with a Business Analyst.",
+                "Custom Production Timeline: Tailored to your business needs.",
+                "Hosting: Premium dedicated hosting with top-tier features.",
+                "Support: 3 months of premium support."
+              ],
+              "cta": "Contact Sales"
+            },
+            "flexidev": {
+              "title": "FlexiDev Web",
+              "description": "Perfect for businesses with ongoing needs or specific, smaller projects.",
+              "features": [
+                "Custom Development: Flexible hours to suit your needs.",
+                "Consultation: $300 upfront fee for initial planning and consultation.",
+                "Support: Available as needed with flexible options."
+              ],
+              "cta": "Choose Plan"
+            }
+          }
+        },
+        "comparePricing": {
+          "title": "Choose Your Plan",
+          "description": "Find the perfect web development plan for your business. Whether you’re just starting out or expanding your online presence, ZitDevs has you covered.",
+          "plans": {
+            "flexidev": {
+              "title": "FlexiDev Web (Pay-As-You-Go)",
+              "description": "Perfect for businesses with ongoing needs or specific, smaller projects.",
+              "cta": "Choose Plan"
+            },
+            "essentials": {
+              "title": "Essential Web",
+              "description": "Perfect for startups or small businesses starting their online journey.",
+              "cta": "Choose Plan"
+            },
+            "growth": {
+              "title": "Growth Web",
+              "description": "Ideal for growing businesses needing a more customized solution.",
+              "cta": "Choose Plan"
+            },
+            "professional": {
+              "title": "Professional Web",
+              "description": "Best for businesses that need a comprehensive and professional online presence.",
+              "cta": "Contact Sales"
+            }
+          },
+          "details": {
+            "designAndPages": {
+              "title": "Design & Pages",
+              "features": {
+                "designType": {
+                  "title": "Design Type",
+                  "columns": {
+                    "flexidev": "Custom development",
+                    "essentials": "Template-based",
+                    "growth": "Custom design",
+                    "professional": "Fully Custom Design"
+                  }
+                },
+                "numberOfPage": {
+                  "title": "Number of Pages",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "Up to 3 pages",
+                    "growth": "Up to 5 pages",
+                    "professional": "Up to 10 pages"
+                  }
+                },
+                "responsiveDesign": {
+                  "title": "Responsive Design"
+                },
+                "customizationOptions": {
+                  "title": "Customization Options",
+                  "columns": {
+                    "flexidev": "Fully Customizable",
+                    "essentials": "Limited",
+                    "growth": "Moderate",
+                    "professional": "Full Customization"
+                  }
+                }
+              }
+            },
+            "SEOAndPerformance": {
+              "title": "SEO & Performance",
+              "features": {
+                "SeoSetup": {
+                  "title": "SEO Setup",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "Basic SEO",
+                    "growth": "Enhanced SEO",
+                    "professional": "Comprehensive SEO"
+                  }
+                },
+                "pageLoadOptimization": {
+                  "title": "Page Load Optimization",
+                  "columns": {
+                    "flexidev": "Customizable"
+                  }
+                },
+                "performanceMonitoring": {
+                  "title": "Performance Monitoring",
+                  "columns": {
+                    "flexidev": "Customizable"
+                  }
+                }
+              }
+            },
+            "projectManagementAndSupport": {
+              "title": "Project Management & Support",
+              "features": {
+                "projectManager": {
+                  "title": "Project Manager",
+                  "columns": {
+                    "flexidev": "Available as needed",
+                    "growth": "Dedicated PM",
+                    "professional": "Dedicated PM & BA"
+                  }
+                },
+                "postLaunchSupport": {
+                  "title": "Post-Launch Support",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "90 days",
+                    "growth": "180 days",
+                    "professional": "3 months with priority support"
+                  }
+                },
+                "consultationHours": {
+                  "title": "Consultation Hours",
+                  "columns": {
+                    "flexidev": "$300 upfront fee for 5 hours",
+                    "growth": "Up to 5 hours",
+                    "professional": "Up to 10 hours"
+                  }
+                }
+              }
+            },
+            "hostingAndMaintenance": {
+              "title": "Hosting & Maintenance",
+              "features": {
+                "hosting": {
+                  "title": "Hosting Type",
+                  "columns": {
+                    "flexidev": "Available as needed",
+                    "essentials": "Shared",
+                    "growth": "Enhanced Shared",
+                    "professional": "Dedicated Hosting"
+                  }
+                },
+                "storage": {
+                  "title": "Storage",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "Up to 10 GB",
+                    "growth": "Up to 20 GB",
+                    "professional": "From 50 GB"
+                  }
+                },
+                "bandWidth": {
+                  "title": "Bandwidth",
+                  "columns": {
+                    "flexidev": "Customizable",
+                    "essentials": "Up to 5 GB",
+                    "growth": "Up to 10 GB",
+                    "professional": "Unlimited"
+                  }
+                },
+                "monthlyMaintenance": {
+                  "title": "Monthly Maintenance",
+                  "columns": {
+                    "flexidev": "Available as needed"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "mobileAppDevelopment": {
+        "metadata": {
+          "title": "Custom Mobile App Development Services | ZitDevs",
+          "description": "ZitDevs specializes in developing high-quality mobile applications for iOS and Android. Our expert team delivers scalable, user-friendly mobile solutions that help businesses grow and succeed.",
+          "keywords": [
+            "Mobile App Development",
+            "Custom Mobile Apps",
+            "iOS App Development",
+            "Android App Development",
+            "Cross-Platform App Development",
+            "Business Mobile Applications",
+            "App Development Services",
+            "Scalable Mobile Solutions",
+            "User-Friendly Mobile Apps",
+            "Mobile App Development Company"
+          ],
+          "openGraph": {
+            "og:title": "Custom Mobile App Development Services | ZitDevs",
+            "og:description": "Transform your business with ZitDevs' custom mobile app development services. Our team of experts creates high-quality, user-friendly apps for iOS and Android that drive business growth.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "en_US"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Custom Mobile App Development Services | ZitDevs",
+            "twitter:description": "ZitDevs offers expert mobile app development for iOS and Android. Build a scalable, user-friendly mobile app that accelerates business growth.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
+        "title": "Transform Your Business with Custom Mobile Apps",
+        "description": "At ZitDevs, we specialize in crafting mobile applications that bring your ideas to life. Whether you’re looking to build an app for iOS, Android, or both, our team of expert developers is equipped to deliver high-quality, user-friendly, and scalable mobile solutions that drive business growth.",
+        "contact": {
+          "title": "Get Started with ZitDevs",
+          "description": "Ready to turn your app idea into reality? Contact us today to get a custom quote tailored to your specific needs and goals. Our team is here to guide you through every step of the mobile app development journey.",
+          "cta": "Contact Us"
+        }
+      },
+      "consultingStrategy": {
+        "metadata": {
+          "title": "Expert Consulting & Strategy Services | ZitDevs",
+          "description": "ZitDevs provides tailored consulting and strategy services to help businesses of all sizes navigate the complexities of the tech landscape. Our expert advisory team offers strategic insights to guide your business toward growth and success.",
+          "keywords": [
+            "Consulting Services",
+            "Business Strategy",
+            "Technology Consulting",
+            "Business Process Optimization",
+            "Product Development Strategy",
+            "Digital Transformation",
+            "Project Management Consulting",
+            "Strategic Consulting",
+            "Agile Methodologies",
+            "Business Growth Strategy"
+          ],
+          "openGraph": {
+            "og:title": "Expert Consulting & Strategy Services | ZitDevs",
+            "og:description": "Turn your vision into action with ZitDevs' expert consulting and strategy services. From business process optimization to digital transformation, we provide strategic guidance to help you succeed.",
+            "og:image": "https://zitdevs.com/images/og-image.jpeg",
+            "og:url": "https://zitdevs.com",
+            "og:type": "website",
+            "og:site_name": "ZitDevs",
+            "og:locale": "en_US"
+          },
+          "twitterCard": {
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Expert Consulting & Strategy Services | ZitDevs",
+            "twitter:description": "ZitDevs offers tailored consulting and strategy services designed to help businesses optimize operations, develop products, and drive digital transformation.",
+            "twitter:image": "https://zitdevs.com/images/og-image.jpeg",
+            "twitter:site": "@zitdevs",
+            "twitter:creator": "@zitdevs"
+          }
+        },
+        "title": "Turn Your Vision Into Action with Strategic Guidance",
+        "description": "At ZitDevs, we offer tailored consulting and strategy services designed to help you navigate the complexities of the tech landscape. Whether you’re a startup needing direction or an established company looking to optimize operations, we provide the insights and frameworks you need to succeed.",
+        "whyChoose": {
+          "title": "Why Choose ZitDevs for Consulting & Strategy?",
+          "items": [
+            {
+              "title": "Expert Advisory Team",
+              "description": "Our seasoned consultants have years of experience across multiple industries, offering strategic advice to help you make informed, impactful decisions."
+            },
+            {
+              "title": "Tailored Solutions",
+              "description": "We don't believe in one-size-fits-all strategies. Every recommendation is customized to your business goals, market, and specific challenges."
+            },
+            {
+              "title": "Agile Methodologies",
+              "description": "We implement agile frameworks to ensure that your business can adapt quickly and effectively to market changes and technological advancements."
+            }
+          ]
+        },
+        "servicesSection": {
+          "title": "Our Consulting & Strategy Services",
+          "services": [
+            {
+              "title": "Technology Consulting",
+              "description": "Align your IT strategy with business objectives. We help you choose the right tools and platforms to ensure long-term scalability and success."
+            },
+            {
+              "title": "Business Process Optimization",
+              "description": "Streamline your operations to increase efficiency and reduce costs. We identify bottlenecks and implement solutions that maximize productivity."
+            },
+            {
+              "title": "Product Development Strategy",
+              "description": "From ideation to launch, we provide guidance throughout the product lifecycle, ensuring that your product resonates with your target audience and meets market demands."
+            },
+            {
+              "title": "Digital Transformation",
+              "description": "Transition your business into the digital age. We assist with integrating modern technologies and processes to make your company more innovative, agile, and competitive."
+            },
+            {
+              "title": "Project Management Consulting",
+              "description": "Optimize your project workflows with expert project management strategies. We provide guidance on best practices to ensure your projects are delivered on time, within budget, and to the highest quality."
+            }
+          ]
+        },
+        "ourApproach": {
+          "title": "Our Approach",
+          "steps": [
+            {
+              "title": "Initial Consultation",
+              "description": "We begin with a deep dive into your business, discussing your pain points, objectives, and vision. We assess your current systems and identify areas for improvement."
+            },
+            {
+              "title": "Strategic Planning",
+              "description": "Our consultants work closely with your team to develop a customized strategy that aligns with your business goals. This includes detailed action plans and clear milestones."
+            },
+            {
+              "title": "Implementation",
+              "description": "We help oversee the implementation of our strategies, ensuring that changes are executed smoothly and efficiently. Our team is hands-on, working with your stakeholders to bring about transformation."
+            },
+            {
+              "title": "Ongoing Support & Evaluation",
+              "description": "Once the strategy is implemented, we offer continued support and performance evaluations to ensure that your business continues to thrive and evolve."
+            }
+          ]
+        },
+        "ctaSection": {
+          "title": "Ready to Elevate Your Business?",
+          "description": "Contact us today for a tailored consulting and strategy session. Whether you need assistance with technology adoption, product strategy, or operational optimization, we're here to help you grow.",
+          "cta": "Contact Us"
+        }
+      }
+    }
+  }
 }

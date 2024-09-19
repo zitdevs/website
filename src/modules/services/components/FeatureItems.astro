@@ -1,0 +1,36 @@
+---
+import { cva, type VariantProps } from "class-variance-authority";
+import { Check } from "lucide-astro";
+import { cn } from "src/lib/utils";
+
+const FeatureVariant = cva("", {
+  variants: {
+    variant: {
+      blue: "text-secondary",
+      dark: "text-primary",
+      orange: "text-amber-400",
+      pink: "text-fuchsia-600",
+    },
+  },
+  defaultVariants: {
+    variant: "blue",
+  },
+});
+
+type Props = VariantProps<typeof FeatureVariant>;
+---
+
+<li class="py-2 border-b last:border-b-0">
+  <Check
+    class={cn(
+      "inline size-4 mr-1",
+      FeatureVariant({
+        variant: Astro.props.variant,
+      }),
+    )}
+    aria-hidden
+  />{" "}
+  <span class="text-sm">
+    <slot />
+  </span>
+</li>

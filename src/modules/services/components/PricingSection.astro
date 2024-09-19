@@ -1,0 +1,72 @@
+---
+import PricingCard from "./PricingCard.astro";
+import type { PlanData } from "../types";
+import { cn } from "src/lib/utils";
+
+type Props = {
+  title: string;
+  description: string;
+  pricing: PlanData[];
+  popularPlanIndex: number;
+
+  classes?: {
+    header?: string;
+    title?: string;
+    feature?: string;
+  };
+
+  variant?: "blue" | "dark" | "orange" | "pink";
+};
+
+const { title, description, pricing, popularPlanIndex, variant, classes } =
+  Astro.props;
+
+const lastIndex = pricing.length - 1;
+const itempProps = {
+  classes: {
+    header: "min-h-[90px]",
+    title: "min-h-[45px]",
+    feature: "min-h-[270px]",
+    ...classes,
+  },
+};
+
+const lastItemProp = {
+  class: "lg:col-span-3",
+  classes: {
+    header: cn(itempProps.classes.header, "lg:min-h-fit"),
+    title: cn(itempProps.classes.title, "lg:min-h-fit"),
+    feature: cn(itempProps.classes.feature, "lg:min-h-fit"),
+    button: "lg:w-fit",
+    footer: "lg:flex",
+  },
+};
+---
+
+<section>
+  <div class="mb-12 space-y-2">
+    <h2 class="text-4xl font-semibold text-center">
+      <span class="text-4xl font-semibold">{title}</span>
+    </h2>
+    <div>
+      <p
+        class="text-center text-gray-800 max-w-[700px] mx-auto"
+        set:html={description}
+      />
+    </div>
+  </div>
+
+  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pt-[40px]">
+    {
+      pricing.map((plan, index) => (
+        <PricingCard
+          {...(index === lastIndex ? lastItemProp : itempProps)}
+          plan={plan}
+          mostPopular={index === popularPlanIndex}
+          variant={variant}
+          hiddeCTA={true}
+        />
+      ))
+    }
+  </div>
+</section>
