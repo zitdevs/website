@@ -16,43 +16,11 @@ export const config: CookieConsentConfig = {
   categories: {
     necessary: {
       readOnly: true,
+      enabled: true,
     },
     functionality: {},
     analytics: {
-      services: {
-        ga4: {
-          label:
-            '<a href="https://marketingplatform.google.com/about/analytics/terms/us/" target="_blank">Google Analytics</a>',
-          onAccept: () => {
-            const script = document.createElement("script");
-            script.src =
-              "https://www.googletagmanager.com/gtag/js?id=G-V28YYZTMPB";
-            script.async = true;
-
-            document.head.appendChild(script);
-
-            const script2 = document.createElement("script");
-            script2.text = `
-              window.dataLayer = window.dataLayer || [];
-              function gtag() {
-                dataLayer.push(arguments);
-              }
-              gtag("js", new Date());
-              gtag("config", "G-V28YYZTMPB");
-            `;
-
-            document.head.appendChild(script2);
-          },
-          onReject: () => {
-            console.log("ga4 rejected");
-          },
-          cookies: [
-            {
-              name: /^_ga/,
-            },
-          ],
-        },
-      },
+      services: {},
     },
   },
   language: {
