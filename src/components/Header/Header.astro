@@ -12,21 +12,24 @@ const tHeader = i18n.default.header;
 ---
 
 <header
-  class="container justify-between flex items-center pt-2 relative z-50 min-h-20"
+  class="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-4 shadow-sm"
 >
-  <a class="w-32" href={`/${lang}/`} title={tHeader?.title}>
-    <LogoIcon />
-  </a>
-  <Nav tNav={tHeader} />
-  <div class="flex gap-4 items-center">
-    <Button
-      variant="secondary"
-      className="px-8 hidden min-[390px]:block"
-      href="#contact"
-      size="sm"
-    >
-      {tHeader.cta.contact}
-    </Button>
-    <Menu tNav={tHeader.menu} tCta={tHeader.cta} />
+  <div class="container justify-between flex items-center">
+    <a class="w-28" href={`/${lang}/`} title={tHeader?.title}>
+      <LogoIcon />
+    </a>
+    <div class="flex items-center gap-10">
+      <Nav tNav={tHeader} />
+      <div class="flex gap-4 items-center">
+        <Button
+          className="px-8 hidden min-[390px]:block"
+          href="#contact"
+          size="sm"
+        >
+          {tHeader.cta.contact}
+        </Button>
+        <Menu tNav={tHeader.menu} tCta={tHeader.cta} />
+      </div>
+    </div>
   </div>
 </header>

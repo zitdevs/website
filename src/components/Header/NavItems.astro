@@ -1,19 +1,20 @@
 ---
+import { cn } from "src/lib/utils";
 import NavLink from "./NavLink.astro";
 
 const { lang } = Astro.params;
 const { tNav } = Astro.props;
+
+const clasess =
+  "font-medium hover:underline hover:text-secondary transition-colors duration-300";
 ---
 
-<NavLink href={`/${lang}/`} className="font-semibold">
-  {tNav?.home}
-</NavLink>
-<NavLink href={`/${lang}/#what-we-do`} className="font-semibold">
+<NavLink href={`/${lang}/#what-we-do`} class={cn(clasess)}>
   {tNav?.about}
 </NavLink>
-<NavLink href={`/${lang}/#how-it-works`} className="font-semibold">
+<NavLink href={`/${lang}/#how-it-works`} class={cn(clasess)}>
   {tNav?.how_it_works}
 </NavLink>
-<NavLink href={`/${lang}/services`} className="font-semibold">
+<NavLink href={`/${lang}/services`} class={cn(clasess)}>
   {tNav?.services}
 </NavLink>

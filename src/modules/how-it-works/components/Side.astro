@@ -11,7 +11,7 @@ interface Item {
 }
 
 const { id, title, cta, variant } = Astro.props;
-const bg = variant === "left" ? "bg-secondary" : "bg-primary";
+const bg = variant === "left" ? "bg-primary" : "bg-[#0A0046]";
 const rounded =
   variant === "left"
     ? "rounded-t-3xl lg:rounded-r-none lg:rounded-l-3xl"
@@ -30,10 +30,12 @@ const rounded =
           <Button
             data-cta="contact"
             data-toggle={cta.toggle}
-            className="mt-4 px-10"
+            className={cn("mt-4 px-10", {
+              "bg-[#0A0046]": variant === "left",
+            })}
             type="button"
             size="sm"
-            variant={variant === "left" ? "default" : "secondary"}
+            variant={variant === "left" ? "secondary" : "default"}
           >
             {cta.text}
           </Button>

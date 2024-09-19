@@ -14,7 +14,7 @@ const { tNav, tCta } = Astro.props;
     aria-expanded="false"
     aria-controls="menu-mobile"
   >
-    <MenuIcon class="size-9 text-secondary" />
+    <MenuIcon class="size-9 text-primary" />
   </button>
 
   <nav
@@ -40,7 +40,7 @@ const { tNav, tCta } = Astro.props;
 
 <script>
   const buttonMenu = document.getElementById(
-    "button-menu"
+    "button-menu",
   ) as HTMLButtonElement;
   const menuMobile = document.getElementById("menu-mobile") as HTMLElement;
   let isOpen = false;

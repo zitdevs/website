@@ -3,7 +3,7 @@
     --cc-primary-color: rgb(239, 244, 246);
     --cc-secondary-color: #b1bdc3 !important;
   
-    --cc-btn-primary-bg: #4d47ff;
+    --cc-btn-primary-bg: #2264DC;
     --cc-btn-primary-color: #ffffff;
     --cc-btn-primary-hover-bg: #9693ff;
     --cc-btn-primary-hover-color: #000000;
@@ -44,7 +44,7 @@
     --cc-footer-color: var(--cc-secondary-color);
     --cc-footer-border-color: #212529;
 
-    --cc-link-color: #4d47ff;
+    --cc-link-color: #2264DC;
   }
   
   .cc--elegant-black #cc-main .cm,
