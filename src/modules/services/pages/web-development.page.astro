@@ -6,6 +6,7 @@ import OurProcess from "../components/OurProcess.astro";
 import PricingSection from "../components/PricingSection.astro";
 import ComparePlanSection from "../components/ComparePlanSection.astro";
 import { GetPlanDetails } from "../utils/transformers/WebDevelopment";
+import { PriceConfig } from "src/config/prices";
 
 const { lang } = Astro.params as { lang: string };
 
@@ -41,8 +42,8 @@ const tDetails = tComparePricing.details;
           name: tPricing.plans.growth.title,
           description: tPricing.plans.growth.description,
           features: tPricing.plans.growth.features,
-          price: 779.99,
-          monthlyPrice: 43.52,
+          price: PriceConfig.webDev.growth.price,
+          monthlyPrice: PriceConfig.webDev.growth.monthly,
           cta: {
             text: tPricing.plans.growth.cta,
             href: `/${lang}/contact`,
@@ -53,8 +54,8 @@ const tDetails = tComparePricing.details;
           name: tPricing.plans.essentials.title,
           description: tPricing.plans.essentials.description,
           features: tPricing.plans.essentials.features,
-          price: 349.99,
-          monthlyPrice: 29.99,
+          price: PriceConfig.webDev.essentials.price,
+          monthlyPrice: PriceConfig.webDev.essentials.monthly,
           cta: {
             text: tPricing.plans.essentials.cta,
             href: `/${lang}/contact`,
@@ -65,8 +66,8 @@ const tDetails = tComparePricing.details;
           name: tPricing.plans.professional.title,
           description: tPricing.plans.professional.description,
           features: tPricing.plans.professional.features,
-          price: 1900.0,
-          monthlyPrice: 99.99,
+          price: PriceConfig.webDev.professional.price,
+          monthlyPrice: PriceConfig.webDev.professional.monthly,
           cta: {
             text: tPricing.plans.professional.cta,
             href: `/${lang}/contact`,
@@ -76,8 +77,8 @@ const tDetails = tComparePricing.details;
           name: tPricing.plans.flexidev.title,
           description: tPricing.plans.flexidev.description,
           features: tPricing.plans.flexidev.features,
-          price: 20,
-          monthlyPrice: 34.99,
+          price: PriceConfig.webDev.flex.price,
+          monthlyPrice: PriceConfig.webDev.flex.monthly,
           priceFrequency: tShared.hour,
           cta: {
             text: tPricing.plans.flexidev.cta,
@@ -94,7 +95,7 @@ const tDetails = tComparePricing.details;
       popularPlanIndex={1}
       plans={[
         {
-          price: 20,
+          price: PriceConfig.webDev.flex.price,
           name: tComparePricing.plans.flexidev.title,
           description: tComparePricing.plans.flexidev.description,
           priceFrequency: tShared.hour,
@@ -105,7 +106,7 @@ const tDetails = tComparePricing.details;
         },
         {
           startingAt: true,
-          price: 349.99,
+          price: PriceConfig.webDev.essentials.price,
           name: tComparePricing.plans.essentials.title,
           description: tComparePricing.plans.essentials.description,
           cta: {
@@ -115,7 +116,7 @@ const tDetails = tComparePricing.details;
         },
         {
           startingAt: true,
-          price: 779.99,
+          price: PriceConfig.webDev.growth.price,
           name: tComparePricing.plans.growth.title,
           description: tComparePricing.plans.growth.description,
           cta: {
@@ -125,7 +126,7 @@ const tDetails = tComparePricing.details;
         },
         {
           startingAt: true,
-          price: 1900.0,
+          price: PriceConfig.webDev.professional.price,
           name: tComparePricing.plans.professional.title,
           description: tComparePricing.plans.professional.description,
           cta: {
