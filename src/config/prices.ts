@@ -1,20 +1,20 @@
 export const PriceConfig = {
   webDev: {
     essentials: {
-      price: 349.99,
-      monthly: 29.99,
+      price: 439.57,
+      monthly: 36.49,
     },
     growth: {
-      price: 779.99,
-      monthly: 43.52,
+      price: 962.2,
+      monthly: 52.93,
     },
     professional: {
-      price: 1900.0,
-      monthly: 69.99,
+      price: 2323.46,
+      monthly: 85.1,
     },
     flex: {
-      price: 20,
-      monthly: 34.99,
+      price: 24.99,
+      monthly: 42.56,
     },
   },
 };
