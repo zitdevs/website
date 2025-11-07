@@ -10,27 +10,28 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/node": "^9.0.0",
-    "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^5.1.4",
-    "@fontsource/raleway": "^5.1.1",
-    "@tailwindcss/forms": "^0.5.9",
-    "astro": "^5.1.2",
+    "@astrojs/check": "^0.9.5",
+    "@astrojs/node": "^9.5.0",
+    "@astrojs/sitemap": "^3.6.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "astro": "^5.15.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-astro": "^0.469.0",
-    "pocketbase": "^0.25.0",
-    "resend": "^4.0.1",
-    "tailwind-merge": "^2.6.0",
-    "tailwindcss": "^3.4.17",
+    "lucide-astro": "^0.553.0",
+    "pocketbase": "^0.26.3",
+    "resend": "^6.4.2",
+    "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.7.2",
-    "vanilla-cookieconsent": "^3.0.1"
+    "typescript": "^5.9.3",
+    "vanilla-cookieconsent": "^3.1.0"
   },
   "devDependencies": {
-    "cypress": "^13.17.0",
-    "prettier": "^3.4.2",
-    "prettier-plugin-astro": "^0.14.1"
-  }
+    "autoprefixer": "^10.4.21",
+    "cypress": "^15.6.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "3.4.0"
+  },
+  "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b"
 }

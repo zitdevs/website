@@ -507,7 +507,8 @@ const form = {
     }
   };
 
-  function onSubmit(token) {
+  // Using bracket notation to avoid TypeScript warning about custom property
+  window["onSubmit"] = function (token) {
     fetch("/api/recaptcha", {
       method: "POST",
       body: JSON.stringify({ recaptcha: token }),
