@@ -13,7 +13,7 @@ const pbBuilder = async () => {
 
   const pb = new PocketBase(url);
 
-  await pb.admins.authWithPassword(email, password);
+  await pb.collection('_superusers').authWithPassword(email, password);
 
   return pb;
 };
